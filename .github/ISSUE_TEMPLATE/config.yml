@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and setup help (Discord)
+    url: https://discord.gg/XMk7GgapuN
+    about: Ask the Port0r bot in #ask-port0r, or the community in #install-help.

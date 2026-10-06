@@ -1,85 +1,233 @@
 ![Port0r](assets/port0r-header.png)
 
+<p align="center">
+  <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
+  <a href="../../releases"><b>Download</b></a> ·
+  <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
+  <a href="https://www.youtube.com/watch?v=N0oONJxX19k"><b>Video</b></a>
+</p>
+
 # Port0r
 
-**Arcade classics in true stereoscopic 3D, on Meta Quest.** Not a flat screen floating in a dark room: the real 3D of the
-game, rebuilt for each eye, at real scale. The car is in front of you, the hills have volume, the speed is physical.
+**Arcade classics in true stereoscopic 3D, on Meta Quest.**
 
-Port0r runs the real arcade game through an emulator and re-projects the 3D scene each board draws, per eye, through
-OpenXR. One app per game, released one at a time.
+Not a flat screen floating in a dark room. Port0r takes the real 3D scene the arcade board draws, rebuilds it for each
+of your eyes and puts you inside it, at real scale. The car sits in front of you, the hills have volume, the trees
+pass by your shoulder, the speed is physical. Be inside the arcade, not in front of it.
+
+[![Watch the launch video](https://img.youtube.com/vi/N0oONJxX19k/maxresdefault.jpg)](https://www.youtube.com/watch?v=N0oONJxX19k)
+
+---
 
 ## Releases
 
-| Game | Status | Download |
+| Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Rally VR** (Sega Rally Championship, Sega Model 2, 1995) | Out now, v0.2.0 | [Releases](../../releases) · itch.io · SideQuest |
-| Time Crisis (Namco System 22, 1995) | Coming soon | |
-| Virtua Cop, Daytona USA, The House of the Dead, Sega Super GT, Top Skater, Virtua Racing, Dirt Dash, Time Crisis II | In progress | |
+| **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.0** ([Releases](../../releases)) |
+| Time Crisis | Namco System 22, 1995 | Coming soon |
+| Virtua Cop | Sega Model 2, 1994 | Next |
+| Daytona USA, The House of the Dead, Sega Super GT 24h, Top Skater, Virtua Racing, Dirt Dash, Time Crisis II | Model 1, Model 2, System 22/23 | In progress |
 
-Meta Quest 3 is the reference headset. Quest 3S and Quest 2 support is being enabled.
+One app per game, released one at a time, when it is right. No release dates.
+
+**Headsets:** Meta Quest 3 is the reference. Quest 3S and Quest 2 support is being enabled.
+
+---
+
+## This is not a one-click port
+
+People sometimes think a VR port is a setting you switch on. It is not. Sega Rally VR alone is months of evenings and
+nights of work, game by game, frame by frame, checked in the headset. Here is what it took, in player terms.
+
+**A new renderer for the arcade board.** The arcade game runs on its own code through an emulator, but the picture you
+see is not the emulator's: every 3D polygon the Sega Model 2 board draws is taken and redrawn on the Quest's GPU, for
+each eye, with the board's own rules re-implemented one by one: its textures and palettes, its lighting tables, its
+transparency, its "checker" glass, the order in which it paints the screen. That is how the colours are the arcade's
+exact colours, and how details like the moving sky reflection in the creek after the Desert checkpoint look like the
+cabinet.
+
+**Real stereoscopic 3D, at real scale.** The scene is re-projected for each eye from the game's own camera, at the size
+it really is: one metre in the game is one metre around you. The game was never made for two eyes, so a lot of work
+went into what that breaks: the HUD (speed, time, gear) sits on a comfortable plane instead of floating inside the
+scenery, the speedometer needle stays inside its dial, screen-wide effects cover your whole view, letterbox bands
+vanish, nothing makes your eyes cross.
+
+**Rock-solid smoothness.** The arcade runs at 60 images a second, the headset at 120 Hz. The game is locked to the
+headset and every arcade image is shown exactly once, with the headset filling in the frames between: no stutter, no
+judder on the car in the corners. Dynamic resolution and Meta's Super Resolution keep it sharp without dropping frames.
+
+**Controls that feel right.** Analog steering with a precise centre, triggers for the pedals, a real manual gearbox on
+the side grips (the manual cars could not even be driven at first), and vibrations read from the game's own physics:
+you feel the wall hits, the jumps and landings and the contacts with other cars, and nothing in a normal corner.
+
+**HD textures.** The app reads the community HD texture packs made for the Model 2 Emulator, as they are: drop Jean-seb's
+pack on the headset and it is found, imported and used, with nothing to configure.
+
+**Everything a player needs, inside the headset.** The game files are found wherever you copied them, the app starts by
+itself, your records are saved, a settings panel floats next to the game, in your language.
+
+**The mods.** The extra modes of our Sega Rally homebrew for the Nintendo Switch, brought to VR: free timer, free play,
+sporty automatic gearbox, adaptive steering, a mirrored track with the co-driver's calls mirrored too, telemetry, and
+picture styles.
+
+All of it is free. If you enjoy it, see [Support the project](#support-the-project).
+
+---
 
 ## Bring your own game files
 
 **No game data is included.** You need your own, legally owned copy of the arcade game. We never provide, link to or
-discuss where to download game files: please don't ask.
+discuss where to download game files: please don't ask, on Discord or anywhere else.
 
 For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip`.
 
 ## Install (Port0r: Rally VR)
 
-1. Turn on Developer Mode on your Quest (Meta Horizon app on your phone > Devices > Headset settings > Developer mode).
-2. Install the APK with [SideQuest](https://sidequestvr.com) ("Install APK file") or `adb install -r`.
+1. Turn on **Developer Mode** on your Quest (Meta Horizon app on your phone > Devices > Headset settings > Developer
+   mode).
+2. Install the APK from [Releases](../../releases) with [SideQuest](https://sidequestvr.com) ("Install APK file") or
+   `adb install -r Port0r-RallyVR-v0.2.0-quest3.apk`.
 3. Copy your game files to the headset (USB cable to your computer, or the headset's browser). The **Download** folder
-   is the usual place, but the app looks everywhere on the headset's storage.
-4. Launch **Port0r: Rally VR** from Library > Unknown sources. The first time, allow "All files access": the app only
+   is the usual place, but the app looks everywhere on the headset's storage, and the names are not case sensitive.
+4. Launch **Port0r: Rally VR** from Library > Unknown sources. The first time, allow **"All files access"**: the app only
    reads its game files and the optional HD texture pack.
-5. Come back to the app: the game is copied in and starts by itself.
+5. Come back to the app: the game is copied in and starts by itself. Until then, a screen in your language tells you
+   which files are missing.
 
-Updating from v0.1.0: it used another app id. Uninstall it, then install the new version; your files stay on the headset.
+![The setup screen, in English, Japanese and Russian](assets/setup-screen-languages.png)
 
-## What you get in Port0r: Rally VR
+**Updating:** install the new APK over the old one; your settings and records are kept. From v0.1.0 (another app id):
+uninstall it first, your game files stay on the headset.
 
-- True stereoscopic 3D at real scale, with the arcade's exact original colours.
-- Rock-solid 60 images a second, smoothed to 120 Hz by the headset. No stutter.
-- The HUD on a comfortable plane, the speedometer needle inside its dial.
-- Manual gearbox on the side grips (left down, right up).
-- Vibrations on wall hits, jumps, landings and contacts with other cars.
-- Your records and the cabinet's settings are saved.
-- **Mods** (settings panel): free timer, free play, sporty automatic gearbox, adaptive steering, mirrored track (the
-  co-driver's calls mirrored too), telemetry bar, and picture styles (colour, black and white, comic, night).
-- Settings panel in ten languages (English, Français, Deutsch, Español, Italiano, Português, Русский, 日本語, 简体中文,
-  한국어), following the headset's language.
+## HD textures (optional)
 
-### Optional: HD textures
+The community HD texture pack for Sega Rally is made by **Jean-seb**. Get it from his video
+["Sega Rally Championship HD textures pack : new version"](https://www.youtube.com/watch?v=K1d4jO6rP2Y) (the download
+link is in its description) and put his zip, or the extracted folder, on the headset next to the game files. The app
+finds it, imports it, and the HD textures are on from the next launch (Image > HD textures switches them off).
 
-The community HD texture pack is made by **Jean-seb**: get it from his video
-["Sega Rally Championship HD textures pack : new version"](https://www.youtube.com/watch?v=K1d4jO6rP2Y) (download link
-in its description). Put his zip on the headset next to the game files: the app finds it and imports it by itself. All
-credit to Jean-seb.
+Without a pack, the app offers it once per launch, with a **"Don't ask again"** choice if you prefer the original look.
+We never ship the pack: all credit goes to Jean-seb, please support his work.
 
-### Controls
+![Original textures and Jean-seb's HD pack](assets/hd-textures-comparison.jpg)
 
-| | |
+## Controls
+
+| Action | Button |
 | --- | --- |
 | Steering | Left stick |
 | Gas / brake | Right trigger / left trigger |
-| Gears (manual cars) | Side grips: left down, right up (the right stick works too) |
-| View | B |
+| Gears (manual cars) | Side grips: left = down, right = up (the right stick up/down works too) |
+| Change view | B |
 | Settings panel | Left menu button (aim with the right controller, trigger or A to click) |
-| Pause | Click both sticks |
+| Pause / resume | Click both thumbsticks |
 
-## Community and support
+## The settings panel
 
-- **Discord**: questions, setup help, bug reports, and an assistant bot that knows the project.
-- **Bugs**: open an issue here with your headset model, the app version and what you saw.
-- **Support the work**: GitHub Sponsors. Donations support the engine's development; they are not a purchase of any game,
-  and there is no paywall or early access for money.
+Everything is set inside the headset, in a panel that floats next to the game. **Defaults** restores the values we
+tuned.
+
+![The settings panel](assets/settings-panel.png)
+
+**Display**
+- **Mode**: *Immersive* (you are inside the game, in 3D; the default), *3D window* (an arcade screen in 3D) or *Flat
+  screen* (the arcade screen, flat).
+- **World size**: 1 = real size; bigger makes you smaller.
+- **Zoom**: enlarges the picture like the arcade screen does (Auto, None, Low, Medium, Strong).
+- **Depth**: *Real* (from each object's real distance) or *Arcade order* (the board's own drawing order).
+
+**Image**
+- **Sharp rendering**: crisp edges; off gives softer, slightly blurrier edges.
+- **Screen quality**: *High* (the arcade screen enlarged and smoothed) or *Native*.
+- **HD textures**: uses the HD pack when one is on the headset.
+- **Brightness**: lightens the dark areas, keeps the white.
+- **Style**: *Colour* (the arcade's), *Black & white*, *Comic* (a flat, inked look) or *Night*.
+
+**Smoothness**
+- **Headset smoothing**: the headset fills in the frames between the arcade's (off: each frame is shown twice).
+- **Super Resolution**: Meta's upscaling and sharpening.
+- **Dynamic resolution** and **Minimum resolution**: keep the frame rate locked in heavy scenes.
+- **Maximum performance**: the headset's highest clocks (off saves battery, after a restart).
+
+**Game**
+- **Driving**: *Soft stick* (precise centre), *Direct stick*, or *VR wheel* (hold an imaginary wheel with both hands).
+- **Vibrations**: on or off.
+- **Speed**: *Original* (the arcade's exact rate) or *60 fps* (follows the headset: smoother, 4 % faster).
+- **Volume**.
+- **Language**: *Auto* follows the headset; or English, Français, Deutsch, Español, Italiano, Português, Русский, 日本語,
+  简体中文, 한국어.
+
+**Mods** (all off by default: the cabinet as it is)
+- **Free timer**: the clock stops during the race. Drive as long as you like.
+- **Free play**: Start begins a game, no coin needed.
+- **Sporty automatic**: the manual cars shift by themselves, at sporty shift points.
+- **Adaptive steering**: finer around the centre, gentler at high speed.
+- **Mirrored track**: the whole track left for right, with the steering mirrored and the co-driver's "left" and "right"
+  calls swapped (compound calls rebuilt from the original recordings) and the navigation arrows turned the right way.
+- **Telemetry**: a bar under the HUD during the race: speed, position, lap, gas and brake.
+
+## Saves
+
+Your records and the cabinet's own settings are saved on the headset while you play (every few seconds) and kept
+across updates.
+
+## Known issues
+
+- Driving on grass does not vibrate yet.
+- The trees of the attract intro, hidden behind the title panel on the cabinet, can be seen from inside the scene.
+
+## Roadmap
+
+- **Time Crisis** (light gun, 120 Hz, real VR aiming): coming soon.
+- **Online leaderboard**: your best times published on our Discord, per track and per car.
+- **Cockpit view**: a steering wheel and hands in the car, following your steering. Later, your real wheel in
+  augmented reality.
+- **Arcade hall**: play on the cabinet itself, standing in a virtual arcade.
+- **Comfort mode**: a gentle darkening of the edges in tight corners and big hits, for players sensitive to motion.
+- **Sunset style**, **best-lap ghost car**, **replays**, **spectator mode** (freeze the race and walk around the car).
+- More games, one at a time.
+
+## Community
+
+Join the **[Port0r Discord](https://discord.gg/XMk7GgapuN)**: release news, setup help, bug reports, game requests and
+your videos.
+
+- **Ask the bot.** In `#ask-port0r`, our assistant knows the whole project (install, settings, mods, HD textures, every
+  game in progress) and answers in a couple of seconds, in your language, day and night. Try it before you ask: it is
+  usually right, and it is honest when it does not know.
+- **Be kind.** Be polite, read `#rules`, stay on topic, no ROM requests or links, ever.
+- **Help each other.** Answer a newcomer in `#install-help`, share your setup and your clips in `#showcase`. A community
+  that helps itself is what keeps a free project alive.
+
+## Support the project
+
+Port0r is a one-person project, and lately it takes all of my free time. It is free and will stay free: no paywall, no
+donor-only game, no early access for money.
+
+If you enjoy it, any help is more than welcome:
+
+- **Share it.** Post your clips, tell a friend, star this repository. It costs nothing and it matters a lot.
+- **Sponsor it** on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd), once or monthly.
+
+Donations support the engine's development. They are not a purchase of any game.
+
+## Report a bug
+
+Open an issue with your headset model, the app version (shown in the store listing), what you did and what you saw. A
+short video or a photo through the lens helps a lot. You can also post in `#bugs` on Discord.
+
+## Credits
+
+- **Jean-seb**: the Sega Rally Championship HD texture pack, used with credit and never redistributed.
+- The **MAME** developers: the emulation the games run on (the BSD-3-Clause parts we use).
+- The **Khronos OpenXR** SDK, **zlib**, **expat**, **FLAC**, **zstd** and the other open-source components listed in
+  `THIRD-PARTY-NOTICES.txt` (shipped with every release and inside the app).
+- The **Inter** and **Noto Sans CJK** typefaces (SIL Open Font License).
 
 ## Legal
 
 Port0r is a free, non-commercial fan project. It is **not affiliated with, endorsed by or connected to SEGA, Namco,
-Meta or any rights holder.** All trademarks belong to their owners.
+Meta or any rights holder.** All trademarks and game content belong to their owners. No game data is distributed.
 
-The apps bundle only permissively licensed open-source components (MAME's BSD-3-Clause parts, OpenXR, zlib and others);
-their copyright notices ship with every release (`THIRD-PARTY-NOTICES.txt`, also inside the app). Port0r's own source
-code is not public for now.
+Port0r's own source code is not public for now. The open-source components it uses are listed, with their licenses, in
+`THIRD-PARTY-NOTICES.txt`.

@@ -1,0 +1,25 @@
+name: Bug report
+description: Something looks or behaves wrong in a Port0r game
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for taking the time. Please never post or ask for game files (ROMs): such issues are closed."
+  - type: input
+    id: game
+    attributes: { label: Game and app version, placeholder: "Port0r: Rally VR v0.2.0" }
+    validations: { required: true }
+  - type: dropdown
+    id: headset
+    attributes: { label: Headset, options: [Quest 3, Quest 3S, Quest 2, Other] }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: What happened, description: "Where in the game, what you did, what you saw, what you expected." }
+    validations: { required: true }
+  - type: textarea
+    id: media
+    attributes: { label: Video or photo, description: "A short clip or a photo through the lens helps a lot (drag and drop here)." }
+  - type: input
+    id: settings
+    attributes: { label: Settings you changed, placeholder: "Mode, mods, style, HD textures on/off..." }
