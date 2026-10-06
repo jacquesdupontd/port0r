@@ -24,6 +24,30 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | Game | Board | Status |
 | --- | --- | --- |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.0** ([Releases](../../releases)) |
+
+**Headsets:** Meta Quest 3 is the reference. Quest 3S and Quest 2 support is being enabled.
+
+## Upcoming
+
+Every game below already runs in the headset, in true 3D. They come out one at a time, when they are right.
+
+- **Time Crisis** (Namco System 22, 1995), *next*: fully immersive 3D at 120 Hz, rendered on the headset's GPU at full
+  speed, real VR aiming where your gun points, with a detailed 3D gun in your hand.
+- **Virtua Cop** (Sega Model 2, 1994): immersive 3D at full arcade speed (57.5 images a second instead of 49), aiming
+  checked against what is really drawn (menus included), a crosshair you can toggle, enemies at cabinet scale.
+- **Daytona USA** (Sega Model 2, 1994): longer draw distance, complete track sides when you look around, full-detail cars
+  in the distance, no scenery popping; community HD texture pack support.
+- **The House of the Dead** (Sega Model 2A, 1996): immersive 3D indoors, the HUD split between your gun and a panel.
+- **Sega Super GT 24h** (Jaleco, Model 2B): full speed (it ran at 82 to 93 %), 120 images a second in races.
+- **Top Skater** (Sega Model 2C, 1997): its 3D displays correctly (it was broken even in the reference emulator),
+  skateboard controls.
+- **Virtua Racing** (Sega Model 1, 1992): the arcade's 30 images a second smoothed to the headset's rate, longer draw
+  distance, all four arcade cameras.
+- **Dirt Dash** (Namco System 22, 1995): immersive 3D at 120 Hz.
+- **Time Crisis II** (Namco System 23, 1997): full speed, immersive 3D.
+
+--- | --- | --- |
+| **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.0** ([Releases](../../releases)) |
 | Time Crisis | Namco System 22, 1995 | Coming soon |
 | Virtua Cop | Sega Model 2, 1994 | Next |
 | Daytona USA, The House of the Dead, Sega Super GT 24h, Top Skater, Virtua Racing, Dirt Dash, Time Crisis II | Model 1, Model 2, System 22/23 | In progress |
