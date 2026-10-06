@@ -103,7 +103,7 @@ All of it is free. If you enjoy it, see [Support the project](#support-the-proje
 **No game data is included.** You need your own, legally owned copy of the arcade game. We never provide, link to or
 discuss where to download game files: please don't ask, on Discord or anywhere else.
 
-For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip`.
+For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip`. `segabill.zip` is only needed if your `srallyc.zip` does not already include the billboard ROM (some sets do; the app checks).
 
 ## Install (Port0r: Rally VR)
 
