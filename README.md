@@ -280,6 +280,13 @@ your videos.
 - **Help each other.** Answer a newcomer in `#install-help`, share your setup and your clips in `#showcase`. A community
   that helps itself is what keeps a free project alive.
 
+## Videos, streams and reviews
+
+Make all the videos, streams and reviews you like, monetised ones included: that is how a free project gets known.
+If you can, put a link to this page (or to [port0r.itch.io/rally-vr](https://port0r.itch.io/rally-vr)) in the
+description, or just say the name, Port0r. It is not an obligation, only a big help, and thank you. If you show the HD
+textures, a word for Jean-seb, who made them, is welcome too.
+
 ## Support the project
 
 Port0r is a one-person project, and lately it takes all of my free time. It is free and will stay free: no paywall, no
