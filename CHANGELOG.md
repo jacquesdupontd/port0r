@@ -1,5 +1,18 @@
 # Changelog
 
+## Port0r: Rally VR v0.2.2
+
+- **Steering on the right stick**, a wish from the Discord: settings panel > Game > **Steering stick** > *Right*. The
+  right stick steers and the side grips shift gears (the right stick's up / down shift is off, so that a diagonal never
+  changes gear). *Left* stays the default.
+- **A Controls page** in the settings panel (the button next to *Resume*): every button of the game, in your language,
+  and it follows your settings (right-stick steering, VR wheel).
+- **The settings panel scrolls** when a tab is longer than the panel, with either thumbstick or the bar on its right:
+  the *Resume* button no longer covered the last settings of the *Game* tab. Long names and sentences now go onto a
+  second line instead of being cut, in all ten languages.
+- **The app's own icon** in the headset's library (earlier versions showed the project's first icon).
+- Nothing else changes in the game: same picture, same smoothness, same settings.
+
 ## Port0r: Rally VR v0.2.1
 
 - **Clear message when your game files are the wrong version.** If MAME can't load your set, a page says so in your
