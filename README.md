@@ -1,6 +1,10 @@
 ![Port0r](assets/port0r-header.png)
 
 <p align="center">
+  <a href="https://github.com/jacquesdupontd/port0r/releases/latest"><img alt="Download Port0r: Rally VR v0.2.0 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.0%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
+</p>
+
+<p align="center">
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
   <a href="../../releases"><b>Download</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
