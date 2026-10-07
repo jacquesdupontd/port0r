@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
   <a href="../../releases"><b>Download</b></a> ·
+  <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
   <a href="https://www.youtube.com/watch?v=N0oONJxX19k"><b>Video</b></a>
 </p>
@@ -16,6 +17,10 @@ of your eyes and puts you inside it, at real scale. The car sits in front of you
 pass by your shoulder, the speed is physical. Be inside the arcade, not in front of it.
 
 [![Watch the launch video](https://img.youtube.com/vi/N0oONJxX19k/maxresdefault.jpg)](https://www.youtube.com/watch?v=N0oONJxX19k)
+
+| Desert | Forest (HD textures) | Mountain |
+| --- | --- | --- |
+| ![Desert](assets/shot-desert.jpg) | ![Forest, with Jean-seb's HD textures](assets/shot-forest-lake.jpg) | ![Mountain](assets/shot-mountain.jpg) |
 
 ---
 
@@ -46,16 +51,6 @@ Every game below already runs in the headset, in true 3D. They come out one at a
 - **Dirt Dash** (Namco System 22, 1995): immersive 3D at 120 Hz.
 - **Time Crisis II** (Namco System 23, 1997): full speed, immersive 3D.
 
---- | --- | --- |
-| **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.0** ([Releases](../../releases)) |
-| Time Crisis | Namco System 22, 1995 | Coming soon |
-| Virtua Cop | Sega Model 2, 1994 | Next |
-| Daytona USA, The House of the Dead, Sega Super GT 24h, Top Skater, Virtua Racing, Dirt Dash, Time Crisis II | Model 1, Model 2, System 22/23 | In progress |
-
-One app per game, released one at a time, when it is right. No release dates.
-
-**Headsets:** Meta Quest 3 is the reference. Quest 3S and Quest 2 support is being enabled.
-
 ---
 
 ## This is not a one-click port
@@ -78,7 +73,8 @@ vanish, nothing makes your eyes cross.
 
 **Rock-solid smoothness.** The arcade runs at 60 images a second, the headset at 120 Hz. The game is locked to the
 headset and every arcade image is shown exactly once, with the headset filling in the frames between: no stutter, no
-judder on the car in the corners. Dynamic resolution and Meta's Super Resolution keep it sharp without dropping frames.
+judder on the car in the corners. The picture is rendered above the headset's own resolution and smoothed by the headset
+on the way to the screen; dynamic resolution lowers it for a moment only when a scene gets too heavy.
 
 **Controls that feel right.** Analog steering with a precise centre, triggers for the pedals, a real manual gearbox on
 the side grips (the manual cars could not even be driven at first), and vibrations read from the game's own physics:
@@ -107,15 +103,49 @@ For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip
 
 ## Install (Port0r: Rally VR)
 
-1. Turn on **Developer Mode** on your Quest (Meta Horizon app on your phone > Devices > Headset settings > Developer
-   mode).
-2. Install the APK from [Releases](../../releases) with [SideQuest](https://sidequestvr.com) ("Install APK file") or
-   `adb install -r Port0r-RallyVR-v0.2.0-quest3.apk`.
-3. Copy your game files to the headset (USB cable to your computer, or the headset's browser). The **Download** folder
-   is the usual place, but the app looks everywhere on the headset's storage, and the names are not case sensitive.
-4. Launch **Port0r: Rally VR** from Library > Unknown sources. The first time, allow **"All files access"**: the app only
-   reads its game files and the optional HD texture pack.
-5. Come back to the app: the game is copied in and starts by itself. Until then, a screen in your language tells you
+About ten minutes the first time. You need a computer (Windows, Mac or Linux) or just the headset's browser, a USB-C
+cable helps.
+
+### 1. Turn on Developer Mode (once)
+
+Developer Mode is what lets a Quest install apps that are not from the Meta store.
+
+1. Create a (free) developer organisation at [developer.oculus.com](https://developer.oculus.com/manage/organizations/create/)
+   with the same Meta account as your headset. Meta asks for this once.
+2. On your phone, open the **Meta Horizon** app > **Devices** > your headset > **Headset settings** > **Developer mode**,
+   and switch it on.
+3. Restart the headset.
+
+### 2. Install the APK
+
+Download `Port0r-RallyVR-v0.2.0-quest3.apk` from [Releases](../../releases), then pick one way:
+
+- **SideQuest** (easiest): install [SideQuest](https://sidequestvr.com/setup-howto) on your computer, plug the headset
+  in with a USB-C cable, put the headset on and accept **"Allow USB debugging"** (tick *Always allow*). In SideQuest the
+  dot at the top left turns green: click the **"Install APK file from folder"** icon (top right) and pick the APK.
+- **adb** (if you already use it): `adb install -r Port0r-RallyVR-v0.2.0-quest3.apk`
+
+The APK checksum is in `SHA256SUMS.txt` next to it, if you want to check your download.
+
+### 3. Put your game files on the headset
+
+The files are `srallyc.zip` and, only if your set needs it, `segabill.zip` (see above). The **Download** folder is the
+usual place, but the app looks everywhere on the headset's storage, and the names are not case sensitive. Pick one way:
+
+- **SideQuest**: the folder icon (top right) opens the headset's files. Open `Download` and drag your zips in.
+- **USB cable, no software**: plug the headset in, put it on and accept **"Allow access to data"** (without it, the
+  headset shows up empty). It appears as **Quest 3 > Internal shared storage**: copy the zips into `Download`.
+  On a **Mac**, Finder does not show Android devices: use [OpenMTP](https://openmtp.ganeshrvel.com) (free) or Android
+  File Transfer.
+- **The headset's browser**: anything you download in the Quest browser lands in `Download`. Handy with a file you keep
+  in your own cloud storage (Google Drive, Dropbox...). The phone's Meta Horizon app cannot copy files to the headset.
+
+### 4. First launch
+
+1. Put the headset on: **Library** > the filter at the top (*All*) > **Unknown sources** > **Port0r: Rally VR**.
+2. The first time, the headset asks for **"All files access"**: allow it. The app only reads its game files and the
+   optional HD texture pack.
+3. Come back to the app: the game is copied in and starts by itself. Until then, a screen in your language tells you
    which files are missing.
 
 ![The setup screen, in English, Japanese and Russian](assets/setup-screen-languages.png)
@@ -156,7 +186,7 @@ tuned.
 **Display**
 - **Mode**: *Immersive* (you are inside the game, in 3D; the default), *3D window* (an arcade screen in 3D) or *Flat
   screen* (the arcade screen, flat).
-- **World size**: 1 = real size; bigger makes you smaller.
+- **World size**: 1 = real size; bigger makes you smaller. 2 by default, where the eyes are most comfortable.
 - **Zoom**: enlarges the picture like the arcade screen does (Auto, None, Low, Medium, Strong).
 - **Depth**: *Real* (from each object's real distance) or *Arcade order* (the board's own drawing order).
 
@@ -164,13 +194,17 @@ tuned.
 - **Sharp rendering**: crisp edges; off gives softer, slightly blurrier edges.
 - **Screen quality**: *High* (the arcade screen enlarged and smoothed) or *Native*.
 - **HD textures**: uses the HD pack when one is on the headset.
+- **Resolution**: *Native* (the headset's own resolution), *High* (the default: smoother edges) or *Maximum*. Above
+  Native the headset smooths the picture down to its screen; dynamic resolution lowers it for a moment if a scene is
+  too heavy.
 - **Brightness**: lightens the dark areas, keeps the white.
 - **Style**: *Colour* (the arcade's), *Black & white*, *Comic* (a flat, inked look) or *Night*.
 
 **Smoothness**
 - **Headset smoothing**: the headset fills in the frames between the arcade's (off: each frame is shown twice).
-- **Super Resolution**: Meta's upscaling and sharpening.
-- **Dynamic resolution** and **Minimum resolution**: keep the frame rate locked in heavy scenes.
+- **Super Resolution**: Meta's sharpening, used when the picture is below Native. Above it the headset always smooths the
+  edges instead (sharpening there would make fine details shimmer).
+- **Dynamic resolution** and **Minimum resolution** (0.5 by default): keep the frame rate locked in heavy scenes.
 - **Maximum performance**: the headset's highest clocks (off saves battery, after a restart).
 
 **Game**
@@ -180,6 +214,8 @@ tuned.
 - **Volume**.
 - **Language**: *Auto* follows the headset; or English, Français, Deutsch, Español, Italiano, Português, Русский, 日本語,
   简体中文, 한국어.
+- **Offer to publish my times**: at the end of a game, the card that offers your times for the Discord leaderboard.
+- **Discord account**: shows the account this headset is linked to; switch it on to link one, off to forget it.
 
 **Mods** (all off by default: the cabinet as it is)
 - **Free timer**: the clock stops during the race. Drive as long as you like.
@@ -189,6 +225,27 @@ tuned.
 - **Mirrored track**: the whole track left for right, with the steering mirrored and the co-driver's "left" and "right"
   calls swapped (compound calls rebuilt from the original recordings) and the navigation arrows turned the right way.
 - **Telemetry**: a bar under the HUD during the race: speed, position, lap, gas and brake.
+
+## The leaderboard on Discord
+
+Your race times can go on the **#leaderboard** channel of the Port0r Discord, with your Discord name. Nothing is ever
+published unless you link your account yourself, and you choose each time.
+
+1. **Link your Discord, once.** The headset offers it at launch (or *Game > Discord account*). It shows a 4-letter code:
+   press **Open the page** to sign in with Discord in the headset's browser, or go to
+   **[alloxr.info/port0r/link](https://alloxr.info/port0r/link)** on your phone or computer and type the code. Signing in
+   joins you to the Port0r server and links the headset in one step. Already on the server? Send `!link CODE` to the
+   bot instead. Discord only tells us your name.
+2. **Race.** When the game is back to its demo (after the name entry), the headset offers the stages you finished.
+   Publish, and they are on the board a few seconds later, with a word from the co-driver.
+
+![Linking your Discord, in the headset](assets/discord-card.png)
+
+Each course has its own board, pinned in the channel and redrawn with every new time: the best time of each player, top
+30. Times set with the sporty automatic gearbox or the adaptive steering go on a separate *With aids* board, mirrored
+runs on a *Mirrored* one, and the free timer is never published.
+
+![The Desert board](assets/leaderboard-desert.png)
 
 ## Saves
 
@@ -203,7 +260,7 @@ across updates.
 ## Roadmap
 
 - **Time Crisis** (light gun, 120 Hz, real VR aiming): coming soon.
-- **Online leaderboard**: your best times published on our Discord, per track and per car.
+- **Championship board**: the arcade's real ranking, the total time of the three stages.
 - **Cockpit view**: a steering wheel and hands in the car, following your steering. Later, your real wheel in
   augmented reality.
 - **Arcade hall**: play on the cabinet itself, standing in a virtual arcade.
@@ -231,9 +288,27 @@ donor-only game, no early access for money.
 If you enjoy it, any help is more than welcome:
 
 - **Share it.** Post your clips, tell a friend, star this repository. It costs nothing and it matters a lot.
-- **Sponsor it** on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd), once or monthly.
+- **Buy me a coffee** on [Ko-fi](https://ko-fi.com/port0r), once or monthly.
+- **Sponsor it** on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd), once or monthly (your name in the
+  Sponsors list below and the Sponsor role on Discord, from $5).
 
 Donations support the engine's development. They are not a purchase of any game.
+
+## Troubleshooting
+
+- **The app is not in my Library.** Look under the filter at the top of the Library: *All* > **Unknown sources**. If
+  that entry is missing, Developer Mode is off or the headset was not restarted after turning it on.
+- **SideQuest stays orange / red.** Put the headset on and accept "Allow USB debugging" (tick *Always allow*); try
+  another USB-C cable (some only charge).
+- **My computer shows the headset as empty.** Put the headset on and accept "Allow access to data", then unplug and plug
+  it again.
+- **The app keeps saying files are missing.** Check the names (`srallyc.zip`, and `segabill.zip` only if asked), that
+  they are zips (not extracted folders), and that "All files access" is allowed: *Settings > Apps > Port0r: Rally VR >
+  Permissions*.
+- **The controllers do nothing.** Restart the headset (hold the power button > Restart).
+- **The game stutters.** Check that *Dynamic resolution* is on (*Smoothness* tab), or set *Resolution* to *Native*.
+- **Still stuck?** Ask the bot in `#ask-port0r` on [Discord](https://discord.gg/XMk7GgapuN): it knows this whole page
+  and answers in seconds, in your language.
 
 ## Report a bug
 

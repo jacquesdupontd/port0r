@@ -12,3 +12,9 @@
 - Mods: free timer, free play, sporty automatic gearbox, adaptive steering, mirrored track (co-driver mirrored too),
   telemetry bar; styles colour, black and white, comic, night.
 - The creek after the Desert checkpoint with its moving sky reflection, like the cabinet.
+- Discord leaderboard: link your Discord once (sign in from the headset's browser or alloxr.info/port0r/link, or
+  `!link CODE`), then publish the stages you finished at the end of a game; one board per course, top 30.
+- Resolution setting (Native / High / Maximum), High by default; dynamic resolution only lowers it under load, and the
+  headset smooths the picture above its native resolution.
+- HD textures sent to the GPU during the boot screens, kept from one course to the next: no hitch on the first hill.
+- Fixed screens (warning, logo, game over) at 120 Hz; the game over shows the SEGA RALLY logo like the cabinet.
