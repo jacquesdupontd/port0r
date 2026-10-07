@@ -325,10 +325,11 @@ Donations support the engine's development. They are not a purchase of any game.
 - **The app keeps saying files are missing.** Check the names (`srallyc.zip`, and `segabill.zip` only if asked), that
   they are zips (not extracted folders), and that "All files access" is allowed: *Settings > Apps > Port0r: Rally VR >
   Permissions*.
-- **The settings menu keeps coming back: I choose Sega Rally, press A, and land in the menu again.** MAME found your
-  files but couldn't start them (a red line at the bottom of the menu says *CHECK AUXILIARY ROM / AUDIT MAME*). Your
-  `srallyc.zip` (or `segabill.zip`) doesn't match MAME 0.289, usually a set from an older MAME version: check it with a
-  ROM manager (ClrMamePro, RomVault) against a recent MAME.
+- **I pick Sega Rally, press A, and land in a settings panel.** That's expected: press the blue **Resume** button at
+  the bottom of the panel (aim with the right controller, pull the trigger) and the game starts.
+- **Resume sends me back to the PORT0R list.** MAME found your files but couldn't start them (a red line at the bottom
+  says *CHECK AUXILIARY ROM / AUDIT MAME*): your `srallyc.zip` (or `segabill.zip`) doesn't match MAME 0.289, usually a
+  set from an older MAME version. Check it with a ROM manager (ClrMamePro, RomVault) against a recent MAME.
 - **The controllers do nothing.** Restart the headset (hold the power button > Restart).
 - **The game stutters.** Check that *Dynamic resolution* is on (*Smoothness* tab), or set *Resolution* to *Native*.
 - **Still stuck?** Ask the bot in `#ask-port0r` on [Discord](https://discord.gg/XMk7GgapuN): it knows this whole page
