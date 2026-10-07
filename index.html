@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Port0r: arcade classics in real 3D VR</title>
+<meta name="description" content="Port0r rebuilds classic arcade games in stereoscopic 3D: in the headset you stand inside the game, at real scale. Time Crisis VR, Cop VR and Rally VR, free on Meta Quest 3. Sega Rally also on Switch, Android, Steam Deck & Linux and Mac.">
+<meta property="og:title" content="Port0r: arcade classics in real 3D VR">
+<meta property="og:description" content="Be inside the arcade, not in front of it. Time Crisis VR, Cop VR and Rally VR, free on Meta Quest 3.">
+<meta property="og:image" content="https://port0r.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://port0r.com/">
+<meta name="theme-color" content="#0b0f19">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=20261016k">
+<link rel="preload" as="image" href="assets/hero-rally.jpg" media="(min-aspect-ratio: 4/5)">
+<link rel="preload" as="image" href="assets/hero-rally-portrait.jpg" media="(max-aspect-ratio: 4/5)">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Organization", "name": "Port0r", "url": "https://port0r.com/",
+ "logo": "https://port0r.com/assets/icon.png", "email": "contact@port0r.com",
+ "description": "Port0r rebuilds classic arcade games in stereoscopic 3D: Port0r: Time Crisis VR (Time Crisis), Port0r: Cop VR (Virtua Cop) and Port0r: Rally VR (Sega Rally), free on Meta Quest 3; Sega Rally also on Nintendo Switch, Android, Steam Deck & Linux and Mac. The official Discord is https://discord.gg/XMk7GgapuN.",
+ "sameAs": ["https://discord.gg/XMk7GgapuN", "https://github.com/jacquesdupontd/port0r", "https://port0r.itch.io/", "https://ko-fi.com/port0r", "https://github.com/sponsors/jacquesdupontd", "https://www.youtube.com/@port0r"]}
+</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the content</a>
+<!-- the anaglyph's two eyes: the red channel alone, the green and blue channels alone (screened together: the picture) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="eye-red" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/></filter>
+  <filter id="eye-cyan" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/></filter>
+</svg>
+
+<header class="top over" id="top">
+  <div class="wrap">
+    <a class="mark" href="./" aria-label="Port0r, home"><img class="on-light" src="assets/wordmark.svg" alt="Port0r" width="116" height="24"><img class="on-dark" src="assets/wordmark-light.svg" alt="" width="116" height="24"></a>
+    <nav aria-label="Sections">
+      <a href="#games">Games</a>
+      <a href="#live">Live</a>
+      <a class="opt" href="#everywhere">Everywhere</a>
+      <a class="opt" href="leaderboard.html">Leaderboards</a>
+      <a class="btn sm" href="https://discord.gg/XMk7GgapuN">Discord</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+<section class="hero" id="hero" aria-label="Port0r">
+  <div class="hero-media" aria-hidden="true">
+    <video muted loop playsinline preload="auto" poster="assets/hero-rally.jpg"
+      data-wide="assets/hero-rally.mp4" data-wide-poster="assets/hero-rally.jpg"
+      data-tall="assets/hero-rally-portrait.mp4" data-tall-poster="assets/hero-rally-portrait.jpg"></video>
+    <div class="hero-eyes"><img class="eye l" alt=""><img class="eye r" alt=""></div>
+  </div>
+  <div class="wrap hero-copy">
+    <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>Free · Meta Quest 3</span>
+    <h1>Be <span class="stereo">inside</span> the arcade,<br> <span class="hl">not in front of it.</span></h1>
+    <p class="lead">Port0r rebuilds the arcade's own 3D for each eye: in the headset you stand in the scene, at real scale. Free, on Meta Quest 3.</p>
+    <div class="row">
+      <a class="btn yellow" href="#games">Get the games</a>
+      <button class="btn glass" type="button" data-watch="FqwEK0hJ_Yc"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the video</button>
+    </div>
+    <p class="rec"><span class="dot" aria-hidden="true"></span>Rally VR, recorded in the headset</p>
+  </div>
+  <div class="strip">
+    <a class="wrap" href="#live" aria-label="The live numbers">
+      <span class="live"><span class="dot" aria-hidden="true"></span>LIVE</span>
+      <span class="n"><b data-n="downloads">&nbsp;</b><small>Downloads</small></span>
+      <span class="n"><b data-n="youtube_views">&nbsp;</b><small>YouTube views</small></span>
+      <span class="n"><b data-n="reddit_views">&nbsp;</b><small>Reddit views</small></span>
+      <span class="n"><b data-n="discord">&nbsp;</b><small>On Discord</small></span>
+    </a>
+  </div>
+</section>
+
+<section class="band" id="games">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker">In VR · Meta Quest 3</p>
+      <h2 class="converge">Three cabinets, <span class="hl">rebuilt around you.</span></h2>
+      <p class="lead">Every video here was recorded in the headset: what you see is what you play.</p>
+    </header>
+
+    <div class="games">
+      <article class="game rise" id="time-crisis-vr" data-game="timecris">
+        <div class="stage">
+          <button class="yt" type="button" data-id="F7Ig3bwq7K8" aria-label="Play the Time Crisis VR video"><img src="assets/yt/F7Ig3bwq7K8.jpg" alt="Time Crisis in VR: the warehouse, the gun in hand" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="F7Ig3bwq7K8"></span></button>
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-timecris.jpg" data-src="assets/clip-timecris.mp4" aria-label="Time Crisis VR, recorded in the headset: the cave, the forklift blown up, the gun in hand"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
+        </div>
+        <div class="extra">
+            <div class="nums" data-g="timecris">
+              <div><b data-k="downloads">&nbsp;</b><small>Downloads</small></div>
+              <div><b data-k="views">&nbsp;</b><small>Views</small></div>
+              <div><b data-k="comments">&nbsp;</b><small>Comments</small></div>
+            </div>
+            <figure class="said" data-said="timecris" hidden><q></q><cite></cite></figure>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.2.1</span><span class="kicker">Namco · 1995 · System 22</span></div>
+          <h3>Time Crisis <span class="hl">in VR</span></h3>
+          <p class="new"><b>New in 0.2.1</b>A gloved hand holds the gun, left-handed mode, 72, 90 or 120 Hz.</p>
+          <ul class="feat">
+            <li>On the island with the soldiers, at real scale</li>
+            <li>Take cover with the pedal button, or crouch for real</li>
+            <li>A 3D gun in your hand, the shots land where you aim</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.1">Download</a>
+            <a class="btn soft" href="time-crisis-vr/">The game's page</a>
+            <a class="link" href="https://sidequestvr.com/app/63135/port0r-time-crisis-vr">SideQuest</a>
+            <a class="link" href="https://port0r.itch.io/time-crisis-vr">itch.io</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="game flip rise" id="cop-vr" data-game="cop">
+        <div class="stage">
+          <button class="yt" type="button" data-id="1qCQorbbdPc" aria-label="Play the Cop VR video"><img src="assets/yt/1qCQorbbdPc.jpg" alt="Virtua Cop in VR: the docks, a gangster in the sights" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="1qCQorbbdPc"></span></button>
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-copvr.jpg" data-src="assets/clip-copvr.mp4" aria-label="Cop VR, recorded in the headset: the docks, a gangster in the sights"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
+        </div>
+        <div class="extra">
+            <div class="nums" data-g="cop">
+              <div><b data-k="downloads">&nbsp;</b><small>Downloads</small></div>
+              <div><b data-k="views">&nbsp;</b><small>Views</small></div>
+              <div><b data-k="comments">&nbsp;</b><small>Comments</small></div>
+            </div>
+            <figure class="said" data-said="cop" hidden><q></q><cite></cite></figure>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.2.1</span><span class="kicker">Sega · 1994 · Model 2</span></div>
+          <h3>Virtua Cop <span class="hl">in VR</span></h3>
+          <p class="new"><b>New in 0.2.1</b>Your hand and arm on the gun, two guns, left-handed mode, the cabinet's zooms back.</p>
+          <ul class="feat">
+            <li>Sega's blue Virtua Gun in your hand, like on the cabinet</li>
+            <li>The weapons you pick up, in 3D</li>
+            <li>The cabinet's camera zooms become a move into the docks</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1">Download</a>
+            <a class="btn soft" href="cop-vr/">The game's page</a>
+            <a class="link" href="https://sidequestvr.com/app/63134/port0r-cop-vr">SideQuest</a>
+            <a class="link" href="https://port0r.itch.io/cop-vr">itch.io</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="game rise" id="rally-vr" data-game="rally">
+        <div class="stage">
+          <button class="yt" type="button" data-id="FqwEK0hJ_Yc" aria-label="Play the Rally VR video"><img src="assets/yt/FqwEK0hJ_Yc.jpg" alt="Sega Rally in VR: the mountain stage, behind the Celica" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="FqwEK0hJ_Yc"></span></button>
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-rally.jpg" data-src="assets/clip-rally.mp4" aria-label="Rally VR, recorded in the headset: the mountain stage, behind the Lancia"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
+        </div>
+        <div class="extra">
+            <div class="nums" data-g="rally">
+              <div><b data-k="downloads">&nbsp;</b><small>Downloads</small></div>
+              <div><b data-k="views">&nbsp;</b><small>Views</small></div>
+              <div><b data-k="comments">&nbsp;</b><small>Comments</small></div>
+            </div>
+            <figure class="said" data-said="rally" hidden><q></q><cite></cite></figure>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.2.6</span><span class="kicker">Sega · 1995 · Model 2A</span></div>
+          <h3>Sega Rally <span class="hl">in VR</span></h3>
+          <p class="new"><b>New in 0.2.6</b>The cabinet's own settings: course length and difficulty, from the Mods menu.</p>
+          <ul class="feat">
+            <li>The whole race in real 3D around you, at real scale</li>
+            <li>Gears on the side grips, the knocks in your hands</li>
+            <li>Jean-seb's HD textures, if you add them</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.6">Download</a>
+            <a class="btn soft" href="rally-vr/">The game's page</a>
+            <a class="link" href="https://sidequestvr.com/app/62980">SideQuest</a>
+            <a class="link" href="https://port0r.itch.io/rally-vr">itch.io</a>
+          </div>
+        </div>
+      </article>
+
+      <aside class="next rise" aria-label="Coming next on Meta Quest">
+        <div>
+          <p class="kicker" style="color:rgb(255 255 255 / .6)">Next on Meta Quest</p>
+          <h3 style="margin-top:12px">The House of the Dead <span class="hl">comes out next.</span></h3>
+          <p>Its beta is on the Discord. Then the others, one app at a time. No dates.</p>
+          <ul class="queue">
+            <li>The House of the Dead</li><li>Daytona USA</li><li>Time Crisis II</li><li>Dirt Dash</li><li>Top Skater</li>
+            <li>Sega Super GT 24h</li><li>Virtua Racing</li>
+          </ul>
+        </div>
+        <a class="btn yellow" href="https://discord.gg/XMk7GgapuN">Join the beta</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="live-band" id="live" aria-labelledby="live-title">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker"><span class="dot" aria-hidden="true"></span>Live · read every 30 minutes</p>
+      <h2 class="converge" id="live-title">The numbers, <span class="hl" style="--c:var(--ink);--on:var(--yellow)">right now.</span></h2>
+      <p class="lead">Read from YouTube, Reddit, GitHub, itch.io, SideQuest and Discord, and counted honestly: the comments are the players' own, without our replies.</p>
+    </header>
+    <div class="board" id="board">
+      <div class="stat" data-stat="downloads"><span class="lbl">Downloads</span><b class="big">&nbsp;</b><div class="trend"><span class="delta"></span><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+      <div class="stat" data-stat="youtube_views"><span class="lbl">YouTube views</span><b class="big">&nbsp;</b><div class="trend"><span class="delta"></span><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+      <div class="stat" data-stat="reddit_views"><span class="lbl">Reddit views</span><b class="big">&nbsp;</b><div class="trend"><span class="delta"></span><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+      <div class="stat" data-stat="comments"><span class="lbl">Players' comments</span><b class="big">&nbsp;</b><div class="trend"><span class="delta"></span><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+      <div class="stat" data-stat="votes"><span class="lbl">Reddit upvotes</span><b class="big">&nbsp;</b><div class="trend"><span class="delta"></span><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+      <div class="stat" data-stat="discord"><span class="lbl">On the Discord</span><b class="big">&nbsp;</b><div class="trend"><span class="delta"></span><svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+    </div>
+    <p class="live-note" id="live-note">Loading the numbers…</p>
+  </div>
+</section>
+
+<section class="voices" id="players" aria-labelledby="voices-title">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker">From the comments</p>
+      <h2 class="converge" id="voices-title">What players <span class="hl" style="--c:var(--yellow);--on:var(--ink)">say.</span></h2>
+      <p class="lead">Every comment players wrote under our posts and videos, on Reddit, YouTube and Facebook. They turn by themselves: pick a game to hear its own.</p>
+    </header>
+    <div class="filters" id="filters" role="group" aria-label="Whose words"></div>
+    <figure class="quote" id="quote" aria-live="polite">
+      <blockquote id="q-text">&nbsp;</blockquote>
+      <figcaption class="who" id="q-who"></figcaption>
+    </figure>
+    <div class="qbar">
+      <button type="button" id="q-prev" aria-label="Previous comment"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg></button>
+      <button type="button" id="q-pause" aria-label="Pause"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+      <button type="button" id="q-next" aria-label="Next comment"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 6 8.6 7.4l4.6 4.6-4.6 4.6L10 18l6-6z"/></svg></button>
+      <span class="track" aria-hidden="true"><i id="q-track"></i></span>
+      <span class="count" id="q-count"></span>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="everywhere">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker">Sega Rally Championship · on a screen</p>
+      <h2 class="converge">Sega Rally, <span class="hl">everywhere.</span></h2>
+      <p class="lead">The same port without a headset: on your TV, your phone, a Steam Deck or a Mac.</p>
+    </header>
+    <div class="plats">
+      <article class="plat rise" data-game="switch">
+        <button class="yt" type="button" data-id="nC8Lj6FlHLE" aria-label="Play the Nintendo Switch video"><img src="assets/yt/nC8Lj6FlHLE.jpg" alt="Sega Rally on Nintendo Switch" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="nC8Lj6FlHLE"></span></button>
+        <div class="body">
+          <h3>Sega Rally <span class="hl">on Switch</span></h3>
+          <p class="spec"><span>v0.5.3 · homebrew · 42 MB</span><span><b data-g="switch" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p>Joy-Con or Pro Controller, docked or handheld. Updates from inside the game.</p>
+          <figure class="said" data-said="switch" hidden><q></q><cite></cite></figure>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SWITCH.md">Install guide</a></div>
+        </div>
+      </article>
+      <article class="plat rise" data-game="android">
+        <button class="yt" type="button" data-id="hZXkqHSjeHs" aria-label="Play the Android video"><img src="assets/yt/hZXkqHSjeHs.jpg" alt="Sega Rally on Android, with its touch controls" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="hZXkqHSjeHs"></span></button>
+        <div class="body">
+          <h3>Sega Rally <span class="hl">on Android</span></h3>
+          <p class="spec"><span>v0.1.2 · APK · 82 MB</span><span><b data-g="android" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p>Phones and tablets: touch controls or a gamepad.</p>
+          <figure class="said" data-said="android" hidden><q></q><cite></cite></figure>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/ANDROID.md">Install guide</a></div>
+        </div>
+      </article>
+      <article class="plat rise" data-game="linux">
+        <button class="yt" type="button" data-id="54HLGGeziXg" aria-label="Play the Steam Deck and Linux video"><img src="assets/yt/54HLGGeziXg.jpg" alt="Sega Rally on Steam Deck and Linux" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="54HLGGeziXg"></span></button>
+        <div class="body">
+          <h3>Sega Rally <span class="hl">on Steam Deck</span></h3>
+          <p class="spec"><span>v0.1.1 · Linux x86-64 · 34 MB</span><span><b data-g="linux" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p>The Deck's controls, every gamepad plugged in, or the keyboard.</p>
+          <figure class="said" data-said="linux" hidden><q></q><cite></cite></figure>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/LINUX.md">Install guide</a></div>
+        </div>
+      </article>
+      <article class="plat rise" data-game="mac">
+        <button class="yt" type="button" data-id="vO_EbBZjnuQ" aria-label="Play the Mac video"><img src="assets/yt/vO_EbBZjnuQ.jpg" alt="Sega Rally on Mac" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="vO_EbBZjnuQ"></span></button>
+        <div class="body">
+          <h3>Sega Rally <span class="hl">on Mac</span></h3>
+          <p class="spec"><span>v0.1.0 · Apple silicon · 34 MB</span><span><b data-g="mac" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p>A gamepad or the keyboard, in a window or full screen.</p>
+          <figure class="said" data-said="mac" hidden><q></q><cite></cite></figure>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/MAC.md">Install guide</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="leaderboards">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker">Published from the headset</p>
+      <h2 class="converge">The boards, <span class="hl">live.</span></h2>
+      <p class="lead">At the end of a game, the headset offers to publish your times or your score on the Port0r Discord. They land here as well.</p>
+    </header>
+    <div class="lbs" id="lbs">
+      <article class="lb" data-game="srallyc"><h3>Rally VR</h3><p class="rule">The best time per player on each course, and the whole championship in one game.</p><div class="tbls"></div></article>
+      <article class="lb" data-game="vcop"><h3>Cop VR</h3><p class="rule">The best score per player.</p><div class="tbls"></div></article>
+      <article class="lb" data-game="timecris"><h3>Time Crisis VR</h3><p class="rule">The cabinet's own Timed Game (shoot TIMED GAME on its mode screen, then a stage): the best time per player on each stage.</p><div class="tbls"></div></article>
+    </div>
+    <div class="row" style="margin-top:28px"><a class="btn" href="leaderboard.html">All the boards</a></div>
+  </div>
+</section>
+
+<section class="band alt" id="install">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker">Meta Quest 3</p>
+      <h2 class="converge">Install in <span class="hl">three steps.</span></h2>
+    </header>
+    <ol class="steps">
+      <li><b>Developer mode</b><span>Once, from the Meta Horizon app on your phone.</span></li>
+      <li><b>SideQuest or adb</b><span>One click from the game's SideQuest page, or the APK with <code>adb install -r</code>.</span></li>
+      <li><b>Your game files</b><span>The MAME 0.289 sets, copied anywhere on the headset: the app finds them.</span></li>
+    </ol>
+    <a class="link" href="https://github.com/jacquesdupontd/port0r#install-on-meta-quest-time-crisis-vr-cop-vr-and-rally-vr">The step-by-step guide, with pictures</a>
+  </div>
+</section>
+
+<section class="band" id="join">
+  <div class="wrap duo">
+    <div class="panel discord rise">
+      <p class="kicker" style="color:rgb(255 255 255 / .7)">The Port0r Discord</p>
+      <p class="big" data-n="discord">&nbsp;</p>
+      <h3>Players, <span class="hl">and counting.</span></h3>
+      <p>Help in seconds from the bot and the players, the betas before anyone, the leaderboards, and the next games as soon as they are out.</p>
+      <a class="btn white" href="https://discord.gg/XMk7GgapuN">Join the Discord</a>
+    </div>
+    <div class="panel give rise">
+      <p class="kicker">Free, every port, every update</p>
+      <h3>No price. No ads. <span class="hl">No account.</span></h3>
+      <p>Port0r is free. It takes all my days, and often more: if you like it, a little help on Ko-fi or GitHub Sponsors is very welcome. Sharing it helps a lot too.</p>
+      <div class="gives">
+        <a href="https://ko-fi.com/port0r">
+          <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.9 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM2 21h18v-2H2v2z"/></svg></span>
+          <span><b>Ko-fi</b><small>A coffee, once or monthly</small></span>
+          <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+        <a href="https://github.com/sponsors/jacquesdupontd">
+          <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+          <span><b>GitHub Sponsors</b><small>Monthly, from your GitHub account</small></span>
+          <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="assets/wordmark-light.svg" alt="Port0r" width="106" height="22">
+    <nav aria-label="Elsewhere">
+      <a href="https://discord.gg/XMk7GgapuN">Discord</a>
+      <a href="https://github.com/jacquesdupontd/port0r">GitHub</a>
+      <a href="https://port0r.itch.io/">itch.io</a>
+      <a href="/stats/">The numbers in detail</a>
+      <a href="https://ko-fi.com/port0r">Ko-fi</a>
+      <a href="https://github.com/sponsors/jacquesdupontd">Sponsors</a>
+      <a href="mailto:contact@port0r.com">contact@port0r.com</a>
+    </nav>
+    <p class="legal">Port0r is a free fan project. Not affiliated with SEGA, Bandai Namco or Meta.</p>
+  </div>
+</footer>
+
+<dialog class="watch" id="watch" aria-label="Video"><div class="watch-in"><button type="button" class="watch-x" aria-label="Close" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button><div class="watch-frame"></div></div></dialog>
+
+<script src="site.js?v=20261016k" defer></script>
+</body>
+</html>

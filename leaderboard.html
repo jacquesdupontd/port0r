@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Port0r leaderboards</title>
+<meta name="description" content="The Port0r leaderboards, live: Rally VR's best times per course, Cop VR's best scores, Time Crisis VR's Timed Game stage times, published from the headset.">
+<meta property="og:title" content="Port0r leaderboards">
+<meta property="og:image" content="https://port0r.com/assets/og.jpg">
+<meta name="theme-color" content="#f3f5f9">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=20261016k">
+</head>
+<body>
+<a class="skip" href="#content">Skip to the content</a>
+<header class="top solid" id="top">
+  <div class="wrap">
+    <a class="mark" href="./" aria-label="Port0r, home"><img class="on-light" src="assets/wordmark.svg" alt="Port0r" width="116" height="24"><img class="on-dark" src="assets/wordmark-light.svg" alt="" width="116" height="24"></a>
+    <nav aria-label="Sections">
+      <a href="./#games">Games</a>
+      <a href="./#live">Live</a>
+      <a class="opt" href="./#everywhere">Everywhere</a>
+      <a class="opt" href="leaderboard.html" aria-current="page">Leaderboards</a>
+      <a class="btn sm" href="https://discord.gg/XMk7GgapuN">Discord</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Published from the headset · live</p>
+    <h1 style="margin-top:14px">The <span class="hl">leaderboards.</span></h1>
+    <p class="lead">At the end of a game, the headset offers to publish your times or your score on the Port0r Discord, and they land here. Link the headset to the Discord once, from the app's settings panel.</p>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="wrap">
+    <div class="tabs" role="tablist" aria-label="Game">
+      <button role="tab" type="button" aria-selected="true" data-game="srallyc">Rally VR</button>
+      <button role="tab" type="button" aria-selected="false" data-game="vcop">Cop VR</button>
+      <button role="tab" type="button" aria-selected="false" data-game="timecris">Time Crisis VR</button>
+    </div>
+    <div id="prize"></div>
+    <div id="boards" class="grid-boards" aria-live="polite"></div>
+    <p class="live-note" id="note" style="color:var(--ink-3)"></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="assets/wordmark-light.svg" alt="Port0r" width="106" height="22">
+    <nav aria-label="Elsewhere">
+      <a href="https://discord.gg/XMk7GgapuN">Discord</a>
+      <a href="https://github.com/jacquesdupontd/port0r">GitHub</a>
+      <a href="https://port0r.itch.io/">itch.io</a>
+      <a href="/stats/">The numbers in detail</a>
+      <a href="https://ko-fi.com/port0r">Ko-fi</a>
+      <a href="mailto:contact@port0r.com">contact@port0r.com</a>
+    </nav>
+    <p class="legal">Port0r is a free fan project. Not affiliated with SEGA, Bandai Namco or Meta.</p>
+  </div>
+</footer>
+
+<script src="site.js?v=20261016k" defer></script>
+<script>
+// The boards in full (16/10/2026): the bot's public files, read every minute. A race game (Rally VR's courses, Time Crisis's
+// Timed Game stages) is one board per course and category, a score game (Cop VR) is this week and all time.
+(() => {
+  const API = "https://alloxr.info/port0r/api/board/";
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const full = (n) => Math.round(n).toLocaleString("en-US").replace(/,/g, " ");
+  const time = (s) => { const cs = Math.round(s * 100); return `${Math.floor(cs / 6000)}'${String(Math.floor(cs / 100) % 60).padStart(2, "0")}"${String(cs % 100).padStart(2, "0")}`; };
+  const day = (d) => d ? new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "";
+  const rows = (list, val, empty) => list && list.length
+    ? `<ol>${list.map((r, i) => `<li><span class="rk">${i + 1}</span><span class="nm">${esc(r.name)}<small style="display:block;font-weight:500;color:var(--ink-3);font-size:12px">${esc(day(r.date))}</small></span><span class="sc">${val(r)}</span></li>`).join("")}</ol>`
+    : `<ol><li class="empty">${esc(empty)}</li></ol>`;
+  const card = (cls, title, sub, body) => `<article class="lb" data-game="${cls}"><h3>${esc(title)}</h3>${sub ? `<p class="rule">${sub}</p>` : ""}<div class="tbl">${body}</div></article>`;
+  let game = (location.hash || "").slice(1) || "srallyc";
+  if (!["srallyc", "vcop", "timecris"].includes(game)) game = "srallyc";
+  async function show() {
+    document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.game === game)));
+    let d;
+    try { d = await (await fetch(API + game + ".json", { cache: "no-store" })).json(); }
+    catch (e) { $("#prize").innerHTML = ""; $("#boards").innerHTML = `<p class="lead">The boards cannot be reached right now. They come back by themselves.</p>`; return; }
+    if (d.boards) {
+      const p = d.prize;
+      $("#prize").innerHTML = !p ? "" : `<div class="prize">${p.bar
+        ? `Something is hidden in ${esc(d.title)}. <b>Beat ${time(p.bar)} on ${esc(p.course)}</b> (${esc(p.category)}) and it is yours.`
+        : `Something is hidden in ${esc(d.title)}. <b>The best ${esc(p.course)} time</b> of its ${esc(p.category)} in the week ending ${new Date(Date.parse(p.first_week_ends) - 1000).toLocaleDateString("en-GB", { day: "numeric", month: "long" })} wins it, then whoever beats that time.`}</div>`;
+      const cats = [...new Set(d.boards.map((b) => b.category))];
+      const html = d.boards.map((b) => card(game, b.course, `${esc(b.category)}${b.championship ? " · Desert + Forest + Mountain in one game" : ""} · ${b.rows.length} player${b.rows.length > 1 ? "s" : ""}`,
+        rows(b.rows, (r) => time(r.seconds), "No time yet")));
+      $("#boards").innerHTML = html.length ? html.join("") : card(game, d.title, "", rows([], null, game === "timecris" ? "No time yet. On the cabinet's mode screen shoot TIMED GAME, pick a stage, clear it, and publish your time from the headset." : "No time yet. Be the first."));
+      $("#note").textContent = d.times ? `${full(d.times)} times published by ${d.players} player${d.players > 1 ? "s" : ""}${cats.length > 1 ? `, in ${cats.length} categories` : ""}.` : "";
+      const w = (p && p.winners) || [];
+      if (w.length) $("#boards").insertAdjacentHTML("beforeend", card(game, "Winners", "The hidden gun", rows(w.map((x) => ({ name: x.name, date: "" , v: x })), (r) => `${esc(String(r.v.week).split("-W")[1] ? "Week " + String(r.v.week).split("-W")[1] : r.v.week)} · ${time(r.v.seconds)}`, "")));
+      return;
+    }
+    const ends = d.week_ends ? new Date(Date.parse(d.week_ends) - 1000).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "Europe/Paris" }) : "";
+    $("#prize").innerHTML = `<div class="prize">${d.bar ? `Something is hidden in ${esc(d.title)}. <b>Beat ${full(d.bar)}</b> and it is yours.`
+      : `Something is hidden in ${esc(d.title)}. <b>The best score of the first week wins it</b>, and sets the score to beat.`}</div>`;
+    const blocks = [card(game, "This week", ends ? `Ends ${esc(ends)}` : "", rows(d.this_week, (r) => full(r.score), "No score yet this week.")),
+                    card(game, "All time", "The best score per player", rows(d.all_time, (r) => full(r.score), "Waiting for the first score."))];
+    if (d.winners && d.winners.length) blocks.push(card(game, "Winners", "The hidden gun", rows(d.winners.map((x) => ({ name: x.name, date: "", v: x })), (r) => `Week ${esc(String(r.v.week).split("-W")[1] || r.v.week)} · ${full(r.v.score)}`, "")));
+    $("#boards").innerHTML = blocks.join("");
+    $("#note").textContent = "";
+  }
+  document.querySelector(".tabs").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-game]");
+    if (!b) return;
+    game = b.dataset.game; history.replaceState(null, "", "#" + game); show();
+  });
+  show();
+  setInterval(() => { if (!document.hidden) show(); }, 60000);
+})();
+</script>
+</body>
+</html>
