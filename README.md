@@ -12,6 +12,11 @@
 
 **Arcade classics in true stereoscopic 3D, on Meta Quest.**
 
+> ### Download Port0r: Rally VR v0.2.0 (free)
+> **[Port0r-RallyVR-v0.2.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.0/Port0r-RallyVR-v0.2.0-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
+> Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time. You bring your own game files.
+> The app's own source code is not public for now: this repository holds the releases, the guide and the issue tracker.
+
 Not a flat screen floating in a dark room. Port0r takes the real 3D scene the arcade board draws, rebuilds it for each
 of your eyes and puts you inside it, at real scale. The car sits in front of you, the hills have volume, the trees
 pass by your shoulder, the speed is physical. Be inside the arcade, not in front of it.
@@ -339,3 +344,9 @@ Meta or any rights holder.** All trademarks and game content belong to their own
 
 Port0r's own source code is not public for now. The open-source components it uses are listed, with their licenses, in
 `THIRD-PARTY-NOTICES.txt`.
+
+---
+
+## Download
+
+**[Port0r-RallyVR-v0.2.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.0/Port0r-RallyVR-v0.2.0-quest3.apk)**, free, from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest) or [itch.io](https://port0r.itch.io/rally-vr). Install guide: [above](#install-port0r-rally-vr). Help: [Discord](https://discord.gg/XMk7GgapuN).
