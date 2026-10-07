@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<script>
+(function () {   /* the public mirror: the bridge's answers are files next to this page */
+  var real = window.fetch.bind(window);
+  var json = function (o) { return Promise.resolve(new Response(JSON.stringify(o), { headers: { 'Content-Type': 'application/json' } })); };
+  window.fetch = function (u, o) {
+    var s = String(u && u.url || u);
+    if (s.indexOf('/api/port0r/stats') === 0) return real('stats.json?t=' + Date.now(), { cache: 'no-store' });
+    if (s.indexOf('/api/port0r/discord') === 0) return real('discord.json?t=' + Date.now(), { cache: 'no-store' });
+    if (s.indexOf('/api/port0r/achievements') === 0) return real('achievements.json?t=' + Date.now(), { cache: 'no-store' });
+    if (s.indexOf('/api/themes/') === 0) return real('theme.json');
+    if (s.indexOf('/api/') === 0) return json({});
+    return real(u, o);
+  };
+})();
+</script>
+<style>
+  /* owner only: the buttons that act, the forms, the Discord monitor's people and messages */
+  #relever, section:has(#ajout), #b-manuel, form.manuel, [data-retirer], #live > section:first-child, #dc-nouveaux, #dc-fil { display: none !important; }
+  #live { grid-template-columns: 1fr !important; }
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Port0r Rally VR · les chiffres du lancement, en direct</title>
+<meta name="description" content="Sega Rally Championship (1995) en vraie 3D sur Meta Quest 3 : vues, votes, commentaires et téléchargements du lancement, relevés toutes les 30 minutes.">
+<meta property="og:title" content="Port0r Rally VR · les chiffres du lancement, en direct">
+<meta property="og:description" content="Sega Rally Championship (1995) en vraie 3D sur Meta Quest 3. Relevé toutes les 30 minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="igor.css">
+<script src="igor.js"></script>
+<style>
+/* Port0r — le tableau de télémétrie du lancement. Tout en jetons du thème ; la seule couleur propre au sujet est le
+   jaune des chiffres du jeu (Sega Rally), en repli d'un jeton d'accentuation. */
+:root {
+  --p0-num: var(--font-display, 'Barlow Condensed', var(--font-family-primary, sans-serif));
+  --p0-hot: var(--warning, #ffc531);
+  --p0-gap: clamp(12px, 2.4vw, 22px);
+}
+body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-family-primary, sans-serif);
+  margin: 0; font-size: var(--t-corps, 15px); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: var(--p0-gap) var(--p0-gap) 64px; }
+
+/* en-tête */
+.tete { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 20px; margin-bottom: var(--p0-gap); }
+.tete h1 { margin: 0; display: flex; align-items: center; gap: 10px; font-size: clamp(24px, 3.4vw, 34px); letter-spacing: -.01em; }
+.tete h1 .material-symbols-outlined { font-size: 1.1em; color: var(--accent); }
+.tete .sous { color: var(--text-secondary); font-size: var(--t-second, 13px); margin-top: 6px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.periodes { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--bg-secondary); }
+.periodes button { appearance: none; border: 0; background: transparent; color: var(--text-secondary); font: inherit;
+  font-size: var(--t-second, 13px); padding: 7px 13px; border-radius: 999px; cursor: pointer; min-height: 34px; }
+.periodes button:hover { color: var(--text-primary); }
+.periodes button.active { background: var(--bg-elevated, var(--bg-card)); color: var(--text-primary); font-weight: 600; }
+.bouton { appearance: none; border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; font: inherit;
+  font-weight: 600; font-size: var(--t-second, 13px); padding: 9px 15px; min-height: 36px; border-radius: 999px;
+  background: var(--accent); color: var(--btn-primary-text, #fff); transition: transform .15s ease, filter .15s ease; }
+.bouton:hover { filter: brightness(1.08); } .bouton:active { transform: scale(.97); }
+.bouton .material-symbols-outlined { font-size: 18px; }
+.bouton.tourne .material-symbols-outlined { animation: p0spin 1s linear infinite; }
+@keyframes p0spin { to { transform: rotate(360deg); } }
+.fraicheur { color: var(--text-muted); font-size: var(--t-meta, 12px); display: inline-flex; align-items: center; gap: 6px; }
+.fraicheur i { width: 7px; height: 7px; border-radius: 50%; background: var(--success, #3ecf8e); display: inline-block; }
+.fraicheur.vieux i { background: var(--warning, #f5a623); }
+
+/* chiffres clés */
+.kpis { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin-bottom: calc(var(--p0-gap) * 1.2); }
+.kpi { background: var(--bg-card); border-radius: var(--radius-lg, 18px); padding: 16px 16px 10px; position: relative; overflow: hidden;
+  min-height: 132px; display: flex; flex-direction: column; }
+.kpi .lib { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); font-size: var(--t-meta, 12px);
+  text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+.kpi .lib .material-symbols-outlined { font-size: 16px; color: var(--accent); }
+.kpi .val { font-family: var(--p0-num); font-style: italic; font-weight: 800; font-size: clamp(34px, 4.2vw, 48px);
+  line-height: 1; margin-top: 10px; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.kpi.hero .val { color: var(--p0-hot); }
+.delta { font-size: var(--t-meta, 12px); font-weight: 700; margin-top: 6px; color: var(--text-muted); }
+.delta.up { color: var(--success, #3ecf8e); }
+.kpi svg { width: 100%; height: 36px; margin-top: auto; display: block; color: var(--accent); }
+.kpi.hero svg { color: var(--p0-hot); }
+
+/* onglets par plateforme (10/10, Guillaume : « des onglets par plateforme pour les stats et un truc plus général tout
+   en haut ») : la vue d'ensemble, puis chaque version du jeu */
+.onglets { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; margin: 0 0 var(--p0-gap); border-radius: var(--radius-lg, 18px);
+  background: var(--bg-secondary); }
+.onglets button { appearance: none; border: 0; background: transparent; color: var(--text-secondary); font: inherit; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: var(--radius-md, 12px); cursor: pointer;
+  white-space: nowrap; flex: 1 1 auto; justify-content: center; }
+.onglets button .material-symbols-outlined { font-size: 19px; }
+.onglets button:hover { color: var(--text-primary); }
+.onglets button.active { background: var(--bg-elevated, var(--bg-card)); color: var(--text-primary); }
+.onglets button.active .material-symbols-outlined { color: var(--accent); }
+/* la vue d'ensemble : une carte par plateforme, qui ouvre son onglet */
+.plateformes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: calc(var(--p0-gap) * 1.2); }
+.pf-carte { appearance: none; border: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--bg-card);
+  border-radius: var(--radius-lg, 18px); padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.pf-carte:hover { background: var(--bg-elevated, var(--bg-card)); }
+.pf-carte .nom { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.pf-carte .nom .material-symbols-outlined { color: var(--accent); font-size: 20px; }
+.pf-carte .nom .aller { margin-left: auto; color: var(--text-muted); font-size: 18px; }
+.pf-carte .gros { font-family: var(--p0-num); font-style: italic; font-weight: 800; font-size: clamp(30px, 3.4vw, 40px); line-height: 1;
+  color: var(--p0-hot); font-variant-numeric: tabular-nums; margin-top: 4px; }
+.pf-carte .gros small { font-family: var(--font-family-primary, sans-serif); font-style: normal; font-weight: 600; font-size: var(--t-meta, 12px);
+  color: var(--text-secondary); margin-left: 6px; }
+.pf-carte .petits { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--text-secondary); font-size: var(--t-meta, 12px); }
+.pf-carte .petits b { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.pf-carte svg { width: 100%; height: 30px; display: block; color: var(--p0-hot); margin-top: auto; }
+
+/* sections */
+.hors-onglet { display: none !important; }
+.grille { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: var(--p0-gap); align-items: start; }
+.bloc { background: var(--bg-card); border-radius: var(--radius-lg, 18px); padding: 18px 18px 8px; margin-bottom: var(--p0-gap); }
+.bloc > h2 { display: flex; align-items: center; gap: 8px; margin: 0 0 4px; font-size: var(--t-corps, 15px); }
+.bloc > h2 .material-symbols-outlined { color: var(--accent); font-size: 20px; }
+.bloc > h2 .compte { margin-left: auto; color: var(--text-muted); font-weight: 500; font-size: var(--t-meta, 12px); }
+.bloc > .aide { color: var(--text-muted); font-size: var(--t-meta, 12px); margin: 0 0 10px; }
+/* the achievements (07/10): a thumbnail of each capture, its sentence, the capture in full on a click */
+.reussites { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 12px; margin: 4px 0 12px; }
+.reussite { background: var(--bg-secondary); border-radius: var(--radius-md, 12px); overflow: hidden; display: flex; flex-direction: column; }
+.reussite a.vignette { display: block; background: var(--bg-tertiary, var(--bg-secondary)); }
+.reussite a.vignette img { display: block; width: 100%; height: 150px; object-fit: cover; object-position: top; }
+.reussite .phrase { padding: 10px 12px 4px; font-size: var(--t-second, 13px); color: var(--text-primary); line-height: 1.4; }
+.reussite .phrase b { color: var(--accent); }
+.reussite .liens { padding: 2px 12px 10px; display: flex; gap: 12px; font-size: var(--t-meta, 12px); }
+.reussite .liens a { color: var(--text-muted); text-decoration: none; }
+.reussite .liens a:hover { color: var(--text-primary); }
+.camp-reussite { color: var(--text-secondary); font-size: var(--t-second, 13px); margin: 0 0 6px; }
+/* what people say (07/10): every comment of our posts, its capture on a click; the picks first */
+.filtres-com { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 12px; }
+.filtres-com button { border: 0; cursor: pointer; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 999px;
+  padding: 6px 12px; font: inherit; font-size: var(--t-second, 13px); }
+.filtres-com button.on { background: var(--accent); color: var(--accent-contrast, #fff); }
+.coms { columns: 3 300px; column-gap: 12px; }
+.com { break-inside: avoid; background: var(--bg-secondary); border-radius: var(--radius-md, 12px); padding: 10px 12px; margin: 0 0 12px; }
+.com .qui { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: var(--t-meta, 12px); color: var(--text-muted); }
+.com .qui b { color: var(--text-primary); font-size: var(--t-second, 13px); }
+.com .qui .ou { color: var(--accent); }
+.com .qui .score { display: inline-flex; align-items: center; gap: 2px; }
+.com .qui .score .material-symbols-outlined { font-size: 14px; }
+.com .texte { margin: 6px 0 4px; font-size: var(--t-second, 13px); color: var(--text-primary); line-height: 1.45; white-space: pre-line;
+  overflow-wrap: anywhere; }
+.com .liens { display: flex; gap: 12px; font-size: var(--t-meta, 12px); }
+.com .liens a { color: var(--text-muted); text-decoration: none; }
+.com .liens a:hover { color: var(--text-primary); }
+/* every comment, classified (09/10): search, filters, chips, state, pick */
+.tous-tete { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 8px; }
+.tous-tete input { flex: 1 1 220px; min-width: 0; }
+.tous-filtres { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+.tous-filtres .lib { font-size: var(--t-meta, 12px); color: var(--text-muted); align-self: center; margin-right: 2px; }
+.tous-filtres button, .com .chips button, .com .etats button { border: 0; cursor: pointer; font: inherit; border-radius: 999px; }
+.tous-filtres button { background: var(--bg-secondary); color: var(--text-secondary); padding: 5px 11px; font-size: var(--t-meta, 12px); }
+.tous-filtres button.on { background: var(--accent); color: var(--accent-contrast, #fff); }
+.com .chips { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 2px; }
+.com .chips span, .com .chips button { font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--bg-tertiary, var(--bg-primary));
+  color: var(--text-secondary); display: inline-flex; align-items: center; gap: 2px; }
+.com .chips .pf-switch { background: var(--danger, #e3121b); color: #fff; }
+.com .chips .pf-quest { background: var(--accent); color: var(--accent-contrast, #fff); }
+.com .chips button .material-symbols-outlined { font-size: 13px; }
+.com .etats { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; align-items: center; }
+.com .etats button { font-size: 11px; padding: 3px 9px; background: var(--bg-tertiary, var(--bg-primary)); color: var(--text-muted); }
+.com .etats button.on { background: var(--accent); color: var(--accent-contrast, #fff); }
+.com .etats .pick { margin-left: auto; background: transparent; color: var(--text-muted); padding: 2px 4px; }
+.com .etats .pick.on { color: var(--warning, #f5b301); background: transparent; }
+.com.nouveau { box-shadow: inset 3px 0 0 var(--accent); }
+.tous-plus { display: block; margin: 4px auto 0; }
+
+.ligne { display: grid; grid-template-columns: minmax(0, 1fr) auto 92px 34px; align-items: center; gap: 12px;
+  padding: 10px 10px; margin: 0 -10px; border-radius: var(--radius-md, 12px); }
+.ligne:hover { background: var(--bg-secondary); }
+.ligne .nom { min-width: 0; }
+.ligne .nom b { display: block; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ligne .nom small { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 3px; color: var(--text-muted); font-size: var(--t-meta, 12px); }
+.pastille { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600;
+  background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
+.pastille.alt { background: var(--bg-secondary); color: var(--text-secondary); }
+.pastille.ko { background: color-mix(in srgb, var(--danger, #e5484d) 14%, transparent); color: var(--danger, #e5484d); }
+.mesures { display: flex; gap: 14px; }
+.mesure { text-align: right; min-width: 52px; }
+.mesure .n { font-family: var(--p0-num); font-style: italic; font-weight: 800; font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums; }
+.mesure .u { display: block; color: var(--text-muted); font-size: 11px; margin-top: 2px; }
+.mesure .d { display: block; font-size: 11px; font-weight: 700; color: var(--success, #3ecf8e); min-height: 13px; }
+.ligne svg { width: 92px; height: 30px; color: var(--accent); }
+.ouvrir { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; color: var(--text-secondary);
+  text-decoration: none; }
+.ouvrir:hover { background: var(--bg-elevated, var(--bg-secondary)); color: var(--text-primary); }
+.ouvrir .material-symbols-outlined { font-size: 19px; }
+.groupe { display: flex; align-items: center; gap: 8px; margin: 14px 0 4px; color: var(--text-secondary); font-size: var(--t-meta, 12px);
+  font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.groupe .somme { margin-left: auto; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--text-muted); }
+.vide { color: var(--text-muted); padding: 16px 0 20px; font-size: var(--t-second, 13px); }
+
+/* saisie manuelle (LinkedIn, Facebook) */
+.manuel { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 10px; }
+.manuel input { width: 82px; }
+.champ, .manuel input { appearance: none; border: 0; background: var(--bg-secondary); color: var(--text-primary); font: inherit;
+  font-size: var(--t-second, 13px); padding: 9px 12px; border-radius: var(--radius-md, 12px); min-height: 36px; outline: none; }
+.champ:focus, .manuel input:focus { box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 55%, transparent); }
+.lien-discret { appearance: none; border: 0; background: transparent; color: var(--text-muted); cursor: pointer; font: inherit;
+  font-size: var(--t-meta, 12px); padding: 4px 6px; border-radius: 8px; }
+.lien-discret:hover { color: var(--danger, #e5484d); background: var(--bg-secondary); }
+
+/* ajout */
+.ajout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+.ajout .champ { width: 100%; min-width: 0; box-sizing: border-box; }
+.ajout .detecte { grid-column: 1 / -1; color: var(--text-muted); font-size: var(--t-meta, 12px); min-height: 16px; }
+.campagnes { grid-column: 1 / -1; display: flex; gap: 6px; flex-wrap: wrap; }
+.campagnes button { appearance: none; border: 0; cursor: pointer; font: inherit; }
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom)); transform: translateX(-50%) translateY(20px);
+  opacity: 0; background: var(--bg-elevated, var(--bg-card)); color: var(--text-primary); padding: 11px 16px; border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25); transition: all .25s ease; font-size: var(--t-second, 13px); z-index: 50; pointer-events: none; }
+.toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+
+/* Discord en direct */
+.live { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--p0-gap); margin-bottom: var(--p0-gap); }
+.todo { display: flex; flex-direction: column; gap: 8px; }
+.todo a { text-decoration: none; color: inherit; display: block; padding: 11px 12px; border-radius: var(--radius-md, 12px);
+  background: var(--bg-secondary); }
+.todo a:hover { background: var(--bg-elevated, var(--bg-secondary)); }
+.todo .haut { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: var(--t-meta, 12px); color: var(--text-muted); }
+.todo .haut b { color: var(--text-primary); font-size: var(--t-second, 13px); }
+.todo p { margin: 6px 0 0; font-size: var(--t-second, 13px); color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; overflow: hidden; }
+.pastille.chaud { background: color-mix(in srgb, var(--p0-hot) 20%, transparent); color: var(--p0-hot); }
+.tout-va { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: var(--radius-md, 12px);
+  background: color-mix(in srgb, var(--success, #3ecf8e) 12%, transparent); color: var(--success, #3ecf8e); font-weight: 600;
+  font-size: var(--t-second, 13px); }
+.chiffres { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+.chiffres div { background: var(--bg-secondary); border-radius: var(--radius-md, 12px); padding: 10px 12px; }
+.chiffres .n { font-family: var(--p0-num); font-style: italic; font-weight: 800; font-size: 28px; line-height: 1; }
+.chiffres small { display: block; color: var(--text-muted); font-size: 11px; margin-top: 3px; }
+.nouveaux { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.barres .barre { display: grid; grid-template-columns: 120px minmax(0, 1fr) 34px; align-items: center; gap: 8px; margin: 5px 0;
+  font-size: var(--t-meta, 12px); color: var(--text-secondary); }
+.barres .barre i { height: 8px; border-radius: 99px; background: var(--accent); display: block; min-width: 4px; }
+.fil { margin-top: 8px; }
+.fil .msg { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 8px; padding: 6px 0; font-size: var(--t-meta, 12px); }
+.fil .msg time { color: var(--text-muted); }
+.fil .msg span { color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fil .msg b { color: var(--text-primary); font-weight: 600; }
+.fil .msg.bot b { color: var(--accent); }
+details.repli > summary { cursor: pointer; color: var(--text-secondary); font-size: var(--t-second, 13px); padding: 6px 0; list-style: none;
+  display: flex; align-items: center; gap: 6px; }
+details.repli > summary::-webkit-details-marker { display: none; }
+details.repli[open] > summary .material-symbols-outlined { transform: rotate(180deg); }
+details.repli > summary .material-symbols-outlined { transition: transform .2s ease; font-size: 18px; }
+@media (max-width: 1100px) { .live { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .barres .barre { grid-template-columns: 92px minmax(0, 1fr) 30px; } }
+@media (max-width: 1100px) { .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } .grille { grid-template-columns: 1fr; } .plateformes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .onglets button { padding: 9px 10px; gap: 6px; flex-basis: 30%; } .onglets button .material-symbols-outlined { font-size: 17px; } }
+@media (max-width: 640px) {
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .kpi { min-height: 116px; padding: 13px 13px 8px; }
+  .ligne { grid-template-columns: minmax(0, 1fr) auto 34px; gap: 10px; }
+  .mesures { gap: 10px; } .mesure { min-width: 40px; } .mesure .n { font-size: 22px; }
+  .ligne svg { display: none; }
+  .ajout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .ajout .champ.url { grid-column: 1 / -1; }
+  .ajout .bouton { grid-column: 1 / -1; justify-content: center; }
+}
+@media (pointer: coarse) { .periodes button, .bouton, .champ { min-height: 44px; } .ouvrir { width: 44px; height: 44px; } }
+</style>
+</head>
+<body>
+<div class="page-slot" data-slot="page-hero"></div>
+<div class="wrap">
+  <header class="tete" data-part="page-head">
+    <div>
+      <h1><span class="material-symbols-outlined">speed</span>Port0r — lancement</h1>
+      <div class="sous">Rally VR 0.2.4 (9 octobre 2026), Sega Rally Switch 0.5.3 (9 octobre 2026), Sega Rally Android 0.1.0 et Steam Deck &amp; Linux 0.1.0 (9 octobre 2026). Relevé automatique toutes les 30 minutes.</div>
+    </div>
+    <div class="actions" data-part="bar">
+      <span class="fraicheur" id="fraicheur"><i></i><span>…</span></span>
+      <div class="periodes" id="periodes" data-part="bar">
+        <button data-days="1" data-part="tab">24 h</button>
+        <button data-days="7" data-part="tab">7 jours</button>
+        <button data-days="30" class="active" data-part="tab">30 jours</button>
+      </div>
+      <button class="bouton" id="relever" data-part="btn"><span class="material-symbols-outlined">refresh</span>Relever maintenant</button>
+    </div>
+  </header>
+
+  <main data-part="main">
+    <nav class="onglets" id="onglets" data-part="bar" aria-label="Plateformes"></nav>
+    <section class="kpis" id="kpis" data-part="section"></section>
+    <section class="plateformes" id="plateformes" data-part="section" hidden></section>
+
+    <section class="bloc" data-part="surface" id="b-reussites" hidden>
+      <h2 data-part="title"><span class="material-symbols-outlined">military_tech</span>Réussites<span class="compte"></span></h2>
+      <div id="reussites"></div>
+    </section>
+
+
+    <section class="bloc" data-part="surface" id="b-coms" hidden>
+      <h2 data-part="title"><span class="material-symbols-outlined">forum</span>Ce qu'ils en disent<span class="compte"></span></h2>
+      <p class="aide" id="coms-aide"></p>
+      <div class="filtres-com" id="coms-filtres"></div>
+      <div id="coms"></div>
+    </section>
+
+    <section class="bloc" data-part="surface" id="b-tous" hidden>
+      <h2 data-part="title"><span class="material-symbols-outlined">inbox</span>Tous les commentaires<span class="compte" id="tous-n"></span></h2>
+      <p class="aide" id="tous-aide"></p>
+      <div class="tous-tete" data-part="bar">
+        <input id="tous-q" type="search" placeholder="Retrouver une phrase, un auteur, un sub..." data-part="field">
+      </div>
+      <div id="tous-filtres"></div>
+      <div id="tous"></div>
+    </section>
+
+    <div class="live" id="live">
+      <section class="bloc" data-part="surface">
+        <h2 data-part="title"><span class="material-symbols-outlined">mark_chat_unread</span>Discord : à toi de répondre<span class="compte" id="todo-n"></span></h2>
+        <p class="aide">Les messages restés sans réponse, ceux qui te mentionnent, les messages privés au bot, et les questions auxquelles le bot n'a pas su répondre.</p>
+        <div class="todo" id="todo"></div>
+      </section>
+      <section class="bloc" data-part="surface">
+        <h2 data-part="title"><span class="material-symbols-outlined">forum</span>Discord en direct<span class="compte" id="dc-frais"></span></h2>
+        <div class="chiffres" id="dc-chiffres"></div>
+        <div class="nouveaux" id="dc-nouveaux"></div>
+        <div class="barres" id="dc-barres"></div>
+        <details class="repli fil" id="dc-fil"><summary><span class="material-symbols-outlined">expand_more</span>Derniers messages</summary><div></div></details>
+      </section>
+    </div>
+    <div class="grille">
+      <div>
+        <section class="bloc" data-part="surface" id="b-reddit">
+          <h2 data-part="title"><span class="material-symbols-outlined">forum</span>Reddit<span class="compte"></span></h2>
+          <p class="aide">Vues (que toi seul vois, en tant qu'auteur), score et commentaires de chaque post, triés par vues. L'écart est celui des dernières 24 h.</p>
+          <div class="liste"></div>
+        </section>
+        <section class="bloc" data-part="surface" id="b-manuel">
+          <h2 data-part="title"><span class="material-symbols-outlined">edit_note</span>Relevés à la main<span class="compte"></span></h2>
+          <p class="aide">LinkedIn, Facebook et Instagram bloquent la lecture automatique : note leurs chiffres ici, ils rejoignent les courbes.</p>
+          <div class="liste"></div>
+        </section>
+      </div>
+      <div>
+        <section class="bloc" data-part="surface" id="b-video">
+          <h2 data-part="title"><span class="material-symbols-outlined">smart_display</span>Vidéos<span class="compte"></span></h2>
+          <div class="liste"></div>
+        </section>
+        <section class="bloc" data-part="surface" id="b-dl">
+          <h2 data-part="title"><span class="material-symbols-outlined">download</span>Téléchargements<span class="compte"></span></h2>
+          <div class="liste"></div>
+        </section>
+        <section class="bloc" data-part="surface" id="b-commu">
+          <h2 data-part="title"><span class="material-symbols-outlined">groups</span>Communauté<span class="compte"></span></h2>
+          <div class="liste"></div>
+        </section>
+      </div>
+    </div>
+
+    <section class="bloc" data-part="surface">
+      <h2 data-part="title"><span class="material-symbols-outlined">add_link</span>Suivre un nouveau lien</h2>
+      <p class="aide">Une vidéo, un post Reddit, une page : colle l'adresse, la plateforme est reconnue toute seule.</p>
+      <form class="ajout" id="ajout" autocomplete="off">
+        <input class="champ url" name="url" placeholder="https://…" inputmode="url" data-part="field" required>
+        <input class="champ" name="label" placeholder="Nom (facultatif)" data-part="field">
+        <input class="champ" name="campaign" placeholder="Campagne" value="Sortie 07/10" data-part="field">
+        <button class="bouton" type="submit" data-part="btn"><span class="material-symbols-outlined">add</span>Suivre</button>
+        <div class="campagnes" id="campagnes"></div>
+        <div class="detecte" id="detecte"></div>
+      </form>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const fmt = n => n == null ? '–' : n >= 10000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace('.', ',') + ' k' : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+let DAYS = 30, DATA = null, timer = null;
+try { DAYS = +localStorage.getItem('p0-days') || 30; } catch (e) {}
+
+function toast(t) { const e = $('#toast'); e.textContent = t; e.classList.add('on'); clearTimeout(e._t); e._t = setTimeout(() => e.classList.remove('on'), 2600); }
+
+// Une série (ts, valeur) en polyline SVG, à l'échelle de sa boîte. Rien quand il n'y a qu'un point.
+function spark(points, w = 120, h = 36) {
+  if (!points || points.length < 2) return `<svg viewBox="0 0 ${w} ${h}" aria-hidden="true"></svg>`;
+  const xs = points.map(p => p[0]), ys = points.map(p => p[1]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const X = x => (x1 === x0 ? w : (x - x0) / (x1 - x0) * w), Y = y => (y1 === y0 ? h * .55 : h - 3 - (y - y0) / (y1 - y0) * (h - 6));
+  const d = points.map((p, i) => (i ? 'L' : 'M') + X(p[0]).toFixed(1) + ' ' + Y(p[1]).toFixed(1)).join(' ');
+  const area = d + ` L${w} ${h} L0 ${h} Z`;
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
+    <path d="${area}" fill="currentColor" opacity=".12"/><path d="${d}" fill="none" stroke="currentColor" stroke-width="1.8" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>`;
+}
+// Le dépôt GitHub entier : ses téléchargements ne comptaient que les .apk avant le 10/10 (ni la Switch ni Linux) ; sa série
+// commence au premier relevé juste (celui qui porte la part de chaque plateforme), sinon la correction passerait pour
+// une hausse de 223 téléchargements en 24 h.
+const estDepot = l => l.kind === 'github' && !/\/releases\/tag\//.test(l.url);
+const serie = (l, key) => l.series.filter(s => s.m && s.m[key] != null && !(key === 'downloads' && estDepot(l) && s.m.dl_quest == null))
+  .map(s => [s.ts, s.m[key]]);
+
+// ── Les onglets (10/10) : la vue d'ensemble, puis chaque version du jeu ──
+const ONGLETS = [
+  { id: 'tout', lib: "Vue d'ensemble", ic: 'dashboard' },
+  { id: 'quest', lib: 'Quest VR', ic: 'view_in_ar' },
+  { id: 'switch', lib: 'Switch', ic: 'videogame_asset' },
+  { id: 'android', lib: 'Android', ic: 'smartphone' },
+  { id: 'linux', lib: 'Steam Deck & Linux', ic: 'sports_esports' },
+];
+let ONGLET = (location.hash || '').slice(1);
+if (!ONGLETS.some(o => o.id === ONGLET)) { ONGLET = 'tout'; try { ONGLET = localStorage.getItem('p0-tab') || 'tout'; } catch (e) {} }
+if (!ONGLETS.some(o => o.id === ONGLET)) ONGLET = 'tout';
+// La plateforme d'un lien : une release GitHub par son tag (vX = le Quest, android-, linux-, switch-), le reste par sa
+// campagne (« Switch 08/10 », « Android 09/10 », « Steam Deck & Linux 09/10 » ; les autres sont celles du jeu VR). Le Discord
+// et le dépôt entier sont communs : la vue d'ensemble seulement.
+function cible(l) {
+  if (l.kind === 'discord' || estDepot(l)) return 'commun';
+  const tag = (l.url.match(/\/releases\/tag\/([^/?#]+)/) || [])[1];
+  if (tag) return /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^switch-/.test(tag) ? 'switch' : 'quest';
+  const c = l.campaign || '';
+  return /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : 'quest';
+}
+// Les téléchargements d'une plateforme : sa part du dépôt GitHub (dl_<plateforme>, toutes ses releases), ses pages itch,
+// et SideQuest pour le Quest. Les liens de release seuls ne s'additionnent pas : le dépôt les contient déjà.
+function sourcesDl(L, p) {
+  const depot = L.filter(estDepot), it = L.filter(l => l.kind === 'itch' && (p === 'tout' || cible(l) === p));
+  const sq = L.filter(l => l.kind === 'sidequest' && (p === 'tout' || p === 'quest'));
+  return [...depot.map(l => [l, p === 'tout' ? 'downloads' : 'dl_' + p]), ...[...it, ...sq].map(l => [l, 'downloads'])];
+}
+const totP = pairs => pairs.reduce((a, [l, k]) => a + ((l.latest || {})[k] || 0), 0);
+// Écart sur 24 h : la valeur actuelle moins la dernière relevée avant il y a 24 h (ou la plus ancienne connue).
+function delta24(pts, now) {
+  if (!pts.length) return null;
+  const cut = now - 86400; let ref = pts[0];
+  for (const p of pts) { if (p[0] <= cut) ref = p; else break; }
+  return pts[pts.length - 1][1] - ref[1];
+}
+// Somme de séries de plusieurs liens, par instant de relevé (même horodatage pour un passage du cron).
+// À chaque instant de relevé, chaque lien compte pour sa dernière valeur connue : un relevé en échec ne fait pas
+// plonger le total.
+function somme(links, key) { return sommeP(links.map(l => [l, key])); }
+function sommeP(pairs) {
+  const series = pairs.map(([l, k]) => serie(l, k)).filter(s => s.length);
+  if (!series.length) return [];
+  // à partir du moment où chaque source a sa première valeur (une mesure ajoutée plus tard, comme les vues Reddit,
+  // ne fait pas croire à une hausse de tout son total en 24 h)
+  const debut = Math.max(...series.map(s => Math.round(s[0][0])));
+  const instants = [...new Set(series.flatMap(s => s.map(p => Math.round(p[0]))))].filter(t => t >= debut).sort((a, b) => a - b);
+  return instants.map(t => [t, series.reduce((acc, s) => { let v = null; for (const p of s) { if (Math.round(p[0]) <= t) v = p[1]; else break; } return acc + (v || 0); }, 0)]);
+}
+const dl = n => n > 0 ? `<span class="d">+${fmt(n)}</span>` : '<span class="d"></span>';
+
+function rendre() {
+  const ALL = DATA.links, now = DATA.now, tout = ONGLET === 'tout';
+  const L = tout ? ALL : ALL.filter(l => cible(l) === ONGLET);
+  $('#onglets').innerHTML = ONGLETS.map(o => `<button type="button" data-tab="${o.id}" data-part="tab" class="${o.id === ONGLET ? 'active' : ''}" aria-selected="${o.id === ONGLET}"><span class="material-symbols-outlined">${o.ic}</span>${esc(o.lib)}</button>`).join('');
+  // les blocs qui ne parlent pas d'une plateforme (réussites, commentaires, Discord) : la vue d'ensemble seulement
+  ['#b-reussites', '#b-coms', '#b-tous', '#live', '#b-commu'].forEach(id => { const e = $(id); if (e) e.classList.toggle('hors-onglet', !tout); });
+  const by = k => L.filter(l => l.kind === k);
+  const yt = by('youtube'), rd = by('reddit'), gh = by('github'), it = by('itch'), sq = by('sidequest'), dc = by('discord'), man = by('manual');
+  const tot = (ls, k) => ls.reduce((a, l) => a + ((l.latest || {})[k] || 0), 0);
+  const kpis = [
+    { lib: 'Vues YouTube', ic: 'play_circle', v: tot(yt, 'views'), s: somme(yt, 'views'), hero: true },
+    { lib: 'Vues Reddit', ic: 'visibility', v: tot(rd, 'views'), s: somme(rd, 'views'), hero: true },
+    { lib: 'Votes Reddit', ic: 'arrow_upward', v: tot(rd, 'score'), s: somme(rd, 'score') },
+    { lib: 'Commentaires', ic: 'chat', v: tot(rd, 'comments') + tot(yt, 'comments'), s: somme([...rd, ...yt], 'comments') },
+    { lib: 'Téléchargements', ic: 'download', v: totP(sourcesDl(ALL, ONGLET)), s: sommeP(sourcesDl(ALL, ONGLET)), hero: true },
+    tout ? { lib: 'Discord', ic: 'groups', v: tot(dc, 'members'), s: somme(dc, 'members') }
+         : { lib: 'Vues itch', ic: 'storefront', v: tot(it, 'views'), s: somme(it, 'views') },
+  ];
+  $('#kpis').innerHTML = kpis.map(k => {
+    const d = delta24(k.s, now);
+    return `<article class="kpi${k.hero ? ' hero' : ''}" data-part="stat">
+      <div class="lib"><span class="material-symbols-outlined">${k.ic}</span>${k.lib}</div>
+      <div class="val">${fmt(k.v)}</div>
+      <div class="delta${d > 0 ? ' up' : ''}">${k.s.length < 2 ? 'premier relevé' : d > 0 ? '+' + fmt(d) + ' en 24 h' : d === 0 ? 'stable sur 24 h' : '&nbsp;'}</div>
+      ${spark(k.s)}</article>`;
+  }).join('');
+  // la vue d'ensemble : une carte par plateforme (téléchargements en gros, puis vues, votes et commentaires)
+  const pfs = $('#plateformes'); pfs.hidden = false; pfs.classList.toggle('hors-onglet', !tout);
+  if (tout) pfs.innerHTML = ONGLETS.filter(o => o.id !== 'tout').map(o => {
+    const ls = ALL.filter(l => cible(l) === o.id), dl = sourcesDl(ALL, o.id);
+    const vues = ls.filter(l => l.kind === 'youtube' || l.kind === 'reddit');
+    const rdl = ls.filter(l => l.kind === 'reddit'), com = ls.filter(l => l.kind === 'reddit' || l.kind === 'youtube');
+    return `<button type="button" class="pf-carte" data-tab="${o.id}" data-part="surface">
+      <div class="nom"><span class="material-symbols-outlined">${o.ic}</span>${esc(o.lib)}<span class="material-symbols-outlined aller">chevron_right</span></div>
+      <div class="gros">${fmt(totP(dl))}<small>téléchargements</small></div>
+      <div class="petits"><span><b>${fmt(tot(vues, 'views'))}</b> vues</span><span><b>${fmt(tot(rdl, 'score'))}</b> votes</span><span><b>${fmt(tot(com, 'comments'))}</b> comm.</span></div>
+      ${spark(sommeP(dl), 120, 30)}</button>`;
+  }).join('');
+
+  const ligne = (l, cols, sk) => {
+    const pts = serie(l, sk);
+    const chips = [`<span class="pastille${l.campaign && /teaser/i.test(l.campaign) ? ' alt' : ''}">${esc(l.campaign || l.platform)}</span>`];
+    if (l.error && !l.latest) chips.push(`<span class="pastille ko" title="${esc(l.error)}">illisible</span>`);
+    else if (l.error) chips.push(`<span class="pastille ko" title="${esc(l.error)}">dernier relevé en échec</span>`);
+    const m = l.latest || {};
+    return `<div class="ligne" data-part="row">
+      <div class="nom"><b title="${esc(l.url)}">${esc(l.label || l.url)}</b><small>${chips.join('')}</small></div>
+      <div class="mesures">${cols.map(([k, u]) => `<div class="mesure"><div class="n">${m.status && k === cols[0][0] && m[k] == null ? '—' : fmt(m[k])}</div><span class="u">${u}</span>${dl(delta24(serie(l, k), now))}</div>`).join('')}</div>
+      ${spark(pts, 92, 30)}
+      <a class="ouvrir" href="${esc(l.url)}" target="_blank" rel="noopener" data-part="iconbtn" aria-label="Ouvrir"><span class="material-symbols-outlined">open_in_new</span></a>
+    </div>`;
+  };
+  const remplir = (id, ls, cols, sk, vide) => {
+    const b = $('#' + id); b.querySelector('.compte').textContent = ls.length ? ls.length + (ls.length > 1 ? ' liens' : ' lien') : '';
+    b.querySelector('.liste').innerHTML = ls.length ? ls.map(l => ligne(l, cols, sk)).join('') : `<div class="vide" data-part="empty">${vide}</div>`;
+  };
+  remplir('b-reddit', rd, [['score', 'points'], ['comments', 'comm.']], 'score', 'Aucun post suivi.');
+  // Reddit par campagne (la plus récente d'abord), chaque groupe trié par score, avec son total
+  // l'ordre des campagnes : celle dont le premier lien a été suivi en premier (la sortie avant le teaser)
+  const camps = [...new Set([...rd].sort((a, b) => a.id - b.id).map(l => l.campaign || 'Sans campagne'))];
+  $('#b-reddit .liste').innerHTML = rd.length ? camps.map(c => {
+    const ls = rd.filter(l => (l.campaign || 'Sans campagne') === c).sort((a, b) => ((b.latest || {}).views || 0) - ((a.latest || {}).views || 0) || ((b.latest || {}).score || 0) - ((a.latest || {}).score || 0));
+    return `<div class="groupe" data-part="title">${esc(c)}<span class="somme">${fmt(tot(ls, 'views'))} vues · ${fmt(tot(ls, 'score'))} points · ${fmt(tot(ls, 'comments'))} comm.</span></div>`
+      + ls.map(l => ligne(l, [['views', 'vues'], ['score', 'points'], ['comments', 'comm.']], 'views')).join('');
+  }).join('') : '<div class="vide" data-part="empty">Aucun post suivi.</div>';
+  remplir('b-video', yt, [['views', 'vues'], ['likes', 'likes']], 'views', 'Aucune vidéo suivie.');
+  // le dépôt entier d'abord (toutes les releases), puis chaque release, puis itch et SideQuest
+  const dls = [...gh.filter(estDepot), ...gh.filter(l => !estDepot(l)).sort((a, b) => b.id - a.id), ...it, ...sq];
+  remplir('b-dl', dls, [['downloads', 'télécharg.'], [gh.length ? 'stars' : 'views', 'étoiles / vues']], 'downloads', 'Aucune source de téléchargements.');
+  // la colonne secondaire dépend de la source : étoiles pour GitHub, vues pour itch, statut pour SideQuest
+  if (dls.length) $('#b-dl .liste').innerHTML = dls.map(l => ligne(l, l.kind === 'github' ? [['downloads', 'télécharg.'], ['stars', 'étoiles']]
+    : l.kind === 'itch' ? [['downloads', 'télécharg.'], ['views', 'vues']] : [['downloads', (l.latest || {}).status === 'waiting for approval' ? 'en validation' : 'télécharg.'], ['views', 'vues']], 'downloads')).join('');
+  remplir('b-commu', dc, [['members', 'membres'], ['linked', 'casques liés']], 'members', 'Aucun serveur suivi.');
+
+  // relevés à la main : une ligne + des champs pour noter les chiffres du moment
+  const bm = $('#b-manuel');
+  bm.querySelector('.compte').textContent = man.length ? man.length + (man.length > 1 ? ' liens' : ' lien') : '';
+  bm.querySelector('.liste').innerHTML = man.length ? man.map(l => ligne(l, [['views', 'vues'], ['likes', 'réactions']], 'views') + `
+    <form class="manuel" data-id="${l.id}">
+      <input name="views" placeholder="Vues" inputmode="numeric" data-part="field">
+      <input name="likes" placeholder="Réactions" inputmode="numeric" data-part="field">
+      <input name="comments" placeholder="Comm." inputmode="numeric" data-part="field">
+      <input name="shares" placeholder="Partages" inputmode="numeric" data-part="field">
+      <button class="bouton" data-part="btn"><span class="material-symbols-outlined">save</span>Noter</button>
+      <button type="button" class="lien-discret" data-retirer="${l.id}" data-part="btn">Ne plus suivre</button>
+    </form>`).join('') : '<div class="vide" data-part="empty">Ajoute ici tes posts LinkedIn et Facebook : colle leur adresse plus bas.</div>';
+
+  const toutes = [...new Set(L.map(l => l.campaign).filter(Boolean))];
+  $('#campagnes').innerHTML = toutes.map(c => `<button type="button" class="pastille alt" data-camp="${esc(c)}" data-part="chip">${esc(c)}</button>`).join('');
+
+  const age = DATA.last_ts ? (now - DATA.last_ts) / 60 : null;
+  const f = $('#fraicheur'); f.classList.toggle('vieux', age == null || age > 45);
+  f.querySelector('span').textContent = DATA.collecting ? 'Relevé en cours…' : age == null ? 'Jamais relevé' : age < 1 ? 'Relevé à l\'instant' : `Relevé il y a ${age < 60 ? Math.round(age) + ' min' : Math.round(age / 60) + ' h'}`;
+  $('#relever').classList.toggle('tourne', !!DATA.collecting);
+}
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+// ── Réussites (07/10) : les captures des statistiques de chaque post, le soir d'un lancement ──
+async function chargerReussites() {
+  let R; try { R = await (await fetch('/api/port0r/achievements')).json(); } catch (e) { return; }
+  const camps = (R && R.campaigns) || [];
+  if (!camps.length) return;
+  const base = R.base || '';
+  const fmtDate = s => new Date(s).toLocaleString('fr-FR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
+  $('#reussites').innerHTML = camps.map(c => `<p class="camp-reussite"><b>${esc(c.title)}</b> · captures du ${esc(fmtDate(c.captured))}, ${c.hours_after} h après la sortie. ${esc(c.summary || '')}</p>
+    <div class="reussites">${(c.items || []).map(it => {
+      const full = base + c.folder + '/' + it.image, thumb = base + c.folder + '/' + (it.thumb || it.image);
+      const s = esc(it.sentence).replace(/(n°1 du jour)/, '<b>$1</b>');
+      return `<div class="reussite" data-part="row"><a class="vignette" href="${full}" target="_blank" rel="noopener" title="Voir la capture en grand"><img src="${thumb}" alt="${esc(it.place)}" loading="lazy"></a>
+        <div class="phrase">${s}</div><div class="liens"><a href="${full}" target="_blank" rel="noopener">Capture en grand</a>${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">Le post</a>` : ''}</div></div>`;
+    }).join('')}</div>`).join('');
+  $('#b-reussites .compte').textContent = camps.reduce((a, c) => a + (c.items || []).length, 0) + ' captures';
+  $('#b-reussites').hidden = false;
+}
+chargerReussites();
+
+// ── Ce qu'ils en disent (07/10) : les plus beaux commentaires de nos posts, chacun avec sa capture ──
+// (Guillaume : « tu prends bien sûr que les bons » ; tous restent relevés dans data/port0r_comments.json)
+let COMS = null, COMS_FILTRE = 'tous';
+function carteCom(c, base) {
+  const img = c.image ? base + 'comments/' + c.image : '';
+  const quand = c.date ? new Date(c.date).toLocaleString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : (c.when || '');
+  const score = c.platform === 'reddit' ? `<span class="score"><span class="material-symbols-outlined">arrow_upward</span>${c.score}</span>` : '';
+  return `<div class="com" data-part="row">
+    <div class="qui"><b>${esc(c.author)}</b><span class="ou">${esc(c.place)}</span>${score}<span>${esc(quand)}</span></div>
+    <div class="texte">${esc(c.text)}</div>
+    ${(c.targets || []).length ? `<div class="chips">${c.targets.map(t => `<span class="pf-${t}" data-part="chip">${t === 'switch' ? 'Switch' : 'Quest'}</span>`).join('')}</div>` : ''}
+    <div class="liens">${img ? `<a href="${img}" target="_blank" rel="noopener">Capture</a>` : ''}${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">Sur ${{ reddit: 'Reddit', facebook: 'Facebook', youtube: 'YouTube' }[c.platform] || c.platform}</a>` : ''}</div></div>`;
+}
+function afficherComs() {
+  const R = COMS, base = R.base || '';
+  document.querySelectorAll('#coms-filtres button').forEach(b => b.classList.toggle('on', b.dataset.f === COMS_FILTRE));
+  const items = (R.comments.items || []).filter(c => COMS_FILTRE === 'tous' || c.platform === COMS_FILTRE || (c.targets || []).includes(COMS_FILTRE));
+  $('#coms').innerHTML = `<div class="coms">${items.map(c => carteCom(c, base)).join('')}</div>`;
+}
+async function chargerComs() {
+  let R; try { R = await (await fetch('/api/port0r/achievements')).json(); } catch (e) { return; }
+  if (!R || !R.comments || !(R.comments.items || []).length) return;
+  COMS = R;
+  const items = R.comments.items, n = p => items.filter(c => c.platform === p).length, t = p => items.filter(c => (c.targets || []).includes(p)).length;
+  const f = [['tous', 'Tous (' + items.length + ')'], ['quest', 'Quest (' + t('quest') + ')'], ['switch', 'Switch (' + t('switch') + ')'],
+             ['reddit', 'Reddit (' + n('reddit') + ')'], ['facebook', 'Facebook (' + n('facebook') + ')'], ['youtube', 'YouTube (' + n('youtube') + ')']].filter(x => !x[1].endsWith('(0)'));
+  $('#coms-filtres').innerHTML = f.length > 2 ? f.map(([k, l]) => `<button type="button" data-part="chip" data-f="${k}">${esc(l)}</button>`).join('') : '';
+  $('#coms-filtres').onclick = e => { const b = e.target.closest('button'); if (b) { COMS_FILTRE = b.dataset.f; afficherComs(); } };
+  const quand = new Date(R.comments.updated).toLocaleString('fr-FR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
+  $('#coms-aide').textContent = `Les plus beaux, choisis parmi les ${R.comments.total} commentaires de nos ${R.comments.posts} posts (relevés le ${quand}). Chacun a sa capture.`;
+  $('#b-coms .compte').textContent = items.length + ' commentaires';
+  $('#b-coms').hidden = false;
+  afficherComs();
+}
+chargerComs();
+
+// ── Tous les commentaires (09/10, Guillaume : « faire la part avec ceux de Switch ou Quest et taguer ça propre ») ──
+// data/port0r_comments.json : plateforme d'après la campagne du post et le texte, sujets, état (nouveau / vu / répondu /
+// ignoré), tags à la main, coups de cœur (publiés sur la page publique). Le lien « Répondre » ouvre CE commentaire.
+const TOUS = { d: null, f: { pf: 'tous', st: 'tous', tag: '', src: 'tous', q: '' }, n: 60 };
+const ETATS = [['nouveau', 'Nouveau'], ['vu', 'Vu'], ['repondu', 'Répondu'], ['ignore', 'Ignoré']];
+const tagsDe = c => [...new Set([...(c.tags || []), ...(c.tags_add || [])])].filter(t => !(c.tags_del || []).includes(t));
+function carteTous(c, picks) {
+  const base = TOUS.d.base || '';
+  const quand = c.date ? new Date(c.date).toLocaleString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : (c.when || '');
+  const src = { reddit: 'Reddit', facebook: 'Facebook', youtube: 'YouTube' }[c.platform] || c.platform;
+  const pf = (c.targets || []).map(t => `<span class="pf-${t}" data-part="chip">${t === 'switch' ? 'Switch' : 'Quest'}</span>`).join('');
+  const tg = tagsDe(c).map(t => `<button type="button" data-part="chip" data-deltag="${esc(t)}" title="Retirer ce tag">${esc(t)}<span class="material-symbols-outlined">close</span></button>`).join('');
+  const et = ETATS.map(([k, l]) => `<button type="button" data-part="chip" data-etat="${k}" class="${(c.state || 'vu') === k ? 'on' : ''}">${l}</button>`).join('');
+  const pk = picks.includes(c.id);
+  return `<div class="com${c.state === 'nouveau' ? ' nouveau' : ''}" data-part="row" data-id="${esc(c.id)}">
+    <div class="qui"><b>${esc(c.author)}</b><span class="ou">${esc(c.place)}</span><span>${esc(src)}</span><span>${esc(quand)}</span></div>
+    <div class="texte">${esc(c.text)}</div>
+    <div class="chips">${pf}${tg}<button type="button" data-part="chip" data-addtag="1" title="Ajouter un tag"><span class="material-symbols-outlined">add</span></button></div>
+    <div class="etats">${et}<button type="button" class="pick${pk ? ' on' : ''}" data-part="iconbtn" data-pick="${pk ? 0 : 1}" title="${pk ? 'Retirer des coups de cœur' : 'Coup de cœur : sur la page publique'}"><span class="material-symbols-outlined">${pk ? 'star' : 'star_outline'}</span></button></div>
+    <div class="liens">${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">Répondre sur ${esc(src)}</a>` : ''}${c.image ? `<a href="${base + c.image}" target="_blank" rel="noopener">Capture</a>` : ''}</div></div>`;
+}
+function filtresTous(cs) {
+  const f = TOUS.f, cnt = fn => cs.filter(fn).length;
+  const groupe = (lib, cle, opts) => `<div class="tous-filtres" data-part="bar"><span class="lib">${lib}</span>${opts.map(([k, l, n]) =>
+    `<button type="button" data-part="chip" data-fk="${cle}" data-fv="${esc(k)}" class="${f[cle] === k ? 'on' : ''}">${esc(l)}${n !== undefined ? ' (' + n + ')' : ''}</button>`).join('')}</div>`;
+  const tags = [...new Set(cs.flatMap(tagsDe))].sort();
+  return groupe('Plateforme', 'pf', [['tous', 'Toutes', cs.length], ['switch', 'Switch', cnt(c => (c.targets || []).includes('switch'))], ['quest', 'Quest', cnt(c => (c.targets || []).includes('quest'))]])
+    + groupe('État', 'st', [['tous', 'Tous'], ...ETATS.map(([k, l]) => [k, l, cnt(c => (c.state || 'vu') === k)])])
+    + groupe('Sujet', 'tag', [['', 'Tous'], ...tags.map(t => [t, t, cnt(c => tagsDe(c).includes(t))])])
+    + groupe('Source', 'src', [['tous', 'Toutes'], ...['reddit', 'facebook', 'youtube'].map(p => [p, p[0].toUpperCase() + p.slice(1), cnt(c => c.platform === p)]).filter(x => x[2])]);
+}
+function rendreTous() {
+  const d = TOUS.d, f = TOUS.f, picks = d.picks || [];
+  const cs = d.comments || [], q = f.q.trim().toLowerCase();
+  const vis = cs.filter(c => (f.pf === 'tous' || (c.targets || []).includes(f.pf)) && (f.st === 'tous' || (c.state || 'vu') === f.st)
+    && (!f.tag || tagsDe(c).includes(f.tag)) && (f.src === 'tous' || c.platform === f.src)
+    && (!q || [c.text, c.author, c.place].join(' ').toLowerCase().includes(q)))
+    .sort((a, b) => ((b.state === 'nouveau') - (a.state === 'nouveau')) || String(b.date || b.first_seen || '').localeCompare(String(a.date || a.first_seen || '')));
+  $('#tous-filtres').innerHTML = filtresTous(cs);
+  $('#tous-n').textContent = vis.length + ' / ' + cs.length;
+  $('#tous').innerHTML = vis.length ? `<div class="coms">${vis.slice(0, TOUS.n).map(c => carteTous(c, picks)).join('')}</div>`
+    + (vis.length > TOUS.n ? `<button type="button" class="tous-plus" data-part="btn" data-plus="1">Afficher ${Math.min(60, vis.length - TOUS.n)} de plus</button>` : '')
+    : `<div data-part="empty">Aucun commentaire pour ces filtres.</div>`;
+}
+async function editerCom(id, body) {
+  const r = await fetch('/api/port0r/comments/' + encodeURIComponent(id), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  const j = await r.json(); if (!j.ok) { toast('Non enregistré : ' + (j.error || r.status)); return; }
+  const i = TOUS.d.comments.findIndex(c => c.id === id); if (i >= 0) TOUS.d.comments[i] = j.comment;
+  TOUS.d.picks = j.picks; rendreTous();
+  if ('pick' in body) { toast(body.pick ? 'Coup de cœur : publié sur la page publique' : 'Retiré des coups de cœur'); chargerComs(); }
+}
+async function chargerTous() {
+  let d; try { d = await (await fetch('/api/port0r/comments')).json(); } catch (e) { return; }
+  if (!d || !(d.comments || []).length) return;
+  TOUS.d = d;
+  const quand = d.updated ? new Date(d.updated).toLocaleString('fr-FR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) : '';
+  $('#tous-aide').textContent = `Tous les commentaires de nos posts, relevés le ${quand}. Plateforme d'après le post et le texte ; les nouveaux d'abord, marqués à gauche. Une étoile publie le commentaire sur la page publique.`;
+  $('#b-tous').hidden = false;
+  rendreTous();
+}
+$('#tous-q').addEventListener('input', e => { TOUS.f.q = e.target.value; TOUS.n = 60; rendreTous(); });
+$('#b-tous').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.fk) { TOUS.f[b.dataset.fk] = b.dataset.fv; TOUS.n = 60; rendreTous(); return; }
+  if (b.dataset.plus) { TOUS.n += 60; rendreTous(); return; }
+  const card = b.closest('.com'); if (!card) return;
+  const id = card.dataset.id, c = TOUS.d.comments.find(x => x.id === id);
+  if (b.dataset.etat) editerCom(id, { state: b.dataset.etat });
+  else if (b.dataset.pick) editerCom(id, { pick: b.dataset.pick === '1' });
+  else if (b.dataset.deltag) editerCom(id, { tags_add: (c.tags_add || []).filter(t => t !== b.dataset.deltag), tags_del: [...new Set([...(c.tags_del || []), b.dataset.deltag])] });
+  else if (b.dataset.addtag) { const t = (prompt('Nouveau tag') || '').trim().toLowerCase(); if (t) editerCom(id, { tags_add: [...new Set([...(c.tags_add || []), t])], tags_del: (c.tags_del || []).filter(x => x !== t) }); }
+});
+chargerTous();
+
+async function charger() {
+  try {
+    const r = await fetch(`/api/port0r/stats?days=${DAYS}`); DATA = await r.json(); rendre();
+    clearTimeout(timer); timer = setTimeout(charger, DATA.collecting ? 5000 : 60000);
+  } catch (e) { toast('Chiffres indisponibles : ' + e.message); }
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-tab]'); if (!b || !DATA) return;
+  ONGLET = b.dataset.tab; try { localStorage.setItem('p0-tab', ONGLET); } catch (x) {}
+  history.replaceState(null, '', ONGLET === 'tout' ? location.pathname + location.search : '#' + ONGLET);
+  rendre(); if (b.classList.contains('pf-carte')) $('#onglets').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+window.addEventListener('hashchange', () => {
+  const h = location.hash.slice(1) || 'tout';
+  if (ONGLETS.some(o => o.id === h) && h !== ONGLET) { ONGLET = h; try { localStorage.setItem('p0-tab', h); } catch (x) {} DATA && rendre(); }
+});
+$('#periodes').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  DAYS = +b.dataset.days; try { localStorage.setItem('p0-days', DAYS); } catch (x) {}
+  document.querySelectorAll('#periodes button').forEach(x => x.classList.toggle('active', x === b)); charger();
+});
+document.querySelectorAll('#periodes button').forEach(x => x.classList.toggle('active', +x.dataset.days === DAYS));
+$('#relever').addEventListener('click', async () => {
+  await fetch('/api/port0r/collect', { method: 'POST' }); toast('Relevé lancé : environ une minute'); DATA && (DATA.collecting = true) && rendre();
+  clearTimeout(timer); timer = setTimeout(charger, 4000);
+});
+const plateforme = u => /youtu\.?be/.test(u) ? 'YouTube : vues, likes, commentaires relevés tout seuls'
+  : /reddit\.com\/r\/.+\/comments\//.test(u) ? 'Reddit : score et commentaires relevés tout seuls'
+  : /github\.com/.test(u) ? 'GitHub : téléchargements et étoiles' : /itch\.io/.test(u) ? 'itch.io : vues et téléchargements'
+  : /sidequestvr/.test(u) ? 'SideQuest : téléchargements une fois la fiche approuvée' : /discord/.test(u) ? 'Discord : membres'
+  : /linkedin|facebook|fb\.com|instagram|x\.com|twitter/.test(u) ? 'Relevé à la main : les chiffres se notent dans « Relevés à la main »' : u ? 'Lien suivi à la main' : '';
+$('#ajout').url.addEventListener('input', e => { $('#detecte').textContent = plateforme(e.target.value.trim()); });
+$('#campagnes').addEventListener('click', e => { const b = e.target.closest('[data-camp]'); if (b) $('#ajout').campaign.value = b.dataset.camp; });
+$('#ajout').addEventListener('submit', async e => {
+  e.preventDefault(); const f = e.target;
+  const r = await fetch('/api/port0r/links', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: f.url.value.trim(), label: f.label.value.trim(), campaign: f.campaign.value.trim() }) });
+  const d = await r.json();
+  if (!d.ok) return toast(d.error || 'Ajout impossible');
+  toast(d.kind === 'manual' ? 'Lien ajouté : note ses chiffres dans « Relevés à la main »' : 'Lien ajouté, premier relevé en cours');
+  f.url.value = ''; f.label.value = ''; $('#detecte').textContent = ''; charger();
+});
+document.addEventListener('submit', async e => {
+  const f = e.target.closest('.manuel'); if (!f) return; e.preventDefault();
+  const metrics = {}; ['views', 'likes', 'comments', 'shares'].forEach(k => { if (f[k].value.trim()) metrics[k] = f[k].value.replace(/\s/g, ''); });
+  const r = await fetch('/api/port0r/manual', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: +f.dataset.id, metrics }) });
+  const d = await r.json(); toast(d.ok ? 'Chiffres notés' : (d.error || 'Rien à noter')); if (d.ok) charger();
+});
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-retirer]'); if (!b) return;
+  await fetch('/api/port0r/links/' + b.dataset.retirer, { method: 'DELETE' }); toast('Ce lien n\'est plus suivi'); charger();
+});
+charger();
+
+// ── Discord en direct (le moniteur du bot, /api/port0r/discord) ──
+const hhmm = ts => { const d = new Date(ts * 1000), now = new Date();
+  const t = d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  return d.toDateString() === now.toDateString() ? t : d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' }) + ' ' + t; };
+const attente = m => m < 60 ? m + ' min' : m < 1440 ? Math.round(m / 60) + ' h' : Math.round(m / 1440) + ' j';
+async function chargerDiscord() {
+  let D;
+  try { D = await (await fetch('/api/port0r/discord?hours=72')).json(); } catch (e) { D = { error: e.message }; }
+  if (D.error) { $('#todo').innerHTML = `<div class="vide" data-part="empty">Moniteur indisponible : ${esc(D.error)}</div>`; return; }
+  $('#todo-n').textContent = D.todo.length ? D.todo.length + ' en attente' : '';
+  $('#todo').innerHTML = D.todo.length ? D.todo.map(t => `<a href="${esc(t.jump)}" target="_blank" rel="noopener" data-part="row">
+      <div class="haut"><b>${esc(t.author)}</b><span class="pastille alt">#${esc(t.channel)}</span><span class="pastille${t.reason === 'te mentionne' || t.reason === 'message privé au bot' ? ' chaud' : ''}">${esc(t.reason)}</span><span>il y a ${attente(t.waiting_min)}</span></div>
+      <p>${esc(t.content || '')}</p>${t.bot_answer ? `<p><em>Le bot : ${esc(t.bot_answer)}</em></p>` : ''}</a>`).join('')
+    : '<div class="tout-va" data-part="empty"><span class="material-symbols-outlined">check_circle</span>Rien ne t\'attend sur le Discord.</div>';
+  const dcl = (DATA && DATA.links || []).find(l => l.kind === 'discord'), lb = (dcl && dcl.latest) || {};
+  $('#dc-chiffres').innerHTML = [[D.members, 'membres'], ['+' + D.joins_24h, 'arrivés en 24 h'], [D.messages_24h, 'messages en 24 h'],
+    [lb.linked, 'casques liés'], [lb.times, 'temps publiés'], [D.bot_answers_24h, 'réponses du bot en 24 h']]
+    .map(([n, u]) => `<div data-part="stat"><div class="n">${fmt(n)}</div><small>${u}</small></div>`).join('');
+  $('#dc-nouveaux').innerHTML = D.newcomers.filter(j => j.name !== 'Port0r').slice(0, 12)
+    .map(j => `<span class="pastille alt" title="arrivé ${hhmm(j.ts)}" data-part="chip"><span class="material-symbols-outlined" style="font-size:14px">person_add</span>${esc(j.name)}</span>`).join('');
+  const max = Math.max(1, ...D.channels.map(c => c.messages));
+  $('#dc-barres').innerHTML = D.channels.slice(0, 8).map(c => `<div class="barre"><span>#${esc(c.channel)}</span><i style="width:${Math.round(c.messages / max * 100)}%"></i><span>${c.messages}</span></div>`).join('');
+  $('#dc-fil > div').innerHTML = D.latest.slice(0, 25).map(m => `<div class="msg${m.is_bot ? ' bot' : ''}"><time>${hhmm(m.ts)}</time><span><b>${esc(m.author)}</b> · #${esc(m.channel)} · ${esc((m.content || '').slice(0, 160))}</span></div>`).join('');
+  $('#dc-frais').textContent = 'mis à jour ' + hhmm(D.now);
+}
+chargerDiscord(); setInterval(chargerDiscord, 60000);
+</script>
+</body>
+</html>
