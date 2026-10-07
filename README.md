@@ -184,9 +184,11 @@ We never ship the pack: all credit goes to Jean-seb, please support his work.
 | Steering | Left stick |
 | Gas / brake | Right trigger / left trigger |
 | Gears (manual cars) | Side grips: left = down, right = up (the right stick up/down works too) |
-| Change view | B |
+| Change view | A or B |
+| Insert a coin / Start | X (left controller) / B (or click the left stick) |
 | Settings panel | Left menu button (aim with the right controller, trigger or A to click) |
-| Pause / resume | Click both thumbsticks |
+| Pause / resume | Click both thumbsticks together (same again to resume) |
+| Recenter the view | Y on the left controller (or hold the Meta button of the right controller for 2 s) |
 
 ## The settings panel
 
