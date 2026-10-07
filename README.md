@@ -110,6 +110,8 @@ discuss where to download game files: please don't ask, on Discord or anywhere e
 
 For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip`. `segabill.zip` is only needed if your `srallyc.zip` does not already include the billboard ROM (some sets do; the app checks).
 
+**The set must match a recent MAME (Port0r runs MAME 0.289).** Sets made for older MAME versions can have different files inside and won't start. If yours is old, check it against a recent MAME with a ROM manager such as ClrMamePro or RomVault.
+
 ## Install (Port0r: Rally VR)
 
 About ten minutes the first time. You need a computer (Windows, Mac or Linux) or just the headset's browser, a USB-C
@@ -323,6 +325,10 @@ Donations support the engine's development. They are not a purchase of any game.
 - **The app keeps saying files are missing.** Check the names (`srallyc.zip`, and `segabill.zip` only if asked), that
   they are zips (not extracted folders), and that "All files access" is allowed: *Settings > Apps > Port0r: Rally VR >
   Permissions*.
+- **The settings menu keeps coming back: I choose Sega Rally, press A, and land in the menu again.** MAME found your
+  files but couldn't start them (a red line at the bottom of the menu says *CHECK AUXILIARY ROM / AUDIT MAME*). Your
+  `srallyc.zip` (or `segabill.zip`) doesn't match MAME 0.289, usually a set from an older MAME version: check it with a
+  ROM manager (ClrMamePro, RomVault) against a recent MAME.
 - **The controllers do nothing.** Restart the headset (hold the power button > Restart).
 - **The game stutters.** Check that *Dynamic resolution* is on (*Smoothness* tab), or set *Resolution* to *Native*.
 - **Still stuck?** Ask the bot in `#ask-port0r` on [Discord](https://discord.gg/XMk7GgapuN): it knows this whole page
