@@ -1,5 +1,14 @@
 # Changelog
 
+## Port0r: Rally VR v0.2.1
+
+- **Clear message when your game files are the wrong version.** If MAME can't load your set, a page says so in your
+  language ("Wrong version of the game files"), lists the files that are missing or don't match, and tells you what to
+  do. Before, the app went back to its menu without a word.
+- **Your corrected files are picked up.** Put a new `srallyc.zip` (or `segabill.zip`) in `Download` and come back to
+  the app: it replaces the copy it made before and the game starts by itself. v0.2.0 kept its first copy forever.
+- No more game list in front of a game that failed to start.
+
 ## Port0r: Rally VR v0.2.0 (first public release)
 
 - True stereoscopic 3D at real scale, the arcade's exact colours, locked 60 images a second smoothed to 120 Hz.
