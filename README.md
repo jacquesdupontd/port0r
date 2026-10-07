@@ -28,7 +28,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.0** ([Releases](../../releases)) |
+| **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.0** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr); SideQuest: waiting for approval, very soon) |
 
 **Headsets:** Meta Quest 3 is the reference. Quest 3S and Quest 2 support is being enabled.
 
@@ -118,7 +118,8 @@ Developer Mode is what lets a Quest install apps that are not from the Meta stor
 
 ### 2. Install the APK
 
-Download `Port0r-RallyVR-v0.2.0-quest3.apk` from [Releases](../../releases), then pick one way:
+Download `Port0r-RallyVR-v0.2.0-quest3.apk` from [Releases](../../releases) or [itch.io](https://port0r.itch.io/rally-vr)
+(a SideQuest store listing is waiting for approval and will follow very soon), then pick one way:
 
 - **SideQuest** (easiest): install [SideQuest](https://sidequestvr.com/setup-howto) on your computer, plug the headset
   in with a USB-C cable, put the headset on and accept **"Allow USB debugging"** (tick *Always allow*). In SideQuest the
@@ -297,7 +298,8 @@ If you enjoy it, any help is more than welcome:
 - **Share it.** Post your clips, tell a friend, star this repository. It costs nothing and it matters a lot.
 - **Buy me a coffee** on [Ko-fi](https://ko-fi.com/port0r), once or monthly.
 - **Sponsor it** on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd), once or monthly (your name in the
-  Sponsors list below and the Sponsor role on Discord, from $5).
+  Sponsors list below and the Sponsor role on Discord, from $5). *The profile is waiting for GitHub's approval: it opens
+  any day now. Until then, Ko-fi is the way.*
 
 Donations support the engine's development. They are not a purchase of any game.
 
