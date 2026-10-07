@@ -5,7 +5,7 @@
   <a href="../../releases"><b>Download</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
-  <a href="https://www.youtube.com/watch?v=N0oONJxX19k"><b>Video</b></a>
+  <a href="https://www.youtube.com/watch?v=FqwEK0hJ_Yc"><b>Video</b></a>
 </p>
 
 # Port0r
@@ -16,7 +16,7 @@ Not a flat screen floating in a dark room. Port0r takes the real 3D scene the ar
 of your eyes and puts you inside it, at real scale. The car sits in front of you, the hills have volume, the trees
 pass by your shoulder, the speed is physical. Be inside the arcade, not in front of it.
 
-[![Watch the launch video](https://img.youtube.com/vi/N0oONJxX19k/maxresdefault.jpg)](https://www.youtube.com/watch?v=N0oONJxX19k)
+[![Watch the launch video](https://img.youtube.com/vi/FqwEK0hJ_Yc/maxresdefault.jpg)](https://www.youtube.com/watch?v=FqwEK0hJ_Yc)
 
 | Desert | Forest (HD textures) | Mountain |
 | --- | --- | --- |
