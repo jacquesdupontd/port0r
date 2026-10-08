@@ -1,5 +1,15 @@
 # Changelog
 
+## Port0r: Rally VR v0.2.3
+
+- **Your game files can be anywhere on the headset**, not only in `Download`: a `ROMS` folder you already use for other
+  emulators works too (up to five folders deep). The pages that ask for the files now say so, in all ten languages
+  (a player on Reddit: "the game notified me it needed to be in the Downloads folder").
+- **A corrected file is picked up wherever you put it**: the most recent copy anywhere on the headset replaces the old
+  one by itself (before, only a file in `Download` was looked at).
+- Nothing else changes in the game: same picture, same smoothness, same settings. Install it over v0.2.2: your
+  settings, records and files are kept.
+
 ## Port0r: Rally VR v0.2.2
 
 - **Steering on the right stick**, a wish from the Discord: settings panel > Game > **Steering stick** > *Right*. The
