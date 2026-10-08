@@ -10,12 +10,21 @@
   <a href="../../releases"><b>Download</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
-  <a href="https://www.youtube.com/watch?v=FqwEK0hJ_Yc"><b>Video</b></a>
+  <a href="https://www.youtube.com/watch?v=FqwEK0hJ_Yc"><b>Video</b></a> ·
+  <a href="SWITCH.md"><b>Nintendo Switch</b></a>
 </p>
 
 # Port0r
 
 **Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch too ([the Switch guide](SWITCH.md)).
+
+## Choose your platform
+
+| [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) | [Nintendo Switch: Sega Rally, full 16:9](SWITCH.md) |
+| --- | --- |
+| [![Port0r Rally VR on Meta Quest](https://img.youtube.com/vi/FqwEK0hJ_Yc/maxresdefault.jpg)](#install-port0r-rally-vr) | [![Sega Rally on Nintendo Switch](assets/switch/header.jpg)](SWITCH.md) |
+| **v0.2.2** · APK for Meta Quest 3 (Quest 2 reported working) · inside the game in true stereoscopic 3D | **v0.5.1** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/latest) · [Install guide](#install-port0r-rally-vr) · [itch.io](https://port0r.itch.io/rally-vr) · [Video](https://www.youtube.com/watch?v=FqwEK0hJ_Yc) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) |
 
 > ### Download Port0r: Rally VR v0.2.2 (free)
 > **[Port0r-RallyVR-v0.2.2-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.2/Port0r-RallyVR-v0.2.2-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
