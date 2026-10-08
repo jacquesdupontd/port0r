@@ -9,6 +9,7 @@
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1"><b>Download</b></a> ·
   <a href="https://port0r.itch.io/sega-rally-switch"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
+  <a href="https://youtu.be/nC8Lj6FlHLE"><b>Video</b></a> ·
   <a href="README.md"><b>Port0r on Meta Quest (VR)</b></a>
 </p>
 
@@ -26,6 +27,8 @@
 The whole track in **full 16:9**, wider than the cabinet ever showed. Jean-seb's community **HD textures** if you want
 them. A **Workshop** with 10 mods, picture styles, a best-lap ghost, named replays and a photo mode. Steer with the
 left or the right stick. And your times on the **Port0r Discord leaderboard**.
+
+[![Watch the release video](https://img.youtube.com/vi/nC8Lj6FlHLE/maxresdefault.jpg)](https://youtu.be/nC8Lj6FlHLE)
 
 | Desert | Forest | Tunnel |
 | --- | --- | --- |

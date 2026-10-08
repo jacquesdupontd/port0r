@@ -70,6 +70,9 @@ Every game below already runs in the headset, in true 3D. They come out one at a
 ## Sega Rally on Nintendo Switch (new, v0.5.1)
 
 > **The complete Switch guide, with screenshots of every Workshop page: [SWITCH.md](SWITCH.md).**
+> **Video:** https://youtu.be/nC8Lj6FlHLE
+
+[![Watch the Switch release video](https://img.youtube.com/vi/nC8Lj6FlHLE/maxresdefault.jpg)](https://youtu.be/nC8Lj6FlHLE)
 
 | Desert | Lake (HD textures) | Mountain |
 | --- | --- | --- |
