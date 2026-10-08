@@ -431,6 +431,11 @@ If you can, put a link to this page (or to [port0r.itch.io/rally-vr](https://por
 description, or just say the name, Port0r. It is not an obligation, only a big help, and thank you. If you show the HD
 textures, a word for Jean-seb, who made them, is welcome too.
 
+Already made by others, thank you:
+
+- [Sega Rally VR - Port0r: Rally VR (Meta Quest 3) - Standalone Gameplay](https://www.youtube.com/watch?v=Hh9QmG03Pgc), by
+  Pixelacos VR (Spanish), 11 minutes of play.
+
 ## Support the project
 
 Port0r is a one-person project, and lately it takes all of my free time. It is free and will stay free: no paywall, no
