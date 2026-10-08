@@ -1,5 +1,24 @@
 # Changelog
 
+## Sega Rally Switch v0.5.3
+
+- Remap ten driving actions in Workshop > Driving > Controls. Press A, release the buttons, then press your chosen button. B saves and returns; X restores defaults. The Workshop and clean-exit shortcuts remain fixed.
+- Choose mirrored scenery or plain black sides for the original 4:3 picture, in Settings > Display.
+- Check for Switch updates at startup, or manually in Sharing > GitHub updates. Automatic checks can be disabled and that choice is saved.
+- Read and scroll the release changelog before downloading. Press + on the update notification to open the notes directly. These notes come from the matching stable Switch release on GitHub; Quest releases are excluded.
+- Download updates in the game. SHA-256 and the NRO header are verified before installation is offered. A second confirmation leaves the race, saves and restarts the new version. B cancels a download or returns without installing.
+- Settings, scores, replays, ghosts and HD textures are kept. The original NRO stays available as a fallback; the HOME tile does not need reinstalling.
+- No changes to MAME emulation, driving physics or graphics in this update. No overclocking.
+
+### Updating from v0.5.1 or v0.5.2
+
+Install v0.5.3 manually once: close the game and replace `/switch/segarally/gpt61sol/segarally.nro` with this release's NRO, or copy the ZIP onto the SD root. Keep all existing data folders. Future newer stable Switch releases can then be installed from the game.
+
+No ROM, BIOS or HD texture pack is included. See SWITCH.md / INSTALL.md for the required folders. Video capture and replay-to-video conversion are not included.
+
+
+Validation: Switch compilation, native menu rendering and host tests for release checks, downloads, cancellation, corrupt files and fallback. The future-update handoff has not yet been tested on a physical Switch.
+
 ## Port0r: Rally VR v0.2.3
 
 - **Your game files can be anywhere on the headset**, not only in `Download`: a `ROMS` folder you already use for other

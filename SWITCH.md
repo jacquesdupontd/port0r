@@ -1,12 +1,12 @@
 ![Sega Rally on Nintendo Switch](assets/switch/header.jpg)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1"><img alt="Download Sega Rally for Nintendo Switch v0.5.1 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.1%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1"><b>Download</b></a> ·
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><b>Download</b></a> ·
   <a href="https://port0r.itch.io/sega-rally-switch"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://youtu.be/nC8Lj6FlHLE"><b>Video</b></a> ·
@@ -17,10 +17,10 @@
 
 **The 1995 arcade Sega Rally Championship, as a free homebrew for a Switch running custom firmware.**
 
-> ### Download Sega Rally for Switch v0.5.1 (free)
-> **[Port0r-SegaRally-Switch-v0.5.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.1/Port0r-SegaRally-Switch-v0.5.1.zip)**
+> ### Download Sega Rally for Switch v0.5.3 (free)
+> **[Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip)**
 > (the game, the optional HOME tile and the install guide), from the
-> [release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1), also on
+> [release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3). The project is also on
 > [itch.io](https://port0r.itch.io/sega-rally-switch). Then follow the [install guide](#install) below: about ten
 > minutes the first time. **You bring your own game files.**
 
@@ -69,7 +69,7 @@ left or the right stick. And your times on the **Port0r Discord leaderboard**.
 
 ### 1. Copy the files
 
-Unzip `Port0r-SegaRally-Switch-v0.5.1.zip` on your computer and copy **its content** to the **root of the SD card**,
+Unzip `Port0r-SegaRally-Switch-v0.5.3.zip` on your computer and copy **its content** to the **root of the SD card**,
 keeping the folders. You get:
 
 ```
@@ -130,7 +130,7 @@ Updates only replace the `.nro`: no need to reinstall the tile.
 | In the Workshop | L / R section, up / down select, A change, B back to the race |
 | Quit cleanly | Hold ZL + ZR + R for 2 seconds |
 
-The Controls page in the Workshop (Driving > Controls) always shows the buttons for your current stick choice.
+The table lists the defaults. In **Driving > Controls**, choose an action, press **A**, release all buttons, then press the button you want. **B** saves and returns; **X** restores the defaults. Ten actions can be changed. The selected steering stick and the fixed Workshop / clean-exit shortcuts remain available.
 
 <a id="the-workshop"></a>
 
@@ -146,7 +146,7 @@ many mods are on.
 - **Steering stick**: left or right. The other stick then works the pedals (analog gas and brake); ZR / ZL still work.
 - **Steering range**: 22 % is the reference; 50 % reaches both ends of the arcade wheel.
 - **Adaptive steering**: a gentler wheel at high speed. The range you chose stays the limit.
-- **Vibrations**: rumble on shocks, jumps, gear changes, and a constant hum. Joy-Con and compatible controllers.
+- **Vibrations**: short rumble impulses for shocks, jumps and gear changes. Joy-Con and compatible controllers.
 - **Controls**: the controls page above.
 
 ### Mods
@@ -179,7 +179,7 @@ See [Replays](#replays).
 ![Workshop: Settings](assets/switch/workshop-settings.png)
 
 - **HD textures**: on or off (when the pack is installed). **Anisotropic filtering** for the HD textures (x8 is the tested default).
-- **Volume**, **Display** (Full 16:9 extends the world and keeps its full height; Full 4:3 is the original framing),
+- **Volume**, **Display** (Full 16:9 extends the world and keeps its full height; 4:3 offers mirrored scenery or black sides),
   **Speed** (60 fps, or the arcade's original speed),
   **Resolution** (automatic or fixed).
 - **HD pack and game files**: where the game looks, and what it found.
@@ -198,6 +198,10 @@ See [Replays](#replays).
 ![Workshop: Sharing](assets/switch/workshop-sharing.png)
 
 The Discord leaderboard: see [below](#the-leaderboard-on-discord).
+
+**GitHub updates** checks the stable Switch release channel. The update page opens with the changelog: up / down scrolls it. Press **+** on an update notification in the Workshop to open these notes directly. **A** downloads a newer release; **B** cancels. Once verified, a **second A confirmation** leaves the current race, saves scores and settings, installs and restarts. **X** shows the release notes again before installing. No update installs automatically.
+
+**Check for updates** can be switched off. Manual checks remain available. Checking happens once at startup without interrupting a race; downloading pauses play. A failed connection never prevents playing offline.
 
 ## Replays
 
@@ -241,9 +245,10 @@ wrong, tell us in #bugs.
 ## Saves, settings and updates
 
 - Scores and arcade settings are saved automatically during play; Workshop > Game > Scores and settings saves now.
-- **Updating**: replace `/switch/segarally/gpt61sol/segarally.nro` with the new one. Settings, records, replays, ghosts
-  and the HD cache stay. The HOME tile needs nothing.
-- To go back to an older version, put its `.nro` back; your data stays.
+- **From v0.5.1 / v0.5.2**: close the game and replace `/switch/segarally/gpt61sol/segarally.nro` with v0.5.3 once. Keep your data folders and the HOME tile.
+- **From v0.5.3 onwards**: use Sharing > GitHub updates, read the changelog, download, then confirm installation. Settings, records, replays, ghosts and the HD cache stay.
+- Downloads use HTTPS and are checked against the release asset's SHA-256. A verified new NRO is stored in `.updates/`; `update.ini` selects it. The original `segarally.nro` and earlier versions are not overwritten.
+- **Rollback**: close the game, remove `update.ini` and `update.ini.bak` in `/switch/segarally/gpt61sol/`, then launch the original NRO. To choose another release manually, also replace `segarally.nro` with its NRO. Your data stays.
 - New replays use the replay format 7; replays of older versions still play. An older version cannot read new replays.
 
 ## Troubleshooting

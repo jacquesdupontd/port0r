@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/jacquesdupontd/port0r/releases/latest"><img alt="Download Port0r: Rally VR v0.2.3 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.3%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1"><img alt="Download Sega Rally for Nintendo Switch v0.5.1 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.1%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
@@ -23,13 +23,13 @@
 | [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) | [Nintendo Switch: Sega Rally, full 16:9](SWITCH.md) |
 | --- | --- |
 | [![Port0r Rally VR on Meta Quest](https://img.youtube.com/vi/FqwEK0hJ_Yc/maxresdefault.jpg)](#install-port0r-rally-vr) | [![Sega Rally on Nintendo Switch](assets/switch/header.jpg)](SWITCH.md) |
-| **v0.2.3** · APK for Meta Quest 3 (Quest 2 reported working) · inside the game in true stereoscopic 3D | **v0.5.1** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/latest) · [Install guide](#install-port0r-rally-vr) · [itch.io](https://port0r.itch.io/rally-vr) · [Video](https://www.youtube.com/watch?v=FqwEK0hJ_Yc) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) |
+| **v0.2.3** · APK for Meta Quest 3 (Quest 2 reported working) · inside the game in true stereoscopic 3D | **v0.5.3** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/latest) · [Install guide](#install-port0r-rally-vr) · [itch.io](https://port0r.itch.io/rally-vr) · [Video](https://www.youtube.com/watch?v=FqwEK0hJ_Yc) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) |
 
 > ### Download Port0r: Rally VR v0.2.3 (free)
 > **[Port0r-RallyVR-v0.2.3-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.3/Port0r-RallyVR-v0.2.3-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time. You bring your own game files.
-> **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.1/Port0r-SegaRally-Switch-v0.5.1.zip) (homebrew), [complete Switch guide](SWITCH.md).
+> **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip) (homebrew), [complete Switch guide](SWITCH.md).
 > The app's own source code is not public for now: this repository holds the releases, the guide and the issue tracker.
 
 Not a flat screen floating in a dark room. Port0r takes the real 3D scene the arcade board draws, rebuilds it for each
@@ -49,7 +49,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | Game | Board | Status |
 | --- | --- | --- |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.3** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr); SideQuest: waiting for approval, very soon) |
-| **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1), [install guide](#install-sega-rally-switch)) |
+| **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
 
 **Headsets:** Meta Quest 3 is the reference. A player reports that it runs perfectly on Quest 2 too.
 
@@ -76,7 +76,7 @@ Every game below already runs in the headset, in true 3D. They come out one at a
 
 <a id="install-sega-rally-switch"></a>
 
-## Sega Rally on Nintendo Switch (new, v0.5.1)
+## Sega Rally on Nintendo Switch (new, v0.5.3)
 
 > **The complete Switch guide, with screenshots of every Workshop page: [SWITCH.md](SWITCH.md).**
 > **Video:** https://youtu.be/nC8Lj6FlHLE
@@ -91,13 +91,13 @@ The same arcade Sega Rally, as a homebrew for a Switch running custom firmware (
 16:9, Jean-seb's HD textures (optional), a Workshop with 10 mods, best-lap ghost, named replays, photo mode, 10
 languages, and your times on the Discord leaderboard.
 
-**Download:** [Port0r-SegaRally-Switch-v0.5.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.1/Port0r-SegaRally-Switch-v0.5.1.zip)
-from the [Switch release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1). You bring your own
+**Download:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip)
+from the [Switch release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3). You bring your own
 game files (MAME 0.289), nothing else is included.
 
 ### 1. Copy the files
 
-Unzip `Port0r-SegaRally-Switch-v0.5.1.zip` and copy its content to the **root of the SD card**, keeping the folders.
+Unzip `Port0r-SegaRally-Switch-v0.5.3.zip` and copy its content to the **root of the SD card**, keeping the folders.
 The game lands in:
 
 ```
@@ -162,6 +162,8 @@ game data: it only opens the NRO. Install it with your usual NSP installer, and 
 | Quit cleanly | Hold ZL + ZR + R for 2 seconds |
 
 Steering sensitivity: 22 % is the reference, 50 % reaches both ends of the arcade wheel.
+
+**New in v0.5.3:** remap driving buttons in Workshop > Driving > Controls (A to capture, B to save, X to reset). Choose mirror or black sides in 4:3. Sharing > GitHub updates shows the scrollable changelog before downloading and confirming installation; automatic checks can be disabled. From v0.5.1 / v0.5.2, copy the new NRO manually once. [Update and rollback guide](SWITCH.md#saves-settings-and-updates).
 
 ### 6. The Workshop (+ and −)
 
