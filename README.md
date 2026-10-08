@@ -15,12 +15,12 @@
 
 # Port0r
 
-**Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch too ([below](#install-sega-rally-switch)).
+**Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch too ([the Switch guide](SWITCH.md)).
 
 > ### Download Port0r: Rally VR v0.2.2 (free)
 > **[Port0r-RallyVR-v0.2.2-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.2/Port0r-RallyVR-v0.2.2-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time. You bring your own game files.
-> **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.1/Port0r-SegaRally-Switch-v0.5.1.zip) (homebrew), [install guide](#install-sega-rally-switch).
+> **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.1/Port0r-SegaRally-Switch-v0.5.1.zip) (homebrew), [complete Switch guide](SWITCH.md).
 > The app's own source code is not public for now: this repository holds the releases, the guide and the issue tracker.
 
 Not a flat screen floating in a dark room. Port0r takes the real 3D scene the arcade board draws, rebuilds it for each
@@ -68,6 +68,12 @@ Every game below already runs in the headset, in true 3D. They come out one at a
 <a id="install-sega-rally-switch"></a>
 
 ## Sega Rally on Nintendo Switch (new, v0.5.1)
+
+> **The complete Switch guide, with screenshots of every Workshop page: [SWITCH.md](SWITCH.md).**
+
+| Desert | Lake (HD textures) | Mountain |
+| --- | --- | --- |
+| ![Desert](assets/switch/shot-desert.jpg) | ![Lake](assets/switch/shot-lake.jpg) | ![Mountain](assets/switch/shot-mountain.jpg) |
 
 The same arcade Sega Rally, as a homebrew for a Switch running custom firmware (Atmosphère): the whole track in full
 16:9, Jean-seb's HD textures (optional), a Workshop with 10 mods, best-lap ghost, named replays, photo mode, 10
