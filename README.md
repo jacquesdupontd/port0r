@@ -2,6 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/jacquesdupontd/port0r/releases/latest"><img alt="Download Port0r: Rally VR v0.2.2 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.2%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1"><img alt="Download Sega Rally for Nintendo Switch v0.5.1 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.1%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
@@ -14,11 +15,12 @@
 
 # Port0r
 
-**Arcade classics in true stereoscopic 3D, on Meta Quest.**
+**Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch too ([below](#install-sega-rally-switch)).
 
 > ### Download Port0r: Rally VR v0.2.2 (free)
 > **[Port0r-RallyVR-v0.2.2-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.2/Port0r-RallyVR-v0.2.2-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time. You bring your own game files.
+> **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.1/Port0r-SegaRally-Switch-v0.5.1.zip) (homebrew), [install guide](#install-sega-rally-switch).
 > The app's own source code is not public for now: this repository holds the releases, the guide and the issue tracker.
 
 Not a flat screen floating in a dark room. Port0r takes the real 3D scene the arcade board draws, rebuilds it for each
@@ -38,6 +40,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | Game | Board | Status |
 | --- | --- | --- |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.2** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr); SideQuest: waiting for approval, very soon) |
+| **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1), [install guide](#install-sega-rally-switch)) |
 
 **Headsets:** Meta Quest 3 is the reference. A player reports that it runs perfectly on Quest 2 too.
 
@@ -59,6 +62,113 @@ Every game below already runs in the headset, in true 3D. They come out one at a
   distance, all four arcade cameras.
 - **Dirt Dash** (Namco System 22, 1995): immersive 3D at 120 Hz.
 - **Time Crisis II** (Namco System 23, 1997): full speed, immersive 3D.
+
+---
+
+<a id="install-sega-rally-switch"></a>
+
+## Sega Rally on Nintendo Switch (new, v0.5.1)
+
+The same arcade Sega Rally, as a homebrew for a Switch running custom firmware (Atmosphère): the whole track in full
+16:9, Jean-seb's HD textures (optional), a Workshop with 10 mods, best-lap ghost, named replays, photo mode, 10
+languages, and your times on the Discord leaderboard.
+
+**Download:** [Port0r-SegaRally-Switch-v0.5.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.1/Port0r-SegaRally-Switch-v0.5.1.zip)
+from the [Switch release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.1). You bring your own
+game files (MAME 0.289), nothing else is included.
+
+### 1. Copy the files
+
+Unzip `Port0r-SegaRally-Switch-v0.5.1.zip` and copy its content to the **root of the SD card**, keeping the folders.
+The game lands in:
+
+```
+/switch/segarally/gpt61sol/segarally.nro
+```
+
+Updating: copy the new `segarally.nro` over the old one; your settings, records, replays, ghosts and cache stay.
+
+### 2. Add your game files
+
+Put `srallyc.zip` and `segabill.zip` (**do not unzip them**) in:
+
+```
+/switch/segarally/gpt61sol/roms/
+```
+
+A merged set that already contains `epr-18022.ic2` (Sega Billboard) does not need the separate `segabill.zip`.
+
+If a file is missing or wrong, the start screen names the files and the folder to put them in; **A** searches again.
+To replace a wrong set, drop the new zip in `/Download/` (up to three sub-folders): a different size or a newer date
+is copied over the old one automatically at the next launch.
+
+### 3. Optional: the HD texture pack (by Jean-seb)
+
+Extract it to:
+
+```
+/switch/segarally/gpt61sol/texpack/srallyc/
+```
+
+`srallyc.pat` and the images must be **directly** in that folder (no extra sub-folder). A pack zip placed in
+`/Download/` is found and extracted there automatically. Without it, **B** plays with the original textures and
+**Y** stops asking. The first launch with HD builds a cache: keep it when you update.
+
+### 4. Launch it in application mode
+
+Hold **R** while opening any installed game to get the Homebrew Menu with full memory, then choose Sega Rally.
+Opening it from the Album alone may run out of memory.
+
+#### Optional: a Sega Rally tile on the HOME screen
+
+The zip has a small launcher (`tile-home/SegaRally-0100534552000000.nsp`, title ID `0100534552000000`). It holds no
+game data: it only opens the NRO. Install it with your usual NSP installer, and copy the two text files of the zip to:
+
+```
+/atmosphere/contents/0100534552000000/romfs/nextNroPath
+/atmosphere/contents/0100534552000000/romfs/nextArgv
+```
+
+### 5. Controls
+
+| Action | Button |
+|---|---|
+| Steer | Left stick (or the right stick: Workshop > Driving) |
+| Gas / brake | ZR / ZL, or the other stick up / down |
+| Gears (manual cars) | L down, R up |
+| Start | + |
+| Insert a coin | − (or click the right stick) |
+| Change view | X / Y |
+| Handbrake | Click the left stick |
+| **Workshop (settings, mods, replays) and pause** | **+ and − together** |
+| Quit cleanly | Hold ZL + ZR + R for 2 seconds |
+
+Steering sensitivity: 22 % is the reference, 50 % reaches both ends of the arcade wheel.
+
+### 6. The Workshop (+ and −)
+
+Ten languages, steering stick, brightness, automatic or fixed resolution, original speed or 60 fps, 10 mods (free play,
+mirrored track, night, comic book, black and white, CRT...), picture styles, practice ghost, named replays, photo mode.
+
+### 7. Replays
+
+Workshop > REPLAYS > Record a new race, then play. **Name and save** keeps it (40 characters max). Replays are saved
+inputs (`.srr`), not videos: replay them in the game, export them to `/switch/segarally/gpt61sol/replays/exports/`,
+or import someone's `.srr` into `replays/` (same version and same game files needed). To make a video of a replay,
+record the Switch's HDMI output with a capture card.
+
+### 8. Online leaderboard (Port0r Discord) — new, please report problems
+
+Workshop > Share > Discord shows a code. On your phone or computer, send `!link CODE` in any channel of the
+[Port0r Discord](https://discord.gg/XMk7GgapuN) or in a private message to the bot. Nothing to install on the Switch.
+After a real race the game asks before publishing your time (replays and free-run times are never published).
+"Forget the account" removes the link. This is the first public version of the Switch link: if anything goes wrong,
+tell us in #bugs.
+
+### Help
+
+- Ask on the [Port0r Discord](https://discord.gg/XMk7GgapuN) (#install-help, or the bot in #ask-port0r).
+- Bugs: #bugs on Discord, or a GitHub issue.
 
 ---
 
