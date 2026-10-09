@@ -32,7 +32,7 @@
 | --- | --- |
 | [![Sega Rally on Android](assets/android/header.jpg)](ANDROID.md) | [![Sega Rally on Linux and the Steam Deck](assets/linux/header.jpg)](LINUX.md) |
 | **v0.1.0** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures | **v0.1.0** · for the Steam Deck and any 64-bit Linux PC (Vulkan) · up to 240 fps and 200 % supersampling, keyboard or gamepad |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.0) · [Complete guide](ANDROID.md) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.0) · [Complete guide](LINUX.md) |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.0) · [Complete guide](ANDROID.md) · [itch.io](https://port0r.itch.io/sega-rally-android) · [Video](https://youtu.be/hZXkqHSjeHs) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.0) · [Complete guide](LINUX.md) · [itch.io](https://port0r.itch.io/sega-rally-steam-deck) · [Video](https://youtu.be/54HLGGeziXg) |
 
 > ### Download Port0r: Rally VR v0.2.4 (free)
 > **[Port0r-RallyVR-v0.2.4-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.4/Port0r-RallyVR-v0.2.4-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).

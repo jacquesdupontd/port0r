@@ -7,7 +7,9 @@
 <p align="center">
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.0"><b>Download</b></a> ·
+  <a href="https://port0r.itch.io/sega-rally-android"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
+  <a href="https://youtu.be/hZXkqHSjeHs"><b>Video</b></a> ·
   <a href="README.md"><b>Port0r on Meta Quest (VR)</b></a> ·
   <a href="SWITCH.md"><b>Nintendo Switch</b></a>
 </p>
@@ -26,6 +28,8 @@ fill a modern screen. Drawn by the same Vulkan renderer as Port0r: Rally VR, at 
 **dynamic resolution** that keeps it smooth and a **sharpening** pass that keeps it crisp. Jean-seb's community **HD
 textures** if you want them. **Touch controls designed for racing**, steering by **turning or tilting the device**, any
 **gamepad**, the Sega Rally **mods**, and your times on the **Port0r Discord leaderboard**.
+
+[![Watch the release video](https://img.youtube.com/vi/hZXkqHSjeHs/maxresdefault.jpg)](https://youtu.be/hZXkqHSjeHs)
 
 | Desert | Forest | Mountain |
 | --- | --- | --- |

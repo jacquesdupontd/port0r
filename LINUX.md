@@ -7,7 +7,9 @@
 <p align="center">
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.0"><b>Download</b></a> ·
+  <a href="https://port0r.itch.io/sega-rally-steam-deck"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
+  <a href="https://youtu.be/54HLGGeziXg"><b>Video</b></a> ·
   <a href="README.md"><b>Port0r on Meta Quest (VR)</b></a> ·
   <a href="SWITCH.md"><b>Nintendo Switch</b></a> ·
   <a href="ANDROID.md"><b>Android</b></a>
@@ -28,6 +30,8 @@ fill your screen, at its **native resolution**. Drawn by the same Vulkan rendere
 or 240 images a second**, with **supersampling up to 200 %**, **anti-aliasing up to x8**, and a **steady pacing** that
 gives every arcade frame exactly the same time on screen. Jean-seb's community **HD textures** if you want them. Keyboard
 and **any gamepad**, the **Steam Deck** as a non-Steam game, and your times on the **Port0r Discord leaderboard**.
+
+[![Watch the release video](https://img.youtube.com/vi/54HLGGeziXg/maxresdefault.jpg)](https://youtu.be/54HLGGeziXg)
 
 | Desert | Forest | Mountain |
 | --- | --- | --- |
