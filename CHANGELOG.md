@@ -1,5 +1,58 @@
 # Changelog
 
+## Sega Rally Linux & Steam Deck v0.1.0
+
+The first Linux version: Sega Rally on the Steam Deck and any 64-bit Linux PC (Vulkan), nothing to install.
+[The Linux guide](LINUX.md).
+
+- **True full screen at your screen's native resolution**, the arcade's whole picture with its HUD and the world widened;
+  the same Vulkan renderer as Port0r: Rally VR.
+- **Up to 240 images a second** (the screen's maximum, or 60, 120, 180, 240), **supersampling up to 200 %**,
+  **anti-aliasing up to x8**: 120 images a second at 200 % of 1440p with the HD textures on a Radeon RX 7800 XT.
+- **Steady pacing**: every arcade picture held exactly the same number of refreshes (Settings > Image > Pacing), or
+  the lowest latency.
+- **Keyboard** (by key position: ZQSD on AZERTY) and **every gamepad** at once, remappable, with rumble; the mouse
+  works in the settings.
+- **Steam Deck**: add `Port0r Rally.sh` as a non-Steam game; the Deck's controls work as a gamepad.
+- **Your game files found by themselves** in Downloads, anywhere in your home folder or on the SD card, zipped HD pack
+  included; or drop them on the window.
+- **Record your races** (F9, or Settings > Game on the Deck): exactly 60 images a second with the game's sound, four
+  quality profiles from Maximum to Light, encoded by the graphics card; F12 takes a screenshot.
+- **Updates from inside the game**: from the next version on, the game checks GitHub at launch, shows what's new
+  before anything is installed, installs it (SHA-256 checked, the previous version kept) and restarts.
+- The Sega Rally mods, picture styles, HD textures, ten languages, the Discord leaderboard.
+- Your own game files (MAME 0.289), never included.
+
+## Sega Rally Android v0.1.0
+
+The first Android version: Sega Rally on phones and tablets (Android 8+, Vulkan). [The Android guide](ANDROID.md).
+
+- **True full screen**: the arcade's whole picture, HUD included, the world widened to fill the screen; the game's own
+  camera, never tilted.
+- **60 images a second** on the tested tablet at its full 3200x2136, with a dynamic resolution (Settings > Image >
+  Resolution: Auto) and a sharpening pass that keeps the picture crisp when it lowers.
+- **Touch controls designed for racing**: a steering slider that appears under the left thumb, the brake and the gas
+  side by side, gears above them, all sized in real millimetres; size, opacity and progressive gas in Settings > Driving.
+- **Steer by turning or tilting the device**, with angle, smoothing, dead zone and recentring.
+- **Any gamepad**: every action remappable in Settings > Gamepad, Start pauses, Select held shows or hides the touch
+  controls, and the settings work with the gamepad.
+- The Rally VR settings that make sense on a flat screen, the Sega Rally mods, HD textures, vibrations, ten languages,
+  the Discord leaderboard.
+- **Updates from inside the game**: from the next version on, the game checks GitHub at launch, shows what's new
+  before anything is installed, and installs it (SHA-256 checked) after Android's confirmation.
+- Installs next to Port0r: Rally VR on a Quest; your own game files (MAME 0.289), never included.
+
+## Port0r: Rally VR v0.2.4
+
+- **Updates from inside the game**: Rally VR checks for a new version once at launch (Settings > Game, can be switched
+  off) and shows what's new before anything is installed. Download and install from the headset, then choose Open to
+  play the new version. The first time, the headset asks you to allow Port0r to install apps (once).
+- Sound comes back by itself after a change of audio output (Bluetooth headphones connected or removed), and no longer
+  drifts after a pause or the menu.
+- Smaller Port0r watermark, fixed in the bottom-left corner.
+- Your settings, records and game files are kept. This one time, install v0.2.4 over v0.2.3 with SideQuest or adb:
+  v0.2.3 has no in-game update yet.
+
 ## Sega Rally Switch v0.5.3
 
 - Remap ten driving actions in Workshop > Driving > Controls. Press A, release the buttons, then press your chosen button. B saves and returns; X restores defaults. The Workshop and clean-exit shortcuts remain fixed.

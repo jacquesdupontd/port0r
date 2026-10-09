@@ -1,7 +1,7 @@
 ![Port0r](assets/port0r-header.png)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/latest"><img alt="Download Port0r: Rally VR v0.2.3 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.3%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/latest"><img alt="Download Port0r: Rally VR v0.2.4 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.4%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
 </p>
 
@@ -11,23 +11,31 @@
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
   <a href="https://www.youtube.com/watch?v=FqwEK0hJ_Yc"><b>Video</b></a> ·
-  <a href="SWITCH.md"><b>Nintendo Switch</b></a>
+  <a href="SWITCH.md"><b>Nintendo Switch</b></a> ·
+  <a href="ANDROID.md"><b>Android</b></a> ·
+  <a href="LINUX.md"><b>Linux & Steam Deck</b></a>
 </p>
 
 # Port0r
 
-**Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch too ([the Switch guide](SWITCH.md)).
+**Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch ([the Switch guide](SWITCH.md)), on Android phones and tablets ([the Android guide](ANDROID.md)), and on Linux and the Steam Deck ([the Linux guide](LINUX.md)).
 
 ## Choose your platform
 
 | [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) | [Nintendo Switch: Sega Rally, full 16:9](SWITCH.md) |
 | --- | --- |
 | [![Port0r Rally VR on Meta Quest](https://img.youtube.com/vi/FqwEK0hJ_Yc/maxresdefault.jpg)](#install-port0r-rally-vr) | [![Sega Rally on Nintendo Switch](assets/switch/header.jpg)](SWITCH.md) |
-| **v0.2.3** · APK for Meta Quest 3 (Quest 2 reported working) · inside the game in true stereoscopic 3D | **v0.5.3** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard |
+| **v0.2.4** · APK for Meta Quest 3 (Quest 2 reported working) · inside the game in true stereoscopic 3D | **v0.5.3** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard |
 | [Download](https://github.com/jacquesdupontd/port0r/releases/latest) · [Install guide](#install-port0r-rally-vr) · [itch.io](https://port0r.itch.io/rally-vr) · [Video](https://www.youtube.com/watch?v=FqwEK0hJ_Yc) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) |
 
-> ### Download Port0r: Rally VR v0.2.3 (free)
-> **[Port0r-RallyVR-v0.2.3-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.3/Port0r-RallyVR-v0.2.3-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
+| [Android: Sega Rally, phones and tablets](ANDROID.md) | [Linux & Steam Deck: Sega Rally, any PC](LINUX.md) |
+| --- | --- |
+| [![Sega Rally on Android](assets/android/header.jpg)](ANDROID.md) | [![Sega Rally on Linux and the Steam Deck](assets/linux/header.jpg)](LINUX.md) |
+| **v0.1.0** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures | **v0.1.0** · for the Steam Deck and any 64-bit Linux PC (Vulkan) · up to 240 fps and 200 % supersampling, keyboard or gamepad |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.0) · [Complete guide](ANDROID.md) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.0) · [Complete guide](LINUX.md) |
+
+> ### Download Port0r: Rally VR v0.2.4 (free)
+> **[Port0r-RallyVR-v0.2.4-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.4/Port0r-RallyVR-v0.2.4-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time. You bring your own game files.
 > **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip) (homebrew), [complete Switch guide](SWITCH.md).
 > The app's own source code is not public for now: this repository holds the releases, the guide and the issue tracker.
@@ -48,7 +56,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.3** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr); SideQuest: waiting for approval, very soon) |
+| **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.4** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr); SideQuest: waiting for approval, very soon) |
 | **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
 
 **Headsets:** Meta Quest 3 is the reference. A player reports that it runs perfectly on Quest 2 too.
@@ -259,13 +267,13 @@ Developer Mode is what lets a Quest install apps that are not from the Meta stor
 
 ### 2. Install the APK
 
-Download `Port0r-RallyVR-v0.2.3-quest3.apk` from [Releases](../../releases) or [itch.io](https://port0r.itch.io/rally-vr)
+Download `Port0r-RallyVR-v0.2.4-quest3.apk` from [Releases](../../releases) or [itch.io](https://port0r.itch.io/rally-vr)
 (a SideQuest store listing is waiting for approval and will follow very soon), then pick one way:
 
 - **SideQuest** (easiest): install [SideQuest](https://sidequestvr.com/setup-howto) on your computer, plug the headset
   in with a USB-C cable, put the headset on and accept **"Allow USB debugging"** (tick *Always allow*). In SideQuest the
   dot at the top left turns green: click the **"Install APK file from folder"** icon (top right) and pick the APK.
-- **adb** (if you already use it): `adb install -r Port0r-RallyVR-v0.2.3-quest3.apk`
+- **adb** (if you already use it): `adb install -r Port0r-RallyVR-v0.2.4-quest3.apk`
 
 The APK checksum is in `SHA256SUMS.txt` next to it, if you want to check your download.
 
@@ -502,4 +510,4 @@ Port0r's own source code is not public for now. The open-source components it us
 
 ## Download
 
-**[Port0r-RallyVR-v0.2.3-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.3/Port0r-RallyVR-v0.2.3-quest3.apk)**, free, from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest) or [itch.io](https://port0r.itch.io/rally-vr). Install guide: [above](#install-port0r-rally-vr). Help: [Discord](https://discord.gg/XMk7GgapuN).
+**[Port0r-RallyVR-v0.2.4-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.4/Port0r-RallyVR-v0.2.4-quest3.apk)**, free, from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest) or [itch.io](https://port0r.itch.io/rally-vr). Install guide: [above](#install-port0r-rally-vr). Help: [Discord](https://discord.gg/XMk7GgapuN).
