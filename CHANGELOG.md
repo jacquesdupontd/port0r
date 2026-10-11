@@ -1,5 +1,11 @@
 # Changelog
 
+## Sega Rally Android v0.1.2
+
+- Fixes a start stuck on the logo on some phones (Android 16, Snapdragon 8 Gen 2, reported on a Galaxy Z Fold 5): the
+  graphics driver's shader cache is now emptied at every launch. Update from inside the game: your settings, records and
+  game files are kept.
+
 ## Sega Rally Mac v0.1.0
 
 The first Mac version: Sega Rally native on Macs with Apple Silicon (M1 and newer), macOS 12 or newer, nothing to
