@@ -37,16 +37,19 @@
 | **v0.1.1** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures | **v0.1.1** · for the Steam Deck and any 64-bit Linux PC (Vulkan) · up to 240 fps and 200 % supersampling, keyboard or gamepad |
 | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.1) · [Complete guide](ANDROID.md) · [itch.io](https://port0r.itch.io/sega-rally-android) · [Video](https://youtu.be/hZXkqHSjeHs) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1) · [Complete guide](LINUX.md) · [itch.io](https://port0r.itch.io/sega-rally-steam-deck) · [Video](https://youtu.be/54HLGGeziXg) |
 
-| [Mac: Sega Rally, Apple Silicon](MAC.md) | |
+| [Mac: Sega Rally, Apple Silicon](MAC.md) | [Discord: leaderboard, help, what's next](https://discord.gg/XMk7GgapuN) |
 | --- | --- |
-| [![Sega Rally on Mac](assets/mac/shot-desert.jpg)](MAC.md) | |
-| **v0.1.0** · native app for Macs with Apple Silicon (M1 and newer), macOS 12+ · 120 fps on ProMotion, up to 240 fps and 200 % supersampling, keyboard or gamepad | |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0) · [Complete guide](MAC.md) | |
+| [![Sega Rally on Mac](assets/mac/header.jpg)](MAC.md) | [![The Port0r Discord](assets/discord-card.png)](https://discord.gg/XMk7GgapuN) |
+| **v0.1.0** · native app for Macs with Apple Silicon (M1 and newer), macOS 12+ · 120 fps on ProMotion, up to 240 fps and 200 % supersampling, keyboard or gamepad | Online leaderboard per stage, install help, bug reports, and the beta program |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0) · [Complete guide](MAC.md) · [Video](https://youtu.be/vO_EbBZjnuQ) | [Join the Discord](https://discord.gg/XMk7GgapuN) · [Support Port0r](https://github.com/sponsors/jacquesdupontd) |
 
 > ### Download Port0r: Rally VR v0.2.5 (free)
 > **[Port0r-RallyVR-v0.2.5-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.5/Port0r-RallyVR-v0.2.5-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time. You bring your own game files.
 > **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip) (homebrew), [complete Switch guide](SWITCH.md).
+> **On Android:** [Port0r-SegaRally-Android-v0.1.1.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.1/Port0r-SegaRally-Android-v0.1.1.apk), [complete Android guide](ANDROID.md).
+> **On Steam Deck & Linux:** [Port0r-SegaRally-Linux-v0.1.1.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/linux-v0.1.1/Port0r-SegaRally-Linux-v0.1.1.tar.gz), [complete Linux guide](LINUX.md).
+> **On Mac (Apple Silicon):** [Port0r-SegaRally-Mac-v0.1.0.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/mac-v0.1.0/Port0r-SegaRally-Mac-v0.1.0.tar.gz), [complete Mac guide](MAC.md).
 > The app's own source code is not public for now: this repository holds the releases, the guide and the issue tracker.
 
 Not a flat screen floating in a dark room. Port0r takes the real 3D scene the arcade board draws, rebuilds it for each
@@ -67,6 +70,9 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | --- | --- | --- |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.5** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr); SideQuest: waiting for approval, very soon) |
 | **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
+| **Sega Rally on Android** (phones, tablets, handhelds) | Sega Model 2A, 1995 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.1), [guide](ANDROID.md), [itch.io](https://port0r.itch.io/sega-rally-android)) |
+| **Sega Rally on Steam Deck & Linux** | Sega Model 2A, 1995 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1), [guide](LINUX.md), [itch.io](https://port0r.itch.io/sega-rally-steam-deck)) |
+| **Sega Rally on Mac** (Apple Silicon) | Sega Model 2A, 1995 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0), [guide](MAC.md)) |
 
 **Headsets:** Meta Quest 3 is the reference. A player reports that it runs perfectly on Quest 2 too.
 
