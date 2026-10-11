@@ -1,14 +1,15 @@
 ![Sega Rally on Android](assets/android/header.jpg)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.0"><img alt="Download Sega Rally for Android v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Android%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.1"><img alt="Download Sega Rally for Android v0.1.1 (APK, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Android%20v0.1.1%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.0"><b>Download</b></a> ·
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.1"><b>Download</b></a> ·
   <a href="https://port0r.itch.io/sega-rally-android"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
+  <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
   <a href="https://youtu.be/hZXkqHSjeHs"><b>Video</b></a> ·
   <a href="README.md"><b>Port0r on Meta Quest (VR)</b></a> ·
   <a href="SWITCH.md"><b>Nintendo Switch</b></a>
@@ -18,9 +19,9 @@
 
 **The 1995 arcade Sega Rally Championship on your phone or tablet, free, from the people who made Port0r: Rally VR.**
 
-> ### Download Sega Rally for Android v0.1.0 (free)
-> **[Port0r-SegaRally-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.0/Port0r-SegaRally-Android-v0.1.0.apk)**
-> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.0). Then follow the
+> ### Download Sega Rally for Android v0.1.1 (free)
+> **[Port0r-SegaRally-Android-v0.1.1.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.1/Port0r-SegaRally-Android-v0.1.1.apk)**
+> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.1). Then follow the
 > [install guide](#install): a few minutes. **You bring your own game files.**
 
 The whole track in **true full screen**: the arcade's picture at its full height, HUD included, and the world widened to
@@ -67,7 +68,7 @@ textures** if you want them. **Touch controls designed for racing**, steering by
 
 ## Install
 
-1. **Download** `Port0r-SegaRally-Android-v0.1.0.apk` on the device and open it. Android asks to allow installing
+1. **Download** `Port0r-SegaRally-Android-v0.1.1.apk` on the device and open it. Android asks to allow installing
    apps from your browser or file manager: allow it for that app, then install.
 2. **Put your game files anywhere on the device**: `srallyc.zip` and `segabill.zip`, **not unzipped**. The Download
    folder is the simplest.
@@ -191,7 +192,7 @@ Your settings, records and game files are kept.
 - **Discord**: https://discord.gg/XMk7GgapuN (#install-help, #bugs, #wishes, #leaderboard)
 - **Bugs**: #bugs, or a [GitHub issue](https://github.com/jacquesdupontd/port0r/issues) with your device and Android
   version.
-- **Support the project**: [Ko-fi](https://ko-fi.com/port0r), or just share it, it helps a lot.
+- **Support the project**: Port0r takes all my time right now. If you'd like to keep it going, you can sponsor it on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd) or buy me a coffee on [Ko-fi](https://ko-fi.com/port0r). Sharing it helps a lot too.
 
 ## Credits and legal
 

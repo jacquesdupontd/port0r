@@ -9,6 +9,7 @@
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><b>Download</b></a> ·
   <a href="https://port0r.itch.io/sega-rally-switch"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
+  <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
   <a href="https://youtu.be/nC8Lj6FlHLE"><b>Video</b></a> ·
   <a href="README.md"><b>Port0r on Meta Quest (VR)</b></a>
 </p>
@@ -276,7 +277,7 @@ wrong, tell us in #bugs.
 - **Discord**: https://discord.gg/XMk7GgapuN (#install-help, #bugs, #wishes, #leaderboard, and #sega-rally-switch)
 - **Bugs**: #bugs, or a [GitHub issue](https://github.com/jacquesdupontd/port0r/issues) with your firmware version and
   what you see.
-- **Support the project**: [Ko-fi](https://ko-fi.com/port0r), or just share it, it helps a lot.
+- **Support the project**: Port0r takes all my time right now. If you'd like to keep it going, you can sponsor it on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd) or buy me a coffee on [Ko-fi](https://ko-fi.com/port0r). Sharing it helps a lot too.
 
 ## Credits and legal
 

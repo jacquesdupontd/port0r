@@ -1,5 +1,58 @@
 # Changelog
 
+## Sega Rally Mac v0.1.0
+
+The first Mac version: Sega Rally native on Macs with Apple Silicon (M1 and newer), macOS 12 or newer, nothing to
+install. [The Mac guide](MAC.md).
+
+- **120 images a second** on a MacBook Pro's ProMotion screen, up to 240 on a faster display, every arcade frame shown
+  evenly; **supersampling up to 200 %** (an M1 Pro keeps 120 images a second at 200 % of 2560x1440).
+- **True full screen at your screen's native resolution**, the same renderer as Port0r: Rally VR.
+- **Keyboard and every gamepad** at once, remappable; both sticks pressed opens the pause menu; the mouse pointer hides
+  by itself.
+- **Your game files and the HD pack found by themselves** in Downloads, or dropped on the window.
+- **Record your races** (F9): 60 images a second with the game's sound, encoded by the Mac's media engine (needs ffmpeg).
+- **Updates from inside the game**: from the next version on, the game shows what's new, replaces the app (SHA-256
+  checked, the previous one kept) and restarts.
+- Crash log, off by default (Settings > Game). macOS asks once at the first launch (no paid Apple certificate).
+- Your own game files (MAME 0.289), never included.
+
+## Sega Rally Linux & Steam Deck v0.1.1
+
+- Faster emulation, picture and sound unchanged.
+- The other cars have their windows and reflections again.
+- With the HD pack, the stage starts fade to white like the cabinet.
+- The picture no longer jumps in size for one frame when the camera changes.
+- Arcade 4:3 picture as an option (Settings > Image > Picture format); gamepad stick settings: steering range, dead zone
+  and response (Settings > Gamepad).
+- Gamepad: both sticks pressed opens the pause menu.
+- Sound comes back by itself after a change of audio output.
+- Recording: the sound stays in sync after a hitch, and recording keeps working when you switch to full screen.
+- Crash log, off by default (Settings > Game): when on, a report is saved in Downloads after a crash, to send us.
+- Already on v0.1.0: the game offers this update by itself at launch.
+
+## Sega Rally Android v0.1.1
+
+- Faster emulation, picture and sound unchanged.
+- The other cars have their windows and reflections again (the rear-view mirror was hiding them).
+- With the HD pack, the stage starts fade to white like the cabinet.
+- Arcade 4:3 picture as an option (Settings > Image > Picture format), full screen stays the default.
+- Gamepad stick settings: steering range, dead zone and response (Settings > Gamepad).
+- New touch buttons with clear icons; labels as an option (Settings > Driving > Button labels).
+- Progressive gas on the touch pedal works in every steering mode, with a gauge.
+- Starts on Mali-G52 / G57 GPUs (Anbernic and others) instead of closing at launch.
+- The picture no longer jumps in size for one frame when the camera changes.
+- Crash log, off by default (Settings > Game): when on, a report is saved in Download after a crash, to send us.
+- Already on v0.1.0: the game offers this update by itself at launch; your settings, records and game files are kept.
+
+## Port0r: Rally VR v0.2.5
+
+- Faster emulation, picture and sound unchanged: 11 % less CPU time per frame plugged in, 18 % on battery (a smoother
+  game when the headset isn't charging).
+- The other cars have their windows and reflections again.
+- With the HD pack, the stage starts fade to white like the cabinet.
+- Your settings, records and game files are kept. Update from inside the game: Rally VR offers it at launch.
+
 ## Sega Rally Linux & Steam Deck v0.1.0
 
 The first Linux version: Sega Rally on the Steam Deck and any 64-bit Linux PC (Vulkan), nothing to install.

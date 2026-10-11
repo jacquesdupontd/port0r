@@ -1,14 +1,15 @@
 ![Sega Rally on Linux and the Steam Deck](assets/linux/header.jpg)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.0"><img alt="Download Sega Rally for Linux and Steam Deck v0.1.0 (free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Linux%20%26%20Steam%20Deck%20v0.1.0%20%C2%B7%20free-9b7bff?style=for-the-badge&logo=linux&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1"><img alt="Download Sega Rally for Linux and Steam Deck v0.1.1 (free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Linux%20%26%20Steam%20Deck%20v0.1.1%20%C2%B7%20free-9b7bff?style=for-the-badge&logo=linux&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.0"><b>Download</b></a> ·
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1"><b>Download</b></a> ·
   <a href="https://port0r.itch.io/sega-rally-steam-deck"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
+  <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
   <a href="https://youtu.be/54HLGGeziXg"><b>Video</b></a> ·
   <a href="README.md"><b>Port0r on Meta Quest (VR)</b></a> ·
   <a href="SWITCH.md"><b>Nintendo Switch</b></a> ·
@@ -20,9 +21,9 @@
 **The 1995 arcade Sega Rally Championship on your Linux PC or your Steam Deck, free, from the people who made Port0r:
 Rally VR.**
 
-> ### Download Sega Rally for Linux v0.1.0 (free)
-> **[Port0r-SegaRally-Linux-v0.1.0.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/linux-v0.1.0/Port0r-SegaRally-Linux-v0.1.0.tar.gz)**
-> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.0). Nothing to install:
+> ### Download Sega Rally for Linux v0.1.1 (free)
+> **[Port0r-SegaRally-Linux-v0.1.1.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/linux-v0.1.1/Port0r-SegaRally-Linux-v0.1.1.tar.gz)**
+> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1). Nothing to install:
 > unpack it and play. Then follow the [install guide](#install). **You bring your own game files.**
 
 The whole track in **true full screen**: the arcade's picture at its full height, HUD included, and the world widened to
@@ -78,7 +79,7 @@ and **any gamepad**, the **Steam Deck** as a non-Steam game, and your times on t
 
 ### On a PC
 
-1. **Download** `Port0r-SegaRally-Linux-v0.1.0.tar.gz` and **unpack** it anywhere (for example `~/Games/`).
+1. **Download** `Port0r-SegaRally-Linux-v0.1.1.tar.gz` and **unpack** it anywhere (for example `~/Games/`).
 2. **Put your game files in your Downloads folder**: `srallyc.zip` and `segabill.zip`, **not unzipped**. Anywhere in
    your home folder works too, even in a sub-folder.
 3. **Double-click `Port0r Rally.sh`** (or run `./port0r` from a terminal). The game finds your files, copies them by
@@ -216,7 +217,7 @@ files are kept: they live in your data folder.
 - Settings > Game > **Check for updates automatically** switches the launch check off; **Updates > Check now** checks
   whenever you want.
 - The game's folder must be writable (it is, wherever you unpacked it in your home folder).
-- This first version, v0.1.0, you download by hand; every version after it comes through the game.
+- The first version, v0.1.0, had to be downloaded by hand; every version since comes through the game.
 - Nothing is sent but the request to GitHub's public release list.
 
 ## Troubleshooting
@@ -248,7 +249,7 @@ When you report a bug, start the game from a terminal (`./port0r`) and join what
 - **Discord**: https://discord.gg/XMk7GgapuN (#install-help, #bugs, #wishes, #leaderboard)
 - **Bugs**: #bugs, or a [GitHub issue](https://github.com/jacquesdupontd/port0r/issues) with your distribution, your
   graphics card, and what `./port0r` printed.
-- **Support the project**: [Ko-fi](https://ko-fi.com/port0r), or just share it, it helps a lot.
+- **Support the project**: Port0r takes all my time right now. If you'd like to keep it going, you can sponsor it on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd) or buy me a coffee on [Ko-fi](https://ko-fi.com/port0r). Sharing it helps a lot too.
 
 ## Credits and legal
 
