@@ -3,6 +3,10 @@
 <p align="center">
   <a href="https://github.com/jacquesdupontd/port0r/releases/latest"><img alt="Download Port0r: Rally VR v0.2.5 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.5%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
+  <br>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.1"><img alt="Download Sega Rally for Android v0.1.1 (APK, free)" src="https://img.shields.io/badge/Download-Android%20v0.1.1%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1"><img alt="Download Sega Rally for Steam Deck and Linux v0.1.1 (free)" src="https://img.shields.io/badge/Download-Steam%20Deck%20%26%20Linux%20v0.1.1%20%C2%B7%20free-7b5cff?style=for-the-badge&logo=steamdeck&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0"><img alt="Download Sega Rally for Mac v0.1.0 (Apple Silicon, free)" src="https://img.shields.io/badge/Download-Mac%20v0.1.0%20%C2%B7%20Apple%20Silicon%20%C2%B7%20free-ff3d7f?style=for-the-badge&logo=apple&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
