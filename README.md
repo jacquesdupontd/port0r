@@ -44,7 +44,7 @@
 | [Mac: Sega Rally, Apple Silicon](MAC.md) | [Discord: leaderboard, help, what's next](https://discord.gg/XMk7GgapuN) |
 | --- | --- |
 | [![Sega Rally on Mac](assets/mac/header.jpg)](MAC.md) | [![The Port0r Discord](assets/discord-card.png)](https://discord.gg/XMk7GgapuN) |
-| **v0.1.0** · native app for Macs with Apple Silicon (M1 and newer), macOS 12+ · 120 fps on ProMotion, up to 240 fps and 200 % supersampling, keyboard or gamepad | Online leaderboard per stage, install help, bug reports, and the beta program |
+| **v0.1.0** · built for Macs with Apple Silicon (M1 and newer), no Rosetta or Wine, macOS 12+ · 120 fps on ProMotion, up to 240 fps and 200 % supersampling, keyboard or gamepad | Online leaderboard per stage, install help, bug reports, and the beta program |
 | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0) · [Complete guide](MAC.md) · [itch.io](https://port0r.itch.io/sega-rally-mac) · [Video](https://youtu.be/vO_EbBZjnuQ) | [Join the Discord](https://discord.gg/XMk7GgapuN) · [Support Port0r](https://github.com/sponsors/jacquesdupontd) |
 
 > ### Download Port0r: Rally VR v0.2.5 (free)

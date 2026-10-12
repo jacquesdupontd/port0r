@@ -17,7 +17,7 @@
 
 # Sega Rally on Mac
 
-**The 1995 arcade Sega Rally Championship, native on your Mac with Apple Silicon, free, from the people who made Port0r:
+**The 1995 arcade Sega Rally Championship on your Mac with Apple Silicon (no Rosetta, no Wine), free, from the people who made Port0r:
 Rally VR.**
 
 > ### Download Sega Rally for Mac v0.1.0 (free)
@@ -29,7 +29,7 @@ The whole track in **true full screen**: the arcade's picture at its full height
 fill your screen, at its **native resolution**. Drawn by the same renderer as Port0r: Rally VR, at **120 images a
 second** on a MacBook Pro's ProMotion screen (60, 120, 180 or 240 on an external one), with **supersampling up to
 200 %** and a **steady pacing** that gives every arcade frame exactly the same time on screen. Jean-seb's community
-**HD textures** if you want them. Keyboard and **any gamepad**, **video recording** of your races, and your times on the
+**HD textures** if you want them. Keyboard or **gamepad** (remappable), **video recording** of your races, and your times on the
 **Port0r Discord leaderboard**.
 
 *Screenshot: captured on a MacBook Pro M1 Pro, 2560x1440, HD textures on.*

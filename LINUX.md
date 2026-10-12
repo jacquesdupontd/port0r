@@ -30,7 +30,7 @@ The whole track in **true full screen**: the arcade's picture at its full height
 fill your screen, at its **native resolution**. Drawn by the same Vulkan renderer as Port0r: Rally VR, at **60, 120, 180
 or 240 images a second**, with **supersampling up to 200 %**, **anti-aliasing up to x8**, and a **steady pacing** that
 gives every arcade frame exactly the same time on screen. Jean-seb's community **HD textures** if you want them. Keyboard
-and **any gamepad**, the **Steam Deck** as a non-Steam game, and your times on the **Port0r Discord leaderboard**.
+or **gamepad** (remappable), the **Steam Deck** as a non-Steam game, and your times on the **Port0r Discord leaderboard**.
 
 [![Watch the release video](https://img.youtube.com/vi/54HLGGeziXg/maxresdefault.jpg)](https://youtu.be/54HLGGeziXg)
 

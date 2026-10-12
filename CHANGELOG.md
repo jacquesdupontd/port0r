@@ -8,7 +8,7 @@
 
 ## Sega Rally Mac v0.1.0
 
-The first Mac version: Sega Rally native on Macs with Apple Silicon (M1 and newer), macOS 12 or newer, nothing to
+The first Mac version: Sega Rally built for Macs with Apple Silicon (no Rosetta, no Wine) (M1 and newer), macOS 12 or newer, nothing to
 install. [The Mac guide](MAC.md).
 
 - **120 images a second** on a MacBook Pro's ProMotion screen, up to 240 on a faster display, every arcade frame shown
@@ -93,7 +93,7 @@ The first Android version: Sega Rally on phones and tablets (Android 8+, Vulkan)
 - **Touch controls designed for racing**: a steering slider that appears under the left thumb, the brake and the gas
   side by side, gears above them, all sized in real millimetres; size, opacity and progressive gas in Settings > Driving.
 - **Steer by turning or tilting the device**, with angle, smoothing, dead zone and recentring.
-- **Any gamepad**: every action remappable in Settings > Gamepad, Start pauses, Select held shows or hides the touch
+- **Gamepads**: every action remappable in Settings > Gamepad, Start pauses, Select held shows or hides the touch
   controls, and the settings work with the gamepad.
 - The Rally VR settings that make sense on a flat screen, the Sega Rally mods, HD textures, vibrations, ten languages,
   the Discord leaderboard.
