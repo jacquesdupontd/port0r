@@ -250,7 +250,7 @@ your report. It is off by default, and the log never grows beyond 8 MB.
 ## Credits and legal
 
 - HD textures: Jean-seb.
-- Built on MAME (GPL), SDL and MoltenVK. Port0r: a free fan project, by the same people as
+- Built from MAME's BSD-3-Clause source files, SDL and MoltenVK (every component's license: [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt)). Port0r: a free fan project, by the same people as
   [Port0r on Meta Quest](README.md) (arcade games in true 3D VR), [Sega Rally on Linux and the Steam Deck](LINUX.md),
   [on Nintendo Switch](SWITCH.md) and [on Android](ANDROID.md).
 

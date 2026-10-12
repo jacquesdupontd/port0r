@@ -254,7 +254,7 @@ When you report a bug, start the game from a terminal (`./port0r`) and join what
 ## Credits and legal
 
 - HD textures: Jean-seb.
-- Built on MAME (GPL) and SDL. Port0r: a free fan project, by the same people as [Port0r on Meta Quest](README.md)
+- Built from MAME's BSD-3-Clause source files and SDL (every component's license: [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt)). Port0r: a free fan project, by the same people as [Port0r on Meta Quest](README.md)
   (arcade games in true 3D VR), [Sega Rally on Nintendo Switch](SWITCH.md) and [on Android](ANDROID.md).
 
 Sega Rally Championship is a trademark of SEGA. Steam and Steam Deck are trademarks of Valve. Port0r is not affiliated

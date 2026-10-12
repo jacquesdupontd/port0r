@@ -282,7 +282,7 @@ wrong, tell us in #bugs.
 ## Credits and legal
 
 - HD textures: Jean-seb.
-- Built on MAME (GPL). Port0r: a free fan project, by the same people as
+- Built from MAME's BSD-3-Clause source files (every component's license: [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt)). Port0r: a free fan project, by the same people as
   [Port0r on Meta Quest](README.md) (arcade games in true 3D VR).
 
 Sega Rally Championship is a trademark of SEGA. Port0r is not affiliated with SEGA or Nintendo. No game files are
