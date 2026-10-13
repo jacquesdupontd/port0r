@@ -1,9 +1,10 @@
 ![Port0r](assets/port0r-header.png)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/latest"><img alt="Download Port0r: Rally VR v0.2.5 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.5%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0"><img alt="Download Port0r: Cop VR v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Cop%20VR%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-1d4ed8?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.5"><img alt="Download Port0r: Rally VR v0.2.5 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.5%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <br>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2"><img alt="Download Sega Rally for Android v0.1.2 (APK, free)" src="https://img.shields.io/badge/Download-Android%20v0.1.2%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1"><img alt="Download Sega Rally for Steam Deck and Linux v0.1.1 (free)" src="https://img.shields.io/badge/Download-Steam%20Deck%20%26%20Linux%20v0.1.1%20%C2%B7%20free-7b5cff?style=for-the-badge&logo=steamdeck&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0"><img alt="Download Sega Rally for Mac v0.1.0 (Apple Silicon, free)" src="https://img.shields.io/badge/Download-Mac%20v0.1.0%20%C2%B7%20Apple%20Silicon%20%C2%B7%20free-ff3d7f?style=for-the-badge&logo=apple&logoColor=white" height="42"></a>
@@ -14,7 +15,8 @@
   <a href="../../releases"><b>Download</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
-  <a href="https://www.youtube.com/watch?v=FqwEK0hJ_Yc"><b>Video</b></a> ·
+  <a href="https://youtu.be/1qCQorbbdPc"><b>Cop VR video</b></a> ·
+  <a href="https://www.youtube.com/watch?v=FqwEK0hJ_Yc"><b>Rally VR video</b></a> ·
   <a href="SWITCH.md"><b>Nintendo Switch</b></a> ·
   <a href="ANDROID.md"><b>Android</b></a> ·
   <a href="LINUX.md"><b>Linux & Steam Deck</b></a> ·
@@ -463,8 +465,9 @@ across updates.
 
 ## Known issues
 
-- Driving on grass does not vibrate yet.
-- The trees of the attract intro, hidden behind the title panel on the cabinet, can be seen from inside the scene.
+- **Rally VR:** driving on grass does not vibrate yet.
+- **Rally VR:** the trees of the attract intro, hidden behind the title panel on the cabinet, can be seen from inside the
+  scene.
 
 ## Roadmap
 
@@ -492,8 +495,8 @@ your videos.
 ## Videos, streams and reviews
 
 Make all the videos, streams and reviews you like, monetised ones included: that is how a free project gets known.
-If you can, put a link to this page (or to [port0r.itch.io/rally-vr](https://port0r.itch.io/rally-vr)) in the
-description, or just say the name, Port0r. It is not an obligation, only a big help, and thank you. If you show the HD
+If you can, put a link to this page (or to the game's itch.io page, [port0r.itch.io/cop-vr](https://port0r.itch.io/cop-vr) or
+[port0r.itch.io/rally-vr](https://port0r.itch.io/rally-vr)) in the description, or just say the name, Port0r. It is not an obligation, only a big help, and thank you. If you show the HD
 textures, a word for Jean-seb, who made them, is welcome too.
 
 Already made by others, thank you:
@@ -525,14 +528,14 @@ Donations support the engine's development. They are not a purchase of any game.
   another USB-C cable (some only charge).
 - **My computer shows the headset as empty.** Put the headset on and accept "Allow access to data", then unplug and plug
   it again.
-- **The app keeps saying files are missing.** Check the names (`srallyc.zip`, and `segabill.zip` only if asked), that
-  they are zips (not extracted folders), and that "All files access" is allowed: *Settings > Apps > Port0r: Rally VR >
-  Permissions*.
+- **The app keeps saying files are missing.** Check the names (`vcop.zip` and `model1io2.zip` for Cop VR; `srallyc.zip`,
+  and `segabill.zip` only if asked, for Rally VR), that they are zips (not extracted folders), and that "All files
+  access" is allowed: *Settings > Apps > Port0r: Cop VR* (or *Port0r: Rally VR*) *> Permissions*.
 - **"Wrong version of the game files".** Your files are on the headset, but they aren't a set for MAME 0.289: the page
-  lists the files that are missing or don't match. Check your `srallyc.zip` (and `segabill.zip`) against MAME 0.289
-  with a ROM manager (ClrMamePro, RomVault), put the corrected files in `Download` in place of the old ones, and come
-  back to the app: it picks them up and the game starts by itself.
-- **(v0.2.0 only) I pick Sega Rally, press A, land in a settings panel, and Resume brings me back.** Same cause: the
+  lists the files that are missing or don't match. Check your zips (`vcop.zip` and `model1io2.zip`, or `srallyc.zip` and
+  `segabill.zip`) against MAME 0.289 with a ROM manager (ClrMamePro, RomVault), put the corrected files in `Download` in
+  place of the old ones, and come back to the app: it picks them up and the game starts by itself.
+- **(Rally VR v0.2.0 only) I pick Sega Rally, press A, land in a settings panel, and Resume brings me back.** Same cause: the
   files don't load. Update to the latest version, which says it plainly, or uninstall and reinstall the app after
   fixing your files (v0.2.0 never replaced the copy it made the first time).
 - **The controllers do nothing.** Restart the headset (hold the power button > Restart).
@@ -565,4 +568,8 @@ Port0r's own source code is not public for now. The open-source components it us
 
 ## Download
 
-**[Port0r-RallyVR-v0.2.5-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.5/Port0r-RallyVR-v0.2.5-quest3.apk)**, free, from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest) or [itch.io](https://port0r.itch.io/rally-vr). Install guide: [above](#install-port0r-rally-vr). Help: [Discord](https://discord.gg/XMk7GgapuN).
+**[Port0r-CopVR-v0.1.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/vcop-v0.1.0/Port0r-CopVR-v0.1.0-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0) or [itch.io](https://port0r.itch.io/cop-vr). Install guide: [above](#install-port0r-cop-vr).
+
+**[Port0r-RallyVR-v0.2.5-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.5/Port0r-RallyVR-v0.2.5-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.5) or [itch.io](https://port0r.itch.io/rally-vr). Install guide: [above](#install-port0r-rally-vr).
+
+Help: [Discord](https://discord.gg/XMk7GgapuN).
