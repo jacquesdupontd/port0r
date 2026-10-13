@@ -278,6 +278,24 @@ For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip
 
 **The set must match a recent MAME (Port0r runs MAME 0.289).** Sets made for older MAME versions can have different files inside and won't start. If yours is old, check it against a recent MAME with a ROM manager such as ClrMamePro or RomVault.
 
+## Install (Port0r: Cop VR)
+
+The same steps as Rally VR, about ten minutes the first time.
+
+1. **Developer Mode**, once per headset: see [step 1 of Rally VR](#1-turn-on-developer-mode-once) (skip it if Rally VR is
+   already installed).
+2. **Install the APK** `Port0r-CopVR-v0.1.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0)
+   or [itch.io](https://port0r.itch.io/cop-vr), with SideQuest or `adb install -r Port0r-CopVR-v0.1.0-quest3.apk`. It
+   installs next to Rally VR. The checksum is in `SHA256SUMS.txt`.
+3. **Put `vcop.zip` and `model1io2.zip` on the headset**, in `Download` like for Rally VR (the app looks everywhere).
+4. **First launch**: Library > *Unknown sources* > **Port0r: Cop VR**, allow **"All files access"**, and the game starts.
+
+**Controls:** point the right controller at what you want to hit and pull the trigger; to reload, shoot below the
+screen, like on the cabinet. X inserts a coin, B is Start. The left menu button opens the settings (screen size, your
+height, the crosshair on or off); Y on the left controller recenters the view.
+
+**Updating:** the game checks its own releases at launch and offers the new version, what's new first.
+
 ## Install (Port0r: Rally VR)
 
 About ten minutes the first time. You need a computer (Windows, Mac or Linux) or just the headset's browser, a USB-C
@@ -332,25 +350,9 @@ the names are not case sensitive. A corrected file put in any folder replaces th
 **Updating:** install the new APK over the old one; your settings and records are kept. From v0.1.0 (another app id):
 uninstall it first, your game files stay on the headset.
 
-## Install (Port0r: Cop VR)
+<a id="hd-textures-optional"></a>
 
-The same steps as Rally VR, about ten minutes the first time.
-
-1. **Developer Mode**, once per headset: see [step 1 of Rally VR](#1-turn-on-developer-mode-once) (skip it if Rally VR is
-   already installed).
-2. **Install the APK** `Port0r-CopVR-v0.1.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0)
-   or [itch.io](https://port0r.itch.io/cop-vr), with SideQuest or `adb install -r Port0r-CopVR-v0.1.0-quest3.apk`. It
-   installs next to Rally VR. The checksum is in `SHA256SUMS.txt`.
-3. **Put `vcop.zip` and `model1io2.zip` on the headset**, in `Download` like for Rally VR (the app looks everywhere).
-4. **First launch**: Library > *Unknown sources* > **Port0r: Cop VR**, allow **"All files access"**, and the game starts.
-
-**Controls:** point the right controller at what you want to hit and pull the trigger; to reload, shoot below the
-screen, like on the cabinet. X inserts a coin, B is Start. The left menu button opens the settings (screen size, your
-height, the crosshair on or off); Y on the left controller recenters the view.
-
-**Updating:** the game checks its own releases at launch and offers the new version, what's new first.
-
-## HD textures (optional)
+## Rally VR: HD textures (optional)
 
 The community HD texture pack for Sega Rally is made by **Jean-seb**. Get it from his video
 ["Sega Rally Championship HD textures pack : new version"](https://www.youtube.com/watch?v=K1d4jO6rP2Y) (the download
@@ -362,7 +364,9 @@ We never ship the pack: all credit goes to Jean-seb, please support his work.
 
 ![Original textures and Jean-seb's HD pack](assets/hd-textures-comparison.jpg)
 
-## Controls
+<a id="controls"></a>
+
+## Rally VR: controls
 
 | Action | Button |
 | --- | --- |
@@ -375,7 +379,9 @@ We never ship the pack: all credit goes to Jean-seb, please support his work.
 | Pause / resume | Click both thumbsticks together (same again to resume) |
 | Recenter the view | Y on the left controller (or hold the Meta button of the right controller for 2 s) |
 
-## The settings panel
+<a id="the-settings-panel"></a>
+
+## Rally VR: the settings panel
 
 Everything is set inside the headset, in a panel that floats next to the game. **Defaults** restores the values we
 tuned. A tab longer than the panel scrolls (either thumbstick, or drag the bar on the right with the laser), and the
@@ -427,7 +433,9 @@ tuned. A tab longer than the panel scrolls (either thumbstick, or drag the bar o
   calls swapped (compound calls rebuilt from the original recordings) and the navigation arrows turned the right way.
 - **Telemetry**: a bar under the HUD during the race: speed, position, lap, gas and brake.
 
-## The leaderboard on Discord
+<a id="the-leaderboard-on-discord"></a>
+
+## Rally VR: the leaderboard on Discord
 
 Your race times can go on the **#leaderboard** channel of the Port0r Discord, with your Discord name. Nothing is ever
 published unless you link your account yourself, and you choose each time.
