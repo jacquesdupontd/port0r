@@ -93,8 +93,8 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Time Crisis VR** (Time Crisis) | Namco System 22, 1995 | **Out now, v0.2.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.0), [itch.io](https://port0r.itch.io/time-crisis-vr); SideQuest: waiting for approval) |
-| **Port0r: Cop VR** (Virtua Cop) | Sega Model 2, 1994 | **Out now, v0.2.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.0), [itch.io](https://port0r.itch.io/cop-vr); SideQuest: waiting for approval) |
+| **Port0r: Time Crisis VR** (Time Crisis) | Namco System 22, 1995 | **Out now, v0.2.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.0), [itch.io](https://port0r.itch.io/time-crisis-vr), [SideQuest](https://sidequestvr.com/app/63135/port0r-time-crisis-vr)) |
+| **Port0r: Cop VR** (Virtua Cop) | Sega Model 2, 1994 | **Out now, v0.2.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.0), [itch.io](https://port0r.itch.io/cop-vr), [SideQuest](https://sidequestvr.com/app/63134/port0r-cop-vr)) |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.5** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr), [SideQuest](https://sidequestvr.com/app/62980)) |
 | **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
 | **Sega Rally on Android** (phones, tablets, handhelds) | Sega Model 2A, 1995 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2), [guide](ANDROID.md), [itch.io](https://port0r.itch.io/sega-rally-android)) |
@@ -328,8 +328,10 @@ Download your game's APK (the table above), then pick one way:
 - **adb** (if you already use it): `adb install -r` followed by the APK's name, for example
   `adb install -r Port0r-CopVR-v0.2.0-quest3.apk`.
 
-The checksum of each APK is in the `SHA256SUMS.txt` next to it, if you want to check your download. Rally VR's SideQuest
-store listing is waiting for Meta's approval.
+The checksum of each APK is in the `SHA256SUMS.txt` next to it, if you want to check your download. The three VR games
+also have their SideQuest store page, with a one-click install from SideQuest:
+[Rally VR](https://sidequestvr.com/app/62980), [Cop VR](https://sidequestvr.com/app/63134/port0r-cop-vr),
+[Time Crisis VR](https://sidequestvr.com/app/63135/port0r-time-crisis-vr).
 
 ### 3. Put your game files on the headset
 
