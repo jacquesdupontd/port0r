@@ -23,7 +23,7 @@
 > (the game, the optional HOME tile and the install guide), from the
 > [release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3). The project is also on
 > [itch.io](https://port0r.itch.io/sega-rally-switch). Then follow the [install guide](#install) below: about ten
-> minutes the first time. **You bring your own game files.**
+> minutes the first time.
 
 The whole track in **full 16:9**, wider than the cabinet ever showed. Jean-seb's community **HD textures** if you want
 them. A **Workshop** with 10 mods, picture styles, a best-lap ghost, named replays and a photo mode. Steer with the

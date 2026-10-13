@@ -23,7 +23,7 @@ Rally VR.**
 > ### Download Sega Rally for Mac v0.1.0 (free)
 > **[Port0r-SegaRally-Mac-v0.1.0.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/mac-v0.1.0/Port0r-SegaRally-Mac-v0.1.0.tar.gz)**
 > from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0). Nothing to install:
-> open it and play. Then follow the [install guide](#install). **You bring your own game files.**
+> open it and play. Then follow the [install guide](#install).
 
 The whole track in **true full screen**: the arcade's picture at its full height, HUD included, and the world widened to
 fill your screen, at its **native resolution**. Drawn by the same renderer as Port0r: Rally VR, at **120 images a

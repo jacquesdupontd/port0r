@@ -24,7 +24,7 @@ Rally VR.**
 > ### Download Sega Rally for Linux v0.1.1 (free)
 > **[Port0r-SegaRally-Linux-v0.1.1.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/linux-v0.1.1/Port0r-SegaRally-Linux-v0.1.1.tar.gz)**
 > from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1). Nothing to install:
-> unpack it and play. Then follow the [install guide](#install). **You bring your own game files.**
+> unpack it and play. Then follow the [install guide](#install).
 
 The whole track in **true full screen**: the arcade's picture at its full height, HUD included, and the world widened to
 fill your screen, at its **native resolution**. Drawn by the same Vulkan renderer as Port0r: Rally VR, at **60, 120, 180

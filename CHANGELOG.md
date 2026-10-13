@@ -1,5 +1,21 @@
 # Changelog
 
+## Port0r: Cop VR v0.1.0
+
+The first Virtua Cop release, on Meta Quest. [Install guide](README.md#install-port0r-cop-vr).
+
+- Virtua Cop (Sega Model 2, 1994) in true 3D on Meta Quest: you stand in the street with the gangsters, at real scale.
+- Redrawn in 4K at the Quest 3's full resolution, 120 Hz in the headset.
+- Aim with your controller like the cabinet's light gun: the shot goes where your gun points in the 3D scene, no calibration.
+- A detailed 3D gun in your hand: trigger, slide and muzzle flash.
+- Reload like on the cabinet: aim below the screen and pull the trigger.
+- Hits land on what you shoot, enemies and scenery, not on a flat screen.
+- The game's camera zooms become a move into the scene: the enemies keep their cabinet size, the world keeps its depth.
+- The HUD (bullets, lives, score) stays on its own plane, steady.
+- Full arcade speed, every arcade image shown.
+- Settings in 10 languages: screen size, your height, crosshair on or off.
+- Updates from inside the game: it checks its own releases and shows what's new before installing.
+
 ## Sega Rally Android v0.1.2
 
 - Fixes a start stuck on the logo on some phones (Android 16, Snapdragon 8 Gen 2, reported on a Galaxy Z Fold 5): the
@@ -21,7 +37,6 @@ install. [The Mac guide](MAC.md).
 - **Updates from inside the game**: from the next version on, the game shows what's new, replaces the app (SHA-256
   checked, the previous one kept) and restarts.
 - Crash log, off by default (Settings > Game). macOS asks once at the first launch (no paid Apple certificate).
-- Your own game files (MAME 0.289), never included.
 
 ## Sega Rally Linux & Steam Deck v0.1.1
 
@@ -80,7 +95,6 @@ The first Linux version: Sega Rally on the Steam Deck and any 64-bit Linux PC (V
 - **Updates from inside the game**: from the next version on, the game checks GitHub at launch, shows what's new
   before anything is installed, installs it (SHA-256 checked, the previous version kept) and restarts.
 - The Sega Rally mods, picture styles, HD textures, ten languages, the Discord leaderboard.
-- Your own game files (MAME 0.289), never included.
 
 ## Sega Rally Android v0.1.0
 
@@ -99,7 +113,7 @@ The first Android version: Sega Rally on phones and tablets (Android 8+, Vulkan)
   the Discord leaderboard.
 - **Updates from inside the game**: from the next version on, the game checks GitHub at launch, shows what's new
   before anything is installed, and installs it (SHA-256 checked) after Android's confirmation.
-- Installs next to Port0r: Rally VR on a Quest; your own game files (MAME 0.289), never included.
+- Installs next to Port0r: Rally VR on a Quest.
 
 ## Port0r: Rally VR v0.2.4
 

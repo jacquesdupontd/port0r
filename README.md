@@ -29,27 +29,36 @@
 
 ## Choose your platform
 
-| [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) | [Nintendo Switch: Sega Rally, full 16:9](SWITCH.md) |
+| [Meta Quest: Cop VR, real 3D VR](#install-port0r-cop-vr) | [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) |
 | --- | --- |
-| [![Port0r Rally VR on Meta Quest](https://img.youtube.com/vi/FqwEK0hJ_Yc/maxresdefault.jpg)](#install-port0r-rally-vr) | [![Sega Rally on Nintendo Switch](assets/switch/header.jpg)](SWITCH.md) |
-| **v0.2.5** · APK for Meta Quest 3 (Quest 2 reported working) · inside the game in true stereoscopic 3D | **v0.5.3** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/latest) · [Install guide](#install-port0r-rally-vr) · [itch.io](https://port0r.itch.io/rally-vr) · [Video](https://www.youtube.com/watch?v=FqwEK0hJ_Yc) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) |
+| [![Port0r Cop VR on Meta Quest](https://img.youtube.com/vi/1qCQorbbdPc/maxresdefault.jpg)](#install-port0r-cop-vr) | [![Port0r Rally VR on Meta Quest](https://img.youtube.com/vi/FqwEK0hJ_Yc/maxresdefault.jpg)](#install-port0r-rally-vr) |
+| **v0.1.0** · APK for Meta Quest 3 · Virtua Cop in true 3D, with a 3D gun in your hand | **v0.2.5** · APK for Meta Quest 3 (Quest 2 reported working) · inside the game in true stereoscopic 3D |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0) · [Install guide](#install-port0r-cop-vr) · [itch.io](https://port0r.itch.io/cop-vr) · [Video](https://youtu.be/1qCQorbbdPc) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.5) · [Install guide](#install-port0r-rally-vr) · [itch.io](https://port0r.itch.io/rally-vr) · [Video](https://www.youtube.com/watch?v=FqwEK0hJ_Yc) |
 
-| [Android: Sega Rally, phones and tablets](ANDROID.md) | [Linux & Steam Deck: Sega Rally, any PC](LINUX.md) |
+| [Nintendo Switch: Sega Rally, full 16:9](SWITCH.md) | [Android: Sega Rally, phones and tablets](ANDROID.md) |
 | --- | --- |
-| [![Sega Rally on Android](assets/android/header.jpg)](ANDROID.md) | [![Sega Rally on Linux and the Steam Deck](assets/linux/header.jpg)](LINUX.md) |
-| **v0.1.2** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures | **v0.1.1** · for the Steam Deck and any 64-bit Linux PC (Vulkan) · up to 240 fps and 200 % supersampling, keyboard or gamepad |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2) · [Complete guide](ANDROID.md) · [itch.io](https://port0r.itch.io/sega-rally-android) · [Video](https://youtu.be/hZXkqHSjeHs) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1) · [Complete guide](LINUX.md) · [itch.io](https://port0r.itch.io/sega-rally-steam-deck) · [Video](https://youtu.be/54HLGGeziXg) |
+| [![Sega Rally on Nintendo Switch](assets/switch/header.jpg)](SWITCH.md) | [![Sega Rally on Android](assets/android/header.jpg)](ANDROID.md) |
+| **v0.5.3** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard | **v0.1.2** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2) · [Complete guide](ANDROID.md) · [itch.io](https://port0r.itch.io/sega-rally-android) · [Video](https://youtu.be/hZXkqHSjeHs) |
 
-| [Mac: Sega Rally, Apple Silicon](MAC.md) | [Discord: leaderboard, help, what's next](https://discord.gg/XMk7GgapuN) |
+| [Linux & Steam Deck: Sega Rally, any PC](LINUX.md) | [Mac: Sega Rally, Apple Silicon](MAC.md) |
 | --- | --- |
-| [![Sega Rally on Mac](assets/mac/header.jpg)](MAC.md) | [![The Port0r Discord](assets/discord-card.png)](https://discord.gg/XMk7GgapuN) |
-| **v0.1.0** · built for Macs with Apple Silicon (M1 and newer), no Rosetta or Wine, macOS 12+ · 120 fps on ProMotion, up to 240 fps and 200 % supersampling, keyboard or gamepad | Online leaderboard per stage, install help, bug reports, and the beta program |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0) · [Complete guide](MAC.md) · [itch.io](https://port0r.itch.io/sega-rally-mac) · [Video](https://youtu.be/vO_EbBZjnuQ) | [Join the Discord](https://discord.gg/XMk7GgapuN) · [Support Port0r](https://github.com/sponsors/jacquesdupontd) |
+| [![Sega Rally on Linux and the Steam Deck](assets/linux/header.jpg)](LINUX.md) | [![Sega Rally on Mac](assets/mac/header.jpg)](MAC.md) |
+| **v0.1.1** · for the Steam Deck and any 64-bit Linux PC (Vulkan) · up to 240 fps and 200 % supersampling, keyboard or gamepad | **v0.1.0** · built for Macs with Apple Silicon (M1 and newer), no Rosetta or Wine, macOS 12+ · 120 fps on ProMotion, up to 240 fps and 200 % supersampling, keyboard or gamepad |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1) · [Complete guide](LINUX.md) · [itch.io](https://port0r.itch.io/sega-rally-steam-deck) · [Video](https://youtu.be/54HLGGeziXg) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0) · [Complete guide](MAC.md) · [itch.io](https://port0r.itch.io/sega-rally-mac) · [Video](https://youtu.be/vO_EbBZjnuQ) |
 
+| [Discord: leaderboard, help, what's next](https://discord.gg/XMk7GgapuN) |
+| --- |
+| [![The Port0r Discord](assets/discord-card.png)](https://discord.gg/XMk7GgapuN) |
+| Online leaderboard per stage, install help, bug reports, and the beta program |
+| [Join the Discord](https://discord.gg/XMk7GgapuN) · [Support Port0r](https://github.com/sponsors/jacquesdupontd) |
+
+> ### Download Port0r: Cop VR v0.1.0 (free)
+> **[Port0r-CopVR-v0.1.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/vcop-v0.1.0/Port0r-CopVR-v0.1.0-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0), also on [itch.io](https://port0r.itch.io/cop-vr), then the [install guide](#install-port0r-cop-vr).
+>
 > ### Download Port0r: Rally VR v0.2.5 (free)
-> **[Port0r-RallyVR-v0.2.5-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.5/Port0r-RallyVR-v0.2.5-quest3.apk)** (Meta Quest 3), from the [releases page](https://github.com/jacquesdupontd/port0r/releases/latest), also on [itch.io](https://port0r.itch.io/rally-vr).
-> Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time. You bring your own game files.
+> **[Port0r-RallyVR-v0.2.5-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.5/Port0r-RallyVR-v0.2.5-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.5), also on [itch.io](https://port0r.itch.io/rally-vr).
+> Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time.
 > **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip) (homebrew), [complete Switch guide](SWITCH.md).
 > **On Android:** [Port0r-SegaRally-Android-v0.1.2.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.2/Port0r-SegaRally-Android-v0.1.2.apk), [complete Android guide](ANDROID.md).
 > **On Steam Deck & Linux:** [Port0r-SegaRally-Linux-v0.1.1.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/linux-v0.1.1/Port0r-SegaRally-Linux-v0.1.1.tar.gz), [complete Linux guide](LINUX.md).
@@ -72,6 +81,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
+| **Port0r: Cop VR** (Virtua Cop) | Sega Model 2, 1994 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0), [itch.io](https://port0r.itch.io/cop-vr)) |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.5** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr); SideQuest: waiting for approval, very soon) |
 | **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
 | **Sega Rally on Android** (phones, tablets, handhelds) | Sega Model 2A, 1995 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2), [guide](ANDROID.md), [itch.io](https://port0r.itch.io/sega-rally-android)) |
@@ -82,12 +92,10 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 ## Upcoming in VR (Quest)
 
-Every game below already runs in the headset, in true 3D. They come out one at a time, when they are right.
+They come out one at a time, when they are right.
 
 - **Time Crisis** (Namco System 22, 1995), *next*: fully immersive 3D at 120 Hz, rendered on the headset's GPU at full
   speed, real VR aiming where your gun points, with a detailed 3D gun in your hand.
-- **Virtua Cop** (Sega Model 2, 1994): immersive 3D at full arcade speed (57.5 images a second instead of 49), aiming
-  checked against what is really drawn (menus included), a crosshair you can toggle, enemies at cabinet scale.
 - **Daytona USA** (Sega Model 2, 1994): longer draw distance, complete track sides when you look around, full-detail cars
   in the distance, no scenery popping; community HD texture pack support.
 - **The House of the Dead** (Sega Model 2A, 1996): immersive 3D indoors, the HUD split between your gun and a panel.
@@ -119,8 +127,7 @@ The same arcade Sega Rally, as a homebrew for a Switch running custom firmware (
 languages, and your times on the Discord leaderboard.
 
 **Download:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip)
-from the [Switch release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3). You bring your own
-game files (MAME 0.289), nothing else is included.
+from the [Switch release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3).
 
 ### 1. Copy the files
 
@@ -260,10 +267,12 @@ All of it is free. If you enjoy it, see [Support the project](#support-the-proje
 
 ---
 
-## Bring your own game files
+## Game files
 
 **No game data is included.** You need your own, legally owned copy of the arcade game. We never provide, link to or
 discuss where to download game files: please don't ask, on Discord or anywhere else.
+
+For Port0r: Cop VR, the files are `vcop.zip` and `model1io2.zip`.
 
 For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip`. `segabill.zip` is only needed if your `srallyc.zip` does not already include the billboard ROM (some sets do; the app checks).
 
@@ -322,6 +331,24 @@ the names are not case sensitive. A corrected file put in any folder replaces th
 
 **Updating:** install the new APK over the old one; your settings and records are kept. From v0.1.0 (another app id):
 uninstall it first, your game files stay on the headset.
+
+## Install (Port0r: Cop VR)
+
+The same steps as Rally VR, about ten minutes the first time.
+
+1. **Developer Mode**, once per headset: see [step 1 of Rally VR](#1-turn-on-developer-mode-once) (skip it if Rally VR is
+   already installed).
+2. **Install the APK** `Port0r-CopVR-v0.1.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0)
+   or [itch.io](https://port0r.itch.io/cop-vr), with SideQuest or `adb install -r Port0r-CopVR-v0.1.0-quest3.apk`. It
+   installs next to Rally VR. The checksum is in `SHA256SUMS.txt`.
+3. **Put `vcop.zip` and `model1io2.zip` on the headset**, in `Download` like for Rally VR (the app looks everywhere).
+4. **First launch**: Library > *Unknown sources* > **Port0r: Cop VR**, allow **"All files access"**, and the game starts.
+
+**Controls:** point the right controller at what you want to hit and pull the trigger; to reload, shoot below the
+screen, like on the cabinet. X inserts a coin, B is Start. The left menu button opens the settings (screen size, your
+height, the crosshair on or off); Y on the left controller recenters the view.
+
+**Updating:** the game checks its own releases at launch and offers the new version, what's new first.
 
 ## HD textures (optional)
 

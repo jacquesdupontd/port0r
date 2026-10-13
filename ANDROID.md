@@ -22,7 +22,7 @@
 > ### Download Sega Rally for Android v0.1.2 (free)
 > **[Port0r-SegaRally-Android-v0.1.2.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.2/Port0r-SegaRally-Android-v0.1.2.apk)**
 > from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2). Then follow the
-> [install guide](#install): a few minutes. **You bring your own game files.**
+> [install guide](#install): a few minutes.
 
 The whole track in **true full screen**: the arcade's picture at its full height, HUD included, and the world widened to
 fill a modern screen. Drawn by the same Vulkan renderer as Port0r: Rally VR, at **60 images a second**, with a
