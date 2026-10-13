@@ -1,5 +1,27 @@
 # Changelog
 
+## Port0r: Time Crisis VR v0.2.0
+
+The first public Time Crisis release, on Meta Quest. [Install guide](README.md#install-port0r-time-crisis-vr).
+
+- Time Crisis (Namco System 22, 1995) in true 3D on Meta Quest: you stand on the island with the soldiers, at real scale.
+- Take cover like on the cabinet: hold the pedal button, or crouch for real (Settings > Buttons > Pedal: Crouch for real).
+- Aim with your controller like the cabinet's gun: the shot goes where your gun points in the 3D scene.
+- A detailed 3D gun in your hand. Tilt it in Settings > Game > Gun angle.
+- Buttons your way: Settings > Buttons.
+- Hits land on what you shoot, not on a flat screen.
+
+## Port0r: Cop VR v0.2.0
+
+- The cabinet's gun: Sega's blue Virtua Gun in your hand, like on the cabinet. The pistol is still there: Settings > Game > Gun.
+- The weapons you pick up, in 3D: rifle, automatic, machine gun, shotgun, magnum, with a weapon change. When it runs dry,
+  your gun comes back.
+- Leaderboard: at the end of a game, publish your score from the headset to the Port0r Discord (this week's board and the
+  all-time board, pinned in #leaderboard).
+- Something is hidden in Virtua Cop: the best score of the first week wins it, then anyone who beats that score.
+- Buttons your way: Start, Coin, Recenter and the crosshair on the controls you want (Settings > Buttons).
+- Gun angle: tilt the gun up or down in your hand (Settings > Game > Gun angle). The shots follow the barrel.
+
 ## Port0r: Cop VR v0.1.0
 
 The first Virtua Cop release, on Meta Quest. [Install guide](README.md#install-port0r-cop-vr).
