@@ -280,32 +280,24 @@ For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip
 
 **The set must match a recent MAME (Port0r runs MAME 0.289).** Sets made for older MAME versions can have different files inside and won't start. If yours is old, check it against a recent MAME with a ROM manager such as ClrMamePro or RomVault.
 
-## Install (Port0r: Cop VR)
+<a id="install-port0r-cop-vr"></a>
+<a id="install-port0r-rally-vr"></a>
 
-The same steps as Rally VR, about ten minutes the first time.
+## Install on Meta Quest (Cop VR and Rally VR)
 
-1. **Developer Mode**, once per headset: see [step 1 of Rally VR](#1-turn-on-developer-mode-once) (skip it if Rally VR is
-   already installed).
-2. **Install the APK** `Port0r-CopVR-v0.1.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0)
-   or [itch.io](https://port0r.itch.io/cop-vr), with SideQuest or `adb install -r Port0r-CopVR-v0.1.0-quest3.apk`. It
-   installs next to Rally VR. The checksum is in `SHA256SUMS.txt`.
-3. **Put `vcop.zip` and `model1io2.zip` on the headset**, in `Download` like for Rally VR (the app looks everywhere).
-4. **First launch**: Library > *Unknown sources* > **Port0r: Cop VR**, allow **"All files access"**, and the game starts.
+Each game is its own app, so you install only the one you want: the steps are the same for both, about ten minutes the
+first time. You need a computer (Windows, Mac or Linux) or just the headset's browser; a USB-C cable helps.
 
-**Controls:** point the right controller at what you want to hit and pull the trigger; to reload, shoot below the
-screen, like on the cabinet. X inserts a coin, B is Start. The left menu button opens the settings (screen size, your
-height, the crosshair on or off); Y on the left controller recenters the view.
-
-**Updating:** the game checks its own releases at launch and offers the new version, what's new first.
-
-## Install (Port0r: Rally VR)
-
-About ten minutes the first time. You need a computer (Windows, Mac or Linux) or just the headset's browser, a USB-C
-cable helps.
+| | Port0r: Cop VR | Port0r: Rally VR |
+| --- | --- | --- |
+| **The app** | `Port0r-CopVR-v0.1.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.1.0) or [itch.io](https://port0r.itch.io/cop-vr) | `Port0r-RallyVR-v0.2.5-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.5) or [itch.io](https://port0r.itch.io/rally-vr) |
+| **Your game files** (MAME 0.289 sets) | `vcop.zip` and `model1io2.zip` | `srallyc.zip`, and `segabill.zip` only if your set needs it |
+| **Its name in the Library** | Port0r: Cop VR | Port0r: Rally VR |
 
 ### 1. Turn on Developer Mode (once)
 
-Developer Mode is what lets a Quest install apps that are not from the Meta store.
+Developer Mode is what lets a Quest install apps that are not from the Meta store. It is set once per headset: if a
+Port0r game is already installed, go straight to step 2.
 
 1. Create a (free) developer organisation at [developer.oculus.com](https://developer.oculus.com/manage/organizations/create/)
    with the same Meta account as your headset. Meta asks for this once.
@@ -315,21 +307,22 @@ Developer Mode is what lets a Quest install apps that are not from the Meta stor
 
 ### 2. Install the APK
 
-Download `Port0r-RallyVR-v0.2.5-quest3.apk` from [Releases](../../releases) or [itch.io](https://port0r.itch.io/rally-vr)
-(a SideQuest store listing is waiting for approval and will follow very soon), then pick one way:
+Download your game's APK (the table above), then pick one way:
 
 - **SideQuest** (easiest): install [SideQuest](https://sidequestvr.com/setup-howto) on your computer, plug the headset
   in with a USB-C cable, put the headset on and accept **"Allow USB debugging"** (tick *Always allow*). In SideQuest the
   dot at the top left turns green: click the **"Install APK file from folder"** icon (top right) and pick the APK.
-- **adb** (if you already use it): `adb install -r Port0r-RallyVR-v0.2.5-quest3.apk`
+- **adb** (if you already use it): `adb install -r` followed by the APK's name, for example
+  `adb install -r Port0r-CopVR-v0.1.0-quest3.apk`.
 
-The APK checksum is in `SHA256SUMS.txt` next to it, if you want to check your download.
+The checksum of each APK is in the `SHA256SUMS.txt` next to it, if you want to check your download. Rally VR's SideQuest
+store listing is waiting for Meta's approval.
 
 ### 3. Put your game files on the headset
 
-The files are `srallyc.zip` and, only if your set needs it, `segabill.zip` (see above). The **Download** folder is the
-usual place, but the app looks everywhere on the headset's storage (a `ROMS` folder of your other emulators works too), and
-the names are not case sensitive. A corrected file put in any folder replaces the old copy by itself. Pick one way:
+Your game's files are in the table above (more in [Game files](#game-files)). The **Download** folder is the usual place,
+but the app looks everywhere on the headset's storage (a `ROMS` folder of your other emulators works too), and the names
+are not case sensitive. A corrected file put in any folder replaces the old copy by itself. Pick one way:
 
 - **SideQuest**: the folder icon (top right) opens the headset's files. Open `Download` and drag your zips in.
 - **USB cable, no software**: plug the headset in, put it on and accept **"Allow access to data"** (without it, the
@@ -341,16 +334,26 @@ the names are not case sensitive. A corrected file put in any folder replaces th
 
 ### 4. First launch
 
-1. Put the headset on: **Library** > the filter at the top (*All*) > **Unknown sources** > **Port0r: Rally VR**.
-2. The first time, the headset asks for **"All files access"**: allow it. The app only reads its game files and the
-   optional HD texture pack.
+1. Put the headset on: **Library** > the filter at the top (*All*) > **Unknown sources** > your game (**Port0r: Cop VR**
+   or **Port0r: Rally VR**).
+2. The first time, the headset asks for **"All files access"**: allow it. The app only reads its game files (and, for
+   Rally VR, the optional HD texture pack).
 3. Come back to the app: the game is copied in and starts by itself. Until then, a screen in your language tells you
    which files are missing.
 
 ![The setup screen, in English, Japanese and Russian](assets/setup-screen-languages.png)
 
-**Updating:** install the new APK over the old one; your settings and records are kept. From v0.1.0 (another app id):
-uninstall it first, your game files stay on the headset.
+**Updating:** each game checks its own releases at launch and offers the new version, what's new first. You can also
+install a new APK over the old one: your settings and records are kept. (Rally VR v0.1.0 had another app id: uninstall it
+first, your game files stay on the headset.)
+
+<a id="cop-vr-controls"></a>
+
+## Cop VR: controls and settings
+
+Point the right controller at what you want to hit and pull the trigger; to reload, shoot below the screen, like on the
+cabinet. X inserts a coin and B is Start. The left menu button opens the settings (screen size, your height, the
+crosshair on or off), and Y on the left controller recenters the view.
 
 <a id="hd-textures-optional"></a>
 
