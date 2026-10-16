@@ -18,7 +18,7 @@
 </script>
 <style>
   /* owner only: the buttons that act, the forms, the Discord monitor's people and messages */
-  #relever, section:has(#ajout), #b-manuel, form.manuel, [data-retirer], #live > section:first-child, #dc-nouveaux, #dc-fil { display: none !important; }
+  #relever, section:has(#ajout), #b-manuel, form.manuel, [data-retirer], #live > section:first-child, #dc-nouveaux, #dc-fil, #b-tickets { display: none !important; }
   #live { grid-template-columns: 1fr !important; }
 </style>
 
@@ -129,6 +129,23 @@ body { background: var(--bg-primary); color: var(--text-primary); font-family: v
 .camp-reussite { color: var(--text-secondary); font-size: var(--t-second, 13px); margin: 0 0 6px; }
 /* what people say (07/10): every comment of our posts, its capture on a click; the picks first */
 .filtres-com { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 12px; }
+/* the Discord bug tickets (16/10/2026): one row each, its status and the version that fixes it changed in place */
+.tk { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 6px 12px; align-items: center; padding: 10px 12px;
+  border-radius: var(--radius-md, 12px); background: var(--bg-secondary); margin-bottom: 6px; }
+.tk .num { font-family: var(--p0-num); font-style: italic; font-weight: 800; font-size: 20px; color: var(--text-secondary); }
+.tk .tit { min-width: 0; }
+.tk .tit a { color: var(--text-primary); font-weight: 600; text-decoration: none; }
+.tk .tit a:hover { text-decoration: underline; }
+.tk .meta { color: var(--text-muted); font-size: var(--t-meta, 12px); margin-top: 2px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.tk .act { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: flex-end; }
+.tk select, .tk input { font: inherit; font-size: var(--t-second, 13px); min-height: 34px; border-radius: var(--radius-sm, 8px);
+  background: var(--bg-card); color: var(--text-primary); border: 0; padding: 0 8px; }
+.tk input { width: 140px; }
+.tk .st { font-size: var(--t-meta, 12px); font-weight: 700; padding: 4px 9px; border-radius: 999px; background: var(--bg-card); }
+.tk .st.pending { color: var(--text-secondary); }
+.tk .st.in_progress { color: var(--warning, #f5a623); }
+.tk .st.fixed { color: var(--success, #3ecf8e); }
+@media (max-width: 760px) { .tk { grid-template-columns: 40px minmax(0, 1fr); } .tk .act { grid-column: 1 / -1; justify-content: flex-start; } }
 .filtres-com button { border: 0; cursor: pointer; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 999px;
   padding: 6px 12px; font: inherit; font-size: var(--t-second, 13px); }
 .filtres-com button.on { background: var(--accent); color: var(--accent-contrast, #fff); }
@@ -278,7 +295,7 @@ details.repli > summary .material-symbols-outlined { transition: transform .2s e
   <header class="tete" data-part="page-head">
     <div>
       <h1><span class="material-symbols-outlined">speed</span>Port0r — lancement</h1>
-      <div class="sous">Time Crisis VR 0.2.1, Cop VR 0.2.1 et Rally VR 0.2.6 (16 octobre 2026 ; les deux pistolets sortis le 13 octobre, sur SideQuest le soir même), Sega Rally Switch 0.5.3, Android 0.1.2, Steam Deck &amp; Linux 0.1.1 et Mac 0.1.0. Relevé automatique toutes les 30 minutes.</div>
+      <div class="sous">Time Crisis VR 0.2.2 (son classement au temps), Cop VR 0.2.1 et Rally VR 0.2.6 (16 octobre 2026 ; les deux pistolets sortis le 13 octobre, sur SideQuest le soir même), Sega Rally Switch 0.5.3, Android 0.1.2, Steam Deck &amp; Linux 0.1.1 et Mac 0.1.0. Relevé automatique toutes les 30 minutes.</div>
     </div>
     <div class="actions" data-part="bar">
       <span class="fraicheur" id="fraicheur"><i></i><span>…</span></span>
@@ -301,6 +318,13 @@ details.repli > summary .material-symbols-outlined { transition: transform .2s e
       <div id="reussites"></div>
     </section>
 
+
+    <section class="bloc" data-part="surface" id="b-tickets">
+      <h2 data-part="title"><span class="material-symbols-outlined">bug_report</span>Bugs Discord · #bug-reports<span class="compte" id="tk-n"></span></h2>
+      <p class="aide">Un fil par bug sur Discord. Un statut changé ici met à jour l'étiquette du fil et le dit dans le fil ; quand c'est corrigé, l'auteur est mentionné avec la version.</p>
+      <div class="filtres-com" id="tk-filtres" data-part="bar"></div>
+      <div id="tk-liste"></div>
+    </section>
 
     <section class="bloc" data-part="surface" id="b-coms" hidden>
       <h2 data-part="title"><span class="material-symbols-outlined">forum</span>Ce qu'ils en disent<span class="compte"></span></h2>
@@ -641,6 +665,54 @@ async function chargerComs() {
   afficherComs();
 }
 chargerComs();
+
+// ── Les bugs Discord (16/10/2026) : #bug-reports, un ticket par fil (le bot, tickets.py) ; un changement passe par le
+// bridge, qui le remet au bot avec la clé du staff ──
+let TK = null, TK_F = 'ouverts';
+const TK_ST = { pending: 'En attente', in_progress: 'En cours', fixed: 'Corrigé', wont_fix: 'Ne sera pas corrigé', duplicate: 'Doublon' };
+function afficherTickets() {
+  if (!TK) return;
+  const all = TK.tickets || [];
+  const ouverts = all.filter(t => t.status === 'pending' || t.status === 'in_progress');
+  const n = s => all.filter(t => t.status === s).length;
+  $('#tk-n').textContent = `${ouverts.length} ouvert${ouverts.length > 1 ? 's' : ''} sur ${all.length}`;
+  const f = [['ouverts', 'Ouverts · ' + ouverts.length], ['pending', 'En attente · ' + n('pending')], ['in_progress', 'En cours · ' + n('in_progress')],
+             ['fixed', 'Corrigés · ' + n('fixed')], ['tous', 'Tous · ' + all.length]];
+  $('#tk-filtres').innerHTML = f.map(([k, l]) => `<button type="button" data-part="chip" data-tk="${k}" class="${k === TK_F ? 'on' : ''}">${esc(l)}</button>`).join('');
+  const vis = TK_F === 'tous' ? all : TK_F === 'ouverts' ? ouverts : all.filter(t => t.status === TK_F);
+  const lien = t => TK.guild ? `https://discord.com/channels/${TK.guild}/${t.thread_id}` : '#';
+  $('#tk-liste').innerHTML = vis.length ? vis.map(t => `<div class="tk" data-part="row" data-n="${t.n}">
+      <span class="num">#${t.n}</span>
+      <div class="tit"><a href="${lien(t)}" target="_blank" rel="noopener">${esc(t.title)}</a>
+        <div class="meta"><span class="st ${esc(t.status)}" data-part="chip">${esc(TK_ST[t.status] || t.status)}${t.status === 'fixed' && t.fixed_in ? ' · ' + esc(t.fixed_in) : ''}</span>
+          <span>${esc(t.game || 'jeu ?')}</span>${t.device ? `<span>${esc(t.device)}</span>` : ''}${t.version ? `<span>${esc(t.version)}</span>` : ''}
+          <span>${esc(t.author_name || '')}</span><span>priorité ${esc(t.priority || 'normal')}</span></div></div>
+      <div class="act">
+        <select data-k="status" aria-label="Statut">${Object.entries(TK_ST).map(([k, l]) => `<option value="${k}"${k === t.status ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select>
+        <select data-k="priority" aria-label="Priorité">${['low', 'normal', 'high', 'critical'].map(p => `<option value="${p}"${p === (t.priority || 'normal') ? ' selected' : ''}>${p}</option>`).join('')}</select>
+        <input data-k="fixed_in" placeholder="Corrigé dans (ex. Cop VR 0.2.2)" value="${esc(t.fixed_in || '')}" aria-label="Corrigé dans">
+        <button type="button" class="relever" data-part="btn" data-tk-save="${t.n}">Enregistrer</button>
+      </div></div>`).join('') : '<div class="vide" data-part="empty">Aucun ticket dans ce filtre.</div>';
+}
+async function chargerTickets() {
+  try { const r = await fetch('/api/port0r/tickets'); if (!r.ok) throw new Error(r.status); TK = await r.json(); }
+  catch (e) { $('#tk-liste').innerHTML = '<div class="vide" data-part="empty">Le bot ne répond pas : les tickets reviendront avec lui.</div>'; return; }
+  afficherTickets();
+}
+$('#tk-filtres').addEventListener('click', e => { const b = e.target.closest('button[data-tk]'); if (b) { TK_F = b.dataset.tk; afficherTickets(); } });
+$('#tk-liste').addEventListener('click', async e => {
+  const b = e.target.closest('[data-tk-save]'); if (!b) return;
+  const row = b.closest('.tk'), body = {};
+  row.querySelectorAll('[data-k]').forEach(el => { body[el.dataset.k] = el.value.trim(); });
+  b.disabled = true;
+  try {
+    const r = await fetch('/api/port0r/tickets/' + b.dataset.tkSave, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    const j = await r.json();
+    toast(j.ok ? `Ticket #${b.dataset.tkSave} : enregistré, et dit dans son fil Discord` : 'Refusé : ' + (j.error || r.status));
+  } catch (err) { toast('Le bot ne répond pas'); }
+  b.disabled = false; chargerTickets();
+});
+chargerTickets(); setInterval(chargerTickets, 60000);
 
 // ── Tous les commentaires (09/10, Guillaume : « faire la part avec ceux de Switch ou Quest et taguer ça propre ») ──
 // data/port0r_comments.json : plateforme d'après la campagne du post et le texte, sujets, état (nouveau / vu / répondu /
