@@ -1,7 +1,7 @@
 ![Port0r](assets/port0r-header.png)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.1"><img alt="Download Port0r: Time Crisis VR v0.2.1 (APK, free)" src="https://img.shields.io/badge/Download-Time%20Crisis%20VR%20v0.2.1%20%C2%B7%20APK%20%C2%B7%20free-d7263d?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2"><img alt="Download Port0r: Time Crisis VR v0.2.2 (APK, free)" src="https://img.shields.io/badge/Download-Time%20Crisis%20VR%20v0.2.2%20%C2%B7%20APK%20%C2%B7%20free-d7263d?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1"><img alt="Download Port0r: Cop VR v0.2.1 (APK, free)" src="https://img.shields.io/badge/Download-Cop%20VR%20v0.2.1%20%C2%B7%20APK%20%C2%B7%20free-1d4ed8?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.6"><img alt="Download Port0r: Rally VR v0.2.6 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.6%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <br>
@@ -35,8 +35,8 @@
 | [Meta Quest: Time Crisis VR, real 3D VR](#install-port0r-time-crisis-vr) |
 | --- |
 | [![Port0r Time Crisis VR on Meta Quest](https://img.youtube.com/vi/F7Ig3bwq7K8/maxresdefault.jpg)](#install-port0r-time-crisis-vr) |
-| **v0.2.1** · APK for Meta Quest 3 · Time Crisis in true 3D: crouch for real to take cover, a 3D gun in your hand |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.1) · [Install guide](#install-port0r-time-crisis-vr) · [itch.io](https://port0r.itch.io/time-crisis-vr) · [Video](https://youtu.be/F7Ig3bwq7K8) |
+| **v0.2.2** · APK for Meta Quest 3 · Time Crisis in true 3D: crouch for real to take cover, a 3D gun in your hand |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) · [Install guide](#install-port0r-time-crisis-vr) · [itch.io](https://port0r.itch.io/time-crisis-vr) · [Video](https://youtu.be/F7Ig3bwq7K8) |
 
 | [Meta Quest: Cop VR, real 3D VR](#install-port0r-cop-vr) | [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) |
 | --- | --- |
@@ -62,8 +62,8 @@
 | Online leaderboard per stage, install help, bug reports, and the beta program |
 | [Join the Discord](https://discord.gg/XMk7GgapuN) · [Support Port0r](https://github.com/sponsors/jacquesdupontd) |
 
-> ### Download Port0r: Time Crisis VR v0.2.1 (free)
-> **[Port0r-TimeCrisisVR-v0.2.1-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/timecris-v0.2.1/Port0r-TimeCrisisVR-v0.2.1-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.1), also on [itch.io](https://port0r.itch.io/time-crisis-vr), then the [install guide](#install-port0r-time-crisis-vr).
+> ### Download Port0r: Time Crisis VR v0.2.2 (free)
+> **[Port0r-TimeCrisisVR-v0.2.2-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/timecris-v0.2.2/Port0r-TimeCrisisVR-v0.2.2-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2), also on [itch.io](https://port0r.itch.io/time-crisis-vr), then the [install guide](#install-port0r-time-crisis-vr).
 >
 > ### Download Port0r: Cop VR v0.2.1 (free)
 > **[Port0r-CopVR-v0.2.1-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/vcop-v0.2.1/Port0r-CopVR-v0.2.1-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1), also on [itch.io](https://port0r.itch.io/cop-vr), then the [install guide](#install-port0r-cop-vr).
@@ -93,7 +93,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Time Crisis VR** (Time Crisis) | Namco System 22, 1995 | **Out now, v0.2.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.1), [itch.io](https://port0r.itch.io/time-crisis-vr), [SideQuest](https://sidequestvr.com/app/63135/port0r-time-crisis-vr)) |
+| **Port0r: Time Crisis VR** (Time Crisis) | Namco System 22, 1995 | **Out now, v0.2.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2), [itch.io](https://port0r.itch.io/time-crisis-vr), [SideQuest](https://sidequestvr.com/app/63135/port0r-time-crisis-vr)) |
 | **Port0r: Cop VR** (Virtua Cop) | Sega Model 2, 1994 | **Out now, v0.2.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1), [itch.io](https://port0r.itch.io/cop-vr), [SideQuest](https://sidequestvr.com/app/63134/port0r-cop-vr)) |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.6** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr), [SideQuest](https://sidequestvr.com/app/62980)) |
 | **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
@@ -303,7 +303,7 @@ first time. You need a computer (Windows, Mac or Linux) or just the headset's br
 
 | | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
 | --- | --- | --- | --- |
-| **The app** | `Port0r-TimeCrisisVR-v0.2.1-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.1) or [itch.io](https://port0r.itch.io/time-crisis-vr) | `Port0r-CopVR-v0.2.1-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1) or [itch.io](https://port0r.itch.io/cop-vr) | `Port0r-RallyVR-v0.2.6-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.6) or [itch.io](https://port0r.itch.io/rally-vr) |
+| **The app** | `Port0r-TimeCrisisVR-v0.2.2-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) or [itch.io](https://port0r.itch.io/time-crisis-vr) | `Port0r-CopVR-v0.2.1-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1) or [itch.io](https://port0r.itch.io/cop-vr) | `Port0r-RallyVR-v0.2.6-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.6) or [itch.io](https://port0r.itch.io/rally-vr) |
 | **Your game files** (MAME 0.289 sets) | `timecris.zip` and `namcoc71.zip` | `vcop.zip` and `model1io2.zip` | `srallyc.zip`, and `segabill.zip` only if your set needs it |
 | **Its name in the Library** | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
 
@@ -476,6 +476,17 @@ runs on a *Mirrored* one, and the free timer is never published.
 
 ![The Desert board](assets/leaderboard-desert.png)
 
+<a id="time-crisis-vr-the-leaderboard"></a>
+
+## Time Crisis VR: the leaderboard on Discord
+
+Time Crisis ranks times, like its cabinet. On the cabinet's mode screen shoot **TIMED GAME**, pick a stage and clear it:
+the game offers to publish your time on the Port0r Discord, with your Discord name (link your Discord once, as for Rally
+VR above). Each stage has its own board, pinned in **#leaderboard** and on
+[port0r.com/leaderboard](https://port0r.com/leaderboard): the best time of each player, top 30.
+
+The best Stage 1 time of the week of 19 October wins the hidden gun, then everyone who beats that time wins it too.
+
 ## Saves
 
 Your records and the cabinet's own settings are saved on the headset while you play (every few seconds) and kept
@@ -586,7 +597,7 @@ Port0r's own source code is not public for now. The open-source components it us
 
 ## Download
 
-**[Port0r-TimeCrisisVR-v0.2.1-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/timecris-v0.2.1/Port0r-TimeCrisisVR-v0.2.1-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.1) or [itch.io](https://port0r.itch.io/time-crisis-vr). Install guide: [above](#install-port0r-time-crisis-vr).
+**[Port0r-TimeCrisisVR-v0.2.2-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/timecris-v0.2.2/Port0r-TimeCrisisVR-v0.2.2-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) or [itch.io](https://port0r.itch.io/time-crisis-vr). Install guide: [above](#install-port0r-time-crisis-vr).
 
 **[Port0r-CopVR-v0.2.1-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/vcop-v0.2.1/Port0r-CopVR-v0.2.1-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1) or [itch.io](https://port0r.itch.io/cop-vr). Install guide: [above](#install-port0r-cop-vr).
 

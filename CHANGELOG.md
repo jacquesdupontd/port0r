@@ -1,5 +1,9 @@
 # Changelog
 
+## Port0r: Time Crisis VR v0.2.2
+
+- Leaderboard: Time Crisis ranks times, like its cabinet. On the cabinet's mode screen shoot TIMED GAME, pick a stage and clear it: the game offers to publish your time on the Port0r Discord, one board per stage (also on port0r.com/leaderboard). The best Stage 1 time of the week of 19 October wins the hidden gun, then everyone who beats that time wins it too.
+
 ## Port0r: Cop VR v0.2.1
 
 - Your hand and arm: a gloved hand now holds the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
