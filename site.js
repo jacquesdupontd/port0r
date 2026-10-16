@@ -34,6 +34,146 @@
       requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add("fuse")));
       setTimeout(() => { play(); hero.classList.add("fused"); }, 1200);
     });
+
+    // ---- the ask, big over the race first (21/10/2026, Guillaume: « en gros dans le header écrit en streaming pour qu'on
+    // ne voie que ça, et qui ensuite via une belle animation va se caler là-haut dans le bandeau jaune pour laisser place à
+    // la phrase actuelle »): the band's own words stream into a big yellow card, word by word behind a caret, over a dimmed
+    // race, the top bar faded; the card then flies into the band and the title comes in.
+    // Shown to EVERY visitor, streamed and flown (21/10, Guillaume could not see the first version in his Brave): a page
+    // opened in a background tab waits until it is seen; only a click or tap, Escape, or a real scroll down ends it early (the wheel and the touch ended it before, and a
+    // trackpad's inertia or a Magic Mouse touched in passing is enough to fire those). Skipped only for a link to an anchor.
+    const band = $(".ask-in", hero), big = $(".ask-big", hero);
+    if (!(band && big && !location.hash)) document.documentElement.classList.remove("ask-pre");
+    if (band && big && !location.hash) {
+      const card = $(".ask-card", big), said = $("p", band), head = $("b", said).textContent.trim();
+      const rest = said.textContent.trim().slice(head.length).trim();
+      const caret = document.createElement("i");
+      caret.className = "caret";
+      const words = (el, text) => text.split(/\s+/).map((w) => {
+        const s = document.createElement("span");
+        s.className = "w"; s.textContent = w; el.append(s, " ");
+        return s;
+      });
+      const first = words($(".ask-big-1", big), head), second = words($(".ask-big-2", big), rest);
+      first[0].before(caret);
+      first[first.length - 1].classList.add("st");
+      const thanks = document.createElement("div");
+      thanks.className = "ask-thanks";
+      thanks.innerHTML = '<b>Thank you</b><svg class="ask-heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg>';
+      card.append(thanks);
+      const heart = $(".ask-heart", thanks);
+      hero.classList.add("asking");
+      document.documentElement.classList.add("asking");
+      // the card whole in the window, whatever its size (21/10/2026, a phone where it sat at the bottom, cut): every word
+      // is laid out from the start (hidden), so the card already has its final size; taller or wider than the window, it
+      // shrinks by one factor (--fit, its type and padding), measured again after the reflow, and again on a resize
+      const fit = () => {
+        big.style.setProperty("--fit", "1");
+        const cs = getComputedStyle(big);
+        const h = big.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+        const w = big.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        let k = 1;
+        for (let i = 0; i < 6 && (card.offsetHeight > h || card.offsetWidth > w); i++) {   // offset sizes: its entrance's scale aside
+          k *= Math.max(.3, Math.min(h / card.offsetHeight, w / card.offsetWidth) * .97);
+          big.style.setProperty("--fit", k.toFixed(3));
+        }
+      };
+      fit();
+      addEventListener("resize", fit);
+      const timers = [], at = (ms, f) => timers.push(setTimeout(f, ms));
+      let over = false;
+      const onKey = (e) => { if (e.key === "Escape") finish(); };
+      const onScroll = () => { if (scrollY > 160) finish(); };
+      const finish = () => {
+        if (over) return;
+        over = true;
+        timers.forEach(clearTimeout);
+        removeEventListener("pointerdown", finish, true);
+        removeEventListener("keydown", onKey, true);
+        removeEventListener("scroll", onScroll);
+        removeEventListener("resize", fit);
+        big.remove();
+        hero.classList.replace("asking", "asked");
+        document.documentElement.classList.remove("asking", "ask-pre");
+      };
+      addEventListener("pointerdown", finish, { capture: true, passive: true });
+      addEventListener("keydown", onKey, true);
+      addEventListener("scroll", onScroll, { passive: true });
+      // A browser that asks for reduced motion (Guillaume's own Brave on his desk: « un panneau en gros d'un coup sans aucune
+      // animation et il devient la barre en haut d'un coup ») gets the SAME stream and flight, the words only fading in
+      // (no blur, no slide, no stereo): the message is the point of the page, and it is one short move.
+      const run = () => {
+        let t = 450;   // the title's words slower, the sentence's like text arriving
+        [...first.map((w) => [w, 190]), ...second.map((w) => [w, 80])].forEach(([w, step]) => {
+          at(t, () => { w.classList.add("on"); w.after(caret); });
+          t += step;
+        });
+        t += 1700;   // the whole sentence, held: time to read it
+        // then a big THANK YOU, its heart beating faster and faster (Guillaume, 21/10: « ensuite je veux un gros Thank you
+        // avec un cœur qui flash de plus en plus vite et là, ça disparaît là-haut »), and at the fastest beat, the flight
+        at(t, () => { caret.remove(); card.classList.add("thanks"); });
+        t += 420;
+        for (const d of [560, 470, 390, 320, 260, 210, 170, 140, 115, 95, 80]) {
+          at(t, () => {
+            heart.style.setProperty("--beat", d + "ms");
+            heart.classList.remove("beat");
+            void heart.getBoundingClientRect();   // the same animation, started again
+            heart.classList.add("beat");
+          });
+          t += d;
+        }
+        at(t, () => {   // the flight: from the card's box to the band's
+          const a = card.getBoundingClientRect(), b = band.getBoundingClientRect(), bs = getComputedStyle(band);
+          Object.assign(card.style, { left: a.left + "px", top: a.top + "px", width: a.width + "px", height: a.height + "px" });
+          card.classList.add("fly");
+          card.getBoundingClientRect();   // the start box laid out before the move
+          Object.assign(card.style, { left: b.left + "px", top: b.top + "px", width: b.width + "px", height: b.height + "px",
+            borderRadius: bs.borderRadius, padding: "0", boxShadow: bs.boxShadow });
+        });
+        at(t + 820, finish);
+      };
+      if (!document.hidden) run();
+      else document.addEventListener("visibilitychange", function seen() {
+        if (document.hidden) return;
+        document.removeEventListener("visibilitychange", seen);
+        run();
+      });
+    }
+  }
+
+  // ---- THE FIRST SCREEN, WHOLE, on any screen (21/10/2026) ----
+  // Guillaume, after the intro card was seen cut at the bottom of a phone: « pareil pour le header et les boutons qui
+  // apparaissent ensuite », « il faut penser tout le site avec cette logique ». A page's header shows its essentials -- the
+  // band, the title, its text, its buttons -- inside the window a phone shows with its bars out (100svh), whatever the phone
+  // or the window. When they would not fit, its type and spacing shrink by one factor (--hfit, never under .72, the buttons
+  // keep their size), measured on the layout boxes (offsets: the entrances' transforms aside) at load, once the fonts are
+  // in, and on every resize. What follows (the dock, the live numbers) may continue below.
+  const head = $(".hero") || $(".page-head .game");   // the home page's header, or a game page's head
+  if (head) {
+    const probe = document.createElement("div");
+    probe.style.cssText = "position:fixed;left:0;top:0;width:0;height:100vh;height:100svh;visibility:hidden;pointer-events:none";
+    document.body.append(probe);
+    const y = (el) => { let v = 0; for (let e = el; e; e = e.offsetParent) v += e.offsetTop; return v; };
+    const fitHead = () => {
+      const row = $(".row", head), btns = row ? $$(".btn", row) : [];   // its buttons; a link that wraps under them may follow
+      const last = btns.length ? btns[btns.length - 1] : row || $(".lead", head) || $("h1", head);
+      if (!last) return;
+      head.style.setProperty("--hfit", "1");
+      const H = probe.offsetHeight || innerHeight;
+      let k = 1;
+      for (let i = 0; i < 8; i++) {
+        const need = y(last) + last.offsetHeight + 12;   // from the page's top: the first screen
+        if (need <= H) break;
+        const next = Math.max(H < 500 ? .62 : .72, k * Math.max(.9, H / need));   // a phone on its side may go a step further
+        if (next >= k) break;
+        k = next;
+        head.style.setProperty("--hfit", k.toFixed(3));
+      }
+    };
+    fitHead();
+    if (document.fonts) document.fonts.ready.then(fitHead);
+    let pending = 0;
+    addEventListener("resize", () => { cancelAnimationFrame(pending); pending = requestAnimationFrame(fitHead); });
   }
 
   // ---- the top bar: light over the header, paper below it (always paper on a page without a header video) ----
@@ -42,19 +182,32 @@
     new IntersectionObserver(([e]) => {
       top.classList.toggle("over", e.isIntersecting);
       top.classList.toggle("solid", !e.isIntersecting);
-    }, { rootMargin: "-68px 0px 0px 0px", threshold: 0 }).observe(hero);
+    // paper as soon as the header's last band is under the bar: a link to #games stops 76 px under the top (scroll-padding),
+    // and at -68 px the bar stayed clear over the live numbers' labels (21/10/2026, seen on the fit bench's screenshots)
+    }, { rootMargin: "-84px 0px 0px 0px", threshold: 0 }).observe(hero);
   }
 
   // ---- the clips recorded in the headset: loaded and played only while on screen ----
-  if (!still) {
+  // ALWAYS, reduced motion or not (17/10/2026, Guillaume: « les "in the headset" tournent bien sur le mobile mais sur PC desktop
+  // je vois pas l'animation donc on comprend pas »): they are the point of the page, small and muted. A desktop browser that
+  // refuses autoplay until the visitor does something (Brave) gets them started at the first click, wheel, key or hover.
+  {
+    const shown = new Set();
+    const start = (v) => { const p = v.play(); if (p) p.catch(() => v.closest(".pip")?.classList.add("blocked")); };
     const io = new IntersectionObserver((list) => {
       for (const e of list) {
         const v = e.target;
-        if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; const p = v.play(); if (p) p.catch(() => {}); }
-        else if (!v.paused) v.pause();
+        if (e.isIntersecting) { shown.add(v); if (!v.src) v.src = v.dataset.src; start(v); }
+        else { shown.delete(v); if (!v.paused) v.pause(); }
       }
     }, { threshold: 0.3 });
-    $$("video.clip").forEach((v) => io.observe(v));
+    $$("video.clip").forEach((v) => {
+      io.observe(v);
+      v.closest(".pip")?.addEventListener("pointerenter", () => { if (!v.src) v.src = v.dataset.src; start(v); });
+      v.addEventListener("playing", () => v.closest(".pip")?.classList.remove("blocked"));
+    });
+    const retry = () => shown.forEach((v) => { if (v.paused) start(v); });
+    for (const ev of ["pointerdown", "keydown", "wheel", "touchstart"]) addEventListener(ev, retry, { passive: true });
   }
 
   // ---- our videos, played right here: the thumbnail we made first, YouTube's player on a click ----
@@ -102,7 +255,7 @@
 
   // ---- the players' words ----
   const WHERE = { reddit: "Reddit", youtube: "YouTube", facebook: "Facebook" };
-  const GAMES = { rally: "Rally VR", cop: "Cop VR", timecris: "Time Crisis VR", switch: "Switch", android: "Android", linux: "Steam Deck & Linux", mac: "Mac" };
+  const GAMES = { timecrs2: "Time Crisis II VR", hotd: "House of the Dead VR", rally: "Rally VR", cop: "Cop VR", timecris: "Time Crisis VR", switch: "Switch", android: "Android", linux: "Steam Deck & Linux", mac: "Mac" };
   const cite = (c) => c.platform === "reddit" ? `u/${c.author} · ${c.place}` : c.platform === "youtube" ? `${c.author} · YouTube`
                     : c.platform === "facebook" ? `${c.author} · Facebook` : c.author;
   function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
@@ -268,5 +421,46 @@
       }).catch(() => { $(".tbls", box).innerHTML = `<p class="rule">The board cannot be reached right now.</p>`; });
     });
   }
-  if ($(".lbs .lb[data-game]")) { loadBoards(); setInterval(() => { if (!document.hidden) loadBoards(); }, 60000); }
+  // the cards themselves from the bot's index (21/10/2026: a game the bot keeps a board for shows here by itself); the cards
+  // written in the page stay if the index cannot be read
+  async function boardCards() {
+    try {
+      const d = await (await fetch(BOARDS + "index.json", { cache: "no-store" })).json();
+      const games = (d.games || []).filter((g) => g.publishing);
+      if (games.length) $("#lbs").innerHTML = games.map((g) => `<article class="lb" data-game="${esc(g.game)}"><h3>${esc(g.name)}</h3>`
+        + `${g.about ? `<p class="rule">${esc(g.about)}</p>` : ""}<div class="tbls"></div></article>`).join("");
+    } catch (e) { /* the cards written in the page stay */ }
+    loadBoards();
+  }
+  if ($("#lbs")) { boardCards(); setInterval(() => { if (!document.hidden) loadBoards(); }, 60000); }
+})();
+
+// THE HERO'S TEXTS, one after the other over the race (22/10/2026, Guillaume: « un slider avec les dernières news ... à
+// la place du texte sur la vidéo de Sega Rally », the news first): every 6.5 s, paused under the pointer or the keyboard and
+// while the tab is hidden; still for reduced motion
+(() => {
+  const box = document.querySelector(".hero .slides");
+  if (!box) return;
+  const items = [...box.children];
+  if (items.length < 2) return;
+  let i = 0, timer = null;
+  // not while the help card covers the hero (27/10/2026: the slides turned under it, and the first one -- the day's news, the
+  // Scud Race beta -- was never seen on a first visit): the first slide waits, the turns start when the card has flown away
+  const asking = () => document.documentElement.classList.contains("asking") || document.documentElement.classList.contains("ask-pre");
+  const go = () => { items[i].classList.remove("on"); i = (i + 1) % items.length; items[i].classList.add("on"); };
+  const start = () => { if (!timer && !asking() && !matchMedia("(prefers-reduced-motion: reduce)").matches) timer = setInterval(go, 6500); };
+  const stop = () => { clearInterval(timer); timer = null; };
+  box.addEventListener("mouseenter", stop); box.addEventListener("mouseleave", start);
+  box.addEventListener("focusin", stop); box.addEventListener("focusout", start);
+  document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+  if (asking()) {
+    const mo = new MutationObserver(() => {
+      if (asking()) return;
+      mo.disconnect();
+      items[i].classList.remove("on"); i = 0; items[0].classList.add("on");
+      start();
+    });
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+  }
+  start();
 })();

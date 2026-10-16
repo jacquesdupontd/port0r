@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=20261016k">
+<link rel="stylesheet" href="site.css?v=20261021g">
 </head>
 <body>
 <a class="skip" href="#content">Skip to the content</a>
@@ -24,6 +24,7 @@
       <a href="./#live">Live</a>
       <a class="opt" href="./#everywhere">Everywhere</a>
       <a class="opt" href="leaderboard.html" aria-current="page">Leaderboards</a>
+      <a class="opt" href="contact/">Contact</a>
       <a class="btn sm" href="https://discord.gg/XMk7GgapuN">Discord</a>
     </nav>
   </div>
@@ -44,6 +45,8 @@
       <button role="tab" type="button" aria-selected="true" data-game="srallyc">Rally VR</button>
       <button role="tab" type="button" aria-selected="false" data-game="vcop">Cop VR</button>
       <button role="tab" type="button" aria-selected="false" data-game="timecris">Time Crisis VR</button>
+      <button role="tab" type="button" aria-selected="false" data-game="hotd">House of the Dead VR</button>
+      <button role="tab" type="button" aria-selected="false" data-game="timecrs2">Time Crisis II VR</button>
     </div>
     <div id="prize"></div>
     <div id="boards" class="grid-boards" aria-live="polite"></div>
@@ -57,20 +60,26 @@
     <img src="assets/wordmark-light.svg" alt="Port0r" width="106" height="22">
     <nav aria-label="Elsewhere">
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
+      <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
       <a href="https://github.com/jacquesdupontd/port0r">GitHub</a>
       <a href="https://port0r.itch.io/">itch.io</a>
       <a href="/stats/">The numbers in detail</a>
       <a href="https://ko-fi.com/port0r">Ko-fi</a>
-      <a href="mailto:contact@port0r.com">contact@port0r.com</a>
+      <a href="contact/">Contact</a>
+      <a href="privacy/">Privacy</a>
     </nav>
     <p class="legal">Port0r is a free fan project. Not affiliated with SEGA, Bandai Namco or Meta.</p>
   </div>
 </footer>
 
-<script src="site.js?v=20261016k" defer></script>
+<script src="site.js?v=20261027a" defer></script>
+<script src="hit.js?v=20261021a" defer></script>
 <script>
 // The boards in full (16/10/2026): the bot's public files, read every minute. A race game (Rally VR's courses, Time Crisis's
 // Timed Game stages) is one board per course and category, a score game (Cop VR) is this week and all time.
+// The tabs come from the bot's index (21/10/2026, Guillaume: « il faut que ce soit automatisé comme il faut »: three games
+// were written here by hand and Time Crisis II was missing): a game the bot keeps a board for shows here by itself; the
+// tabs written in the page stay if the index cannot be read.
 (() => {
   const API = "https://alloxr.info/port0r/api/board/";
   const $ = (s) => document.querySelector(s);
@@ -82,10 +91,25 @@
     ? `<ol>${list.map((r, i) => `<li><span class="rk">${i + 1}</span><span class="nm">${esc(r.name)}<small style="display:block;font-weight:500;color:var(--ink-3);font-size:12px">${esc(day(r.date))}</small></span><span class="sc">${val(r)}</span></li>`).join("")}</ol>`
     : `<ol><li class="empty">${esc(empty)}</li></ol>`;
   const card = (cls, title, sub, body) => `<article class="lb" data-game="${cls}"><h3>${esc(title)}</h3>${sub ? `<p class="rule">${sub}</p>` : ""}<div class="tbl">${body}</div></article>`;
-  let game = (location.hash || "").slice(1) || "srallyc";
-  if (!["srallyc", "vcop", "timecris"].includes(game)) game = "srallyc";
+  let GAMES = [...document.querySelectorAll(".tabs button")].map((b) => ({ game: b.dataset.game, name: b.textContent, publishing: b.dataset.game !== "hotd", note: "" }));
+  let game = (location.hash || "").slice(1);
+  async function tabs() {
+    try {
+      const d = await (await fetch(API + "index.json", { cache: "no-store" })).json();
+      if (d.games && d.games.length) GAMES = d.games;
+    } catch (e) { /* the tabs written in the page stay */ }
+    if (!GAMES.some((g) => g.game === game)) game = GAMES[0].game;
+    document.querySelector(".tabs").innerHTML = GAMES.map((g) => `<button role="tab" type="button" aria-selected="${g.game === game}" data-game="${esc(g.game)}">${esc(g.name)}</button>`).join("");
+  }
   async function show() {
     document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.game === game)));
+    const meta = GAMES.find((g) => g.game === game) || {};
+    if (meta.publishing === false) {   // its headset does not send scores yet: said, never an empty board
+      $("#prize").innerHTML = "";
+      $("#boards").innerHTML = card(game, meta.name || game, "", `<ol><li class="empty">${esc(meta.note || "This game does not publish its scores yet.")}</li></ol>`);
+      $("#note").textContent = "";
+      return;
+    }
     let d;
     try { d = await (await fetch(API + game + ".json", { cache: "no-store" })).json(); }
     catch (e) { $("#prize").innerHTML = ""; $("#boards").innerHTML = `<p class="lead">The boards cannot be reached right now. They come back by themselves.</p>`; return; }
@@ -117,7 +141,7 @@
     if (!b) return;
     game = b.dataset.game; history.replaceState(null, "", "#" + game); show();
   });
-  show();
+  tabs().then(show);
   setInterval(() => { if (!document.hidden) show(); }, 60000);
 })();
 </script>
