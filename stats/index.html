@@ -246,6 +246,7 @@ body { background: var(--bg-primary); color: var(--text-primary); font-family: v
   background: var(--bg-secondary); }
 .todo a:hover { background: var(--bg-elevated, var(--bg-secondary)); }
 .todo .haut { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: var(--t-meta, 12px); color: var(--text-muted); }
+.todo p, .todo .haut { overflow-wrap: anywhere; }
 .todo .haut b { color: var(--text-primary); font-size: var(--t-second, 13px); }
 .todo p { margin: 6px 0 0; font-size: var(--t-second, 13px); color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; overflow: hidden; }
@@ -261,6 +262,22 @@ body { background: var(--bg-primary); color: var(--text-primary); font-family: v
 .barres .barre { display: grid; grid-template-columns: 120px minmax(0, 1fr) 34px; align-items: center; gap: 8px; margin: 5px 0;
   font-size: var(--t-meta, 12px); color: var(--text-secondary); }
 .barres .barre i { height: 8px; border-radius: 99px; background: var(--accent); display: block; min-width: 4px; }
+/* port0r.com : les visites (21/10/2026) */
+.site-barre { display: flex; justify-content: flex-end; margin: -2px 0 8px; }
+#site-nous { cursor: pointer; font: inherit; font-size: 11px; font-weight: 600; }
+#site-nous[aria-pressed="true"] { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--accent); }
+.site-chiffres { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.site-jours svg { width: 100%; height: 96px; display: block; color: var(--accent); }
+.site-jours .axe { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 11px; margin: 4px 0 6px; }
+.site-grille { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 24px; margin-bottom: 6px; }
+.site-grille h3 { font-size: var(--t-meta, 12px); color: var(--text-secondary); text-transform: uppercase; letter-spacing: .06em;
+  font-weight: 600; margin: 12px 0 2px; }
+.site-grille .barre { grid-template-columns: 136px minmax(0, 1fr) 40px; }
+.site-grille .barre span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.site-grille .barre span:last-child { text-align: right; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+@media (max-width: 1100px) { .site-chiffres { grid-template-columns: repeat(3, minmax(0, 1fr)); } .site-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .site-chiffres { grid-template-columns: repeat(2, minmax(0, 1fr)); } .site-grille { grid-template-columns: 1fr; }
+  .site-grille .barre { grid-template-columns: 112px minmax(0, 1fr) 36px; } }
 .fil { margin-top: 8px; }
 .fil .msg { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 8px; padding: 6px 0; font-size: var(--t-meta, 12px); }
 .fil .msg time { color: var(--text-muted); }
@@ -272,7 +289,7 @@ details.repli > summary { cursor: pointer; color: var(--text-secondary); font-si
 details.repli > summary::-webkit-details-marker { display: none; }
 details.repli[open] > summary .material-symbols-outlined { transform: rotate(180deg); }
 details.repli > summary .material-symbols-outlined { transition: transform .2s ease; font-size: 18px; }
-@media (max-width: 1100px) { .live { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .live { grid-template-columns: minmax(0, 1fr); } }   /* 1fr let a long word (a link in a message) widen the column past the screen (21/10) */
 @media (max-width: 640px) { .barres .barre { grid-template-columns: 92px minmax(0, 1fr) 30px; } }
 @media (max-width: 1100px) { .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } .grille { grid-template-columns: 1fr; } .plateformes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .onglets button { padding: 9px 10px; gap: 6px; flex-basis: 30%; } .onglets button .material-symbols-outlined { font-size: 17px; } }
@@ -295,7 +312,7 @@ details.repli > summary .material-symbols-outlined { transition: transform .2s e
   <header class="tete" data-part="page-head">
     <div>
       <h1><span class="material-symbols-outlined">speed</span>Port0r — lancement</h1>
-      <div class="sous">Time Crisis VR 0.2.2 (son classement au temps), Cop VR 0.2.1 et Rally VR 0.2.6 (16 octobre 2026 ; les deux pistolets sortis le 13 octobre, sur SideQuest le soir même), Sega Rally Switch 0.5.3, Android 0.1.2, Steam Deck &amp; Linux 0.1.1 et Mac 0.1.0. Relevé automatique toutes les 30 minutes.</div>
+      <div class="sous">Dirt Dash VR 0.1.3 (21 octobre 2026), Cop VR 0.2.2 et House of the Dead VR 0.1.1 (19 octobre), Time Crisis II VR 0.1.0 (17 octobre), Time Crisis VR 0.2.2 (son classement au temps) et Rally VR 0.2.6 (16 octobre), Sega Rally Switch 0.5.3, Android 0.1.2, Steam Deck &amp; Linux 0.1.1 et Mac 0.1.0. Relevé automatique toutes les 30 minutes.</div>
     </div>
     <div class="actions" data-part="bar">
       <span class="fraicheur" id="fraicheur"><i></i><span>…</span></span>
@@ -312,6 +329,22 @@ details.repli > summary .material-symbols-outlined { transition: transform .2s e
     <nav class="onglets" id="onglets" data-part="bar" aria-label="Plateformes"></nav>
     <section class="kpis" id="kpis" data-part="section"></section>
     <section class="plateformes" id="plateformes" data-part="section" hidden></section>
+    <section class="bloc" data-part="surface" id="b-site">
+      <h2 data-part="title"><span class="material-symbols-outlined">travel_explore</span>Visites de port0r.com<span class="compte" id="site-n"></span></h2>
+      <p class="aide">Chaque page du site le signale au serveur Port0r, sans cookie ; l'adresse IP n'est jamais écrite, un visiteur est une empreinte qui change à minuit (sur plusieurs jours, les visiteurs de chaque jour s'additionnent). Lignes brutes : <code>/api/port0r/visits?days=N</code>.</p>
+      <div class="site-barre"><button type="button" class="pastille alt" id="site-nous" data-part="chip" aria-pressed="false">Compter nos visites</button></div>
+      <div class="chiffres site-chiffres" id="site-chiffres"></div>
+      <div class="site-jours" id="site-jours"></div>
+      <div class="site-grille">
+        <div><h3 data-part="title">D'où ils arrivent</h3><div class="barres" id="site-src"></div></div>
+        <div><h3 data-part="title">Pages vues</h3><div class="barres" id="site-pages"></div></div>
+        <div><h3 data-part="title">Appareils</h3><div class="barres" id="site-app"></div></div>
+        <div><h3 data-part="title">Liens ouverts</h3><div class="barres" id="site-clics"></div></div>
+        <div><h3 data-part="title">Langues</h3><div class="barres" id="site-langues"></div></div>
+        <div><h3 data-part="title">Navigateurs</h3><div class="barres" id="site-nav"></div></div>
+      </div>
+      <details class="repli"><summary><span class="material-symbols-outlined">expand_more</span>Les dernières pages vues</summary><div class="fil" id="site-fil"></div></details>
+    </section>
 
     <section class="bloc" data-part="surface" id="b-reussites" hidden>
       <h2 data-part="title"><span class="material-symbols-outlined">military_tech</span>Réussites<span class="compte"></span></h2>
@@ -436,6 +469,9 @@ const ONGLETS = [
   { id: 'quest', lib: 'Rally VR', ic: 'view_in_ar' },
   { id: 'copvr', lib: 'Cop VR', ic: 'my_location' },   // 13/10 : Virtua Cop, son propre onglet (tag vcop-v, campagne « Cop VR »)
   { id: 'timecris', lib: 'Time Crisis VR', ic: 'gps_fixed' },   // 13/10 au soir : tag timecris-v, campagne « Time Crisis VR »
+  { id: 'hotd', lib: 'House of the Dead VR', ic: 'skull' },   // 16/10 : tag hotd-v, campagne « House of the Dead VR »
+  { id: 'timecrs2', lib: 'Time Crisis II VR', ic: 'filter_center_focus' },
+  { id: 'dirtdash', lib: 'Dirt Dash VR', ic: 'terrain' },   // 20/10 : tag dirtdash-v, campagne « Dirt Dash VR »   // 17/10 : tag timecrs2-v, campagne « Time Crisis II VR »
   { id: 'switch', lib: 'Switch', ic: 'videogame_asset' },
   { id: 'android', lib: 'Android', ic: 'smartphone' },
   { id: 'linux', lib: 'Steam Deck & Linux', ic: 'sports_esports' },
@@ -450,9 +486,9 @@ if (!ONGLETS.some(o => o.id === ONGLET)) ONGLET = 'tout';
 function cible(l) {
   if (l.kind === 'discord' || estDepot(l)) return 'commun';
   const tag = (l.url.match(/\/releases\/tag\/([^/?#]+)/) || [])[1];
-  if (tag) return /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
+  if (tag) return /^dirtdash-/.test(tag) ? 'dirtdash' : /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^timecrs2-/.test(tag) ? 'timecrs2' : /^hotd-/.test(tag) ? 'hotd' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
   const c = l.campaign || '';
-  return /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis/i.test(c) ? 'timecris' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
+  return /dirt ?dash/i.test(c) ? 'dirtdash' : /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis ?(ii|2)\b/i.test(c) ? 'timecrs2' : /time ?crisis/i.test(c) ? 'timecris' : /house ?of ?the ?dead|hotd/i.test(c) ? 'hotd' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
 }
 // Les téléchargements d'une plateforme : sa part du dépôt GitHub (dl_<plateforme>, toutes ses releases), ses pages itch,
 // et SideQuest pour le Quest. Les liens de release seuls ne s'additionnent pas : le dépôt les contient déjà.
@@ -496,7 +532,7 @@ function rendre() {
   const L = tout ? ALL : ALL.filter(l => cible(l) === ONGLET);
   $('#onglets').innerHTML = ONGLETS.map(o => `<button type="button" data-tab="${o.id}" data-part="tab" class="${o.id === ONGLET ? 'active' : ''}" aria-selected="${o.id === ONGLET}"><span class="material-symbols-outlined">${o.ic}</span>${esc(o.lib)}</button>`).join('');
   // les blocs qui ne parlent pas d'une plateforme (réussites, commentaires, Discord) : la vue d'ensemble seulement
-  ['#b-reussites', '#b-coms', '#b-tous', '#live', '#b-commu'].forEach(id => { const e = $(id); if (e) e.classList.toggle('hors-onglet', !tout); });
+  ['#b-reussites', '#b-coms', '#b-tous', '#live', '#b-commu', '#b-site'].forEach(id => { const e = $(id); if (e) e.classList.toggle('hors-onglet', !tout); });
   const by = k => L.filter(l => l.kind === k);
   const yt = by('youtube'), rd = by('reddit'), gh = by('github'), it = by('itch'), sq = by('sidequest'), dc = by('discord'), man = by('manual');
   const tot = (ls, k) => ls.reduce((a, l) => a + ((l.latest || {})[k] || 0), 0);
@@ -808,7 +844,7 @@ window.addEventListener('hashchange', () => {
 $('#periodes').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   DAYS = +b.dataset.days; try { localStorage.setItem('p0-days', DAYS); } catch (x) {}
-  document.querySelectorAll('#periodes button').forEach(x => x.classList.toggle('active', x === b)); charger();
+  document.querySelectorAll('#periodes button').forEach(x => x.classList.toggle('active', x === b)); charger(); chargerSite();
 });
 document.querySelectorAll('#periodes button').forEach(x => x.classList.toggle('active', +x.dataset.days === DAYS));
 $('#relever').addEventListener('click', async () => {
@@ -869,6 +905,108 @@ async function chargerDiscord() {
   $('#dc-frais').textContent = 'mis à jour ' + hhmm(D.now);
 }
 chargerDiscord(); setInterval(chargerDiscord, 60000);
+
+// ---- port0r.com : les visites (21/10/2026, Guillaume : « je veux les putains de stats en place dès ce soir ... pour le site »).
+// Les lignes BRUTES du compteur (sideprojects/port0r-bot/visits.py, par /api/port0r/visits) : toutes les sommes se font ici.
+// Un visiteur est une empreinte du jour (elle change à minuit, heure de Paris) : sur plusieurs jours, « visiteurs » additionne
+// les visiteurs de chaque jour. Nos propres visites (self = la maison, le tailnet, le réseau local) sont écartées sauf demande.
+let SITE = null, SITE_NOUS = false;
+try { SITE_NOUS = localStorage.getItem('p0-site-nous') === '1'; } catch (x) {}
+const SRC_LIB = { direct: 'Direct', reddit: 'Reddit', facebook: 'Facebook', youtube: 'YouTube', google: 'Google', github: 'GitHub',
+  itch: 'itch.io', sidequest: 'SideQuest', discord: 'Discord', x: 'X', bing: 'Bing', duckduckgo: 'DuckDuckGo', instagram: 'Instagram',
+  tiktok: 'TikTok', 'ko-fi': 'Ko-fi' };
+const APP_LIB = { quest: 'Quest (casque)', phone: 'Téléphone', computer: 'Ordinateur', tablet: 'Tablette', pico: 'Pico' };
+const SOUTIEN = ['Ko-fi', 'GitHub Sponsors'], TELE = ['Téléchargement direct', 'Releases GitHub', 'itch.io', 'SideQuest'];
+function cibleClic(u) {
+  try {
+    const x = new URL(u), h = x.hostname.replace(/^www\./, '');
+    if (h === 'ko-fi.com') return 'Ko-fi';
+    if (h === 'github.com' && x.pathname.startsWith('/sponsors')) return 'GitHub Sponsors';
+    if (h === 'github.com' && /\/releases\/download\//.test(x.pathname)) return 'Téléchargement direct';
+    if (h === 'github.com' && /\/releases/.test(x.pathname)) return 'Releases GitHub';
+    if (h.endsWith('itch.io')) return 'itch.io';
+    if (h === 'sidequestvr.com') return 'SideQuest';
+    if (/(^|\.)discord\.(gg|com)$/.test(h)) return 'Discord';
+    if (/(^|\.)youtube\.com$|^youtu\.be$/.test(h)) return 'YouTube';
+    if (h === 'github.com') return 'GitHub';
+    return h;
+  } catch (e) { return String(u || '').slice(0, 40); }
+}
+async function chargerSite() {
+  try {
+    const r = await fetch(`/api/port0r/visits?days=${DAYS}`); const d = await r.json();
+    if (!r.ok || d.error) throw new Error(d.error || ('HTTP ' + r.status));
+    SITE = d;
+  } catch (e) { SITE = { erreur: String(e.message || e) }; }
+  rendreSite();
+}
+function rendreSite() {
+  if (!SITE || !$('#b-site')) return;
+  $('#site-nous').setAttribute('aria-pressed', String(SITE_NOUS));
+  const zones = ['#site-jours', '#site-src', '#site-pages', '#site-app', '#site-clics', '#site-langues', '#site-nav', '#site-fil'];
+  if (SITE.erreur) {
+    $('#site-chiffres').innerHTML = `<div class="vide" data-part="empty">Le compteur ne répond pas : ${esc(SITE.erreur)}</div>`;
+    zones.forEach(z => { $(z).innerHTML = ''; }); $('#site-n').textContent = ''; return;
+  }
+  const C = SITE.cols, tout = SITE.rows.map(r => Object.fromEntries(C.map((c, i) => [c, r[i]])));
+  const rows = tout.filter(r => SITE_NOUS || !r.self), nous = tout.length - rows.length;
+  const jour = ts => { const d = new Date(ts * 1000); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; };
+  const vj = r => jour(r.ts) + '|' + r.visitor;
+  const vues = rows.filter(r => r.kind === 'view');
+  const premier = new Map(); for (const r of vues) { const k = vj(r); if (!premier.has(k)) premier.set(k, r); }
+  const P = [...premier.values()];
+  const durees = new Map(); for (const r of rows) if (r.kind === 'leave' && r.pv) durees.set(r.pv, Math.max(durees.get(r.pv) || 0, r.dur || 0));
+  const ds = [...durees.values()].sort((a, b) => a - b), med = ds.length ? ds[Math.floor(ds.length / 2)] : null;
+  const live = new Set(rows.filter(r => r.ts > SITE.now - 1800).map(r => r.visitor));
+  const clics = rows.filter(r => r.kind === 'click'), plays = rows.filter(r => r.kind === 'play');
+  const nb = noms => clics.filter(r => noms.includes(cibleClic(r.target))).length;
+  const duree = s => s == null ? '–' : s < 60 ? s + ' s' : Math.floor(s / 60) + ' min ' + String(s % 60).padStart(2, '0');
+  const d0 = tout.length ? new Date(tout[0].ts * 1000) : null;
+  $('#site-n').textContent = (d0 ? `compté depuis le ${d0.toLocaleDateString('fr-FR')} ${d0.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}` : 'aucun signal encore')
+    + (nous && !SITE_NOUS ? ` · ${fmt(nous)} signaux à nous écartés` : '');
+  $('#site-chiffres').innerHTML = [
+    [fmt(premier.size), DAYS > 1 ? 'visiteurs (jours additionnés)' : 'visiteurs', `${fmt(P.filter(r => r.device === 'quest').length)} dans un casque Quest`],
+    [fmt(vues.length), 'pages vues', P.length ? `${(vues.length / P.length).toFixed(1).replace('.', ',')} par visiteur` : ''],
+    [duree(med), 'temps médian sur une page', `${fmt(ds.length)} mesures`],
+    [fmt(live.size), 'en ce moment', '30 dernières minutes'],
+    [fmt(nb(SOUTIEN)), 'clics Ko-fi et Sponsors', ''],
+    [fmt(nb(TELE)), 'clics vers un téléchargement', 'GitHub, itch.io, SideQuest'],
+  ].map(([n, l, s]) => `<div data-part="stat"><div class="n">${n}</div><small>${l}${s ? ' · ' + s : ''}</small></div>`).join('');
+  // par jour (par heure sur 24 h) : les visiteurs en plein, les pages vues en clair derrière
+  const h24 = DAYS <= 1, N = h24 ? 24 : Math.round(DAYS), bornes = [];
+  const fin = new Date(SITE.now * 1000);
+  if (h24) { fin.setMinutes(0, 0, 0); for (let i = N - 1; i >= 0; i--) bornes.push(fin.getTime() / 1000 - i * 3600); }
+  else { fin.setHours(0, 0, 0, 0); for (let i = N - 1; i >= 0; i--) { const d = new Date(fin); d.setDate(d.getDate() - i); bornes.push(d.getTime() / 1000); } }
+  const pas = (i) => i + 1 < bornes.length ? bornes[i + 1] : Infinity;
+  const cases = bornes.map((b, i) => { const vs = vues.filter(r => r.ts >= b && r.ts < pas(i)); return { b, vues: vs.length, vis: new Set(vs.map(vj)).size }; });
+  const mx = Math.max(1, ...cases.map(c => c.vues)), W = N * 10;
+  const lib = c => h24 ? new Date(c.b * 1000).toLocaleTimeString('fr-FR', { hour: '2-digit' }) + ' h' : new Date(c.b * 1000).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
+  $('#site-jours').innerHTML = `<svg viewBox="0 0 ${W} 100" preserveAspectRatio="none" role="img" aria-label="Visiteurs et pages vues">${cases.map((c, i) =>
+    `<g><title>${lib(c)} : ${c.vis} visiteurs, ${c.vues} pages vues</title><rect x="${i * 10 + 1.5}" y="${100 - c.vues / mx * 96}" width="7" height="${c.vues / mx * 96}" fill="currentColor" opacity=".22" rx="1.5"/>`
+    + `<rect x="${i * 10 + 1.5}" y="${100 - c.vis / mx * 96}" width="7" height="${c.vis / mx * 96}" fill="currentColor" rx="1.5"/></g>`).join('')}</svg>`
+    + `<div class="axe"><span>${lib(cases[0])}</span><span>en plein : visiteurs · en clair : pages vues</span><span>${h24 ? 'maintenant' : "aujourd'hui"}</span></div>`;
+  const compte = (arr, cle) => { const m = new Map(); for (const x of arr) { const k = cle(x); if (k == null || k === '') continue; m.set(k, (m.get(k) || 0) + 1); } return m; };
+  const barres = (el, m, nom = k => k) => {
+    const top = [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8), max = Math.max(1, ...top.map(x => x[1]));
+    $(el).innerHTML = top.length ? top.map(([k, v]) => `<div class="barre"><span title="${esc(nom(k))}">${esc(nom(k))}</span><i style="width:${Math.round(v / max * 100)}%"></i><span>${fmt(v)}</span></div>`).join('')
+      : '<div class="vide" data-part="empty">Rien sur cette période</div>';
+  };
+  barres('#site-src', compte(P.filter(r => r.src !== 'port0r'), r => r.campaign ? r.src + ' · ' + r.campaign : r.src), k => { const [s, c] = k.split(' · '); return (SRC_LIB[s] || s) + (c ? ' · ' + c : ''); });
+  barres('#site-pages', compte(vues, r => r.path));
+  barres('#site-app', compte(P, r => r.device), k => APP_LIB[k] || k);
+  const ouverts = compte(clics, r => cibleClic(r.target)); if (plays.length) ouverts.set('Vidéos lancées sur le site', plays.length);
+  barres('#site-clics', ouverts);
+  barres('#site-langues', compte(P, r => (r.lang || '').slice(0, 2).toLowerCase() || null));
+  barres('#site-nav', compte(P, r => r.browser));
+  const hm = ts => new Date(ts * 1000).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  $('#site-fil').innerHTML = vues.slice(-30).reverse().map(r => `<div class="msg"><time>${hm(r.ts)}</time><span><b>${esc(r.path)}</b> · ${esc(SRC_LIB[r.src] || r.src)}${r.campaign ? ' · ' + esc(r.campaign) : ''} · ${esc(APP_LIB[r.device] || r.device)} · ${esc(r.browser)}${r.self ? ' · nous' : ''}</span></div>`).join('')
+    || '<div class="vide" data-part="empty">Aucune page vue sur cette période</div>';
+}
+$('#site-nous').addEventListener('click', () => {
+  SITE_NOUS = !SITE_NOUS; try { localStorage.setItem('p0-site-nous', SITE_NOUS ? '1' : '0'); } catch (x) {}
+  rendreSite();
+});
+chargerSite(); setInterval(() => { if (!document.hidden) chargerSite(); }, 60000);
 </script>
 </body>
 </html>

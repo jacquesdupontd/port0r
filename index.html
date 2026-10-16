@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Port0r: arcade classics in real 3D VR</title>
-<meta name="description" content="Port0r rebuilds classic arcade games in stereoscopic 3D: in the headset you stand inside the game, at real scale. Time Crisis VR, Cop VR and Rally VR, free on Meta Quest 3. Sega Rally also on Switch, Android, Steam Deck & Linux and Mac.">
+<meta name="description" content="Port0r rebuilds classic arcade games in stereoscopic 3D: in the headset you stand inside the game, at real scale. Time Crisis II VR, House of the Dead VR, Time Crisis VR, Cop VR and Rally VR, free on Meta Quest 3. Sega Rally also on Switch, Android, Steam Deck & Linux and Mac.">
 <meta property="og:title" content="Port0r: arcade classics in real 3D VR">
-<meta property="og:description" content="Be inside the arcade, not in front of it. Time Crisis VR, Cop VR and Rally VR, free on Meta Quest 3.">
-<meta property="og:image" content="https://port0r.com/assets/og.jpg">
+<meta property="og:description" content="Be inside the arcade, not in front of it. Time Crisis II VR, House of the Dead VR, Time Crisis VR, Cop VR and Rally VR, free on Meta Quest 3.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Port0r">
+<meta property="og:image" content="https://port0r.com/assets/og.jpg?v=20261017">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,14 +19,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=20261016k">
+<link rel="stylesheet" href="site.css?v=20261021g">
+<!-- the help message plays first (site.js): the band, the title and the bar wait for it from the very first paint, the race
+     dimmed; if site.js never runs, everything shows after 4 s anyway (21/10/2026) -->
+<script>if (!location.hash) { document.documentElement.classList.add("ask-pre"); setTimeout(function () { if (!document.querySelector(".hero.asking")) document.documentElement.classList.remove("ask-pre"); }, 4000); }</script>
 <link rel="preload" as="image" href="assets/hero-rally.jpg" media="(min-aspect-ratio: 4/5)">
 <link rel="preload" as="image" href="assets/hero-rally-portrait.jpg" media="(max-aspect-ratio: 4/5)">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization", "name": "Port0r", "url": "https://port0r.com/",
- "logo": "https://port0r.com/assets/icon.png", "email": "contact@port0r.com",
- "description": "Port0r rebuilds classic arcade games in stereoscopic 3D: Port0r: Time Crisis VR (Time Crisis), Port0r: Cop VR (Virtua Cop) and Port0r: Rally VR (Sega Rally), free on Meta Quest 3; Sega Rally also on Nintendo Switch, Android, Steam Deck & Linux and Mac. The official Discord is https://discord.gg/XMk7GgapuN.",
- "sameAs": ["https://discord.gg/XMk7GgapuN", "https://github.com/jacquesdupontd/port0r", "https://port0r.itch.io/", "https://ko-fi.com/port0r", "https://github.com/sponsors/jacquesdupontd", "https://www.youtube.com/@port0r"]}
+ "logo": "https://port0r.com/assets/icon.png", "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://port0r.com/contact/"},
+ "description": "Port0r rebuilds classic arcade games in stereoscopic 3D: Port0r: Time Crisis II VR (Time Crisis II), Port0r: House of the Dead VR (The House of the Dead), Port0r: Time Crisis VR (Time Crisis), Port0r: Cop VR (Virtua Cop) and Port0r: Rally VR (Sega Rally), free on Meta Quest 3; Sega Rally also on Nintendo Switch, Android, Steam Deck & Linux and Mac. The official Discord is https://discord.gg/XMk7GgapuN.",
+ "sameAs": ["https://discord.gg/XMk7GgapuN", "https://github.com/jacquesdupontd/port0r", "https://port0r.itch.io/", "https://ko-fi.com/port0r", "https://github.com/sponsors/jacquesdupontd", "https://www.youtube.com/@jacquesdupontd"]}
 </script>
 </head>
 <body>
@@ -33,6 +38,13 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <filter id="eye-red" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/></filter>
   <filter id="eye-cyan" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/></filter>
+  <!-- the dock's marks (Simple Icons, CC0; the heart: Material Symbols) -->
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></symbol>
+  <symbol id="i-itch" viewBox="0 0 24 24"><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"/></symbol>
+  <symbol id="i-kofi" viewBox="0 0 24 24"><path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
 </svg>
 
 <header class="top over" id="top">
@@ -43,6 +55,7 @@
       <a href="#live">Live</a>
       <a class="opt" href="#everywhere">Everywhere</a>
       <a class="opt" href="leaderboard.html">Leaderboards</a>
+      <a class="opt" href="contact/">Contact</a>
       <a class="btn sm" href="https://discord.gg/XMk7GgapuN">Discord</a>
     </nav>
   </div>
@@ -50,6 +63,19 @@
 
 <main id="content">
 <section class="hero" id="hero" aria-label="Port0r">
+  <!-- the first thing a visitor reads (20/10/2026, Guillaume: « si vous appréciez le projet, une aide est la bienvenue car je
+       travaille gratuitement ... il faut vraiment que ce soit la première chose qu'ils voient »); then the games, the Discord, all -->
+  <aside class="ask" aria-label="Support Port0r">
+    <div class="wrap"><div class="ask-in">
+      <p><b>Port0r is free.</b> Any help is welcome: I work on it for free, all day long, and I really want to keep the project going.</p>
+      <span class="ask-go">
+        <a class="btn sm ink" href="https://ko-fi.com/port0r"><svg aria-hidden="true"><use href="#i-kofi"/></svg>Ko-fi</a>
+        <a class="btn sm ink" href="https://github.com/sponsors/jacquesdupontd"><svg aria-hidden="true"><use href="#i-heart"/></svg>Sponsor</a>
+      </span>
+    </div></div>
+  </aside>
+  <!-- the same words, big over the race at first, streamed in, then flown into the band above (21/10/2026, site.js) -->
+  <div class="ask-big" aria-hidden="true"><div class="ask-card"><p class="ask-big-1"></p><p class="ask-big-2"></p></div></div>
   <div class="hero-media" aria-hidden="true">
     <video muted loop playsinline preload="auto" poster="assets/hero-rally.jpg"
       data-wide="assets/hero-rally.mp4" data-wide-poster="assets/hero-rally.jpg"
@@ -57,13 +83,43 @@
     <div class="hero-eyes"><img class="eye l" alt=""><img class="eye r" alt=""></div>
   </div>
   <div class="wrap hero-copy">
-    <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>Free · Meta Quest 3</span>
-    <h1>Be <span class="stereo">inside</span> the arcade,<br> <span class="hl">not in front of it.</span></h1>
-    <p class="lead">Port0r rebuilds the arcade's own 3D for each eye: in the headset you stand in the scene, at real scale. Free, on Meta Quest 3.</p>
+    <!-- the latest news first, then the arcade's line: only the texts change over the race (22/10/2026, Guillaume: « un
+         slider avec les dernières news ... à la place du texte sur la vidéo de Sega Rally », site.js) -->
+    <div class="slides">
+      <div class="slide on">
+        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>In beta · on our Discord</span>
+        <h2 class="hx">Daytona USA, <span class="hl">in beta now.</span></h2>
+        <p class="lead">Our testers race it now on Meta Quest: join them on our Discord.</p>
+      </div>
+      <div class="slide">
+        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>In beta · on our Discord</span>
+        <h2 class="hx">Rally VR <span class="hl">on PC, in beta.</span></h2>
+        <p class="lead">In your headset through SteamVR, Quest Link or Virtual Desktop, or on the PC's screen, with a wheel.</p>
+      </div>
+      <div class="slide">
+        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>Free · Meta Quest 3</span>
+        <h1>Be <span class="stereo">inside</span> the arcade,<br> <span class="hl">not in front of it.</span></h1>
+        <p class="lead">Port0r rebuilds the arcade's own 3D for each eye: in the headset you stand in the scene, at real scale. Free, on Meta Quest 3.</p>
+      </div>
+    </div>
     <div class="row">
       <a class="btn yellow" href="#games">Get the games</a>
       <button class="btn glass" type="button" data-watch="FqwEK0hJ_Yc"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the video</button>
     </div>
+    <!-- every place Port0r lives, one address to give: port0r.com (17/10/2026, Guillaume) -->
+    <nav class="dock" aria-label="Port0r on YouTube, GitHub, Discord, itch.io, Ko-fi and GitHub Sponsors">
+      <a class="dk ytb" href="https://www.youtube.com/@jacquesdupontd" style="--i:0">
+        <span class="reel" aria-hidden="true"><video class="clip" muted loop playsinline preload="none" poster="assets/yt-montage.jpg" data-src="assets/yt-montage.mp4"></video><svg class="yt-mark"><use href="#i-youtube"/></svg></span>
+        <span class="dk-t"><b>YouTube</b><small>Every game, in the headset</small></span>
+      </a>
+      <a class="dk gh" href="https://github.com/jacquesdupontd/port0r" style="--i:1"><svg aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span></a>
+      <a class="dk dc" href="https://discord.gg/XMk7GgapuN" style="--i:2"><svg aria-hidden="true"><use href="#i-discord"/></svg><span>Discord</span></a>
+      <a class="dk it" href="https://port0r.itch.io/" style="--i:3"><svg aria-hidden="true"><use href="#i-itch"/></svg><span>itch.io</span></a>
+      <a class="dk kf" href="https://ko-fi.com/port0r" style="--i:4"><svg aria-hidden="true"><use href="#i-kofi"/></svg><span>Ko-fi</span></a>
+      <a class="dk love" href="https://github.com/sponsors/jacquesdupontd" style="--i:5">
+        <span class="heart" aria-hidden="true"><svg><use href="#i-heart"/></svg><i></i><i></i><i></i></span><span>Sponsor</span>
+      </a>
+    </nav>
     <p class="rec"><span class="dot" aria-hidden="true"></span>Rally VR, recorded in the headset</p>
   </div>
   <div class="strip">
@@ -81,12 +137,103 @@
   <div class="wrap">
     <header class="head">
       <p class="kicker">In VR · Meta Quest 3</p>
-      <h2 class="converge">Three cabinets, <span class="hl">rebuilt around you.</span></h2>
+      <h2 class="converge">Five cabinets, <span class="hl">rebuilt around you.</span></h2>
       <p class="lead">Every video here was recorded in the headset: what you see is what you play.</p>
     </header>
 
     <div class="games">
-      <article class="game rise" id="time-crisis-vr" data-game="timecris">
+      <article class="game rise" id="dirt-dash-vr" data-game="dirtdash" style="--c:var(--earth);--on:var(--on-earth)">
+        <div class="stage">
+          <button class="yt" type="button" data-id="PN8u_SZXYpQ" aria-label="Play the Dirt Dash VR video"><img src="assets/yt/PN8u_SZXYpQ.jpg" alt="Dirt Dash in VR: the city stage, behind the blue truck" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-dirtdash.jpg" data-src="assets/clip-dirtdash.mp4" aria-label="Dirt Dash VR, recorded in the headset: the city stage, behind the blue truck"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
+        </div>
+        <div class="extra">
+            <div class="nums" data-g="dirtdash">
+              <div><b data-k="downloads">&nbsp;</b><small>Downloads</small></div>
+              <div><b data-k="views">&nbsp;</b><small>Views</small></div>
+              <div><b data-k="comments">&nbsp;</b><small>Comments</small></div>
+            </div>
+            <figure class="said" data-said="dirtdash" hidden><q></q><cite></cite></figure>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.1.2</span><span class="kicker">Namco · 1995 · System Super 22</span></div>
+          <h3>Dirt Dash <span class="hl">in VR</span></h3>
+          <p class="new"><b>New</b>Dirt Dash, Namco's 1995 off-road arcade racer, in VR on Meta Quest 3, in stereoscopic 3D.</p>
+          <ul class="feat">
+            <li>Released in Japan in December 1995, worldwide in 1996</li>
+            <li>&ldquo;To Sega Rally what Tekken is to Virtua Fighter&rdquo; (Next Generation)</li>
+            <li>In VR on Meta Quest 3, in stereoscopic 3D</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.3">Download</a>
+            <a class="btn soft" href="dirt-dash-vr/">The game's page</a>
+            <a class="link" href="https://port0r.itch.io/dirt-dash-vr">itch.io</a>
+          </div>
+        </div>
+      </article>
+      <article class="game flip rise" id="time-crisis-ii-vr" data-game="timecrs2" style="--c:var(--sky);--on:var(--on-sky)">
+        <div class="stage">
+          <button class="yt" type="button" data-id="_7ZEGjgzLc4" aria-label="Play the Time Crisis II VR video"><img src="assets/yt/_7ZEGjgzLc4.jpg" alt="Time Crisis II in VR: the soldiers come right at you, the gun in your hand" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="_7ZEGjgzLc4"></span></button>
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-tc2.jpg" data-src="assets/clip-tc2.mp4" aria-label="Time Crisis II VR, recorded in the headset: the red restaurant, soldiers at the tables, hits"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
+        </div>
+        <div class="extra">
+            <div class="nums" data-g="timecrs2">
+              <div><b data-k="downloads">&nbsp;</b><small>Downloads</small></div>
+              <div><b data-k="views">&nbsp;</b><small>Views</small></div>
+              <div><b data-k="comments">&nbsp;</b><small>Comments</small></div>
+            </div>
+            <figure class="said" data-said="timecrs2" hidden><q></q><cite></cite></figure>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.1.0</span><span class="kicker">Namco · 1997 · System 23</span></div>
+          <h3>Time Crisis II <span class="hl">in VR</span></h3>
+          <p class="new"><b>New</b>Time Crisis II in real 3D: the town of the first stage at real scale, the soldiers right at you, cover for real.</p>
+          <ul class="feat">
+            <li>In the town of the first stage, at real scale</li>
+            <li>Take cover with the pedal button, or crouch for real</li>
+            <li>A 3D gun in your hand, the shots land on what you hit</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.0">Download</a>
+            <a class="btn soft" href="time-crisis-ii-vr/">The game's page</a>
+            <a class="link" href="https://sidequestvr.com/app/63359/port0r-time-crisis-ii-vr">SideQuest</a>
+            <a class="link" href="https://port0r.itch.io/time-crisis-ii-vr">itch.io</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="game rise" id="house-of-the-dead-vr" data-game="hotd" style="--c:var(--red);--on:var(--on-blue)">
+        <div class="stage">
+          <button class="yt" type="button" data-id="JEYKmI-9PBE" aria-label="Play the House of the Dead VR video"><img src="assets/yt/JEYKmI-9PBE.jpg" alt="House of the Dead in VR: the zombies walk right up to you, the gun in your hand" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="JEYKmI-9PBE"></span></button>
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-hotd.jpg" data-src="assets/clip-hotd.mp4" aria-label="House of the Dead VR, recorded in the headset: the courtyard, two zombies with axes, a hit"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
+        </div>
+        <div class="extra">
+            <div class="nums" data-g="hotd">
+              <div><b data-k="downloads">&nbsp;</b><small>Downloads</small></div>
+              <div><b data-k="views">&nbsp;</b><small>Views</small></div>
+              <div><b data-k="comments">&nbsp;</b><small>Comments</small></div>
+            </div>
+            <figure class="said" data-said="hotd" hidden><q></q><cite></cite></figure>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.1.0</span><span class="kicker">Sega · 1996 · Model 2</span></div>
+          <h3>House of the Dead <span class="hl">in VR</span></h3>
+          <p class="new"><b>New</b>The House of the Dead in real 3D: the Curien mansion at real scale, the zombies right up to you, the hits on what you shoot.</p>
+          <ul class="feat">
+            <li>In the Curien mansion, at real scale</li>
+            <li>The zombies walk right up to you</li>
+            <li>A 3D gun in your hand, or the cabinet's blue gun</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0">Download</a>
+            <a class="btn soft" href="house-of-the-dead-vr/">The game's page</a>
+            <a class="link" href="https://sidequestvr.com/app/63360/port0r-house-of-the-dead-vr">SideQuest</a>
+            <a class="link" href="https://port0r.itch.io/house-of-the-dead-vr">itch.io</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="game flip rise" id="time-crisis-vr" data-game="timecris">
         <div class="stage">
           <button class="yt" type="button" data-id="F7Ig3bwq7K8" aria-label="Play the Time Crisis VR video"><img src="assets/yt/F7Ig3bwq7K8.jpg" alt="Time Crisis in VR: the warehouse, the gun in hand" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="F7Ig3bwq7K8"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-timecris.jpg" data-src="assets/clip-timecris.mp4" aria-label="Time Crisis VR, recorded in the headset: the cave, the forklift blown up, the gun in hand"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -117,7 +264,7 @@
         </div>
       </article>
 
-      <article class="game flip rise" id="cop-vr" data-game="cop">
+      <article class="game rise" id="cop-vr" data-game="cop">
         <div class="stage">
           <button class="yt" type="button" data-id="1qCQorbbdPc" aria-label="Play the Cop VR video"><img src="assets/yt/1qCQorbbdPc.jpg" alt="Virtua Cop in VR: the docks, a gangster in the sights" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="1qCQorbbdPc"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-copvr.jpg" data-src="assets/clip-copvr.mp4" aria-label="Cop VR, recorded in the headset: the docks, a gangster in the sights"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -148,7 +295,7 @@
         </div>
       </article>
 
-      <article class="game rise" id="rally-vr" data-game="rally">
+      <article class="game flip rise" id="rally-vr" data-game="rally">
         <div class="stage">
           <button class="yt" type="button" data-id="FqwEK0hJ_Yc" aria-label="Play the Rally VR video"><img src="assets/yt/FqwEK0hJ_Yc.jpg" alt="Sega Rally in VR: the mountain stage, behind the Celica" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="FqwEK0hJ_Yc"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-rally.jpg" data-src="assets/clip-rally.mp4" aria-label="Rally VR, recorded in the headset: the mountain stage, behind the Lancia"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -179,13 +326,13 @@
         </div>
       </article>
 
-      <aside class="next rise" aria-label="Coming next on Meta Quest">
+      <aside class="next rise" aria-label="In beta now, on our Discord">
         <div>
-          <p class="kicker" style="color:rgb(255 255 255 / .6)">Next on Meta Quest</p>
-          <h3 style="margin-top:12px">The House of the Dead <span class="hl">comes out next.</span></h3>
-          <p>Its beta is on the Discord. Then the others, one app at a time. No dates.</p>
+          <p class="kicker" style="color:rgb(255 255 255 / .6)">In beta now · on our Discord</p>
+          <h3 style="margin-top:12px">Daytona USA <span class="hl">and Rally VR on PC.</span></h3>
+          <p>Daytona USA on Meta Quest. Rally VR on PC: in your headset through SteamVR, Quest Link or Virtual Desktop, or on the screen, with a wheel. Then the others, one app at a time. No dates.</p>
           <ul class="queue">
-            <li>The House of the Dead</li><li>Daytona USA</li><li>Time Crisis II</li><li>Dirt Dash</li><li>Top Skater</li>
+            <li class="beta">Daytona USA</li><li class="beta">Rally VR · PC</li><li>Top Skater</li>
             <li>Sega Super GT 24h</li><li>Virtua Racing</li>
           </ul>
         </div>
@@ -299,6 +446,7 @@
       <article class="lb" data-game="srallyc"><h3>Rally VR</h3><p class="rule">The best time per player on each course, and the whole championship in one game.</p><div class="tbls"></div></article>
       <article class="lb" data-game="vcop"><h3>Cop VR</h3><p class="rule">The best score per player.</p><div class="tbls"></div></article>
       <article class="lb" data-game="timecris"><h3>Time Crisis VR</h3><p class="rule">The cabinet's own Timed Game (shoot TIMED GAME on its mode screen, then a stage): the best time per player on each stage.</p><div class="tbls"></div></article>
+      <article class="lb" data-game="timecrs2"><h3>Time Crisis II VR</h3><p class="rule">The best score per player.</p><div class="tbls"></div></article>
     </div>
     <div class="row" style="margin-top:28px"><a class="btn" href="leaderboard.html">All the boards</a></div>
   </div>
@@ -354,12 +502,14 @@
     <img src="assets/wordmark-light.svg" alt="Port0r" width="106" height="22">
     <nav aria-label="Elsewhere">
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
+      <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
       <a href="https://github.com/jacquesdupontd/port0r">GitHub</a>
       <a href="https://port0r.itch.io/">itch.io</a>
       <a href="/stats/">The numbers in detail</a>
       <a href="https://ko-fi.com/port0r">Ko-fi</a>
       <a href="https://github.com/sponsors/jacquesdupontd">Sponsors</a>
-      <a href="mailto:contact@port0r.com">contact@port0r.com</a>
+      <a href="contact/">Contact</a>
+      <a href="privacy/">Privacy</a>
     </nav>
     <p class="legal">Port0r is a free fan project. Not affiliated with SEGA, Bandai Namco or Meta.</p>
   </div>
@@ -367,6 +517,7 @@
 
 <dialog class="watch" id="watch" aria-label="Video"><div class="watch-in"><button type="button" class="watch-x" aria-label="Close" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button><div class="watch-frame"></div></div></dialog>
 
-<script src="site.js?v=20261016k" defer></script>
+<script src="site.js?v=20261021g" defer></script>
+<script src="hit.js?v=20261021a" defer></script>
 </body>
 </html>
