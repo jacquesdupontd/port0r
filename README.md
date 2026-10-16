@@ -42,7 +42,7 @@
 | --- | --- |
 | [![Port0r House of the Dead VR on Meta Quest](https://img.youtube.com/vi/JEYKmI-9PBE/maxresdefault.jpg)](#install-port0r-house-of-the-dead-vr) | [![Port0r Time Crisis VR on Meta Quest](https://img.youtube.com/vi/F7Ig3bwq7K8/maxresdefault.jpg)](#install-port0r-time-crisis-vr) |
 | **v0.1.0** · APK for Meta Quest 3 · The House of the Dead in true 3D: the zombies walk right up to you, a 3D gun in your gloved hand | **v0.2.2** · APK for Meta Quest 3 · Time Crisis in true 3D: crouch for real to take cover, a 3D gun in your hand |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0) · [Install guide](#install-port0r-house-of-the-dead-vr) · [Video](https://youtu.be/JEYKmI-9PBE) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) · [Install guide](#install-port0r-time-crisis-vr) · [itch.io](https://port0r.itch.io/time-crisis-vr) · [Video](https://youtu.be/F7Ig3bwq7K8) |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0) · [Install guide](#install-port0r-house-of-the-dead-vr) · [itch.io](https://port0r.itch.io/house-of-the-dead-vr) · [Video](https://youtu.be/JEYKmI-9PBE) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) · [Install guide](#install-port0r-time-crisis-vr) · [itch.io](https://port0r.itch.io/time-crisis-vr) · [Video](https://youtu.be/F7Ig3bwq7K8) |
 
 | [Meta Quest: Cop VR, real 3D VR](#install-port0r-cop-vr) | [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) |
 | --- | --- |
@@ -69,7 +69,7 @@
 | [Join the Discord](https://discord.gg/XMk7GgapuN) · [Support Port0r](https://github.com/sponsors/jacquesdupontd) |
 
 > ### Download Port0r: House of the Dead VR v0.1.0 (free)
-> **[Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/hotd-v0.1.0/Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0), then the [install guide](#install-port0r-house-of-the-dead-vr).
+> **[Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/hotd-v0.1.0/Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0), also on [itch.io](https://port0r.itch.io/house-of-the-dead-vr), then the [install guide](#install-port0r-house-of-the-dead-vr).
 >
 > ### Download Port0r: Time Crisis VR v0.2.2 (free)
 > **[Port0r-TimeCrisisVR-v0.2.2-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/timecris-v0.2.2/Port0r-TimeCrisisVR-v0.2.2-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2), also on [itch.io](https://port0r.itch.io/time-crisis-vr), then the [install guide](#install-port0r-time-crisis-vr).
@@ -102,7 +102,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: House of the Dead VR** (The House of the Dead) | Sega Model 2, 1996 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0)) |
+| **Port0r: House of the Dead VR** (The House of the Dead) | Sega Model 2, 1996 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0), [itch.io](https://port0r.itch.io/house-of-the-dead-vr)) |
 | **Port0r: Time Crisis VR** (Time Crisis) | Namco System 22, 1995 | **Out now, v0.2.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2), [itch.io](https://port0r.itch.io/time-crisis-vr), [SideQuest](https://sidequestvr.com/app/63135/port0r-time-crisis-vr)) |
 | **Port0r: Cop VR** (Virtua Cop) | Sega Model 2, 1994 | **Out now, v0.2.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1), [itch.io](https://port0r.itch.io/cop-vr), [SideQuest](https://sidequestvr.com/app/63134/port0r-cop-vr)) |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.6** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr), [SideQuest](https://sidequestvr.com/app/62980)) |
@@ -315,7 +315,7 @@ first time. You need a computer (Windows, Mac or Linux) or just the headset's br
 
 | | Port0r: House of the Dead VR | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
 | --- | --- | --- | --- | --- |
-| **The app** | `Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0) | `Port0r-TimeCrisisVR-v0.2.2-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) or [itch.io](https://port0r.itch.io/time-crisis-vr) | `Port0r-CopVR-v0.2.1-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1) or [itch.io](https://port0r.itch.io/cop-vr) | `Port0r-RallyVR-v0.2.6-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.6) or [itch.io](https://port0r.itch.io/rally-vr) |
+| **The app** | `Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0) or [itch.io](https://port0r.itch.io/house-of-the-dead-vr) | `Port0r-TimeCrisisVR-v0.2.2-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) or [itch.io](https://port0r.itch.io/time-crisis-vr) | `Port0r-CopVR-v0.2.1-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.1) or [itch.io](https://port0r.itch.io/cop-vr) | `Port0r-RallyVR-v0.2.6-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.6) or [itch.io](https://port0r.itch.io/rally-vr) |
 | **Your game files** (MAME 0.289 sets) | `hotd.zip` | `timecris.zip` and `namcoc71.zip` | `vcop.zip` and `model1io2.zip` | `srallyc.zip`, and `segabill.zip` only if your set needs it |
 | **Its name in the Library** | Port0r: House of the Dead VR | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
 
@@ -609,7 +609,7 @@ Port0r's own source code is not public for now. The open-source components it us
 
 ## Download
 
-**[Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/hotd-v0.1.0/Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0). Install guide: [above](#install-port0r-house-of-the-dead-vr).
+**[Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/hotd-v0.1.0/Port0r-HouseOfTheDeadVR-v0.1.0-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0) or [itch.io](https://port0r.itch.io/house-of-the-dead-vr). Install guide: [above](#install-port0r-house-of-the-dead-vr).
 
 **[Port0r-TimeCrisisVR-v0.2.2-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/timecris-v0.2.2/Port0r-TimeCrisisVR-v0.2.2-quest3.apk)**, free, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) or [itch.io](https://port0r.itch.io/time-crisis-vr). Install guide: [above](#install-port0r-time-crisis-vr).
 
