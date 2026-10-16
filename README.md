@@ -12,6 +12,7 @@
 </p>
 
 <p align="center">
+  <a href="https://port0r.com"><b>port0r.com</b></a> ·
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
   <a href="../../releases"><b>Download</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
@@ -21,12 +22,15 @@
   <a href="SWITCH.md"><b>Nintendo Switch</b></a> ·
   <a href="ANDROID.md"><b>Android</b></a> ·
   <a href="LINUX.md"><b>Linux & Steam Deck</b></a> ·
-  <a href="MAC.md"><b>Mac</b></a>
+  <a href="MAC.md"><b>Mac</b></a> ·
+  <a href="https://port0r.com/contact/"><b>Contact</b></a>
 </p>
 
 # Port0r
 
 **Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch ([the Switch guide](SWITCH.md)), on Android phones and tablets ([the Android guide](ANDROID.md)), on Linux and the Steam Deck ([the Linux guide](LINUX.md)), and on Mac ([the Mac guide](MAC.md)).
+
+**[port0r.com](https://port0r.com)**: every game with its video, the numbers live, the players' words and the leaderboards, in one place.
 
 > Port0r takes all my time right now. If you'd like to keep it going, you can sponsor it on [GitHub Sponsors](https://github.com/sponsors/jacquesdupontd) or buy me a coffee on [Ko-fi](https://ko-fi.com/port0r). Sharing it helps a lot too.
 
