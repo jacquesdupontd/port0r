@@ -46,15 +46,26 @@
   }
 
   // ---- the clips recorded in the headset: loaded and played only while on screen ----
-  if (!still) {
+  // ALWAYS, reduced motion or not (17/10/2026, Guillaume: « les "in the headset" tournent bien sur le mobile mais sur PC desktop
+  // je vois pas l'animation donc on comprend pas »): they are the point of the page, small and muted. A desktop browser that
+  // refuses autoplay until the visitor does something (Brave) gets them started at the first click, wheel, key or hover.
+  {
+    const shown = new Set();
+    const start = (v) => { const p = v.play(); if (p) p.catch(() => v.closest(".pip")?.classList.add("blocked")); };
     const io = new IntersectionObserver((list) => {
       for (const e of list) {
         const v = e.target;
-        if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; const p = v.play(); if (p) p.catch(() => {}); }
-        else if (!v.paused) v.pause();
+        if (e.isIntersecting) { shown.add(v); if (!v.src) v.src = v.dataset.src; start(v); }
+        else { shown.delete(v); if (!v.paused) v.pause(); }
       }
     }, { threshold: 0.3 });
-    $$("video.clip").forEach((v) => io.observe(v));
+    $$("video.clip").forEach((v) => {
+      io.observe(v);
+      v.closest(".pip")?.addEventListener("pointerenter", () => { if (!v.src) v.src = v.dataset.src; start(v); });
+      v.addEventListener("playing", () => v.closest(".pip")?.classList.remove("blocked"));
+    });
+    const retry = () => shown.forEach((v) => { if (v.paused) start(v); });
+    for (const ev of ["pointerdown", "keydown", "wheel", "touchstart"]) addEventListener(ev, retry, { passive: true });
   }
 
   // ---- our videos, played right here: the thumbnail we made first, YouTube's player on a click ----
@@ -102,7 +113,7 @@
 
   // ---- the players' words ----
   const WHERE = { reddit: "Reddit", youtube: "YouTube", facebook: "Facebook" };
-  const GAMES = { rally: "Rally VR", cop: "Cop VR", timecris: "Time Crisis VR", switch: "Switch", android: "Android", linux: "Steam Deck & Linux", mac: "Mac" };
+  const GAMES = { timecrs2: "Time Crisis II VR", hotd: "House of the Dead VR", rally: "Rally VR", cop: "Cop VR", timecris: "Time Crisis VR", switch: "Switch", android: "Android", linux: "Steam Deck & Linux", mac: "Mac" };
   const cite = (c) => c.platform === "reddit" ? `u/${c.author} · ${c.place}` : c.platform === "youtube" ? `${c.author} · YouTube`
                     : c.platform === "facebook" ? `${c.author} · Facebook` : c.author;
   function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }

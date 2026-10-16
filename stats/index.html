@@ -436,6 +436,8 @@ const ONGLETS = [
   { id: 'quest', lib: 'Rally VR', ic: 'view_in_ar' },
   { id: 'copvr', lib: 'Cop VR', ic: 'my_location' },   // 13/10 : Virtua Cop, son propre onglet (tag vcop-v, campagne « Cop VR »)
   { id: 'timecris', lib: 'Time Crisis VR', ic: 'gps_fixed' },   // 13/10 au soir : tag timecris-v, campagne « Time Crisis VR »
+  { id: 'hotd', lib: 'House of the Dead VR', ic: 'skull' },   // 16/10 : tag hotd-v, campagne « House of the Dead VR »
+  { id: 'timecrs2', lib: 'Time Crisis II VR', ic: 'filter_center_focus' },   // 17/10 : tag timecrs2-v, campagne « Time Crisis II VR »
   { id: 'switch', lib: 'Switch', ic: 'videogame_asset' },
   { id: 'android', lib: 'Android', ic: 'smartphone' },
   { id: 'linux', lib: 'Steam Deck & Linux', ic: 'sports_esports' },
@@ -450,9 +452,9 @@ if (!ONGLETS.some(o => o.id === ONGLET)) ONGLET = 'tout';
 function cible(l) {
   if (l.kind === 'discord' || estDepot(l)) return 'commun';
   const tag = (l.url.match(/\/releases\/tag\/([^/?#]+)/) || [])[1];
-  if (tag) return /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
+  if (tag) return /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^timecrs2-/.test(tag) ? 'timecrs2' : /^hotd-/.test(tag) ? 'hotd' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
   const c = l.campaign || '';
-  return /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis/i.test(c) ? 'timecris' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
+  return /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis ?(ii|2)\b/i.test(c) ? 'timecrs2' : /time ?crisis/i.test(c) ? 'timecris' : /house ?of ?the ?dead|hotd/i.test(c) ? 'hotd' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
 }
 // Les téléchargements d'une plateforme : sa part du dépôt GitHub (dl_<plateforme>, toutes ses releases), ses pages itch,
 // et SideQuest pour le Quest. Les liens de release seuls ne s'additionnent pas : le dépôt les contient déjà.
