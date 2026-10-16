@@ -18,6 +18,7 @@
   <a href="../../releases"><b>Download</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
+  <a href="https://youtu.be/JEYKmI-9PBE"><b>House of the Dead VR video</b></a> ·
   <a href="https://youtu.be/1qCQorbbdPc"><b>Cop VR video</b></a> ·
   <a href="https://www.youtube.com/watch?v=FqwEK0hJ_Yc"><b>Rally VR video</b></a> ·
   <a href="SWITCH.md"><b>Nintendo Switch</b></a> ·
@@ -39,9 +40,9 @@
 
 | [Meta Quest: House of the Dead VR, real 3D VR](#install-port0r-house-of-the-dead-vr) | [Meta Quest: Time Crisis VR, real 3D VR](#install-port0r-time-crisis-vr) |
 | --- | --- |
-| [![Port0r House of the Dead VR on Meta Quest](assets/hotd/header.jpg)](#install-port0r-house-of-the-dead-vr) | [![Port0r Time Crisis VR on Meta Quest](https://img.youtube.com/vi/F7Ig3bwq7K8/maxresdefault.jpg)](#install-port0r-time-crisis-vr) |
+| [![Port0r House of the Dead VR on Meta Quest](https://img.youtube.com/vi/JEYKmI-9PBE/maxresdefault.jpg)](#install-port0r-house-of-the-dead-vr) | [![Port0r Time Crisis VR on Meta Quest](https://img.youtube.com/vi/F7Ig3bwq7K8/maxresdefault.jpg)](#install-port0r-time-crisis-vr) |
 | **v0.1.0** · APK for Meta Quest 3 · The House of the Dead in true 3D: the zombies walk right up to you, a 3D gun in your gloved hand | **v0.2.2** · APK for Meta Quest 3 · Time Crisis in true 3D: crouch for real to take cover, a 3D gun in your hand |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0) · [Install guide](#install-port0r-house-of-the-dead-vr) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) · [Install guide](#install-port0r-time-crisis-vr) · [itch.io](https://port0r.itch.io/time-crisis-vr) · [Video](https://youtu.be/F7Ig3bwq7K8) |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.0) · [Install guide](#install-port0r-house-of-the-dead-vr) · [Video](https://youtu.be/JEYKmI-9PBE) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2) · [Install guide](#install-port0r-time-crisis-vr) · [itch.io](https://port0r.itch.io/time-crisis-vr) · [Video](https://youtu.be/F7Ig3bwq7K8) |
 
 | [Meta Quest: Cop VR, real 3D VR](#install-port0r-cop-vr) | [Meta Quest: Rally VR, real 3D VR](#install-port0r-rally-vr) |
 | --- | --- |
