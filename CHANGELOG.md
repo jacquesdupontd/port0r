@@ -1,20 +1,5 @@
 # Changelog
 
-## Port0r: House of the Dead VR v0.1.0
-
-- The House of the Dead (Sega Model 2, 1996) in true 3D on Meta Quest: you walk through the Curien mansion with the zombies, at real scale.
-- Redrawn in 4K at the Quest 3's full resolution, 120 Hz in the headset.
-- Aim with your controller like the cabinet's light gun: the shot goes where your gun points in the 3D scene, no calibration.
-- Your gloved hand and arm hold a detailed 3D gun (Settings > Game > Arm).
-- Or the cabinet's own blue gun in your hand: Settings > Game > Cabinet gun.
-- Reload like on the cabinet: aim off the screen and pull the trigger.
-- Hits land on what you shoot, a zombie, a wall or the sky far away, not on a flat screen in front of you.
-- Red blood and English text, the cabinet's export settings.
-- The HUD and the story's text stay steady in front of you, and come forward when a zombie gets in your face.
-- Full arcade speed, every arcade image shown.
-- Settings in 10 languages: screen size, your height, crosshair on or off.
-- Updates from inside the game: it checks its own releases and shows what's new before installing.
-
 ## Port0r: Time Crisis VR v0.2.2
 
 - Leaderboard: Time Crisis ranks times, like its cabinet. On the cabinet's mode screen shoot TIMED GAME, pick a stage and clear it: the game offers to publish your time on the Port0r Discord, one board per stage (also on port0r.com/leaderboard). The best Stage 1 time of the week of 19 October wins the hidden gun, then everyone who beats that time wins it too.
