@@ -854,3 +854,12 @@ minizip (Nintendo Switch)
 ==============================================================================
 
 Copyright (C) 1998-2026 Gilles Vollant and contributors. Under the zlib license (text in the zlib section above).
+
+==============================================================================
+"Hand With Gloves" 3D model (the player's arm in the gun games)
+==============================================================================
+
+"Hand With Gloves" by JUST (https://sketchfab.com/3d-models/hand-with-gloves-5a6a434b8ec943ffacc581358781eecb),
+licensed under Creative Commons Attribution 4.0 International (https://creativecommons.org/licenses/by/4.0/).
+Changes made for Port0r: the right arm only, its hand posed on the guns' grips (the cabinet's gun, the pistols), scaled to a real hand, its pose baked;
+the left arm is that one mirrored.

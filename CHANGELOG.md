@@ -1,5 +1,38 @@
 # Changelog
 
+## Port0r: Cop VR v0.2.1
+
+- Your hand and arm: a gloved hand now holds the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
+- The picture is no longer tilted: the HUD stays at the bottom of the screen and the sky where the cabinet shows it.
+- The game's zooms are the cabinet's again: the enemy has his arcade size and the whole screen can be shot at (during a zoom only the middle could, and aiming low reloaded).
+- Flat screen is the arcade picture again, sharp and complete (it showed the 3D window, and buildings were missing).
+- Reload with a button: A by default, any button in Settings > Buttons > Reload. Shooting off the screen still reloads.
+- Left-handed: Settings > Game > Gun hand. The left controller aims, shoots and vibrates, and the buttons are mirrored (Reload on X, Start on Y).
+- Two guns: Settings > Game > Two guns puts player 2's gun in your other hand. Start and Coin go to both players.
+- Settings > Game > Gun: the other gun is now a revolver, as in the game (six rounds, the cylinder in the HUD).
+- Refresh rate: Settings > Smoothness > Refresh rate (72, 90 or 120 Hz). A Quest 2 runs at 72 Hz by default.
+- Headset smoothing now works at 120 Hz only: at 72 or 90 Hz it showed fewer pictures than the game makes, so every picture is drawn there instead.
+- Log file: Settings > Game > Log file (off by default). When it is on, the game writes its log in Download as you play, to send us with a bug report; it is kept even through a crash or a restart of the headset.
+- Graphics compatibility: Settings > Game > Graphics compatibility (off by default), a simpler rendering to try if the immersive view stays empty on a headset that is not a Quest. Applied at the next launch.
+
+## Port0r: Time Crisis VR v0.2.1
+
+- Your hand and arm: a gloved hand now holds the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
+- Left-handed: Settings > Game > Gun hand. The left controller aims, shoots and vibrates, and the buttons are mirrored (the pedal on X, Start on Y).
+- Refresh rate: Settings > Smoothness > Refresh rate (72, 90 or 120 Hz). A Quest 2 runs at 72 Hz by default.
+- Headset smoothing now works at 120 Hz only: at 72 or 90 Hz it showed fewer pictures than the game makes, so every picture is drawn there instead.
+- Log file: Settings > Game > Log file (off by default). When it is on, the game writes its log in Download as you play, to send us with a bug report; it is kept even through a crash or a restart of the headset.
+- Graphics compatibility: Settings > Game > Graphics compatibility (off by default), a simpler rendering to try if the immersive view stays empty on a headset that is not a Quest. Applied at the next launch.
+
+## Port0r: Rally VR v0.2.6
+
+- Flat screen is complete again: parts of the scenery and the 3D title were missing from the flat picture.
+- Mods > Cabinet settings opens the cabinet's own test menu: course length (GAME MODE), difficulty, country. The game writes its settings itself.
+- Refresh rate: Settings > Smoothness > Refresh rate (72, 90 or 120 Hz). A Quest 2 runs at 72 Hz by default.
+- Headset smoothing now works at 120 Hz only: at 72 or 90 Hz it showed fewer pictures than the game makes, so every picture is drawn there instead.
+- Log file: Settings > Game > Log file (off by default). When it is on, the game writes its log in Download as you play, to send us with a bug report; it is kept even through a crash or a restart of the headset.
+- Graphics compatibility: Settings > Game > Graphics compatibility (off by default), a simpler rendering to try if the immersive view stays empty on a headset that is not a Quest. Applied at the next launch.
+
 ## Port0r: Time Crisis VR v0.2.0
 
 The first public Time Crisis release, on Meta Quest. [Install guide](README.md#install-port0r-time-crisis-vr).
