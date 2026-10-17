@@ -1,5 +1,18 @@
 # Changelog
 
+## Port0r: Time Crisis II VR v0.1.0
+
+- Time Crisis II (Namco System 23, 1997) in true 3D on Meta Quest: you stand in the game's own 3D, the soldiers come right at you.
+- Take cover like on the cabinet: hold the pedal button, or crouch for real (Settings > Buttons > Pedal: Crouch for real).
+- Aim with your controller like the cabinet's gun: the shot goes where your gun points in the 3D scene, no calibration.
+- A detailed 3D gun in your hand.
+- Hits land on what you shoot, a soldier, a wall or a car, not on a flat screen in front of you.
+- The HUD and the story's subtitles stay readable in front of the 3D.
+- Screen size your way: Settings > Display > Screen size, from the game's own view (45°) up to 100°.
+- Full arcade speed, every arcade image shown.
+- Settings in 10 languages: screen size, your height, crosshair on or off.
+- Updates from inside the game: it checks its own releases and shows what's new before installing.
+
 ## Port0r: House of the Dead VR v0.1.0
 
 - The House of the Dead (Sega Model 2, 1996) in true 3D on Meta Quest: you walk through the Curien mansion with the zombies, at real scale.
