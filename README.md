@@ -123,6 +123,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 They come out one at a time, when they are right.
 
+- **Dirt Dash** (Namco System 22, 1995), *next*: immersive 3D at 120 Hz.
 - **Daytona USA** (Sega Model 2, 1994): longer draw distance, complete track sides when you look around, full-detail cars
   in the distance, no scenery popping; community HD texture pack support.
 - **Sega Super GT 24h** (Jaleco, Model 2B): full speed (it ran at 82 to 93 %), 120 images a second in races.
@@ -130,7 +131,6 @@ They come out one at a time, when they are right.
   skateboard controls.
 - **Virtua Racing** (Sega Model 1, 1992): the arcade's 30 images a second smoothed to the headset's rate, longer draw
   distance, all four arcade cameras.
-- **Dirt Dash** (Namco System 22, 1995): immersive 3D at 120 Hz.
 
 ---
 
