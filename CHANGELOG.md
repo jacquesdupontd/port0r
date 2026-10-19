@@ -1,5 +1,17 @@
 # Changelog
 
+## Port0r: Cop VR v0.2.2
+
+- Reload button works on its own, no trigger needed. With two guns, it reloads both.
+- Immersive: the bottom of the screen, around the HUD, can be shot. Aiming below it reloads.
+- Two guns: player 2 has its own crosshair (blue).
+
+## Port0r: House of the Dead VR v0.1.1
+
+- Reload button works on its own, no trigger needed. With two guns, it reloads both.
+- Immersive: the bottom of the screen, around the HUD, can be shot. Aiming below it reloads.
+- Two guns: player 2 has its own crosshair (blue).
+
 ## Port0r: Time Crisis II VR v0.1.0
 
 - Time Crisis II (Namco System 23, 1997) in true 3D on Meta Quest: you stand in the game's own 3D, the soldiers come right at you.
