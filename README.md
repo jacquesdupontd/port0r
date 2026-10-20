@@ -440,7 +440,7 @@ tuned. A tab longer than the panel scrolls (either thumbstick, or drag the bar o
 ![The settings panel](assets/settings-panel.png)
 
 **Display**
-- **Mode**: *Immersive* (you are inside the game, in 3D; the default), *3D window* (an arcade screen in 3D) or *Flat
+- **Mode**: *Immersive* (the default: the game in 3D around you), *3D window* (an arcade screen in 3D) or *Flat
   screen* (the arcade screen, flat).
 - **World size**: 1 = real size; bigger makes you smaller. 2 by default, where the eyes are most comfortable.
 - **Zoom**: enlarges the picture like the arcade screen does (Auto, None, Low, Medium, Strong).
