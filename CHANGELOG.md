@@ -1,5 +1,9 @@
 # Changelog
 
+## Port0r: Dirt Dash VR v0.1.2
+
+- Dirt Dash, Namco's 1995 off-road arcade racer (System Super 22), in VR on Meta Quest 3, in stereoscopic 3D.
+
 ## Port0r: Cop VR v0.2.2
 
 - Reload button works on its own, no trigger needed. With two guns, it reloads both.
@@ -30,7 +34,7 @@
 - The House of the Dead (Sega Model 2, 1996) in true 3D on Meta Quest: you walk through the Curien mansion with the zombies, at real scale.
 - Redrawn in 4K at the Quest 3's full resolution, 120 Hz in the headset.
 - Aim with your controller like the cabinet's light gun: the shot goes where your gun points in the 3D scene, no calibration.
-- Your gloved hand and arm hold a detailed 3D gun (Settings > Game > Arm).
+- Your hand and arm hold a detailed 3D gun (Settings > Game > Arm).
 - Or the cabinet's own blue gun in your hand: Settings > Game > Cabinet gun.
 - Reload like on the cabinet: aim off the screen and pull the trigger.
 - Hits land on what you shoot, a zombie, a wall or the sky far away, not on a flat screen in front of you.
@@ -46,7 +50,7 @@
 
 ## Port0r: Cop VR v0.2.1
 
-- Your hand and arm: a gloved hand now holds the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
+- Your hand and arm now hold the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
 - The picture is no longer tilted: the HUD stays at the bottom of the screen and the sky where the cabinet shows it.
 - The game's zooms are the cabinet's again: the enemy has his arcade size and the whole screen can be shot at (during a zoom only the middle could, and aiming low reloaded).
 - Flat screen is the arcade picture again, sharp and complete (it showed the 3D window, and buildings were missing).
@@ -61,7 +65,7 @@
 
 ## Port0r: Time Crisis VR v0.2.1
 
-- Your hand and arm: a gloved hand now holds the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
+- Your hand and arm now hold the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
 - Left-handed: Settings > Game > Gun hand. The left controller aims, shoots and vibrates, and the buttons are mirrored (the pedal on X, Start on Y).
 - Refresh rate: Settings > Smoothness > Refresh rate (72, 90 or 120 Hz). A Quest 2 runs at 72 Hz by default.
 - Headset smoothing now works at 120 Hz only: at 72 or 90 Hz it showed fewer pictures than the game makes, so every picture is drawn there instead.
