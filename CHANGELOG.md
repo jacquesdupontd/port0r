@@ -1,5 +1,10 @@
 # Changelog
 
+## Port0r: Dirt Dash VR v0.1.3
+
+- Rumble: every hit now shakes the controllers, a jolt in both hands, stronger for a harder hit. Settings > Game > Vibrations turns it off.
+- Game files anywhere on the headset: the game now waits for both dirtdash.zip and namcoc71.zip before it starts, no second launch needed.
+
 ## Port0r: Dirt Dash VR v0.1.2
 
 - Dirt Dash, Namco's 1995 off-road arcade racer (System Super 22), in VR on Meta Quest 3, in stereoscopic 3D.
