@@ -1,5 +1,39 @@
 # Changelog
 
+## Port0r: Cop VR v0.2.3
+
+- Quest 2: the picture is back (on a Quest 2 with sound but no picture, install this APK over the old one with SideQuest).
+- Sound: no more skip when the headset switches to 120 Hz a few seconds after the start.
+- The refresh rate you choose (72, 90 or 120 Hz; 72 Hz on a Quest 2 by default) is used from the start.
+- The volume is the same in every Port0r game at 100 %.
+
+## Port0r: House of the Dead VR v0.1.2
+
+- Quest 2: the picture is back (on a Quest 2 with sound but no picture, install this APK over the old one with SideQuest).
+- Sound: no more skip when the headset switches to 120 Hz a few seconds after the start.
+- The refresh rate you choose (72, 90 or 120 Hz; 72 Hz on a Quest 2 by default) is used from the start.
+- The volume is the same in every Port0r game at 100 %.
+
+## Port0r: Time Crisis VR v0.2.3
+
+- Quest 2: the picture is back (on a Quest 2 with sound but no picture, install this APK over the old one with SideQuest).
+- Sound: no more skip when the headset switches to 120 Hz a few seconds after the start.
+- The refresh rate you choose (72, 90 or 120 Hz; 72 Hz on a Quest 2 by default) is used from the start.
+- The volume is the same in every Port0r game at 100 %.
+
+## Port0r: Time Crisis II VR v0.1.1
+
+- Quest 2: the picture is back (on a Quest 2 with sound but no picture, install this APK over the old one with SideQuest).
+- Sound: no more skip when the headset switches to 120 Hz a few seconds after the start.
+- The refresh rate you choose (72, 90 or 120 Hz; 72 Hz on a Quest 2 by default) is used from the start.
+- The volume is the same in every Port0r game at 100 %.
+
+## Port0r: Dirt Dash VR v0.1.4
+
+- Quest 2: the picture is back (on a Quest 2 with sound but no picture, install this APK over the old one with SideQuest).
+- Sound: no more skip when the headset switches to 120 Hz a few seconds after the start.
+- The refresh rate you choose (72, 90 or 120 Hz; 72 Hz on a Quest 2 by default) is used from the start.
+
 ## Sega Rally on Windows PC v0.1.7 (PCVR and desktop)
 
 - Sega Rally Championship on a Windows PC: in VR through SteamVR or Quest Link, or on the screen, from one installer and its launcher.
