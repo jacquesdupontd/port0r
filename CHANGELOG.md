@@ -1,5 +1,20 @@
 # Changelog
 
+## Sega Rally on Windows PC v0.1.7 (PCVR and desktop)
+
+- Sega Rally Championship on a Windows PC: in VR through SteamVR or Quest Link, or on the screen, from one installer and its launcher.
+- Cockpit view, on by default; VIEW changes the view: cockpit, chase, on the road. At the end of a race, the game's own cameras come back.
+- Logitech wheels (tested with a G29) with the force feedback of the arcade cabinet, in VR and on the screen. Settings > Wheel: rotation, force, every button, the pedals (Find them).
+- The whole Port0r menu works from the wheel: Triangle opens it, the D-pad moves, Cross chooses, Circle goes back.
+- The launcher: the game files chosen once, where they are; Jean-seb's HD pack added, switched on or off, or removed from it.
+- Leaderboard on Discord, as on the Quest.
+
+## Port0r: Rally VR v0.2.7
+
+- Cockpit view, on by default; VIEW changes the view: cockpit, chase, on the road. At the end of a race, the game's own cameras come back.
+- Logitech wheels work in standalone via the USB-C port (tested with a G29), with the force feedback of the arcade cabinet.
+- The whole Port0r menu works from the wheel; Settings > Wheel: rotation, force, every button, the pedals (Find them).
+
 ## Port0r: Daytona USA VR v0.1.8
 
 - Leaderboard: finish a race and the headset offers to publish your time on the Port0r Discord.
