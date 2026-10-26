@@ -1,5 +1,11 @@
 # Changelog
 
+## Port0r: Daytona USA VR v0.1.7
+
+- Daytona USA (Sega AM2, 1994) in VR on Meta Quest 3, standalone, in 3D and 4K.
+- Logitech wheels work in standalone via the USB-C port.
+- The cabinet's own settings menu, in Settings > Mods > Cabinet settings: the Japanese or export version, the difficulty.
+
 ## Port0r: Dirt Dash VR v0.1.3
 
 - Rumble: every hit now shakes the controllers, a jolt in both hands, stronger for a harder hit. Settings > Game > Vibrations turns it off.
