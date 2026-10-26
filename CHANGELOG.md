@@ -1,5 +1,12 @@
 # Changelog
 
+## Port0r: Daytona USA VR v0.1.8
+
+- Leaderboard: finish a race and the headset offers to publish your time on the Port0r Discord.
+- One board per course, Beginner, Advanced and Expert: the best time of each player.
+- A race is published when it enters the cabinet's own rankings, and a personal best always does.
+- The boards are in #leaderboard on the Discord and on https://port0r.com/leaderboard. Link the headset once, as in the other Port0r games.
+
 ## Port0r: Daytona USA VR v0.1.7
 
 - Daytona USA (Sega AM2, 1994) in VR on Meta Quest 3, standalone, in 3D and 4K.
