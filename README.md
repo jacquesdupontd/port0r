@@ -135,6 +135,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | **Sega Rally on Android** (phones, tablets, handhelds) | Sega Model 2A, 1995 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2), [guide](ANDROID.md), [itch.io](https://port0r.itch.io/sega-rally-android)) |
 | **Sega Rally on Steam Deck & Linux** | Sega Model 2A, 1995 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1), [guide](LINUX.md), [itch.io](https://port0r.itch.io/sega-rally-steam-deck)) |
 | **Sega Rally on Mac** (Apple Silicon) | Sega Model 2A, 1995 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0), [guide](MAC.md), [itch.io](https://port0r.itch.io/sega-rally-mac)) |
+| **Sega Rally on Windows PC** (PCVR and desktop) | Sega Model 2A, 1995 | **Out now, v0.1.7** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7), [guide](WINDOWS.md), [itch.io](https://port0r.itch.io/rally-vr)) |
 
 **Headsets:** Meta Quest 3 is the reference. A player reports that it runs perfectly on Quest 2 too.
 
