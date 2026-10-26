@@ -121,8 +121,8 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Daytona USA VR** (Daytona USA) | Sega Model 2, 1994 | **Out now, v0.1.7** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.7), [itch.io](https://port0r.itch.io/daytona-usa-vr)) |
-| **Port0r: Dirt Dash VR** (Dirt Dash) | Namco System Super 22, 1995 | **Out now, v0.1.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.3), [itch.io](https://port0r.itch.io/dirt-dash-vr)) |
+| **Port0r: Daytona USA VR** (Daytona USA) | Sega Model 2, 1994 | **Out now, v0.1.7** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.7), [itch.io](https://port0r.itch.io/daytona-usa-vr), [SideQuest](https://sidequestvr.com/app/63694/port0r-daytona-usa-vr)) |
+| **Port0r: Dirt Dash VR** (Dirt Dash) | Namco System Super 22, 1995 | **Out now, v0.1.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.3), [itch.io](https://port0r.itch.io/dirt-dash-vr), [SideQuest](https://sidequestvr.com/app/63515/port0r-dirt-dash-vr)) |
 | **Port0r: Time Crisis II VR** (Time Crisis II) | Namco System 23, 1997 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.0), [itch.io](https://port0r.itch.io/time-crisis-ii-vr), [SideQuest](https://sidequestvr.com/app/63359/port0r-time-crisis-ii-vr)) |
 | **Port0r: House of the Dead VR** (The House of the Dead) | Sega Model 2, 1996 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.1), [itch.io](https://port0r.itch.io/house-of-the-dead-vr), [SideQuest](https://sidequestvr.com/app/63360/port0r-house-of-the-dead-vr)) |
 | **Port0r: Time Crisis VR** (Time Crisis) | Namco System 22, 1995 | **Out now, v0.2.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.2), [itch.io](https://port0r.itch.io/time-crisis-vr), [SideQuest](https://sidequestvr.com/app/63135/port0r-time-crisis-vr)) |
@@ -367,8 +367,9 @@ Download your game's APK (the table above), then pick one way:
 - **adb** (if you already use it): `adb install -r` followed by the APK's name, for example
   `adb install -r Port0r-CopVR-v0.2.2-quest3.apk`.
 
-The checksum of each APK is in the `SHA256SUMS.txt` next to it, if you want to check your download. The five VR games
+The checksum of each APK is in the `SHA256SUMS.txt` next to it, if you want to check your download. The seven VR games
 also have their SideQuest store page, with a one-click install from SideQuest:
+[Daytona USA VR](https://sidequestvr.com/app/63694/port0r-daytona-usa-vr), [Dirt Dash VR](https://sidequestvr.com/app/63515/port0r-dirt-dash-vr),
 [Time Crisis II VR](https://sidequestvr.com/app/63359/port0r-time-crisis-ii-vr), [House of the Dead VR](https://sidequestvr.com/app/63360/port0r-house-of-the-dead-vr),
 [Time Crisis VR](https://sidequestvr.com/app/63135/port0r-time-crisis-vr), [Cop VR](https://sidequestvr.com/app/63134/port0r-cop-vr),
 [Rally VR](https://sidequestvr.com/app/62980).
