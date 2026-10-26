@@ -104,6 +104,7 @@
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time.
 > **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip) (homebrew), [complete Switch guide](SWITCH.md).
 > **On Android:** [Port0r-SegaRally-Android-v0.1.2.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.2/Port0r-SegaRally-Android-v0.1.2.apk), [complete Android guide](ANDROID.md).
+> **On a Windows PC (PCVR or the screen):** [Port0r-SegaRally-PC-v0.1.7-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/pc-v0.1.7/Port0r-SegaRally-PC-v0.1.7-Setup.exe) (v0.1.7, the installer), [complete Windows guide](WINDOWS.md).
 > **On Steam Deck & Linux:** [Port0r-SegaRally-Linux-v0.1.1.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/linux-v0.1.1/Port0r-SegaRally-Linux-v0.1.1.tar.gz), [complete Linux guide](LINUX.md).
 > **On Mac (Apple Silicon):** [Port0r-SegaRally-Mac-v0.1.0.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/mac-v0.1.0/Port0r-SegaRally-Mac-v0.1.0.tar.gz), [complete Mac guide](MAC.md).
 > The app's own source code is not public for now: this repository holds the releases, the guide and the issue tracker.
