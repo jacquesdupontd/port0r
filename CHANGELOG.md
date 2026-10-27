@@ -1,5 +1,15 @@
 # Changelog
 
+## Port0r: Daytona USA VR v0.1.9
+
+- No more flashes of wrong textures in long races (a black sky behind the trees, the car in another livery): the texture cache now makes room one image at a time instead of being rebuilt whole.
+- The same volume as every other Port0r game: Daytona USA played about 12 dB louder at the default volume.
+- The whole menu works from a Logitech wheel: Triangle opens it, the D-pad moves, Cross chooses, Circle goes back, the paddles change tab; Settings > Wheel: rotation, force and its direction, every button, the pedals.
+
+## Daytona USA on Android v0.1.0 and Dirt Dash on Android v0.1.0
+
+- The two arcade racers on Android phones and tablets (Android 8 or newer, Vulkan): touch controls, tilt or a gamepad, updates from inside the game. Guides: DAYTONA-ANDROID.md and DIRTDASH-ANDROID.md.
+
 ## Port0r: Cop VR v0.2.3
 
 - Quest 2: the picture is back (on a Quest 2 with sound but no picture, install this APK over the old one with SideQuest).
