@@ -12,6 +12,8 @@
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7"><img alt="Download Sega Rally for Windows PC v0.1.7 (PCVR and desktop, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20PC%20v0.1.7%20%C2%B7%20PCVR%20%26%20desktop%20%C2%B7%20free-9b7bff?style=for-the-badge&logo=windows&logoColor=white" height="34"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2"><img alt="Download Sega Rally for Android v0.1.2 (APK, free)" src="https://img.shields.io/badge/Download-Android%20v0.1.2%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.0"><img alt="Download Daytona USA for Android v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Daytona%20USA%20Android%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0"><img alt="Download Dirt Dash for Android v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Dirt%20Dash%20Android%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1"><img alt="Download Sega Rally for Steam Deck and Linux v0.1.1 (free)" src="https://img.shields.io/badge/Download-Steam%20Deck%20%26%20Linux%20v0.1.1%20%C2%B7%20free-7b5cff?style=for-the-badge&logo=steamdeck&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0"><img alt="Download Sega Rally for Mac v0.1.0 (Apple Silicon, free)" src="https://img.shields.io/badge/Download-Mac%20v0.1.0%20%C2%B7%20Apple%20Silicon%20%C2%B7%20free-ff3d7f?style=for-the-badge&logo=apple&logoColor=white" height="42"></a>
 </p>
@@ -37,7 +39,7 @@
 
 # Port0r
 
-**Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch ([the Switch guide](SWITCH.md)), on Android phones and tablets ([the Android guide](ANDROID.md)), on Linux and the Steam Deck ([the Linux guide](LINUX.md)), and on Mac ([the Mac guide](MAC.md)).
+**Arcade classics in true stereoscopic 3D, on Meta Quest.** And now Sega Rally on Nintendo Switch ([the Switch guide](SWITCH.md)), on Android phones and tablets with Daytona USA and Dirt Dash too ([Sega Rally](ANDROID.md), [Daytona USA](DAYTONA-ANDROID.md) and [Dirt Dash](DIRTDASH-ANDROID.md) on Android), on Linux and the Steam Deck ([the Linux guide](LINUX.md)), and on Mac ([the Mac guide](MAC.md)).
 
 **[port0r.com](https://port0r.com)**: every game with its video, the numbers live, the players' words and the leaderboards, in one place.
 
@@ -75,6 +77,12 @@
 | **v0.5.3** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard | **v0.1.2** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures |
 | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2) · [Complete guide](ANDROID.md) · [itch.io](https://port0r.itch.io/sega-rally-android) · [Video](https://youtu.be/hZXkqHSjeHs) |
 
+| [Android: Daytona USA, phones and tablets](DAYTONA-ANDROID.md) | [Android: Dirt Dash, phones and tablets](DIRTDASH-ANDROID.md) |
+| --- | --- |
+| [![Daytona USA on Android](assets/android-daytona/header.jpg)](DAYTONA-ANDROID.md) | [![Dirt Dash on Android](assets/android-dirtdash/header.jpg)](DIRTDASH-ANDROID.md) |
+| **v0.1.0** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, full screen or the cabinet's 4:3 picture | **v0.1.0** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, full screen or the cabinet's picture |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.0) · [Complete guide](DAYTONA-ANDROID.md) · [itch.io](https://port0r.itch.io/daytona-usa-vr) · [Video](https://youtu.be/75K8WlwFTeU) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0) · [Complete guide](DIRTDASH-ANDROID.md) · [itch.io](https://port0r.itch.io/dirt-dash-vr) · [Video](https://youtu.be/75K8WlwFTeU) |
+
 | [Windows PC: Sega Rally, PCVR and desktop](WINDOWS.md) | [Linux & Steam Deck: Sega Rally, any PC](LINUX.md) | [Mac: Sega Rally, Apple Silicon](MAC.md) |
 | --- | --- | --- |
 | [![Sega Rally on Windows PC, PCVR and desktop](assets/windows/header.jpg)](WINDOWS.md) | [![Sega Rally on Linux and the Steam Deck](assets/linux/header.jpg)](LINUX.md) | [![Sega Rally on Mac](assets/mac/header.jpg)](MAC.md) |
@@ -104,6 +112,8 @@
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time.
 > **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip) (homebrew), [complete Switch guide](SWITCH.md).
 > **On Android:** [Port0r-SegaRally-Android-v0.1.2.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.2/Port0r-SegaRally-Android-v0.1.2.apk), [complete Android guide](ANDROID.md).
+> **Daytona USA on Android:** [Port0r-DaytonaUSA-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/daytona-android-v0.1.0/Port0r-DaytonaUSA-Android-v0.1.0.apk), [its guide](DAYTONA-ANDROID.md).
+> **Dirt Dash on Android:** [Port0r-DirtDash-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/dirtdash-android-v0.1.0/Port0r-DirtDash-Android-v0.1.0.apk), [its guide](DIRTDASH-ANDROID.md).
 > **On a Windows PC (PCVR or the screen):** [Port0r-SegaRally-PC-v0.1.7-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/pc-v0.1.7/Port0r-SegaRally-PC-v0.1.7-Setup.exe) (v0.1.7, the installer), [complete Windows guide](WINDOWS.md).
 > **On Steam Deck & Linux:** [Port0r-SegaRally-Linux-v0.1.1.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/linux-v0.1.1/Port0r-SegaRally-Linux-v0.1.1.tar.gz), [complete Linux guide](LINUX.md).
 > **On Mac (Apple Silicon):** [Port0r-SegaRally-Mac-v0.1.0.tar.gz](https://github.com/jacquesdupontd/port0r/releases/download/mac-v0.1.0/Port0r-SegaRally-Mac-v0.1.0.tar.gz), [complete Mac guide](MAC.md).
@@ -134,6 +144,8 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.7** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr), [SideQuest](https://sidequestvr.com/app/62980)) |
 | **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
 | **Sega Rally on Android** (phones, tablets, handhelds) | Sega Model 2A, 1995 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2), [guide](ANDROID.md), [itch.io](https://port0r.itch.io/sega-rally-android)) |
+| **Daytona USA on Android** (phones, tablets, handhelds) | Sega Model 2, 1994 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.0), [guide](DAYTONA-ANDROID.md), [itch.io](https://port0r.itch.io/daytona-usa-vr)) |
+| **Dirt Dash on Android** (phones, tablets, handhelds) | Namco System Super 22, 1995 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0), [guide](DIRTDASH-ANDROID.md), [itch.io](https://port0r.itch.io/dirt-dash-vr)) |
 | **Sega Rally on Steam Deck & Linux** | Sega Model 2A, 1995 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1), [guide](LINUX.md), [itch.io](https://port0r.itch.io/sega-rally-steam-deck)) |
 | **Sega Rally on Mac** (Apple Silicon) | Sega Model 2A, 1995 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0), [guide](MAC.md), [itch.io](https://port0r.itch.io/sega-rally-mac)) |
 | **Sega Rally on Windows PC** (PCVR and desktop) | Sega Model 2A, 1995 | **Out now, v0.1.7** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7), [guide](WINDOWS.md), [itch.io](https://port0r.itch.io/rally-vr)) |
