@@ -1,5 +1,9 @@
 # Changelog
 
+## Port0r: Daytona USA VR v0.1.11
+
+- Mods > Cabinet settings works: switched on from our menu, it opens the cabinet's own menu (country, difficulty...), where the right stick's up and down move, its right and left change the value, and A or B chooses. It is off every time the game starts, so the coins always reach the game.
+
 ## Port0r: Daytona USA VR v0.1.10
 
 - Settings > Wheel > Pedals, Find them: it learns each pedal's own travel, where it rests and where it ends, so a Logitech G29 in its PS3 mode, or a wheel that reports its pedals the other way round or both on one axis, drives right too.
