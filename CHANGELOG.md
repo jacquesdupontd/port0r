@@ -1,5 +1,12 @@
 # Changelog
 
+## Port0r: Time Crisis II VR v0.1.2
+
+- Much brighter: the picture was far darker than the cabinet's (the emulation of its System 23 board gives no light curve). Image > Brightness now starts at 80 %, white stays white, and the walls up close are smooth instead of showing their pixels as blocks. Thanks to LordVal for the report.
+- The game mode select (Solo/Linked, Solo only) is shown: its panels vanished half a second after appearing, leaving only their texts. Thanks to LordVal for this one too.
+- Image > Brightness is a slider from 0 to 100 %.
+- The sound starts at its right pitch from the first second.
+
 ## Port0r: Daytona USA VR v0.1.11
 
 - Mods > Cabinet settings works: switched on from our menu, it opens the cabinet's own menu (country, difficulty...), where the right stick's up and down move, its right and left change the value, and A or B chooses. It is off every time the game starts, so the coins always reach the game.
