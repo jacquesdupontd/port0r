@@ -1,5 +1,10 @@
 # Changelog
 
+## Port0r: Daytona USA VR v0.1.10
+
+- Settings > Wheel > Pedals, Find them: it learns each pedal's own travel, where it rests and where it ends, so a Logitech G29 in its PS3 mode, or a wheel that reports its pedals the other way round or both on one axis, drives right too.
+- The sound plays at its right pitch from the very first second of the game.
+
 ## Port0r: Daytona USA VR v0.1.9
 
 - No more flashes of wrong textures in long races (a black sky behind the trees, the car in another livery): the texture cache now makes room one image at a time instead of being rebuilt whole.
