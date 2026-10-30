@@ -7,12 +7,16 @@
 <meta name="description" content="The Port0r leaderboards, live: Rally VR's best times per course, Cop VR's best scores, Time Crisis VR's Timed Game stage times, published from the headset.">
 <meta property="og:title" content="Port0r leaderboards">
 <meta property="og:image" content="https://port0r.com/assets/og.jpg">
-<meta name="theme-color" content="#0c0e12">
+<meta name="theme-color" content="#f4efe5">
 <link rel="icon" href="assets/port0r-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=20261030">
+<script>
+try { const theme = localStorage.getItem("port0r-theme") || "light"; if (theme !== "system") document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light"; }
+catch (_) { document.documentElement.dataset.theme = "light"; }
+</script>
+<link rel="stylesheet" href="site.css?v=20261030-softveil">
 </head>
 <body>
 <a class="skip" href="#content">Skip to the content</a>
@@ -57,7 +61,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <img src="assets/port0r-wordmark.svg" alt="Port0r" width="106" height="22">
+    <img src="assets/port0r-wordmark.svg" alt="Port0r" width="116" height="24">
     <nav aria-label="Elsewhere">
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
       <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
@@ -72,7 +76,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=20261027a" defer></script>
+<script src="site.js?v=20261030-eightcolors-v2" defer></script>
 <script src="hit.js?v=20261021a" defer></script>
 <script>
 // The boards in full (16/10/2026): the bot's public files, read every minute. A race game (Rally VR's courses, Time Crisis's
