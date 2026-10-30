@@ -1,5 +1,38 @@
 # Changelog
 
+## Port0r: Scud Race VR v0.1.7
+
+- Scud Race, the GT racing game Sega AM2 released in arcades in 1996, standalone in VR on Meta Quest 3.
+- Plug a Logitech wheel straight into your Quest: steering and force feedback, no PC needed.
+- All the Port0r settings you know, to make it play exactly the way you like.
+- Optimised to the bone, to get the very best out of your device.
+- Port0r is now more than one person, it's becoming a community. Thanks a lot to the beta testers who helped a lot.
+
+## Scud Race on Android v0.1.0
+
+- Scud Race, the GT racing game Sega AM2 released in arcades in 1996, on Android in 4K at 120 FPS.
+- All the Port0r settings you know, to make it play exactly the way you like.
+- Optimised to the bone, to get the very best out of your device.
+- Everyone can play: Quest, Android and PC.
+- Port0r is now more than one person, it's becoming a community. Thanks a lot to the beta testers who helped a lot.
+
+## Port0r: Scud Race VR on PC v0.1.1
+
+- Scud Race, the GT racing game Sega AM2 released in arcades in 1996, on PC: on your screen, or in VR with a PC headset (PCVR).
+- All the Port0r settings you know, to make it play exactly the way you like.
+- Optimised to the bone, to get the very best out of your device.
+- Everyone can play: Quest, Android and PC.
+- Port0r is now more than one person, it's becoming a community. Thanks a lot to the beta testers who helped a lot.
+
+## Port0r: Daytona USA VR v0.2.0
+
+- **Daytona has a cockpit now.** It's one more view: switch views with the view button and you're sitting in a NASCAR stock car, with its roll cage and its gauges all around you, and its steering wheel, with the Port0r 0 on its hub, turning with yours. Every race starts in it.
+- **Force feedback on a Logitech wheel, plugged straight into the headset.** No PC needed: the wheel pulls back to the centre in the corners and kicks on every knock, driven by the cabinet's own wheel board, just like at the arcade. You can set how hard it pushes in Wheel > Force feedback.
+- In Settings > Cockpit you can raise or lower the car, slide your seat to the left or right, and bring the counters closer or push them further away.
+- The stick's steering is yours to tune in Settings > Game: how far the wheels turn, the dead zone, and a linear or progressive response.
+- The game is louder by default, like every Port0r game from now on, and the volume goes up to 130 % if you want even more.
+- Brightness is a slider in the Image tab, from 0 to 100 %.
+
 ## Port0r: Time Crisis II VR v0.1.2
 
 - Much brighter: the picture was far darker than the cabinet's (the emulation of its System 23 board gives no light curve). Image > Brightness now starts at 80 %, white stays white, and the walls up close are smooth instead of showing their pixels as blocks. Thanks to LordVal for the report.

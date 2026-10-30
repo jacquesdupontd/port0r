@@ -1,7 +1,8 @@
 ![Port0r](assets/port0r-header.png)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11"><img alt="Download Port0r: Daytona USA VR v0.1.11 (APK, free)" src="https://img.shields.io/badge/Download-Daytona%20USA%20VR%20v0.1.11%20%C2%B7%20APK%20%C2%B7%20free-e3141b?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7"><img alt="Download Port0r: Scud Race VR v0.1.7 (APK, free)" src="https://img.shields.io/badge/Download-Scud%20Race%20VR%20v0.1.7%20%C2%B7%20APK%20%C2%B7%20free-e3141b?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0"><img alt="Download Port0r: Daytona USA VR v0.2.0 (APK, free)" src="https://img.shields.io/badge/Download-Daytona%20USA%20VR%20v0.2.0%20%C2%B7%20APK%20%C2%B7%20free-e3141b?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4"><img alt="Download Port0r: Dirt Dash VR v0.1.4 (APK, free)" src="https://img.shields.io/badge/Download-Dirt%20Dash%20VR%20v0.1.4%20%C2%B7%20APK%20%C2%B7%20free-a0522d?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.2"><img alt="Download Port0r: Time Crisis II VR v0.1.2 (APK, free)" src="https://img.shields.io/badge/Download-Time%20Crisis%20II%20VR%20v0.1.2%20%C2%B7%20APK%20%C2%B7%20free-d97706?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.2"><img alt="Download Port0r: House of the Dead VR v0.1.2 (APK, free)" src="https://img.shields.io/badge/Download-House%20of%20the%20Dead%20VR%20v0.1.2%20%C2%B7%20APK%20%C2%B7%20free-8b0000?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
@@ -47,11 +48,17 @@
 
 ## Choose your platform
 
+| [Meta Quest: Scud Race VR, standalone VR](#install-port0r-scud-race-vr) | [Android and PC: Scud Race](#install-port0r-scud-race-vr) |
+| --- | --- |
+| [![Port0r Scud Race VR on Meta Quest](https://img.youtube.com/vi/r90VKyOhWvY/maxresdefault.jpg)](#install-port0r-scud-race-vr) | [![Scud Race on Android and PC](https://img.youtube.com/vi/r90VKyOhWvY/maxresdefault.jpg)](https://youtu.be/r90VKyOhWvY) |
+| **v0.1.7** · APK for Meta Quest 3 · Sega AM2's 1996 GT arcade racer, standalone in VR, Logitech wheel with force feedback | **Android v0.1.0** · 4K at 120 FPS · **PC v0.1.1** · Windows, on the screen or in VR (PCVR) |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7) · [Install guide](#install-port0r-scud-race-vr) · [Video](https://youtu.be/r90VKyOhWvY) | [Android](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0) · [PC](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1) · [Video](https://youtu.be/r90VKyOhWvY) |
+
 | [Meta Quest: Daytona USA VR, standalone VR](#install-port0r-daytona-usa-vr) | [Meta Quest: Dirt Dash VR, real 3D VR](#install-port0r-dirt-dash-vr) |
 | --- | --- |
 | [![Port0r Daytona USA VR on Meta Quest](https://img.youtube.com/vi/toPG4va9joY/maxresdefault.jpg)](#install-port0r-daytona-usa-vr) | [![Port0r Dirt Dash VR on Meta Quest](https://img.youtube.com/vi/PN8u_SZXYpQ/maxresdefault.jpg)](#install-port0r-dirt-dash-vr) |
-| **v0.1.11** · APK for Meta Quest 3 · Sega's 1994 stock-car arcade racer, standalone in VR, 4K, Logitech wheel support | **v0.1.4** · APK for Meta Quest 3 · Dirt Dash, Namco's 1995 off-road arcade racer, in VR |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11) · [Install guide](#install-port0r-daytona-usa-vr) · [itch.io](https://port0r.itch.io/daytona-usa-vr) · [Video](https://youtu.be/toPG4va9joY) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4) · [Install guide](#install-port0r-dirt-dash-vr) · [itch.io](https://port0r.itch.io/dirt-dash-vr) · [Video](https://youtu.be/PN8u_SZXYpQ) |
+| **v0.2.0** · APK for Meta Quest 3 · Sega's 1994 stock-car arcade racer, standalone in VR, 4K, Logitech wheel support | **v0.1.4** · APK for Meta Quest 3 · Dirt Dash, Namco's 1995 off-road arcade racer, in VR |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0) · [Install guide](#install-port0r-daytona-usa-vr) · [itch.io](https://port0r.itch.io/daytona-usa-vr) · [Video](https://youtu.be/toPG4va9joY) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4) · [Install guide](#install-port0r-dirt-dash-vr) · [itch.io](https://port0r.itch.io/dirt-dash-vr) · [Video](https://youtu.be/PN8u_SZXYpQ) |
 
 | [Meta Quest: Time Crisis II VR, real 3D VR](#install-port0r-time-crisis-ii-vr) | [Meta Quest: House of the Dead VR, real 3D VR](#install-port0r-house-of-the-dead-vr) |
 | --- | --- |
@@ -89,8 +96,11 @@
 | **v0.1.7** · Windows 10 / 11 · in VR through SteamVR or Quest Link, or on the screen · cockpit view, Logitech wheels with the force feedback of the arcade cabinet | **v0.1.1** · for the Steam Deck and any 64-bit Linux PC (Vulkan) · up to 240 fps and 200 % supersampling, keyboard or gamepad | **v0.1.0** · built for Macs with Apple Silicon (M1 and newer), no Rosetta or Wine, macOS 12+ · 120 fps on ProMotion, up to 240 fps and 200 % supersampling, keyboard or gamepad |
 | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7) · [Complete guide](WINDOWS.md) · [Video](https://youtu.be/_Nm22_u1s7Y) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1) · [Complete guide](LINUX.md) · [itch.io](https://port0r.itch.io/sega-rally-steam-deck) · [Video](https://youtu.be/54HLGGeziXg) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0) · [Complete guide](MAC.md) · [itch.io](https://port0r.itch.io/sega-rally-mac) · [Video](https://youtu.be/vO_EbBZjnuQ) |
 
-> ### Download Port0r: Daytona USA VR v0.1.11 (free)
-> **[Port0r-DaytonaUSAVR-v0.1.11-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/daytona-v0.1.11/Port0r-DaytonaUSAVR-v0.1.11-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11) or [itch.io](https://port0r.itch.io/daytona-usa-vr). Then follow the [install guide](#install-port0r-daytona-usa-vr) below.
+> ### Download Port0r: Scud Race VR v0.1.7 (free)
+> **[Port0r-ScudRaceVR-v0.1.7-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-v0.1.7/Port0r-ScudRaceVR-v0.1.7-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7). Then follow the [install guide](#install-port0r-scud-race-vr) below. On Android: [Port0r-ScudRace-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-android-v0.1.0/Port0r-ScudRace-Android-v0.1.0.apk). On PC: [Port0r-ScudRace-PC-0.1.1-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/scud-pc-v0.1.1/Port0r-ScudRace-PC-0.1.1-Setup.exe).
+>
+> ### Download Port0r: Daytona USA VR v0.2.0 (free)
+> **[Port0r-DaytonaUSAVR-v0.2.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/daytona-v0.2.0/Port0r-DaytonaUSAVR-v0.2.0-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0) or [itch.io](https://port0r.itch.io/daytona-usa-vr). Then follow the [install guide](#install-port0r-daytona-usa-vr) below.
 >
 > ### Download Port0r: Dirt Dash VR v0.1.4 (free)
 > **[Port0r-DirtDashVR-v0.1.4-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/dirtdash-v0.1.4/Port0r-DirtDashVR-v0.1.4-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4) or [itch.io](https://port0r.itch.io/dirt-dash-vr). Then follow the [install guide](#install-port0r-dirt-dash-vr) below.
@@ -135,7 +145,10 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Daytona USA VR** (Daytona USA) | Sega Model 2, 1994 | **Out now, v0.1.11** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11), [itch.io](https://port0r.itch.io/daytona-usa-vr), [SideQuest](https://sidequestvr.com/app/63694/port0r-daytona-usa-vr)) |
+| **Port0r: Scud Race VR** (Scud Race) | Sega Model 3, 1996 | **Out now, v0.1.7** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7)) |
+| **Scud Race on Android** (phones, tablets, handhelds) | Sega Model 3, 1996 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0)) |
+| **Port0r: Scud Race VR on PC** (Windows, screen and PCVR) | Sega Model 3, 1996 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1)) |
+| **Port0r: Daytona USA VR** (Daytona USA) | Sega Model 2, 1994 | **Out now, v0.2.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0), [itch.io](https://port0r.itch.io/daytona-usa-vr), [SideQuest](https://sidequestvr.com/app/63694/port0r-daytona-usa-vr)) |
 | **Port0r: Dirt Dash VR** (Dirt Dash) | Namco System Super 22, 1995 | **Out now, v0.1.4** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4), [itch.io](https://port0r.itch.io/dirt-dash-vr), [SideQuest](https://sidequestvr.com/app/63515/port0r-dirt-dash-vr)) |
 | **Port0r: Time Crisis II VR** (Time Crisis II) | Namco System 23, 1997 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.2), [itch.io](https://port0r.itch.io/time-crisis-ii-vr), [SideQuest](https://sidequestvr.com/app/63359/port0r-time-crisis-ii-vr)) |
 | **Port0r: House of the Dead VR** (The House of the Dead) | Sega Model 2, 1996 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.2), [itch.io](https://port0r.itch.io/house-of-the-dead-vr), [SideQuest](https://sidequestvr.com/app/63360/port0r-house-of-the-dead-vr)) |
@@ -327,6 +340,8 @@ All of it is free. If you enjoy it, see [Support the project](#support-the-proje
 **No game data is included.** You need your own, legally owned copy of the arcade game. We never provide, link to or
 discuss where to download game files: please don't ask, on Discord or anywhere else.
 
+For Port0r: Scud Race VR (Quest, Android and PC), the file is `scud.zip`.
+
 For Port0r: Daytona USA VR, the files are `daytona.zip` and `model1io.zip`.
 
 For Port0r: Dirt Dash VR, the files are `dirtdash.zip` and `namcoc71.zip`.
@@ -343,6 +358,7 @@ For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip
 
 **The set must match a recent MAME (Port0r runs MAME 0.289).** Sets made for older MAME versions can have different files inside and won't start. If yours is old, check it against a recent MAME with a ROM manager such as ClrMamePro or RomVault.
 
+<a id="install-port0r-scud-race-vr"></a>
 <a id="install-port0r-daytona-usa-vr"></a>
 <a id="install-port0r-dirt-dash-vr"></a>
 <a id="install-port0r-time-crisis-ii-vr"></a>
@@ -357,11 +373,11 @@ For Port0r: Rally VR, the files are the MAME set `srallyc.zip` and `segabill.zip
 Each game is its own app, so you install only the one you want: the steps are the same for each, about ten minutes the
 first time. You need a computer (Windows, Mac or Linux) or just the headset's browser; a USB-C cable helps.
 
-| | Port0r: Daytona USA VR | Port0r: Dirt Dash VR | Port0r: Time Crisis II VR | Port0r: House of the Dead VR | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **The app** | `Port0r-DaytonaUSAVR-v0.1.11-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11) or [itch.io](https://port0r.itch.io/daytona-usa-vr) | `Port0r-DirtDashVR-v0.1.4-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4) or [itch.io](https://port0r.itch.io/dirt-dash-vr) | `Port0r-TimeCrisisIIVR-v0.1.2-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.2) or [itch.io](https://port0r.itch.io/time-crisis-ii-vr) | `Port0r-HouseOfTheDeadVR-v0.1.2-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.2) or [itch.io](https://port0r.itch.io/house-of-the-dead-vr) | `Port0r-TimeCrisisVR-v0.2.3-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.3) or [itch.io](https://port0r.itch.io/time-crisis-vr) | `Port0r-CopVR-v0.2.3-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.3) or [itch.io](https://port0r.itch.io/cop-vr) | `Port0r-RallyVR-v0.2.7-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.7) or [itch.io](https://port0r.itch.io/rally-vr) |
-| **Your game files** (MAME 0.289 sets) | `daytona.zip` and `model1io.zip` | `dirtdash.zip` and `namcoc71.zip` | `timecrs2.zip` | `hotd.zip` | `timecris.zip` and `namcoc71.zip` | `vcop.zip` and `model1io2.zip` | `srallyc.zip`, and `segabill.zip` only if your set needs it |
-| **Its name in the Library** | Port0r: Daytona USA VR | Port0r: Dirt Dash VR | Port0r: Time Crisis II VR | Port0r: House of the Dead VR | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
+| | Port0r: Scud Race VR | Port0r: Daytona USA VR | Port0r: Dirt Dash VR | Port0r: Time Crisis II VR | Port0r: House of the Dead VR | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **The app** | `Port0r-ScudRaceVR-v0.1.7-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7) | `Port0r-DaytonaUSAVR-v0.2.0-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0) or [itch.io](https://port0r.itch.io/daytona-usa-vr) | `Port0r-DirtDashVR-v0.1.4-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4) or [itch.io](https://port0r.itch.io/dirt-dash-vr) | `Port0r-TimeCrisisIIVR-v0.1.2-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.2) or [itch.io](https://port0r.itch.io/time-crisis-ii-vr) | `Port0r-HouseOfTheDeadVR-v0.1.2-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.2) or [itch.io](https://port0r.itch.io/house-of-the-dead-vr) | `Port0r-TimeCrisisVR-v0.2.3-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.3) or [itch.io](https://port0r.itch.io/time-crisis-vr) | `Port0r-CopVR-v0.2.3-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.3) or [itch.io](https://port0r.itch.io/cop-vr) | `Port0r-RallyVR-v0.2.7-quest3.apk`, from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.7) or [itch.io](https://port0r.itch.io/rally-vr) |
+| **Your game files** (MAME 0.289 sets) | `scud.zip` | `daytona.zip` and `model1io.zip` | `dirtdash.zip` and `namcoc71.zip` | `timecrs2.zip` | `hotd.zip` | `timecris.zip` and `namcoc71.zip` | `vcop.zip` and `model1io2.zip` | `srallyc.zip`, and `segabill.zip` only if your set needs it |
+| **Its name in the Library** | Port0r: Scud Race VR | Port0r: Daytona USA VR | Port0r: Dirt Dash VR | Port0r: Time Crisis II VR | Port0r: House of the Dead VR | Port0r: Time Crisis VR | Port0r: Cop VR | Port0r: Rally VR |
 
 ### 1. Turn on Developer Mode (once)
 
