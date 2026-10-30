@@ -17,6 +17,20 @@
   const time = (s) => { const cs = Math.round(s * 100); return `${Math.floor(cs / 6000)}'${String(Math.floor(cs / 100) % 60).padStart(2, "0")}"${String(cs % 100).padStart(2, "0")}`; };
 
   // ---- the header: its video cut for the screen's shape, and the two eyes converging at load ----
+  const logoIntro = $("#brand-intro video");
+  let logoIntroDone = !logoIntro || !document.documentElement.classList.contains("brand-intro-active");
+  if (logoIntro && !logoIntroDone) {
+    const finishLogoIntro = () => {
+      if (logoIntroDone) return;
+      logoIntroDone = true;
+      document.documentElement.classList.remove("brand-intro-active");
+      sessionStorage.setItem("port0r-logo-seen", "1");
+      document.dispatchEvent(new Event("port0r-logo-ended"));
+    };
+    logoIntro.addEventListener("ended", finishLogoIntro, { once: true });
+    logoIntro.play().catch(() => { logoIntro.muted = true; logoIntro.play().catch(finishLogoIntro); });
+    setTimeout(finishLogoIntro, 4800);
+  }
   const hero = $("#hero");
   if (hero) {
     const vid = $("video", hero);
@@ -42,6 +56,7 @@
     // Shown to EVERY visitor, streamed and flown (21/10, Guillaume could not see the first version in his Brave): a page
     // opened in a background tab waits until it is seen; only a click or tap, Escape, or a real scroll down ends it early (the wheel and the touch ended it before, and a
     // trackpad's inertia or a Magic Mouse touched in passing is enough to fire those). Skipped only for a link to an anchor.
+    const launchAsk = () => {
     const band = $(".ask-in", hero), big = $(".ask-big", hero);
     if (!(band && big && !location.hash)) document.documentElement.classList.remove("ask-pre");
     if (band && big && !location.hash) {
@@ -139,6 +154,9 @@
         run();
       });
     }
+    };
+    if (logoIntro && !logoIntroDone) document.addEventListener("port0r-logo-ended", launchAsk, { once: true });
+    else launchAsk();
   }
 
   // ---- THE FIRST SCREEN, WHOLE, on any screen (21/10/2026) ----
