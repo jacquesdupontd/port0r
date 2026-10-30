@@ -312,7 +312,7 @@ details.repli > summary .material-symbols-outlined { transition: transform .2s e
   <header class="tete" data-part="page-head">
     <div>
       <h1><span class="material-symbols-outlined">speed</span>Port0r — lancement</h1>
-      <div class="sous">Dirt Dash VR 0.1.3 (21 octobre 2026), Cop VR 0.2.2 et House of the Dead VR 0.1.1 (19 octobre), Time Crisis II VR 0.1.0 (17 octobre), Time Crisis VR 0.2.2 (son classement au temps) et Rally VR 0.2.6 (16 octobre), Sega Rally Switch 0.5.3, Android 0.1.2, Steam Deck &amp; Linux 0.1.1 et Mac 0.1.0. Relevé automatique toutes les 30 minutes.</div>
+      <div class="sous">Sur Quest depuis le 9 novembre 2026 : Rally VR 0.2.8 (le pack 4K de ScottMadeAThing), Cop VR 0.2.4, House of the Dead VR 0.1.3, Time Crisis VR 0.2.4, Time Crisis II VR 0.1.3, Dirt Dash VR 0.1.5, Daytona USA VR 0.2.1 et Scud Race VR 0.2.3. Ailleurs : Scud Race Android et PC 0.2.2 (5 novembre), Daytona USA et Dirt Dash Android 0.1.0, Sega Rally PC 0.1.7, Switch 0.5.3, Android 0.1.2, Steam Deck &amp; Linux 0.1.1 et Mac 0.1.0. Relevé automatique toutes les 30 minutes.</div>
     </div>
     <div class="actions" data-part="bar">
       <span class="fraicheur" id="fraicheur"><i></i><span>…</span></span>
@@ -471,6 +471,7 @@ const ONGLETS = [
   { id: 'timecris', lib: 'Time Crisis VR', ic: 'gps_fixed' },   // 13/10 au soir : tag timecris-v, campagne « Time Crisis VR »
   { id: 'hotd', lib: 'House of the Dead VR', ic: 'skull' },   // 16/10 : tag hotd-v, campagne « House of the Dead VR »
   { id: 'timecrs2', lib: 'Time Crisis II VR', ic: 'filter_center_focus' },
+  { id: 'scud', lib: 'Scud Race VR', ic: 'directions_car' },   // 30/10 : tags scud-v (Quest), scud-android-v, scud-pc-v ; campagne « Scud Race VR »
   { id: 'daytona', lib: 'Daytona USA VR', ic: 'directions_car' },   // 26/10 : tag daytona-v, campagne « Daytona USA VR »
   { id: 'dirtdash', lib: 'Dirt Dash VR', ic: 'terrain' },   // 20/10 : tag dirtdash-v, campagne « Dirt Dash VR »   // 17/10 : tag timecrs2-v, campagne « Time Crisis II VR »
   { id: 'switch', lib: 'Switch', ic: 'videogame_asset' },
@@ -487,9 +488,9 @@ if (!ONGLETS.some(o => o.id === ONGLET)) ONGLET = 'tout';
 function cible(l) {
   if (l.kind === 'discord' || estDepot(l)) return 'commun';
   const tag = (l.url.match(/\/releases\/tag\/([^/?#]+)/) || [])[1];
-  if (tag) return /^(daytona|dirtdash)-android-/.test(tag) ? 'android' : /^daytona-/.test(tag) ? 'daytona' : /^dirtdash-/.test(tag) ? 'dirtdash' : /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^timecrs2-/.test(tag) ? 'timecrs2' : /^hotd-/.test(tag) ? 'hotd' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
+  if (tag) return /^(daytona|dirtdash|scud)-android-/.test(tag) ? 'android' : /^scud-/.test(tag) ? 'scud' : /^daytona-/.test(tag) ? 'daytona' : /^dirtdash-/.test(tag) ? 'dirtdash' : /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^timecrs2-/.test(tag) ? 'timecrs2' : /^hotd-/.test(tag) ? 'hotd' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
   const c = l.campaign || '';
-  return /(daytona|dirt ?dash).*android/i.test(c) ? 'android' : /daytona/i.test(c) ? 'daytona' : /dirt ?dash/i.test(c) ? 'dirtdash' : /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis ?(ii|2)\b/i.test(c) ? 'timecrs2' : /time ?crisis/i.test(c) ? 'timecris' : /house ?of ?the ?dead|hotd/i.test(c) ? 'hotd' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
+  return /(daytona|dirt ?dash|scud).*android/i.test(c) ? 'android' : /scud/i.test(c) ? 'scud' : /daytona/i.test(c) ? 'daytona' : /dirt ?dash/i.test(c) ? 'dirtdash' : /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis ?(ii|2)\b/i.test(c) ? 'timecrs2' : /time ?crisis/i.test(c) ? 'timecris' : /house ?of ?the ?dead|hotd/i.test(c) ? 'hotd' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
 }
 // Les téléchargements d'une plateforme : sa part du dépôt GitHub (dl_<plateforme>, toutes ses releases), ses pages itch,
 // et SideQuest pour le Quest. Les liens de release seuls ne s'additionnent pas : le dépôt les contient déjà.
