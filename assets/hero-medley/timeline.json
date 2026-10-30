@@ -1,0 +1,22 @@
+{
+  "duration": 25.566667,
+  "fade": 0.6,
+  "cues": [
+    {
+      "id": "scud",
+      "at": 0
+    },
+    {
+      "id": "daytona-cockpit",
+      "at": 5.8
+    },
+    {
+      "id": "android",
+      "at": 12.2
+    },
+    {
+      "id": "immersive",
+      "at": 18.6
+    }
+  ]
+}

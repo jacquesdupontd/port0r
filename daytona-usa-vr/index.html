@@ -4,25 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Port0r: Daytona USA VR: Daytona USA in real 3D VR on Meta Quest 3</title>
-<meta name="description" content="Daytona USA is the stock-car racing game Sega AM2 released in arcades in 1994 (directed by Toshihiro Nagoshi and produced by Yu Suzuki). Logitech wheels work in standalone via the USB-C port. Free, on Meta Quest 3. Version 0.1.11.">
+<meta name="description" content="Daytona USA is the stock-car racing game Sega AM2 released in arcades in 1994 (directed by Toshihiro Nagoshi and produced by Yu Suzuki). Logitech wheels work in standalone via the USB-C port. Free, on Meta Quest 3. Version 0.2.0.">
 <meta property="og:title" content="Port0r: Daytona USA VR: Daytona USA in real 3D VR">
 <meta property="og:description" content="Daytona USA is the stock-car racing game Sega AM2 released in arcades in 1994 (directed by Toshihiro Nagoshi and produced by Yu Suzuki). Logitech wheels work in standalone via the USB-C port.">
 <meta property="og:image" content="https://port0r.com/assets/yt/toPG4va9joY.jpg">
 <meta property="og:url" content="https://port0r.com/daytona-usa-vr/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0c0e12">
+<meta name="theme-color" content="#f4efe5">
 <link rel="icon" href="../assets/port0r-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../site.css?v=20261030">
+<script>
+try { const theme = localStorage.getItem("port0r-theme") || "light"; if (theme !== "system") document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light"; }
+catch (_) { document.documentElement.dataset.theme = "light"; }
+</script>
+<link rel="stylesheet" href="../site.css?v=20261030-softveil">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Port0r: Daytona USA VR", "operatingSystem": "Meta Quest (Android)",
- "applicationCategory": "GameApplication", "softwareVersion": "0.1.11", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
- "downloadUrl": "https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11", "url": "https://port0r.com/daytona-usa-vr/"}
+ "applicationCategory": "GameApplication", "softwareVersion": "0.2.0", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+ "downloadUrl": "https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0", "url": "https://port0r.com/daytona-usa-vr/"}
 </script>
 </head>
-<body style="--c:var(--red);--on:var(--on-blue)">
+<body data-game="daytona">
 <a class="skip" href="#content">Skip to the content</a>
 <header class="top solid" id="top">
   <div class="wrap">
@@ -54,12 +58,12 @@
         </div>
       </div>
       <div class="info">
-        <div class="meta"><span class="chip">Out now · 0.1.11</span><span class="kicker">Sega AM2 · 1994 · Sega Model 2</span></div>
+        <div class="meta"><span class="chip">Out now · 0.2.0</span><span class="kicker">Sega AM2 · 1994 · Sega Model 2</span></div>
         <h1 class="gt">Daytona USA <span class="hl">in VR</span></h1>
         <p class="lead gl">Daytona USA is the stock-car racing game Sega AM2 released in arcades in 1994 (directed by Toshihiro Nagoshi and produced by Yu Suzuki). Logitech wheels work in standalone via the USB-C port. Free, on Meta Quest 3.</p>
         <ul class="feat"><li>Sega AM2, arcades, 1994</li><li>Standalone in VR on Meta Quest 3, in 4K</li><li>Logitech wheels work in standalone via the USB-C port</li></ul>
         <div class="row">
-          <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11">Download v0.1.11</a>
+          <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0">Download v0.2.0</a>
           <a class="btn soft" href="https://sidequestvr.com/app/63694/port0r-daytona-usa-vr">SideQuest</a>
           
           <a class="link" href="https://port0r.itch.io/daytona-usa-vr">itch.io</a>
@@ -74,7 +78,7 @@
   <div class="wrap">
     <header class="head">
       <p class="kicker">From the comments</p>
-      <h2 class="converge" id="voices-title">What its players <span class="hl" style="--c:var(--yellow);--on:var(--ink)">say.</span></h2>
+      <h2 class="converge" id="voices-title">What its players <span class="hl" style="--c:var(--cyan);--on:#0c0e12">say.</span></h2>
     </header>
     <figure class="quote" id="quote" data-only="daytona" aria-live="polite">
       <blockquote id="q-text">&nbsp;</blockquote>
@@ -93,16 +97,16 @@
 <section class="band">
   <div class="wrap duo">
     <div class="panel give">
-      <p class="kicker">New in 0.1.11</p>
+      <p class="kicker">New in 0.2.0</p>
       <h3>What's <span class="hl">new.</span></h3>
-      <ul class="feat"><li>Mods &gt; Cabinet settings works: switched on from our menu, it opens the cabinet&#x27;s own menu (country, difficulty...), where the right stick&#x27;s up and down move, its right and left change the value, and A or B chooses. It is off every time the game starts, so the coins always reach the game.</li></ul>
+      <ul class="feat"><li>**Daytona has a cockpit now.** It&#x27;s one more view: switch views with the view button and you&#x27;re sitting in a NASCAR stock car, with its roll cage and its gauges all around you, and its steering wheel, with the Port0r 0 on its hub, turning with yours. Every race starts in it.</li><li>**Force feedback on a Logitech wheel, plugged straight into the headset.** No PC needed: the wheel pulls back to the centre in the corners and kicks on every knock, driven by the cabinet&#x27;s own wheel board, just like at the arcade. You can set how hard it pushes in Wheel &gt; Force feedback.</li><li>In Settings &gt; Cockpit you can raise or lower the car, slide your seat to the left or right, and bring the counters closer or push them further away.</li><li>The stick&#x27;s steering is yours to tune in Settings &gt; Game: how far the wheels turn, the dead zone, and a linear or progressive response.</li><li>The game is louder by default, like every Port0r game from now on, and the volume goes up to 130 % if you want even more.</li><li>Brightness is a slider in the Image tab, from 0 to 100 %.</li></ul>
       <a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/CHANGELOG.md">Every version</a>
     </div>
     <div class="panel give">
       <p class="kicker">The game</p>
       <h3>In the <span class="hl">headset.</span></h3>
       <p>Daytona USA, Sega AM2's 1994 cabinet (Sega Model 2), rebuilt in real 3D for each eye: you stand inside the scene, at real scale.</p>
-      <p class="spec" style="display:flex;flex-wrap:wrap;gap:6px 18px;font:600 14px/1.3 var(--text);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)"><span>Version <b style="color:var(--ink)">0.1.11</b></span><span>Size <b style="color:var(--ink)">66.0 MB</b></span><span>Price <b style="color:var(--ink)">free</b></span></p>
+      <p class="spec" style="display:flex;flex-wrap:wrap;gap:6px 18px;font:600 14px/1.3 var(--text);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)"><span>Version <b style="color:var(--ink)">0.2.0</b></span><span>Size <b style="color:var(--ink)">75.8 MB</b></span><span>Price <b style="color:var(--ink)">free</b></span></p>
     </div>
   </div>
 </section>
@@ -116,7 +120,7 @@
     </header>
     <ol class="steps" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))">
       <li><b>Developer mode</b><span>Once per headset: a free developer organisation on developer.oculus.com, then Meta Horizon app &gt; Devices &gt; Headset settings &gt; Developer mode, and restart the headset.</span></li>
-      <li><b>The app</b><span>One click from <a class="link" href="https://sidequestvr.com/app/63694/port0r-daytona-usa-vr">its SideQuest page</a>, or <code>Port0r-DaytonaUSAVR-v0.1.11-quest3.apk</code> with SideQuest or <code>adb install -r</code>.</span></li>
+      <li><b>The app</b><span>One click from <a class="link" href="https://sidequestvr.com/app/63694/port0r-daytona-usa-vr">its SideQuest page</a>, or <code>Port0r-DaytonaUSAVR-v0.2.0-quest3.apk</code> with SideQuest or <code>adb install -r</code>.</span></li>
       <li><b>Your game files</b><span><code>daytona.zip</code> and <code>model1io.zip</code>: the MAME 0.289 set, anywhere on the headset (Download is the simplest). The app finds them.</span></li>
       <li><b>First launch</b><span>Library &gt; All &gt; Unknown sources &gt; Port0r: Daytona USA VR. Allow "All files access": the game starts by itself.</span></li>
     </ol>
@@ -149,14 +153,14 @@
 <section class="band">
   <div class="wrap">
     <header class="head"><p class="kicker">Also in VR</p><h2 class="converge">The other <span class="hl">cabinets.</span></h2></header>
-    <div class="plats"><a class="plat other" data-game="dirtdash" href="../dirt-dash-vr/" style="--c:var(--earth);--on:var(--on-earth)"><span class="yt" style="cursor:pointer"><img src="../assets/yt/PN8u_SZXYpQ.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Dirt Dash · Namco · 1995</span><h3>Dirt Dash <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="timecrs2" href="../time-crisis-ii-vr/" style="--c:var(--sky);--on:var(--on-sky)"><span class="yt" style="cursor:pointer"><img src="../assets/yt/_7ZEGjgzLc4.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Time Crisis II · Namco · 1997</span><h3>Time Crisis II <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="hotd" href="../house-of-the-dead-vr/" style="--c:var(--red);--on:var(--on-blue)"><span class="yt" style="cursor:pointer"><img src="../assets/yt/JEYKmI-9PBE.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">The House of the Dead · Sega · 1996</span><h3>House of the Dead <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="timecris" href="../time-crisis-vr/" style="--c:var(--amber);--on:var(--on-amber)"><span class="yt" style="cursor:pointer"><img src="../assets/yt/F7Ig3bwq7K8.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Time Crisis · Namco · 1995</span><h3>Time Crisis <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="cop" href="../cop-vr/" style="--c:var(--blue);--on:var(--on-blue)"><span class="yt" style="cursor:pointer"><img src="../assets/yt/1qCQorbbdPc.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Virtua Cop · Sega · 1994</span><h3>Virtua Cop <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="rally" href="../rally-vr/" style="--c:var(--yellow);--on:var(--on-yellow)"><span class="yt" style="cursor:pointer"><img src="../assets/yt/_Nm22_u1s7Y.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Sega Rally Championship · Sega · 1995</span><h3>Sega Rally <span class="hl">in VR</span></h3></span></a></div>
+    <div class="plats"><a class="plat other" data-game="scud" href="../scud-race-vr/"><span class="yt" style="cursor:pointer"><img src="../assets/yt/r90VKyOhWvY.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Scud Race · Sega AM2 · 1996</span><h3>Scud Race <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="dirtdash" href="../dirt-dash-vr/"><span class="yt" style="cursor:pointer"><img src="../assets/yt/PN8u_SZXYpQ.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Dirt Dash · Namco · 1995</span><h3>Dirt Dash <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="timecrs2" href="../time-crisis-ii-vr/"><span class="yt" style="cursor:pointer"><img src="../assets/yt/_7ZEGjgzLc4.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Time Crisis II · Namco · 1997</span><h3>Time Crisis II <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="hotd" href="../house-of-the-dead-vr/"><span class="yt" style="cursor:pointer"><img src="../assets/yt/JEYKmI-9PBE.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">The House of the Dead · Sega · 1996</span><h3>House of the Dead <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="timecris" href="../time-crisis-vr/"><span class="yt" style="cursor:pointer"><img src="../assets/yt/F7Ig3bwq7K8.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Time Crisis · Namco · 1995</span><h3>Time Crisis <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="cop" href="../cop-vr/"><span class="yt" style="cursor:pointer"><img src="../assets/yt/1qCQorbbdPc.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Virtua Cop · Sega · 1994</span><h3>Virtua Cop <span class="hl">in VR</span></h3></span></a><a class="plat other" data-game="rally" href="../rally-vr/"><span class="yt" style="cursor:pointer"><img src="../assets/yt/_Nm22_u1s7Y.jpg" alt="" loading="lazy"></span><span class="body"><span class="kicker">Sega Rally Championship · Sega · 1995</span><h3>Sega Rally <span class="hl">in VR</span></h3></span></a></div>
   </div>
 </section>
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <img src="../assets/port0r-wordmark.svg" alt="Port0r" width="106" height="22">
+    <img src="../assets/port0r-wordmark.svg" alt="Port0r" width="116" height="24">
     <nav aria-label="Elsewhere">
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
       <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
@@ -172,7 +176,7 @@
   </div>
 </footer>
 <dialog class="watch" id="watch" aria-label="Video"><div class="watch-in"><button type="button" class="watch-x" aria-label="Close" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button><div class="watch-frame"></div></div></dialog>
-<script src="../site.js?v=20261027a" defer></script>
+<script src="../site.js?v=20261030-eightcolors-v2" defer></script>
 <script src="../hit.js?v=20261021a" defer></script>
 </body>
 </html>

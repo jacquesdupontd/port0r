@@ -9,22 +9,35 @@
 <meta property="og:description" content="Be inside the arcade, not in front of it. Time Crisis II VR, House of the Dead VR, Time Crisis VR, Cop VR and Rally VR, free on Meta Quest 3.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Port0r">
-<meta property="og:image" content="https://port0r.com/assets/og.jpg?v=20261017">
+<meta property="og:image" content="https://port0r.com/assets/og.jpg?v=20261030">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://port0r.com/">
-<meta name="theme-color" content="#0c0e12">
+<meta name="theme-color" content="#f4efe5">
 <link rel="icon" href="assets/port0r-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=20261030">
-<!-- the help message plays first (site.js): the band, the title and the bar wait for it from the very first paint, the race
-     dimmed; if site.js never runs, everything shows after 4 s anyway (21/10/2026) -->
-<script>if (!location.hash) { document.documentElement.classList.add("ask-pre"); setTimeout(function () { if (!document.querySelector(".hero.asking")) document.documentElement.classList.remove("ask-pre"); }, 4000); }</script>
-<link rel="preload" as="image" href="assets/hero-rally.jpg" media="(min-aspect-ratio: 4/5)">
-<link rel="preload" as="image" href="assets/hero-rally-portrait.jpg" media="(max-aspect-ratio: 4/5)">
+<script>
+try { const theme = localStorage.getItem("port0r-theme") || "light"; if (theme !== "system") document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light"; }
+catch (_) { document.documentElement.dataset.theme = "light"; }
+</script>
+<link rel="stylesheet" href="site.css?v=20261030-softveil">
+<script>
+let showIntro = true;
+try { showIntro = localStorage.getItem("port0r-intro") !== "off"; } catch (_) {}
+if (!location.hash && (showIntro || new URLSearchParams(location.search).get("intro") === "play")) {
+  document.documentElement.classList.add("intro-pending");
+  window.port0rIntroFallback = setTimeout(() => {
+    if (document.hidden) return;
+    document.getElementById("brand-intro")?.close();
+    document.documentElement.classList.remove("intro-pending");
+  }, 8500);
+}
+</script>
+<link rel="preload" as="image" href="assets/hero-medley/hero-medley-wide.jpg" media="(min-aspect-ratio: 4/5)">
+<link rel="preload" as="image" href="assets/hero-medley/hero-medley-tall.jpg" media="(max-aspect-ratio: 4/5)">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization", "name": "Port0r", "url": "https://port0r.com/",
  "logo": "https://port0r.com/assets/port0r-icon.svg", "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://port0r.com/contact/"},
@@ -46,6 +59,20 @@
   <symbol id="i-kofi" viewBox="0 0 24 24"><path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
 </svg>
+<dialog id="brand-intro" class="brand-intro" aria-label="Welcome to Port0r">
+  <div class="intro-stage">
+    <div class="intro-logo"><video playsinline preload="none"><source src="assets/port0r-logo-animation-v4.mp4" type="video/mp4"></video></div>
+    <div class="intro-message" role="group">
+      <div class="intro-words" aria-hidden="true"><p class="intro-title"></p><p class="intro-text"></p></div>
+      <div class="intro-thanks" aria-hidden="true"><b>Thank you</b><svg class="intro-heart" viewBox="0 0 24 24"><use href="#i-heart"/></svg></div>
+    </div>
+  </div>
+  <div class="intro-controls">
+    <label class="intro-preference"><input type="checkbox" data-intro-enabled checked>Play intro on visits</label>
+    <button type="button" data-intro-sound aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3Zm13-5v2a7 7 0 0 1 0 12v2a9 9 0 0 0 0-16Zm0 4v8a5 5 0 0 0 0-8Z"/></svg><span>Sound on</span></button>
+    <button type="button" data-intro-skip>Skip intro <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m13 5-1.4 1.4 4.6 4.6H4v2h12.2l-4.6 4.6L13 19l7-7Z"/></svg></button>
+  </div>
+</dialog>
 
 <header class="top over" id="top">
   <div class="wrap">
@@ -62,7 +89,7 @@
 </header>
 
 <main id="content">
-<section class="hero" id="hero" aria-label="Port0r">
+<section class="hero" id="hero" aria-label="Port0r" data-medley="assets/hero-medley/timeline.json">
   <!-- the first thing a visitor reads (20/10/2026, Guillaume: « si vous appréciez le projet, une aide est la bienvenue car je
        travaille gratuitement ... il faut vraiment que ce soit la première chose qu'ils voient »); then the games, the Discord, all -->
   <aside class="ask" aria-label="Support Port0r">
@@ -74,42 +101,39 @@
       </span>
     </div></div>
   </aside>
-  <!-- the same words, big over the race at first, streamed in, then flown into the band above (21/10/2026, site.js) -->
-  <div class="ask-big" aria-hidden="true"><div class="ask-card"><p class="ask-big-1"></p><p class="ask-big-2"></p></div></div>
   <div class="hero-media" aria-hidden="true">
-    <video muted loop playsinline preload="auto" poster="assets/hero-rally.jpg"
-      data-wide="assets/hero-rally.mp4" data-wide-poster="assets/hero-rally.jpg"
-      data-tall="assets/hero-rally-portrait.mp4" data-tall-poster="assets/hero-rally-portrait.jpg"></video>
+    <video muted loop playsinline preload="auto" poster="assets/hero-medley/hero-medley-wide.jpg"
+      data-wide="assets/hero-medley/hero-medley-wide.mp4" data-wide-poster="assets/hero-medley/hero-medley-wide.jpg"
+      data-tall="assets/hero-medley/hero-medley-tall.mp4" data-tall-poster="assets/hero-medley/hero-medley-tall.jpg"></video>
     <div class="hero-eyes"><img class="eye l" alt=""><img class="eye r" alt=""></div>
   </div>
   <div class="wrap hero-copy">
-    <!-- the latest news first, then the arcade's line: only the texts change over the race (22/10/2026, Guillaume: « un
-         slider avec les dernières news ... à la place du texte sur la vidéo de Sega Rally », site.js) -->
+    <!-- Each cue follows the matching shot in the medley; the video's time is the only clock. -->
     <div class="slides">
-      <div class="slide on">
-        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>In beta now · on our Discord</span>
-        <h2 class="hx">Scud Race, <span class="hl">in beta.</span></h2>
-        <p class="lead">Sega AM2's 1996 GT racer, the first Sega Model 3 game in Port0r, in 3D on Meta Quest 3. Apply on our Discord to play it before everyone else.</p>
+      <div class="slide on" data-cue="scud" data-recording="Scud Race VR, recorded in the headset" data-hero-watch="r90VKyOhWvY">
+        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>Out now · free · Quest · Android · PC</span>
+        <h2 class="hx">Scud Race, <span class="hl">out now.</span></h2>
+        <p class="lead">The GT racing game Sega AM2 released in arcades in 1996: standalone in VR on Meta Quest 3, on Android in 4K at 120 FPS, and on PC / PCVR.</p>
       </div>
-      <div class="slide">
-        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>Out now · free · Meta Quest 3</span>
-        <h2 class="hx">Daytona USA, <span class="hl">standalone in VR.</span></h2>
-        <p class="lead">The stock-car racing game Sega AM2 released in arcades in 1994, in 4K on Meta Quest 3. Logitech wheels work in standalone via the USB-C port.</p>
+      <div class="slide" data-cue="daytona-cockpit" data-recording="Daytona USA VR, recorded in the cockpit" data-hero-watch="toPG4va9joY">
+        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>New · 0.2.0 · Meta Quest 3</span>
+        <h2 class="hx">Daytona USA, <span class="hl">with a cockpit.</span></h2>
+        <p class="lead">You're sitting in a NASCAR stock car, with its roll cage and its gauges all around you, and a Logitech wheel plugged straight into the headset gives you force feedback, no PC needed.</p>
       </div>
-      <div class="slide">
+      <div class="slide" data-cue="android" data-recording="Daytona USA &amp; Dirt Dash, recorded on Android" data-hero-watch="75K8WlwFTeU">
         <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>Out now · free · Android</span>
         <h2 class="hx">Daytona USA &amp; Dirt Dash, <span class="hl">on Android.</span></h2>
         <p class="lead">Sega AM2's 1994 stock-car racer and Namco's 1995 off-road racer on Android phones and tablets, in 4K at 120 FPS.</p>
       </div>
-      <div class="slide">
+      <div class="slide" data-cue="immersive" data-recording="Dirt Dash VR, recorded in the headset" data-hero-watch="PN8u_SZXYpQ">
         <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>Free · Meta Quest 3</span>
         <h1>Be <span class="stereo">inside</span> the arcade,<br> <span class="hl">not in front of it.</span></h1>
         <p class="lead">Port0r rebuilds the arcade's own 3D for each eye: in the headset you stand in the scene, at real scale. Free, on Meta Quest 3.</p>
       </div>
     </div>
     <div class="row">
-      <a class="btn yellow" href="#games">Get the games</a>
-      <button class="btn glass" type="button" data-watch="FqwEK0hJ_Yc"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the video</button>
+      <a class="btn primary" href="#games">Get the games</a>
+      <button class="btn glass" type="button" data-watch="r90VKyOhWvY"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the video</button>
     </div>
     <!-- every place Port0r lives, one address to give: port0r.com (17/10/2026, Guillaume) -->
     <nav class="dock" aria-label="Port0r on YouTube, GitHub, Discord, itch.io, Ko-fi and GitHub Sponsors">
@@ -125,7 +149,7 @@
         <span class="heart" aria-hidden="true"><svg><use href="#i-heart"/></svg><i></i><i></i><i></i></span><span>Sponsor</span>
       </a>
     </nav>
-    <p class="rec"><span class="dot" aria-hidden="true"></span>Rally VR, recorded in the headset</p>
+    <p class="rec"><span class="dot" aria-hidden="true"></span><span data-hero-caption>Scud Race VR, recorded in the headset</span></p>
   </div>
   <div class="strip">
     <a class="wrap" href="#live" aria-label="The live numbers">
@@ -140,39 +164,49 @@
 
 <!-- the latest release, a block of its own above the VR games (27/10/2026, Guillaume: « là-haut tu mets ça en un bloc les 2
      sorties, mais ce n'est pas la section in VR et Seven cabinets, là c'est une sortie Android ») -->
-<section class="band" id="android" aria-label="Daytona USA and Dirt Dash on Android">
+<section class="band" id="android" aria-label="Scud Race on Android and on PC">
   <div class="wrap">
     <header class="head">
-      <p class="kicker">Out now · Android phones and tablets</p>
-      <h2 class="converge">Daytona USA &amp; Dirt Dash, <span class="hl">on Android.</span></h2>
-      <p class="lead">Two arcade racers on your phone or tablet, free, in 4K at 120 FPS.</p>
+      <p class="kicker">Out now · Android · PC / PCVR</p>
+      <h2 class="converge">Scud Race, <span class="hl">on Android and PC.</span></h2>
+      <p class="lead">Sega AM2's 1996 GT racer on your phone or tablet in 4K at 120 FPS, and on your PC, on the screen or in VR.</p>
     </header>
     <div class="games">
-      <article class="game rise" id="android-release" data-game="android" style="--c:var(--green);--on:var(--on-green)">
+      <article class="game rise" id="scud-android" data-game="android_scud">
         <div class="stage">
-          <button class="yt" type="button" data-id="75K8WlwFTeU" aria-label="Play the Daytona USA and Dirt Dash on Android video"><img src="assets/yt/75K8WlwFTeU.jpg" alt="Daytona USA and Dirt Dash on Android" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
-        </div>
-        <div class="extra">
-            <div class="nums">
-              <div><b data-g="android_daytona" data-k="downloads">&nbsp;</b><small>Daytona USA downloads</small></div>
-              <div><b data-g="android_dirtdash" data-k="downloads">&nbsp;</b><small>Dirt Dash downloads</small></div>
-              <div><b data-g="android_daytona" data-k="views">&nbsp;</b><small>Views</small></div>
-            </div>
+          <button class="yt" type="button" data-id="r90VKyOhWvY" aria-label="Play the Scud Race video"><img src="assets/scud/android.jpg" alt="Scud Race on an Android tablet, with its touch controls" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
         </div>
         <div class="info">
           <div class="meta"><span class="chip">Out now · 0.1.0</span><span class="kicker">Android 8+ · APK · free</span></div>
-          <h3>Daytona USA &amp; Dirt Dash <span class="hl">on Android</span></h3>
-          <p class="new"><b>New</b>Daytona USA and Dirt Dash on Android phones and tablets, in 4K at 120 FPS, with touch controls, tilt or a gamepad.</p>
+          <h3>Scud Race <span class="hl">on Android</span></h3>
+          <p class="new"><b>New</b>Scud Race on Android phones and tablets, in 4K at 120 FPS, with touch controls or a gamepad.</p>
           <ul class="feat">
-            <li>Daytona USA: the stock-car racing game Sega AM2 released in arcades in 1994</li>
-            <li>Dirt Dash: the off-road racing game Namco released in arcades in 1995</li>
+            <li>All the Port0r settings you know, to make it play exactly the way you like</li>
+            <li>Optimised to the bone, to get the very best out of your device</li>
             <li>Updates from inside the game</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.0">Daytona USA</a>
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0">Dirt Dash</a>
-            <a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/DAYTONA-ANDROID.md">Daytona USA guide</a>
-            <a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/DIRTDASH-ANDROID.md">Dirt Dash guide</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0">Download</a>
+            <a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-ANDROID.md">Install guide</a>
+          </div>
+        </div>
+      </article>
+      <article class="game flip rise" id="scud-pc" data-game="pc_scud">
+        <div class="stage">
+          <button class="yt" type="button" data-id="r90VKyOhWvY" aria-label="Play the Scud Race video"><img src="assets/scud/pc.jpg" alt="Scud Race on PC, the canyon" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.1.1</span><span class="kicker">Windows 10 / 11 · free</span></div>
+          <h3>Scud Race <span class="hl">on PC</span></h3>
+          <p class="new"><b>New</b>Scud Race on your PC, in VR through SteamVR or Quest Link, or on the screen: the Port0r launcher lets you choose.</p>
+          <ul class="feat">
+            <li>An installer, and the Port0r launcher: your game file chosen once, then Play in VR or Play on the screen</li>
+            <li>A Logitech wheel or a gamepad</li>
+            <li>All the Port0r settings you know, to make it play exactly the way you like</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1">Download</a>
+            <a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-PC.md">Install guide</a>
           </div>
         </div>
       </article>
@@ -183,12 +217,37 @@
   <div class="wrap">
     <header class="head">
       <p class="kicker">In VR · Meta Quest 3</p>
-      <h2 class="converge">Seven cabinets, <span class="hl">rebuilt around you.</span></h2>
+      <h2 class="converge">Eight cabinets, <span class="hl">rebuilt around you.</span></h2>
       <p class="lead">Every video here was recorded in the headset: what you see is what you play.</p>
     </header>
 
     <div class="games">
-      <article class="game rise" id="daytona-usa-vr" data-game="daytona" style="--c:var(--red);--on:var(--on-blue)">
+      <article class="game rise" id="scud-race-vr" data-game="scud">
+        <div class="stage">
+          <button class="yt" type="button" data-id="r90VKyOhWvY" aria-label="Play the Scud Race VR video"><img src="assets/scud/quest.jpg" alt="Scud Race in VR: by the sea, behind the yellow car" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-scud.jpg" data-src="assets/clip-scud.mp4" aria-label="Scud Race VR, recorded in the headset: by the sea, behind the yellow car"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.1.7</span><span class="kicker">Sega AM2 · 1996 · Model 3</span></div>
+          <h3>Scud Race <span class="hl">in VR</span></h3>
+          <p class="new"><b>New</b>Port0r is now more than one person, it's becoming a community. Thanks a lot to the beta testers who helped a lot.</p>
+          <ul class="feat">
+            <li>The GT racing game Sega AM2 released in arcades in 1996</li>
+            <li>Standalone on Meta Quest 3</li>
+            <li>Plug a Logitech wheel straight into your Quest: steering and force feedback, no PC needed</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7">Download</a>
+            <a class="btn soft" href="scud-race-vr/">The game's page</a>
+            <a class="link" href="https://sidequestvr.com/app/63830/port0r-scud-race-vr">SideQuest</a>
+            <a class="link" href="https://port0r.itch.io/scud-race-vr">itch.io</a>
+            <a class="link" href="https://github.com/jacquesdupontd/port0r#install-port0r-scud-race-vr">Install guide</a>
+            <a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-ANDROID.md">On Android</a>
+            <a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-PC.md">On PC</a>
+          </div>
+        </div>
+      </article>
+      <article class="game flip rise" id="daytona-usa-vr" data-game="daytona">
         <div class="stage">
           <button class="yt" type="button" data-id="toPG4va9joY" aria-label="Play the Daytona USA VR video"><img src="assets/yt/toPG4va9joY.jpg" alt="Daytona USA in VR: into the pack, door to door with the yellow car" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-daytona.jpg" data-src="assets/clip-daytona.mp4" aria-label="Daytona USA VR, recorded in the headset: into the pack, door to door with the yellow car"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -202,16 +261,16 @@
             <figure class="said" data-said="daytona" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.1.11</span><span class="kicker">Sega AM2 · 1994 · Model 2</span></div>
+          <div class="meta"><span class="chip">Out now · 0.2.0</span><span class="kicker">Sega AM2 · 1994 · Model 2</span></div>
           <h3>Daytona USA <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.1.11</b>Mods &gt; Cabinet settings opens the cabinet's own menu (country, difficulty), every value changes from your controllers, and the coins always reach the game.</p>
+          <p class="new"><b>New in 0.2.0</b>Daytona has a cockpit now: you're sitting in a NASCAR stock car, with its roll cage and its gauges all around you. Force feedback on a Logitech wheel, plugged straight into the headset, no PC needed.</p>
           <ul class="feat">
             <li>The stock-car racing game Sega AM2 released in arcades in 1994</li>
             <li>Standalone on Meta Quest 3, in 4K</li>
             <li>The cabinet's own settings menu: the Japanese or export version</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.1.11">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0">Download</a>
             <a class="btn soft" href="daytona-usa-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63694/port0r-daytona-usa-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/daytona-usa-vr">itch.io</a>
@@ -219,7 +278,7 @@
           </div>
         </div>
       </article>
-      <article class="game flip rise" id="dirt-dash-vr" data-game="dirtdash" style="--c:var(--earth);--on:var(--on-earth)">
+      <article class="game rise" id="dirt-dash-vr" data-game="dirtdash">
         <div class="stage">
           <button class="yt" type="button" data-id="PN8u_SZXYpQ" aria-label="Play the Dirt Dash VR video"><img src="assets/yt/PN8u_SZXYpQ.jpg" alt="Dirt Dash in VR: the city stage, behind the blue truck" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-dirtdash.jpg" data-src="assets/clip-dirtdash.mp4" aria-label="Dirt Dash VR, recorded in the headset: the city stage, behind the blue truck"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -250,7 +309,7 @@
           </div>
         </div>
       </article>
-      <article class="game rise" id="time-crisis-ii-vr" data-game="timecrs2" style="--c:var(--sky);--on:var(--on-sky)">
+      <article class="game flip rise" id="time-crisis-ii-vr" data-game="timecrs2">
         <div class="stage">
           <button class="yt" type="button" data-id="_7ZEGjgzLc4" aria-label="Play the Time Crisis II VR video"><img src="assets/yt/_7ZEGjgzLc4.jpg" alt="Time Crisis II in VR: the soldiers come right at you, the gun in your hand" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="_7ZEGjgzLc4"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-tc2.jpg" data-src="assets/clip-tc2.mp4" aria-label="Time Crisis II VR, recorded in the headset: the red restaurant, soldiers at the tables, hits"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -281,7 +340,7 @@
         </div>
       </article>
 
-      <article class="game flip rise" id="house-of-the-dead-vr" data-game="hotd" style="--c:var(--red);--on:var(--on-blue)">
+      <article class="game rise" id="house-of-the-dead-vr" data-game="hotd">
         <div class="stage">
           <button class="yt" type="button" data-id="JEYKmI-9PBE" aria-label="Play the House of the Dead VR video"><img src="assets/yt/JEYKmI-9PBE.jpg" alt="House of the Dead in VR: the zombies walk right up to you, the gun in your hand" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="JEYKmI-9PBE"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-hotd.jpg" data-src="assets/clip-hotd.mp4" aria-label="House of the Dead VR, recorded in the headset: the courtyard, two zombies with axes, a hit"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -312,7 +371,7 @@
         </div>
       </article>
 
-      <article class="game rise" id="time-crisis-vr" data-game="timecris">
+      <article class="game flip rise" id="time-crisis-vr" data-game="timecris">
         <div class="stage">
           <button class="yt" type="button" data-id="F7Ig3bwq7K8" aria-label="Play the Time Crisis VR video"><img src="assets/yt/F7Ig3bwq7K8.jpg" alt="Time Crisis in VR: the warehouse, the gun in hand" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="F7Ig3bwq7K8"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-timecris.jpg" data-src="assets/clip-timecris.mp4" aria-label="Time Crisis VR, recorded in the headset: the cave, the forklift blown up, the gun in hand"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -343,7 +402,7 @@
         </div>
       </article>
 
-      <article class="game flip rise" id="cop-vr" data-game="cop">
+      <article class="game rise" id="cop-vr" data-game="cop">
         <div class="stage">
           <button class="yt" type="button" data-id="1qCQorbbdPc" aria-label="Play the Cop VR video"><img src="assets/yt/1qCQorbbdPc.jpg" alt="Virtua Cop in VR: the docks, a gangster in the sights" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="1qCQorbbdPc"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-copvr.jpg" data-src="assets/clip-copvr.mp4" aria-label="Cop VR, recorded in the headset: the docks, a gangster in the sights"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -374,7 +433,7 @@
         </div>
       </article>
 
-      <article class="game rise" id="rally-vr" data-game="rally">
+      <article class="game flip rise" id="rally-vr" data-game="rally">
         <div class="stage">
           <button class="yt" type="button" data-id="_Nm22_u1s7Y" aria-label="Play the Sega Rally video"><img src="assets/yt/_Nm22_u1s7Y.jpg" alt="Sega Rally in VR, from the cockpit" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="FqwEK0hJ_Yc"></span></button>
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-rally.jpg" data-src="assets/clip-rally.mp4" aria-label="Rally VR, recorded in the headset: the mountain stage, behind the Lancia"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
@@ -406,17 +465,15 @@
         </div>
       </article>
 
-      <aside class="next rise" aria-label="In beta now, on our Discord">
+      <aside class="next rise" aria-label="Next">
         <div>
-          <p class="kicker" style="color:#f4efe5">In beta now · on our Discord</p>
-          <h3 style="margin-top:12px">Scud Race <span class="hl">in VR.</span></h3>
-          <p>Sega AM2's 1996 racer, the first Sega Model 3 game in Port0r, in 3D in your headset: apply on our Discord to play it before everyone else. Then the others, one app at a time. No dates.</p>
+          <p class="kicker" style="color:#f4efe5">Next</p>
+          <h3 style="margin-top:12px">Have you ever been inside one's <span class="hl">dream</span>?</h3>
           <ul class="queue">
-            <li class="beta">Scud Race</li><li>Top Skater</li>
-            <li>Sega Super GT 24h</li><li>Virtua Racing</li>
+            <li>Top Skater</li><li>Sega Super GT 24h</li><li>Virtua Racing</li>
           </ul>
         </div>
-        <a class="btn yellow" href="https://discord.gg/XMk7GgapuN">Apply for the beta</a>
+        <a class="btn primary" href="https://discord.gg/XMk7GgapuN">Join our Discord</a>
       </aside>
     </div>
   </div>
@@ -426,7 +483,7 @@
   <div class="wrap">
     <header class="head">
       <p class="kicker"><span class="dot" aria-hidden="true"></span>Live · read every 30 minutes</p>
-      <h2 class="converge" id="live-title">The numbers, <span class="hl" style="--c:var(--ink);--on:var(--yellow)">right now.</span></h2>
+      <h2 class="converge" id="live-title">The numbers, <span class="hl" style="--c:var(--cyan);--on:#0c0e12">right now.</span></h2>
       <p class="lead">Read from YouTube, Reddit, GitHub, itch.io, SideQuest and Discord, and counted honestly: the comments are the players' own, without our replies.</p>
     </header>
     <div class="board" id="board">
@@ -445,7 +502,7 @@
   <div class="wrap">
     <header class="head">
       <p class="kicker">From the comments</p>
-      <h2 class="converge" id="voices-title">What players <span class="hl" style="--c:var(--yellow);--on:var(--ink)">say.</span></h2>
+      <h2 class="converge" id="voices-title">What players <span class="hl" style="--c:var(--cyan);--on:#0c0e12">say.</span></h2>
       <p class="lead">Every comment players wrote under our posts and videos, on Reddit, YouTube and Facebook. They turn by themselves: pick a game to hear its own.</p>
     </header>
     <div class="filters" id="filters" role="group" aria-label="Whose words"></div>
@@ -468,9 +525,27 @@
     <header class="head">
       <p class="kicker">On a screen</p>
       <h2 class="converge">Port0r, <span class="hl">everywhere.</span></h2>
-      <p class="lead">Sega Rally on your PC (in PCVR or on the screen), your TV, a Steam Deck or a Mac; Sega Rally, Daytona USA and Dirt Dash on your phone or tablet.</p>
+      <p class="lead">Sega Rally and Scud Race on your PC (in PCVR or on the screen); Sega Rally on your TV, a Steam Deck or a Mac; Sega Rally, Daytona USA, Dirt Dash and Scud Race on your phone or tablet.</p>
     </header>
     <div class="plats">
+      <article class="plat rise" data-game="pc_scud">
+        <button class="yt" type="button" data-id="r90VKyOhWvY" aria-label="Play the Scud Race video"><img src="assets/scud/pc.jpg" alt="Scud Race on PC, the canyon" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
+        <div class="body">
+          <h3>Scud Race <span class="hl">on PC</span></h3>
+          <p class="spec"><span>v0.1.1 · Windows 10 / 11 · 24 MB</span></p>
+          <p>In VR through SteamVR or Quest Link, or on the screen, from the Port0r launcher.</p>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-PC.md">Install guide</a></div>
+        </div>
+      </article>
+      <article class="plat rise" data-game="android_scud">
+        <button class="yt" type="button" data-id="r90VKyOhWvY" aria-label="Play the Scud Race video"><img src="assets/scud/android.jpg" alt="Scud Race on Android, with its touch controls" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
+        <div class="body">
+          <h3>Scud Race <span class="hl">on Android</span></h3>
+          <p class="spec"><span>v0.1.0 · APK · 58 MB</span></p>
+          <p>Phones and tablets: touch controls or a gamepad, 4K at 120 FPS.</p>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-ANDROID.md">Install guide</a></div>
+        </div>
+      </article>
       <article class="plat rise" data-game="pc">
         <button class="yt" type="button" data-id="_Nm22_u1s7Y" aria-label="Play the Sega Rally PCVR video"><img src="assets/yt/_Nm22_u1s7Y.jpg" alt="Sega Rally on PC, in PCVR from the cockpit" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
         <div class="body">
@@ -607,7 +682,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <img src="assets/port0r-wordmark.svg" alt="Port0r" width="106" height="22">
+    <img src="assets/port0r-wordmark.svg" alt="Port0r" width="116" height="24">
     <nav aria-label="Elsewhere">
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
       <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
@@ -625,7 +700,7 @@
 
 <dialog class="watch" id="watch" aria-label="Video"><div class="watch-in"><button type="button" class="watch-x" aria-label="Close" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button><div class="watch-frame"></div></div></dialog>
 
-<script src="site.js?v=20261027a" defer></script>
+<script src="site.js?v=20261031-medley" defer></script>
 <script src="hit.js?v=20261021a" defer></script>
 </body>
 </html>
