@@ -48,11 +48,11 @@
 
 ## Choose your platform
 
-| [Meta Quest: Scud Race VR, standalone VR](#install-port0r-scud-race-vr) | [Android and PC: Scud Race](#install-port0r-scud-race-vr) |
-| --- | --- |
-| [![Port0r Scud Race VR on Meta Quest](https://img.youtube.com/vi/r90VKyOhWvY/maxresdefault.jpg)](#install-port0r-scud-race-vr) | [![Scud Race on Android and PC](https://img.youtube.com/vi/r90VKyOhWvY/maxresdefault.jpg)](https://youtu.be/r90VKyOhWvY) |
-| **v0.1.7** · APK for Meta Quest 3 · Sega AM2's 1996 GT arcade racer, standalone in VR, Logitech wheel with force feedback | **Android v0.1.0** · 4K at 120 FPS · **PC v0.1.1** · Windows, on the screen or in VR (PCVR) |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7) · [Install guide](#install-port0r-scud-race-vr) · [Video](https://youtu.be/r90VKyOhWvY) | [Android](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0) · [PC](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1) · [Video](https://youtu.be/r90VKyOhWvY) |
+| [Meta Quest: Scud Race VR, standalone VR](#install-port0r-scud-race-vr) | [Android: Scud Race, phones and tablets](SCUD-ANDROID.md) | [Windows PC: Scud Race, PCVR and desktop](SCUD-PC.md) |
+| --- | --- | --- |
+| [![Port0r Scud Race VR on Meta Quest](assets/scud/video.jpg)](#install-port0r-scud-race-vr) | [![Scud Race on Android](assets/android-scud/shot-touch-controls.jpg)](SCUD-ANDROID.md) | [![Scud Race on PC](assets/pc-scud/shot-launcher.jpg)](SCUD-PC.md) |
+| **v0.1.7** · APK for Meta Quest 3 · Sega AM2's 1996 GT arcade racer, standalone in VR, Logitech wheel with force feedback | **v0.1.0** · Android 8+ · 4K at 120 FPS, touch controls or a gamepad | **v0.1.1** · Windows 10 / 11 · in VR through SteamVR or Quest Link, or on the screen, from the Port0r launcher |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7) · [Install guide](#install-port0r-scud-race-vr) · [Video](https://youtu.be/r90VKyOhWvY) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0) · [Complete guide](SCUD-ANDROID.md) · [Video](https://youtu.be/r90VKyOhWvY) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1) · [Complete guide](SCUD-PC.md) · [Video](https://youtu.be/r90VKyOhWvY) |
 
 | [Meta Quest: Daytona USA VR, standalone VR](#install-port0r-daytona-usa-vr) | [Meta Quest: Dirt Dash VR, real 3D VR](#install-port0r-dirt-dash-vr) |
 | --- | --- |
@@ -97,7 +97,7 @@
 | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7) · [Complete guide](WINDOWS.md) · [Video](https://youtu.be/_Nm22_u1s7Y) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/linux-v0.1.1) · [Complete guide](LINUX.md) · [itch.io](https://port0r.itch.io/sega-rally-steam-deck) · [Video](https://youtu.be/54HLGGeziXg) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/mac-v0.1.0) · [Complete guide](MAC.md) · [itch.io](https://port0r.itch.io/sega-rally-mac) · [Video](https://youtu.be/vO_EbBZjnuQ) |
 
 > ### Download Port0r: Scud Race VR v0.1.7 (free)
-> **[Port0r-ScudRaceVR-v0.1.7-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-v0.1.7/Port0r-ScudRaceVR-v0.1.7-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7). Then follow the [install guide](#install-port0r-scud-race-vr) below. On Android: [Port0r-ScudRace-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-android-v0.1.0/Port0r-ScudRace-Android-v0.1.0.apk). On PC: [Port0r-ScudRace-PC-0.1.1-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/scud-pc-v0.1.1/Port0r-ScudRace-PC-0.1.1-Setup.exe).
+> **[Port0r-ScudRaceVR-v0.1.7-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-v0.1.7/Port0r-ScudRaceVR-v0.1.7-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7). Then follow the [install guide](#install-port0r-scud-race-vr) below. On Android: [Port0r-ScudRace-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-android-v0.1.0/Port0r-ScudRace-Android-v0.1.0.apk) ([its guide](SCUD-ANDROID.md)). On PC: [Port0r-ScudRace-PC-0.1.1-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/scud-pc-v0.1.1/Port0r-ScudRace-PC-0.1.1-Setup.exe) ([its guide](SCUD-PC.md)).
 >
 > ### Download Port0r: Daytona USA VR v0.2.0 (free)
 > **[Port0r-DaytonaUSAVR-v0.2.0-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/daytona-v0.2.0/Port0r-DaytonaUSAVR-v0.2.0-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0) or [itch.io](https://port0r.itch.io/daytona-usa-vr). Then follow the [install guide](#install-port0r-daytona-usa-vr) below.
@@ -146,8 +146,8 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | Game | Board | Status |
 | --- | --- | --- |
 | **Port0r: Scud Race VR** (Scud Race) | Sega Model 3, 1996 | **Out now, v0.1.7** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.1.7)) |
-| **Scud Race on Android** (phones, tablets, handhelds) | Sega Model 3, 1996 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0)) |
-| **Port0r: Scud Race VR on PC** (Windows, screen and PCVR) | Sega Model 3, 1996 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1)) |
+| **Scud Race on Android** (phones, tablets, handhelds) | Sega Model 3, 1996 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0), [guide](SCUD-ANDROID.md)) |
+| **Port0r: Scud Race VR on PC** (Windows, screen and PCVR) | Sega Model 3, 1996 | **Out now, v0.1.1** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.1.1), [guide](SCUD-PC.md)) |
 | **Port0r: Daytona USA VR** (Daytona USA) | Sega Model 2, 1994 | **Out now, v0.2.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.0), [itch.io](https://port0r.itch.io/daytona-usa-vr), [SideQuest](https://sidequestvr.com/app/63694/port0r-daytona-usa-vr)) |
 | **Port0r: Dirt Dash VR** (Dirt Dash) | Namco System Super 22, 1995 | **Out now, v0.1.4** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.4), [itch.io](https://port0r.itch.io/dirt-dash-vr), [SideQuest](https://sidequestvr.com/app/63515/port0r-dirt-dash-vr)) |
 | **Port0r: Time Crisis II VR** (Time Crisis II) | Namco System 23, 1997 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.2), [itch.io](https://port0r.itch.io/time-crisis-ii-vr), [SideQuest](https://sidequestvr.com/app/63359/port0r-time-crisis-ii-vr)) |
