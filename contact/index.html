@@ -10,13 +10,17 @@
 <meta property="og:image" content="https://port0r.com/assets/og.jpg">
 <meta property="og:url" content="https://port0r.com/contact/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0c0e12">
+<meta name="theme-color" content="#f4efe5">
 <link rel="canonical" href="https://port0r.com/contact/">
 <link rel="icon" href="../assets/port0r-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../site.css?v=20261030">
+<script>
+try { const theme = localStorage.getItem("port0r-theme") || "light"; if (theme !== "system") document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light"; }
+catch (_) { document.documentElement.dataset.theme = "light"; }
+</script>
+<link rel="stylesheet" href="../site.css?v=20261030-themeintro">
 <link rel="preconnect" href="https://alloxr.info" crossorigin>
 </head>
 <body>
@@ -92,7 +96,7 @@
         </fieldset>
 
         <div class="c-send">
-          <button class="btn yellow c-go" type="submit" aria-busy="false"><span>Send the message</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+          <button class="btn primary c-go" type="submit" aria-busy="false"><span>Send the message</span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
           <p class="c-proof"><i class="c-led" aria-hidden="true"></i><span id="proof">No captcha, no tracker.</span></p>
         </div>
         <p class="c-status" role="status" aria-live="polite"></p>
@@ -145,7 +149,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <img src="../assets/port0r-wordmark.svg" alt="Port0r" width="106" height="22">
+    <img src="../assets/port0r-wordmark.svg" alt="Port0r" width="116" height="24">
     <nav aria-label="Elsewhere">
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
       <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
@@ -161,6 +165,7 @@
   </div>
 </footer>
 <script src="../contact.js?v=20261016m" defer></script>
+<script src="../site.js?v=20261030-themeintro" defer></script>
 <script src="../hit.js?v=20261021a" defer></script>
 </body>
 </html>
