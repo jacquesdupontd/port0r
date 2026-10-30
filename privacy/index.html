@@ -10,13 +10,17 @@
 <meta property="og:image" content="https://port0r.com/assets/og.jpg">
 <meta property="og:url" content="https://port0r.com/privacy/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0c0e12">
+<meta name="theme-color" content="#f4efe5">
 <link rel="canonical" href="https://port0r.com/privacy/">
 <link rel="icon" href="../assets/port0r-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../site.css?v=20261030">
+<script>
+try { const theme = localStorage.getItem("port0r-theme") || "light"; if (theme !== "system") document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light"; }
+catch (_) { document.documentElement.dataset.theme = "light"; }
+</script>
+<link rel="stylesheet" href="../site.css?v=20261030-eightcolors-v2">
 </head>
 <body>
 <a class="skip" href="#content">Skip to the content</a>
@@ -57,7 +61,7 @@
     <ul>
       <li>GitHub Pages hosts port0r.com, so GitHub receives your requests like any web host. The fonts come from Google Fonts, so Google sees that request too. A video loads YouTube's player (youtube-nocookie.com) only when you press play.</li>
       <li>To count visits, each page tells Port0r's server it was seen: the page, the site you came from (and a link's campaign tag, if it has one), the kind of device (Quest, phone, computer), the browser's and system's names, the language, the time zone, the window's width, how long the page was on screen, and which outside link or video you opened.</li>
-      <li>No cookie, nothing stored on your device. To count visitors without following them, the server mixes your IP address and browser with a key that changes every day and keeps only the result. The IP itself isn't written, and each day's key is deleted the next day.</li>
+      <li>No tracking cookie. Your chosen appearance and whether to play the intro are saved only in this browser. To count visitors without following them, the server mixes your IP address and browser with a key that changes every day and keeps only the result. The IP itself isn't written, and each day's key is deleted the next day.</li>
       <li>The contact form: what you write (name, e-mail, topic, message) is stored on Port0r's server and sent by e-mail to Port0r so the person who makes the games can answer you. Your IP address is kept only as a scrambled code, to stop spam.</li>
       <li>The live numbers and the leaderboards are read from Port0r's server and from GitHub.</li>
     </ul>
@@ -84,7 +88,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <img src="../assets/port0r-wordmark.svg" alt="Port0r" width="106" height="22">
+    <img src="../assets/port0r-wordmark.svg" alt="Port0r" width="116" height="24">
     <nav aria-label="Elsewhere">
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
       <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
@@ -99,7 +103,7 @@
     <p class="legal">Port0r is a free fan project. Not affiliated with SEGA, Bandai Namco or Meta.</p>
   </div>
 </footer>
-<script src="../site.js?v=20261027a" defer></script>
+<script src="../site.js?v=20261030-eightcolors-v2" defer></script>
 <script src="../hit.js?v=20261021a" defer></script>
 </body>
 </html>

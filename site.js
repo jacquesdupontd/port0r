@@ -16,14 +16,162 @@
   const short = (n) => n >= 100000 ? (n / 1000).toFixed(0) + "K" : n >= 10000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "K" : full(n);
   const time = (s) => { const cs = Math.round(s * 100); return `${Math.floor(cs / 6000)}'${String(Math.floor(cs / 100) % 60).padStart(2, "0")}"${String(cs % 100).padStart(2, "0")}`; };
 
-  // ---- the header: its video cut for the screen's shape, and the two eyes converging at load ----
+  // Display preferences are local to this browser and shared by every page.
+  const root = document.documentElement;
+  const readPref = (key, fallback) => { try { return localStorage.getItem(key) ?? fallback; } catch (_) { return fallback; } };
+  const savePref = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
+  const applyTheme = (value) => {
+    if (value === "system") delete root.dataset.theme;
+    else root.dataset.theme = value === "dark" ? "dark" : "light";
+    const meta = $('meta[name="theme-color"]');
+    if (meta) meta.content = getComputedStyle(root).getPropertyValue("--paper").trim();
+  };
+  const syncIntroPreference = () => $$("[data-intro-enabled]").forEach((el) => { el.checked = readPref("port0r-intro", "on") !== "off"; });
+  const nav = $("#top nav");
+  let preferences, preferenceSummary;
+  if (nav) {
+    const discord = $(".btn", nav);
+    if (discord) {
+      discord.setAttribute("aria-label", "Discord");
+      discord.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg><span class="nav-discord-label">Discord</span>';
+    }
+    preferences = document.createElement("details");
+    preferences.className = "site-preferences";
+    preferences.innerHTML = `<summary aria-label="Display preferences"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 2v14a7 7 0 0 1 0-14Z"/></svg><span class="preferences-label">Display</span></summary>
+      <div class="preferences-panel"><label>Appearance<select aria-label="Appearance"><option value="light">Light</option><option value="dark">Dark</option><option value="system">Use device setting</option></select></label>
+      <label class="intro-preference"><input type="checkbox" data-intro-enabled checked>Play intro on visits</label><button type="button" data-replay-intro>Replay intro</button></div>`;
+    nav.append(preferences);
+    preferenceSummary = $("summary", preferences);
+    const select = $("select", preferences);
+    select.value = readPref("port0r-theme", "light");
+    select.addEventListener("change", () => { savePref("port0r-theme", select.value); applyTheme(select.value); });
+    $("[data-replay-intro]", preferences).addEventListener("click", () => {
+      preferences.open = false;
+      if ($("#brand-intro")) startIntro(preferenceSummary);
+      else {
+        const url = new URL($("#top .mark").href);
+        url.searchParams.set("intro", "play");
+        location.href = url;
+      }
+    });
+    document.addEventListener("pointerdown", (e) => { if (!preferences.contains(e.target)) preferences.open = false; });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && preferences.open) { preferences.open = false; preferenceSummary.focus(); } });
+  }
+  syncIntroPreference();
+  $$("[data-intro-enabled]").forEach((el) => el.addEventListener("change", () => {
+    savePref("port0r-intro", el.checked ? "on" : "off"); syncIntroPreference();
+  }));
+  applyTheme(readPref("port0r-theme", "light"));
+  addEventListener("storage", (e) => {
+    if (e.key === "port0r-theme") { applyTheme(readPref(e.key, "light")); if (preferences) $("select", preferences).value = readPref(e.key, "light"); }
+    if (e.key === "port0r-intro") syncIntroPreference();
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    if (readPref("port0r-theme", "light") === "system") applyTheme("system");
+  });
+
+  // The logo and the support message occupy one screen and one timeline.
+  const intro = $("#brand-intro");
+  let introRunning = false, introFrame = 0, introTimers = [], introReturnFocus;
+  const finishIntro = (immediate = false) => {
+    if (!introRunning) return;
+    introRunning = false;
+    cancelAnimationFrame(introFrame);
+    introTimers.forEach(clearTimeout); introTimers = [];
+    $("video", intro).pause();
+    intro.classList.add("leaving");
+    const close = () => {
+      intro.close(); root.classList.remove("intro-pending");
+      clearTimeout(window.port0rIntroFallback);
+      document.dispatchEvent(new Event("port0r-intro-ended"));
+      if (introReturnFocus) introReturnFocus.focus({ preventScroll: true });
+    };
+    if (immediate || still) close(); else introTimers.push(setTimeout(close, 340));
+  };
+  function startIntro(returnFocus) {
+    if (!intro || introRunning) return;
+    introTimers.forEach(clearTimeout); introTimers = [];
+    clearTimeout(window.port0rIntroFallback);
+    introRunning = true; introReturnFocus = returnFocus;
+    root.classList.add("intro-pending");
+    intro.classList.remove("leaving", "thanking");
+    intro.dataset.phase = "logo";
+    const video = $("video", intro), sound = $("[data-intro-sound]", intro), heart = $(".intro-heart", intro);
+    const said = $(".ask-in p");
+    const head = $("b", said).textContent.trim(), rest = said.textContent.trim().slice(head.length).trim();
+    $(".intro-message", intro).setAttribute("aria-label", head + " " + rest);
+    let next = 180;
+    const parts = [[".intro-title", head, 140], [".intro-text", rest, 70]];
+    const words = parts.flatMap(([selector, text, step]) => {
+      const el = $(selector, intro); el.replaceChildren();
+      return text.split(/\s+/).map((word) => {
+        const span = document.createElement("span"); span.className = "intro-word"; span.textContent = word;
+        el.append(span, " "); const result = { span, at: next }; next += step; return result;
+      });
+    });
+    video.currentTime = 0; video.preload = "auto";
+    const soundLabel = () => { sound.setAttribute("aria-pressed", String(!video.muted)); $("span", sound).textContent = video.muted ? "Sound off" : "Sound on"; };
+    let videoFailed = false;
+    const play = () => {
+      video.play().catch(() => { video.muted = true; soundLabel(); video.play().catch(() => { videoFailed = true; }); });
+    };
+    soundLabel();
+    try { intro.showModal(); } catch (_) { introRunning = false; root.classList.remove("intro-pending"); return; }
+    $("[data-intro-skip]", intro).focus({ preventScroll: true });
+    if (!document.hidden) play();
+    const visible = () => { last = 0; if (document.hidden) video.pause(); else if (introRunning && !video.ended) play(); };
+    document.addEventListener("visibilitychange", visible);
+    const cleanupVisibility = () => document.removeEventListener("visibilitychange", visible);
+    intro.addEventListener("close", cleanupVisibility, { once: true });
+    let elapsed = 0, last = 0, wordIndex = 0, thanksAt = null, beatIndex = -1;
+    const colors = getComputedStyle(root).getPropertyValue("--brand-cycle").trim().split(/\s*,\s*/);
+    const durations = still ? colors.map(() => 225) : [420, 350, 290, 240, 200, 165, 135, 110, 90];
+    const beats = durations.map((duration, i) => ({ duration, at: durations.slice(0, i).reduce((a, b) => a + b, 0) }));
+    const thanksLength = durations.reduce((a, b) => a + b, 0) + 160;
+    const tick = (now) => {
+      if (!introRunning) return;
+      if (!document.hidden && last) elapsed += now - last;
+      last = now;
+      while (wordIndex < words.length && elapsed >= words[wordIndex].at) words[wordIndex++].span.classList.add("on");
+      if (thanksAt === null && elapsed >= 3600 && (video.ended || videoFailed || elapsed >= 4500)) {
+        thanksAt = elapsed; intro.classList.add("thanking"); intro.dataset.phase = "thanks";
+      }
+      if (thanksAt !== null) {
+        const t = elapsed - thanksAt;
+        let index = 0; while (index + 1 < beats.length && t >= beats[index + 1].at) index++;
+        if (index !== beatIndex) {
+          beatIndex = index; heart.style.color = colors[index % colors.length];
+          if (!still) heart.animate([{ transform: "scale(1)" }, { transform: "scale(1.24)", offset: .3 }, { transform: "scale(1)" }], { duration: beats[index].duration, easing: "ease-out" });
+        }
+        if (t >= thanksLength) { finishIntro(); return; }
+      }
+      introFrame = requestAnimationFrame(tick);
+    };
+    introFrame = requestAnimationFrame(tick);
+    introTimers.push(setTimeout(() => { if (!document.hidden) finishIntro(true); }, 10000));
+  }
+  if (intro) {
+    $("[data-intro-skip]", intro).addEventListener("click", () => finishIntro());
+    $("[data-intro-sound]", intro).addEventListener("click", (e) => {
+      const video = $("video", intro); video.muted = !video.muted;
+      e.currentTarget.setAttribute("aria-pressed", String(!video.muted));
+      $("span", e.currentTarget).textContent = video.muted ? "Sound off" : "Sound on";
+    });
+    intro.addEventListener("cancel", (e) => { e.preventDefault(); finishIntro(); });
+    intro.addEventListener("close", () => { if (introRunning) finishIntro(true); });
+    if (root.classList.contains("intro-pending")) startIntro();
+    const url = new URL(location.href);
+    if (url.searchParams.get("intro") === "play") { url.searchParams.delete("intro"); history.replaceState(null, "", url); }
+  }
+
+  // The race behind the title keeps its existing stereo opening.
   const hero = $("#hero");
   if (hero) {
     const vid = $("video", hero);
     const tall = matchMedia("(max-aspect-ratio: 4/5)").matches;
     const poster = tall ? vid.dataset.tallPoster : vid.dataset.widePoster;
     vid.poster = poster;
-    hero.style.setProperty("--focus-y", "58%");   // where the car is, measured on the clip (tools/make_clips.sh)
+    hero.style.setProperty("--focus-y", "58%");
     const eyes = $$(".hero-eyes .eye", hero);
     eyes.forEach((e) => { e.src = poster; });
     vid.src = tall ? vid.dataset.tall : vid.dataset.wide;
@@ -34,111 +182,6 @@
       requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add("fuse")));
       setTimeout(() => { play(); hero.classList.add("fused"); }, 1200);
     });
-
-    // ---- the ask, big over the race first (21/10/2026, Guillaume: « en gros dans le header écrit en streaming pour qu'on
-    // ne voie que ça, et qui ensuite via une belle animation va se caler là-haut dans le bandeau jaune pour laisser place à
-    // la phrase actuelle »): the band's own words stream into a big yellow card, word by word behind a caret, over a dimmed
-    // race, the top bar faded; the card then flies into the band and the title comes in.
-    // Shown to EVERY visitor, streamed and flown (21/10, Guillaume could not see the first version in his Brave): a page
-    // opened in a background tab waits until it is seen; only a click or tap, Escape, or a real scroll down ends it early (the wheel and the touch ended it before, and a
-    // trackpad's inertia or a Magic Mouse touched in passing is enough to fire those). Skipped only for a link to an anchor.
-    const band = $(".ask-in", hero), big = $(".ask-big", hero);
-    if (!(band && big && !location.hash)) document.documentElement.classList.remove("ask-pre");
-    if (band && big && !location.hash) {
-      const card = $(".ask-card", big), said = $("p", band), head = $("b", said).textContent.trim();
-      const rest = said.textContent.trim().slice(head.length).trim();
-      const caret = document.createElement("i");
-      caret.className = "caret";
-      const words = (el, text) => text.split(/\s+/).map((w) => {
-        const s = document.createElement("span");
-        s.className = "w"; s.textContent = w; el.append(s, " ");
-        return s;
-      });
-      const first = words($(".ask-big-1", big), head), second = words($(".ask-big-2", big), rest);
-      first[0].before(caret);
-      first[first.length - 1].classList.add("st");
-      const thanks = document.createElement("div");
-      thanks.className = "ask-thanks";
-      thanks.innerHTML = '<b>Thank you</b><svg class="ask-heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg>';
-      card.append(thanks);
-      const heart = $(".ask-heart", thanks);
-      hero.classList.add("asking");
-      document.documentElement.classList.add("asking");
-      // the card whole in the window, whatever its size (21/10/2026, a phone where it sat at the bottom, cut): every word
-      // is laid out from the start (hidden), so the card already has its final size; taller or wider than the window, it
-      // shrinks by one factor (--fit, its type and padding), measured again after the reflow, and again on a resize
-      const fit = () => {
-        big.style.setProperty("--fit", "1");
-        const cs = getComputedStyle(big);
-        const h = big.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
-        const w = big.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
-        let k = 1;
-        for (let i = 0; i < 6 && (card.offsetHeight > h || card.offsetWidth > w); i++) {   // offset sizes: its entrance's scale aside
-          k *= Math.max(.3, Math.min(h / card.offsetHeight, w / card.offsetWidth) * .97);
-          big.style.setProperty("--fit", k.toFixed(3));
-        }
-      };
-      fit();
-      addEventListener("resize", fit);
-      const timers = [], at = (ms, f) => timers.push(setTimeout(f, ms));
-      let over = false;
-      const onKey = (e) => { if (e.key === "Escape") finish(); };
-      const onScroll = () => { if (scrollY > 160) finish(); };
-      const finish = () => {
-        if (over) return;
-        over = true;
-        timers.forEach(clearTimeout);
-        removeEventListener("pointerdown", finish, true);
-        removeEventListener("keydown", onKey, true);
-        removeEventListener("scroll", onScroll);
-        removeEventListener("resize", fit);
-        big.remove();
-        hero.classList.replace("asking", "asked");
-        document.documentElement.classList.remove("asking", "ask-pre");
-      };
-      addEventListener("pointerdown", finish, { capture: true, passive: true });
-      addEventListener("keydown", onKey, true);
-      addEventListener("scroll", onScroll, { passive: true });
-      // A browser that asks for reduced motion (Guillaume's own Brave on his desk: « un panneau en gros d'un coup sans aucune
-      // animation et il devient la barre en haut d'un coup ») gets the SAME stream and flight, the words only fading in
-      // (no blur, no slide, no stereo): the message is the point of the page, and it is one short move.
-      const run = () => {
-        let t = 450;   // the title's words slower, the sentence's like text arriving
-        [...first.map((w) => [w, 190]), ...second.map((w) => [w, 80])].forEach(([w, step]) => {
-          at(t, () => { w.classList.add("on"); w.after(caret); });
-          t += step;
-        });
-        t += 1700;   // the whole sentence, held: time to read it
-        // then a big THANK YOU, its heart beating faster and faster (Guillaume, 21/10: « ensuite je veux un gros Thank you
-        // avec un cœur qui flash de plus en plus vite et là, ça disparaît là-haut »), and at the fastest beat, the flight
-        at(t, () => { caret.remove(); card.classList.add("thanks"); });
-        t += 420;
-        for (const d of [560, 470, 390, 320, 260, 210, 170, 140, 115, 95, 80]) {
-          at(t, () => {
-            heart.style.setProperty("--beat", d + "ms");
-            heart.classList.remove("beat");
-            void heart.getBoundingClientRect();   // the same animation, started again
-            heart.classList.add("beat");
-          });
-          t += d;
-        }
-        at(t, () => {   // the flight: from the card's box to the band's
-          const a = card.getBoundingClientRect(), b = band.getBoundingClientRect(), bs = getComputedStyle(band);
-          Object.assign(card.style, { left: a.left + "px", top: a.top + "px", width: a.width + "px", height: a.height + "px" });
-          card.classList.add("fly");
-          card.getBoundingClientRect();   // the start box laid out before the move
-          Object.assign(card.style, { left: b.left + "px", top: b.top + "px", width: b.width + "px", height: b.height + "px",
-            borderRadius: bs.borderRadius, padding: "0", boxShadow: bs.boxShadow });
-        });
-        at(t + 820, finish);
-      };
-      if (!document.hidden) run();
-      else document.addEventListener("visibilitychange", function seen() {
-        if (document.hidden) return;
-        document.removeEventListener("visibilitychange", seen);
-        run();
-      });
-    }
   }
 
   // ---- THE FIRST SCREEN, WHOLE, on any screen (21/10/2026) ----
@@ -255,7 +298,7 @@
 
   // ---- the players' words ----
   const WHERE = { reddit: "Reddit", youtube: "YouTube", facebook: "Facebook" };
-  const GAMES = { timecrs2: "Time Crisis II VR", hotd: "House of the Dead VR", rally: "Rally VR", cop: "Cop VR", timecris: "Time Crisis VR", switch: "Switch", android: "Android", linux: "Steam Deck & Linux", mac: "Mac" };
+  const GAMES = { daytona: "Daytona USA VR", dirtdash: "Dirt Dash VR", pc: "PC", android_daytona: "Daytona USA · Android", android_dirtdash: "Dirt Dash · Android", timecrs2: "Time Crisis II VR", hotd: "House of the Dead VR", rally: "Rally VR", cop: "Cop VR", timecris: "Time Crisis VR", switch: "Switch", android: "Android", linux: "Steam Deck & Linux", mac: "Mac" };
   const cite = (c) => c.platform === "reddit" ? `u/${c.author} · ${c.place}` : c.platform === "youtube" ? `${c.author} · YouTube`
                     : c.platform === "facebook" ? `${c.author} · Facebook` : c.author;
   function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
@@ -272,7 +315,7 @@
     const counts = {};
     all.forEach((c) => { counts[c.game] = (counts[c.game] || 0) + 1; });
     if ($("#filters")) $("#filters").innerHTML = [["all", "All", all.length], ...Object.keys(GAMES).filter((k) => counts[k]).map((k) => [k, GAMES[k], counts[k]])]
-      .map(([k, l, n]) => `<button type="button" data-f="${k}" aria-pressed="${k === "all"}">${esc(l)}<small>${n}</small></button>`).join("");
+      .map(([k, l, n]) => `<button type="button" data-f="${k}" data-game="${k}" aria-pressed="${k === "all"}">${esc(l)}<small>${n}</small></button>`).join("");
     const show = (dir = 1) => {
       const c = st.list[st.i];
       if (!c) return;
@@ -282,7 +325,7 @@
         q.textContent = c.text;
         q.classList.toggle("long", c.text.length > 150);
         const link = c.url ? `<a href="${esc(c.url)}">${esc(cite(c))}</a>` : esc(cite(c));
-        $("#q-who").innerHTML = `<span>${link}</span><span class="chip" style="background:var(--yellow);color:var(--ink)">${esc(GAMES[c.game] || "")}</span>` +
+        $("#q-who").innerHTML = `<span>${link}</span><span class="chip" data-game="${esc(c.game)}">${esc(GAMES[c.game] || "Port0r")}</span>` +
           (c.score > 1 ? `<span class="chip on-dark">${c.score} upvotes</span>` : "");
         $("#q-count").textContent = `${st.i + 1} / ${st.list.length}`;
         box.classList.remove("out");
@@ -446,7 +489,7 @@
   let i = 0, timer = null;
   // not while the help card covers the hero (27/10/2026: the slides turned under it, and the first one -- the day's news, the
   // Scud Race beta -- was never seen on a first visit): the first slide waits, the turns start when the card has flown away
-  const asking = () => document.documentElement.classList.contains("asking") || document.documentElement.classList.contains("ask-pre");
+  const asking = () => document.documentElement.classList.contains("intro-pending");
   const go = () => { items[i].classList.remove("on"); i = (i + 1) % items.length; items[i].classList.add("on"); };
   const start = () => { if (!timer && !asking() && !matchMedia("(prefers-reduced-motion: reduce)").matches) timer = setInterval(go, 6500); };
   const stop = () => { clearInterval(timer); timer = null; };
