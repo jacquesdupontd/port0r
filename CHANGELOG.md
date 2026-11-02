@@ -1,5 +1,18 @@
 # Changelog
 
+## Port0r: Scud Race VR v0.2.1
+
+Big update: Scud Race now looks like the real arcade machine, in HD.
+
+- HD textures, switched on from the start: every texture in the game, four times sharper and true to the original.
+- The arcade's fog: that white haze in the distance, just like on the machine.
+- Real glass on the cars: you see the drivers and the road through the windows.
+- A complete cockpit view: dashboard, gauges, steering wheel and the driver's arms, with a clear windscreen in front of you.
+- The castle on the Expert course, lit up and textured like in the arcade.
+- Menus and attract mode on a big screen in front of you, like the arcade monitor, and the race puts you right into the 3D.
+- Your controllers vibrate with every hit and crash.
+- New settings: HUD size, to bring the HUD closer to the centre, and seat height for the cockpit view.
+
 ## Port0r: Scud Race VR v0.2.0
 
 Big update: Scud Race now looks like the real arcade machine.
