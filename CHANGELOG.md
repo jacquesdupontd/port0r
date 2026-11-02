@@ -2,22 +2,15 @@
 
 ## Port0r: Scud Race VR v0.2.0
 
-Scud Race VR's biggest update: the arcade board's own picture, rebuilt rule by rule from the Real3D itself.
+Big update: Scud Race now looks like the real arcade machine.
 
-- The cabinet's fog: the Model 3's haze in the distance is drawn, white as the game asks for it, course by course.
-- The cars' windows are glass: you see the drivers and the road through them, the sun's reflection and the rev counter's arc as faint as on the cabinet.
-- From inside the McLaren, a clear windscreen: as on the cabinet, a glass is drawn from its front only.
-- The in-car view in full: the dashboard, the instrument panel, the console, the wheel and the driver's arms.
-- The castle at the end of the Expert course's first lap and its walls, lit and textured as on the cabinet.
-- The cabinet's own field of view, read from the board itself: 100 degrees in a race, on the flat screen and in the 3D window too.
-- Menus, selections, attract and results are shown as the game's own picture on a screen in front of you, exactly as the cabinet draws it; the races are in 3D all around you.
-- Selection screens as on the cabinet: the red corners frame the course, the car or the gearbox you pick, every car whole with its livery.
-- Menus and HUD drawn smooth in the headset: the arcade's 2D upscaled with edge rules.
-- Vibrations in your controllers from the cabinet's own drive board: a jolt in the hand on the side of each contact or crash, a light buzz on rough ground.
-- The stick reaches the wheel's full lock at its stop, in the race as in the menus, like the cabinet's one wheel.
-- Settings > Display > HUD size: the race HUD gathered toward the centre of your view, your time and your position at a glance.
-- Settings > Display > In-car seat height: lower your seat in the cockpit view.
-- 3D window: the HUD fits the window exactly, its top band (time, position) included.
+- The arcade's fog: that white haze in the distance, just like on the machine.
+- Real glass on the cars: you see the drivers and the road through the windows.
+- A complete cockpit view: dashboard, gauges, steering wheel and the driver's arms, with a clear windscreen in front of you.
+- The castle on the Expert course, lit up and textured like in the arcade.
+- Menus and attract mode on a big screen in front of you, like the arcade monitor, and the race puts you right into the 3D.
+- Your controllers vibrate with every hit and crash.
+- New settings: HUD size, to bring the HUD closer to the centre, and seat height for the cockpit view.
 
 ## Port0r: Scud Race VR v0.1.7
 
