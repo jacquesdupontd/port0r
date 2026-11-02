@@ -202,7 +202,7 @@ Big update: Scud Race now looks like the real arcade machine.
 ## Port0r: Cop VR v0.2.1
 
 - Your hand and arm now hold the gun, behind the grip and round it, the index on the trigger, the arm coming from your shoulder. Settings > Game > Arm turns it off.
-- The picture is no longer tilted: the HUD stays at the bottom of the screen and the sky where the cabinet shows it.
+- A level picture: the HUD at the bottom of the screen and the sky where the cabinet shows it.
 - The game's zooms are the cabinet's again: the enemy has his arcade size and the whole screen can be shot at (during a zoom only the middle could, and aiming low reloaded).
 - Flat screen is the arcade picture again, sharp and complete (it showed the 3D window, and buildings were missing).
 - Reload with a button: A by default, any button in Settings > Buttons > Reload. Shooting off the screen still reloads.
@@ -297,7 +297,7 @@ install. [The Mac guide](MAC.md).
 - Faster emulation, picture and sound unchanged.
 - The other cars have their windows and reflections again.
 - With the HD pack, the stage starts fade to white like the cabinet.
-- The picture no longer jumps in size for one frame when the camera changes.
+- The picture keeps its size when the camera changes.
 - Arcade 4:3 picture as an option (Settings > Image > Picture format); gamepad stick settings: steering range, dead zone
   and response (Settings > Gamepad).
 - Gamepad: both sticks pressed opens the pause menu.
@@ -316,7 +316,7 @@ install. [The Mac guide](MAC.md).
 - New touch buttons with clear icons; labels as an option (Settings > Driving > Button labels).
 - Progressive gas on the touch pedal works in every steering mode, with a gauge.
 - Starts on Mali-G52 / G57 GPUs (Anbernic and others) instead of closing at launch.
-- The picture no longer jumps in size for one frame when the camera changes.
+- The picture keeps its size when the camera changes.
 - Crash log, off by default (Settings > Game): when on, a report is saved in Download after a crash, to send us.
 - Already on v0.1.0: the game offers this update by itself at launch; your settings, records and game files are kept.
 
@@ -374,8 +374,8 @@ The first Android version: Sega Rally on phones and tablets (Android 8+, Vulkan)
 - **Updates from inside the game**: Rally VR checks for a new version once at launch (Settings > Game, can be switched
   off) and shows what's new before anything is installed. Download and install from the headset, then choose Open to
   play the new version. The first time, the headset asks you to allow Port0r to install apps (once).
-- Sound comes back by itself after a change of audio output (Bluetooth headphones connected or removed), and no longer
-  drifts after a pause or the menu.
+- Sound comes back by itself after a change of audio output (Bluetooth headphones connected or removed), and keeps
+  its timing after a pause or the menu.
 - Smaller Port0r watermark, fixed in the bottom-left corner.
 - Your settings, records and game files are kept. This one time, install v0.2.4 over v0.2.3 with SideQuest or adb:
   v0.2.3 has no in-game update yet.
@@ -417,7 +417,7 @@ Validation: Switch compilation, native menu rendering and host tests for release
 - **A Controls page** in the settings panel (the button next to *Resume*): every button of the game, in your language,
   and it follows your settings (right-stick steering, VR wheel).
 - **The settings panel scrolls** when a tab is longer than the panel, with either thumbstick or the bar on its right:
-  the *Resume* button no longer covered the last settings of the *Game* tab. Long names and sentences now go onto a
+  every setting of the *Game* tab within reach. Long names and sentences now go onto a
   second line instead of being cut, in all ten languages.
 - **The app's own icon** in the headset's library (earlier versions showed the project's first icon).
 - Nothing else changes in the game: same picture, same smoothness, same settings.

@@ -169,9 +169,8 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 They come out one at a time, when they are right.
 
-- **Sega Super GT 24h** (Jaleco, Model 2B): full speed (it ran at 82 to 93 %), 120 images a second in races.
-- **Top Skater** (Sega Model 2C, 1997): its 3D displays correctly (it was broken even in the reference emulator),
-  skateboard controls.
+- **Sega Super GT 24h** (Jaleco, Model 2B): full speed, 120 images a second in races.
+- **Top Skater** (Sega Model 2C, 1997): its 3D in full, skateboard controls.
 - **Virtua Racing** (Sega Model 1, 1992): the arcade's 30 images a second smoothed to the headset's rate, longer draw
   distance, all four arcade cameras.
 
