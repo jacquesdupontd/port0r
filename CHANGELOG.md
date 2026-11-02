@@ -1,5 +1,24 @@
 # Changelog
 
+## Port0r: Scud Race VR v0.2.0
+
+Scud Race VR's biggest update: the arcade board's own picture, rebuilt rule by rule from the Real3D itself.
+
+- The cabinet's fog: the Model 3's haze in the distance is drawn, white as the game asks for it, course by course.
+- The cars' windows are glass: you see the drivers and the road through them, the sun's reflection and the rev counter's arc as faint as on the cabinet.
+- From inside the McLaren, a clear windscreen: as on the cabinet, a glass is drawn from its front only.
+- The in-car view in full: the dashboard, the instrument panel, the console, the wheel and the driver's arms.
+- The castle at the end of the Expert course's first lap and its walls, lit and textured as on the cabinet.
+- The cabinet's own field of view, read from the board itself: 100 degrees in a race, on the flat screen and in the 3D window too.
+- Menus, selections, attract and results are shown as the game's own picture on a screen in front of you, exactly as the cabinet draws it; the races are in 3D all around you.
+- Selection screens as on the cabinet: the red corners frame the course, the car or the gearbox you pick, every car whole with its livery.
+- Menus and HUD drawn smooth in the headset: the arcade's 2D upscaled with edge rules.
+- Vibrations in your controllers from the cabinet's own drive board: a jolt in the hand on the side of each contact or crash, a light buzz on rough ground.
+- The stick reaches the wheel's full lock at its stop, in the race as in the menus, like the cabinet's one wheel.
+- Settings > Display > HUD size: the race HUD gathered toward the centre of your view, your time and your position at a glance.
+- Settings > Display > In-car seat height: lower your seat in the cockpit view.
+- 3D window: the HUD fits the window exactly, its top band (time, position) included.
+
 ## Port0r: Scud Race VR v0.1.7
 
 - Scud Race, the GT racing game Sega AM2 released in arcades in 1996, standalone in VR on Meta Quest 3.
