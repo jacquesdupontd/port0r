@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0"><img alt="Download Scud Race for Android v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Scud%20Race%20Android%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.2.2"><img alt="Download Scud Race for Android v0.2.2 (APK, free)" src="https://img.shields.io/badge/Download-Scud%20Race%20Android%20v0.2.2%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
 </p>
 
 # Scud Race on Android
 
 **Sega AM2's 1996 arcade Scud Race on your phone or tablet, free, from the people who made Port0r: Scud Race VR.**
 
-> ### Download Scud Race for Android v0.1.0 (free)
-> **[Port0r-ScudRace-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-android-v0.1.0/Port0r-ScudRace-Android-v0.1.0.apk)**
-> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.1.0). Then follow the [install guide](#install): a few minutes.
+> ### Download Scud Race for Android v0.2.2 (free)
+> **[Port0r-ScudRace-Android-v0.2.2.apk](https://github.com/jacquesdupontd/port0r/releases/download/scud-android-v0.2.2/Port0r-ScudRace-Android-v0.2.2.apk)**
+> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.2.2). Then follow the [install guide](#install): a few minutes.
 
 The race on your phone or tablet **in 4K at 120 FPS**, drawn by the same Vulkan renderer as Port0r: Scud Race VR. All the
 Port0r settings you know, to make it play exactly the way you like. Optimised to the bone, to get the very best out of your
@@ -47,7 +47,7 @@ device. Touch controls on the screen, or a gamepad.
 
 ## Install
 
-1. **Download** `Port0r-ScudRace-Android-v0.1.0.apk` on the device and open it. Android asks to allow installing apps
+1. **Download** `Port0r-ScudRace-Android-v0.2.2.apk` on the device and open it. Android asks to allow installing apps
    from your browser or file manager: allow it for that app, then install.
 2. **Put your game file anywhere on the device**: `scud.zip`, **not unzipped**. The Download folder is the simplest.
 3. **Open the game.** The first time, it asks for **access to all files**, to find your game file wherever it is: allow

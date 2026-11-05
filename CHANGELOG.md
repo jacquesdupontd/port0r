@@ -1,5 +1,15 @@
 # Changelog
 
+## Scud Race on Android v0.2.2
+
+- Steering: the same wheel inertia and smoothing as the Quest version, for touch, tilt, gamepad and keyboard, with the game's own settings, for a smooth drive.
+- Mods > Cabinet settings: Start chooses in the cabinet's menu, Start with a gear goes back from a test page, and EXIT gives the game back.
+- Settings > Display > In-car seat distance and In-car seat height: move your seat back from the wheel, or lower it, in the in-car view.
+- With a gamepad, click both sticks together to pause the game, and again to resume it, as in the headset.
+- The cars' windows are real glass: see the driver and the road through them, and a clear view through the McLaren's windscreen from inside.
+- The cabinet's fog: the Model 3's white haze in the distance.
+- The castle at the end of the Expert course's first lap, lit and textured as on the cabinet.
+
 ## Port0r: Scud Race VR v0.2.1
 
 Big update: Scud Race now looks like the real arcade machine, in HD.
