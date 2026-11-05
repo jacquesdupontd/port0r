@@ -1,5 +1,16 @@
 # Changelog
 
+## Port0r: Scud Race VR on PC v0.2.2
+
+- Scud Race's HD textures, made for Port0r, on by default as on the Quest and Android (Settings > Image).
+- Steering on the screen: the same wheel inertia and smoothing as the Quest version, for the keyboard and the gamepad, with the game's own settings, for a smooth drive.
+- Mods > Cabinet settings: Start (B in VR) chooses in the cabinet's menu, the same with a gear goes back from a test page, and EXIT gives the game back.
+- Settings > Display > In-car seat distance and In-car seat height: move your seat back from the wheel, or lower it, in the in-car view, on the screen and in VR.
+- The cars' windows are real glass: see the driver and the road through them, and a clear view through the McLaren's windscreen from inside.
+- The cabinet's fog: the Model 3's white haze in the distance. The castle at the end of the Expert course's first lap, lit and textured as on the cabinet.
+- In VR: the menus and the HUD drawn smooth, Settings > Display > HUD size to gather the HUD toward the centre (0.75 by default), the selection screens' red corners on their cards, and the controllers vibrating with the cabinet's drive board on each contact.
+- If the game ever crashes, port0r.log says where, with the call stack: send it with your bug report.
+
 ## Scud Race on Android v0.2.2
 
 - Steering: the same wheel inertia and smoothing as the Quest version, for touch, tilt, gamepad and keyboard, with the game's own settings, for a smooth drive.

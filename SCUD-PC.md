@@ -3,9 +3,9 @@
 **Sega AM2's 1996 arcade Scud Race on a Windows PC, free: in your VR headset through SteamVR or Quest Link, or on the
 screen.**
 
-> ### Download Scud Race for Windows PC v0.1.1 (free)
-> **[Port0r-ScudRace-PC-0.1.1-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/scud-pc-v0.1.1/Port0r-ScudRace-PC-0.1.1-Setup.exe)**
-> (the installer), or **[Port0r-ScudRace-PC-0.1.1.zip](https://github.com/jacquesdupontd/port0r/releases/download/scud-pc-v0.1.1/Port0r-ScudRace-PC-0.1.1.zip)**
+> ### Download Scud Race for Windows PC v0.2.2 (free)
+> **[Port0r-ScudRace-PC-0.2.2-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/scud-pc-v0.2.2/Port0r-ScudRace-PC-0.2.2-Setup.exe)**
+> (the installer), or **[Port0r-ScudRace-PC-0.2.2.zip](https://github.com/jacquesdupontd/port0r/releases/download/scud-pc-v0.2.2/Port0r-ScudRace-PC-0.2.2.zip)**
 > to unpack anywhere without installing.
 
 [![Watch the release video](assets/scud/video.jpg)](https://youtu.be/r90VKyOhWvY)
@@ -42,7 +42,7 @@ screen.**
 
 ## Install
 
-1. **Download** `Port0r-ScudRace-PC-0.1.1-Setup.exe` and open it. The installer is not signed: if Windows shows
+1. **Download** `Port0r-ScudRace-PC-0.2.2-Setup.exe` and open it. The installer is not signed: if Windows shows
    "Windows protected your PC", click **More info**, then **Run anyway**. It installs for your account only, no
    administrator rights needed.
 2. The **Port0r launcher** opens. Under **Game files**, click **Choose the files** and pick `scud.zip`, **not unzipped**,
