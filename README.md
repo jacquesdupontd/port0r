@@ -52,7 +52,7 @@
 
 | [Meta Quest: Scud Race VR, standalone VR](#install-port0r-scud-race-vr) | [Android: Scud Race, phones and tablets](SCUD-ANDROID.md) | [Windows PC: Scud Race, PCVR and desktop](SCUD-PC.md) |
 | --- | --- | --- |
-| [![Port0r Scud Race VR on Meta Quest](assets/scud/video.jpg)](#install-port0r-scud-race-vr) | [![Scud Race on Android](assets/android-scud/shot-touch-controls.jpg)](SCUD-ANDROID.md) | [![Scud Race on PC](assets/pc-scud/shot-launcher.jpg)](SCUD-PC.md) |
+| [![Port0r Scud Race VR on Meta Quest](assets/scud/video.jpg)](#install-port0r-scud-race-vr) | [![Scud Race on Android](assets/scud/header.jpg)](SCUD-ANDROID.md) | [![Scud Race on PC](assets/scud/header.jpg)](SCUD-PC.md) |
 | **v0.2.1** · APK for Meta Quest 3 · Sega AM2's 1996 GT arcade racer, standalone in VR, Logitech wheel with force feedback | **v0.2.2** · Android 8+ · 4K at 120 FPS, touch controls or a gamepad | **v0.2.2** · Windows 10 / 11 · in VR through SteamVR or Quest Link, or on the screen, from the Port0r launcher |
 | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.2.1) · [Install guide](#install-port0r-scud-race-vr) · [itch.io](https://port0r.itch.io/scud-race-vr) · [SideQuest](https://sidequestvr.com/app/63830/port0r-scud-race-vr) · [Video](https://youtu.be/r90VKyOhWvY) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.2.2) · [Complete guide](SCUD-ANDROID.md) · [Video](https://youtu.be/r90VKyOhWvY) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.2.2) · [Complete guide](SCUD-PC.md) · [Video](https://youtu.be/r90VKyOhWvY) |
 
