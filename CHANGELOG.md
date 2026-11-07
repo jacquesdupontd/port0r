@@ -1,5 +1,12 @@
 # Changelog
 
+## Port0r: Scud Race VR v0.2.2 (Meta Quest 3)
+
+- Mods > Cabinet settings: B chooses in the cabinet's menu (it only moved the arrow before), B with a gear goes back from a test page, and EXIT gives the game back.
+- Settings > Display > In-car seat distance: move your seat back from the wheel in the in-car view.
+- The in-game update finds new versions however many Port0r releases come out (it read only the 40 latest).
+- Not new, but worth it if you don't have a wheel and haven't tried it yet: Settings > Game > Driving > VR wheel. Hold an imaginary wheel with both hands and drive with your arms: it's really cool.
+
 ## Port0r: Scud Race VR on PC v0.2.2
 
 - Scud Race's HD textures, made for Port0r, on by default as on the Quest and Android (Settings > Image).
