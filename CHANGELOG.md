@@ -1,5 +1,50 @@
 # Changelog
 
+## Port0r: Scud Race VR v0.2.3 (Meta Quest 3)
+
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a race and keep racing.
+- The game now responds to your buttons from the moment it starts.
+- The sound now plays from start to finish without the slightest gap.
+- Find them in Settings > Wheel > Pedals now finds a Logitech G29 in its PS3/PS4 mode, or a stiff brake, on the first try.
+
+## Port0r: Daytona USA VR v0.2.1 (Meta Quest 3)
+
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a race and keep racing.
+- The game now responds to your buttons from the moment it starts.
+- Find them in Settings > Wheel > Pedals now finds a Logitech G29 in its PS3/PS4 mode, or a stiff brake, on the first try.
+
+## Port0r: Dirt Dash VR v0.1.5 (Meta Quest 3)
+
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a race and keep racing.
+- Find them in Settings > Wheel > Pedals now learns how far each of your pedals moves, so it finds a Logitech G29 in its PS3/PS4 mode, reversed pedals or a stiff brake on the first try.
+
+## Port0r: Rally VR v0.2.8 (Meta Quest 3)
+
+- ScottMadeAThing's 4K texture pack now comes with the game, and we want to say a big thank you to ScottMadeAThing! If you imported a texture pack yourself, the game keeps using yours, so remove it from the headset to get Scott's.
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a race and keep racing.
+- The game now responds to your buttons from the moment it starts.
+- Find them in Settings > Wheel > Pedals now learns how far each of your pedals moves, so it finds a Logitech G29 in its PS3/PS4 mode, reversed pedals or a stiff brake on the first try.
+
+## Port0r: Time Crisis II VR v0.1.3 (Meta Quest 3)
+
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a game and keep playing.
+
+## Port0r: Time Crisis VR v0.2.4 (Meta Quest 3)
+
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a game and keep playing.
+
+## Port0r: House of the Dead VR v0.1.3 (Meta Quest 3)
+
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a game and keep playing.
+- The game now responds to your buttons from the moment it starts.
+- You can now hit targets right at the edge of the screen, and only aiming below the screen reloads.
+
+## Port0r: Cop VR v0.2.4 (Meta Quest 3)
+
+- You can now switch Smoothing off in Settings > Smoothness in the middle of a game and keep playing.
+- The game now responds to your buttons from the moment it starts.
+- You can now hit targets right at the edge of the screen, and only aiming below the screen reloads.
+
 ## Port0r: Scud Race VR v0.2.2 (Meta Quest 3)
 
 - Mods > Cabinet settings: B chooses in the cabinet's menu (it only moved the arrow before), B with a gear goes back from a test page, and EXIT gives the game back.
