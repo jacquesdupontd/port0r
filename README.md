@@ -54,7 +54,7 @@
 | [Meta Quest: Cop 2 VR, real 3D VR](#install-port0r-cop-2-vr) | [Meta Quest: Cop VR, real 3D VR](#install-port0r-cop-vr) |
 | --- | --- |
 | [![Port0r Cop 2 VR on Meta Quest](https://img.youtube.com/vi/VIDEO_ID_A_VENIR/maxresdefault.jpg)](#install-port0r-cop-2-vr) | [![Port0r Cop VR on Meta Quest](https://img.youtube.com/vi/1qCQorbbdPc/maxresdefault.jpg)](#install-port0r-cop-vr) |
-| **v0.1.0** · APK for Meta Quest 3 · Virtua Cop 2 in true 3D, one gun or two, a gloved or a bare hand, HD textures | **v0.2.4** · APK for Meta Quest 3 · Virtua Cop in true 3D, the cabinet's blue gun in your hand |
+| **v0.1.0** · APK for Meta Quest 3 · Virtua Cop 2 in true 3D, one gun or two, a ray gun to win, HD textures | **v0.2.4** · APK for Meta Quest 3 · Virtua Cop in true 3D, the cabinet's blue gun in your hand |
 | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/vcop2-v0.1.0) · [Install guide](#install-port0r-cop-2-vr) · [itch.io](https://port0r.itch.io/cop-2-vr) · [Video](https://youtu.be/VIDEO_ID_A_VENIR) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.4) · [Install guide](#install-port0r-cop-vr) · [itch.io](https://port0r.itch.io/cop-vr) · [Video](https://youtu.be/1qCQorbbdPc) |
 
 | [Meta Quest: Scud Race VR, standalone VR](#install-port0r-scud-race-vr) | [Android: Scud Race, phones and tablets](SCUD-ANDROID.md) | [Windows PC: Scud Race, PCVR and desktop](SCUD-PC.md) |
@@ -453,8 +453,7 @@ first, your game files stay on the headset.)
 
 Point the right controller at what you want to hit and pull the trigger. To reload, press A (X if you hold the gun in your
 left hand), or shoot toward the floor below the screen. X inserts a coin and B is Start. Turn on Settings > Game > Two guns
-to hold player 2's gun in your other hand, and Coin and Start then count for both. Settings > Game > Hand gives you a bare
-hand in place of the glove. The best score of the first week wins a ray gun, anyone who beats that score later wins it too,
+to hold player 2's gun in your other hand, and Coin and Start then count for both. The best score of the first week wins a ray gun, anyone who beats that score later wins it too,
 and once won it is in Settings > Game > Gun. The left menu button opens the settings, Y on the left controller recenters the
 view, and every button can be changed in the Buttons tab.
 

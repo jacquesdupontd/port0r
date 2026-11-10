@@ -3,12 +3,12 @@
 ## Port0r: Cop 2 VR v0.1.0 (Meta Quest 3)
 
 - Virtua Cop 2 is now playable in VR on Quest 3 in its own app, and you hold the cabinet's blue gun or the revolver in 3D.
-- Your hand and arm hold the gun, and you can switch to a bare hand in Settings > Game > Hand.
+- You see your own arm holding the gun.
 - You can play with two guns, one in each hand, by turning on Settings > Game > Two guns.
 - The best score of the first week wins a ray gun, and anyone who beats that score later wins it too.
 - Every texture of the game is shown in HD, and Settings > Textures brings back the original ones.
 - You can reload with the A button (X if you hold the gun in your left hand), or by shooting toward the floor below the screen.
-- You can move through the menu with either thumbstick and confirm with A or X.
+- You can move through the menu with either thumbstick without changing anything. Press A to change the chosen line, then A to keep the new value or B to go back to the old one.
 
 ## Port0r: Scud Race VR v0.2.3 (Meta Quest 3)
 
