@@ -55,7 +55,7 @@
 | --- | --- |
 | [![Port0r Cop 2 VR on Meta Quest](https://img.youtube.com/vi/mBV8_gGyiBA/maxresdefault.jpg)](#install-port0r-cop-2-vr) | [![Port0r Cop VR on Meta Quest](https://img.youtube.com/vi/1qCQorbbdPc/maxresdefault.jpg)](#install-port0r-cop-vr) |
 | **v0.1.0** · APK for Meta Quest 3 · Virtua Cop 2 in true 3D, one gun or two, a ray gun to win, HD textures | **v0.2.4** · APK for Meta Quest 3 · Virtua Cop in true 3D, the cabinet's blue gun in your hand |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/vcop2-v0.1.0) · [Install guide](#install-port0r-cop-2-vr) · [itch.io](https://port0r.itch.io/cop-2-vr) · [Video](https://youtu.be/mBV8_gGyiBA) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.4) · [Install guide](#install-port0r-cop-vr) · [itch.io](https://port0r.itch.io/cop-vr) · [Video](https://youtu.be/1qCQorbbdPc) |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/vcop2-v0.1.0) · [Install guide](#install-port0r-cop-2-vr) · [itch.io](https://port0r.itch.io/cop-2-vr) · [SideQuest](https://sidequestvr.com/app/64058/port0r-cop-2-vr) · [Video](https://youtu.be/mBV8_gGyiBA) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.4) · [Install guide](#install-port0r-cop-vr) · [itch.io](https://port0r.itch.io/cop-vr) · [Video](https://youtu.be/1qCQorbbdPc) |
 
 | [Meta Quest: Scud Race VR, standalone VR](#install-port0r-scud-race-vr) | [Android: Scud Race, phones and tablets](SCUD-ANDROID.md) | [Windows PC: Scud Race, PCVR and desktop](SCUD-PC.md) |
 | --- | --- | --- |
@@ -153,7 +153,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 
 | Game | Board | Status |
 | --- | --- | --- |
-| **Port0r: Cop 2 VR** (Virtua Cop 2) | Sega Model 2A, 1995 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop2-v0.1.0), [itch.io](https://port0r.itch.io/cop-2-vr)) |
+| **Port0r: Cop 2 VR** (Virtua Cop 2) | Sega Model 2A, 1995 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop2-v0.1.0), [itch.io](https://port0r.itch.io/cop-2-vr), [SideQuest](https://sidequestvr.com/app/64058/port0r-cop-2-vr)) |
 | **Port0r: Scud Race VR** (Scud Race) | Sega Model 3, 1996 | **Out now, v0.2.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.2.3), [itch.io](https://port0r.itch.io/scud-race-vr), [SideQuest](https://sidequestvr.com/app/63830/port0r-scud-race-vr)) |
 | **Scud Race on Android** (phones, tablets, handhelds) | Sega Model 3, 1996 | **Out now, v0.2.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.2.2), [guide](SCUD-ANDROID.md), [itch.io](https://port0r.itch.io/scud-race-vr)) |
 | **Port0r: Scud Race VR on PC** (Windows, screen and PCVR) | Sega Model 3, 1996 | **Out now, v0.2.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/scud-pc-v0.2.2), [guide](SCUD-PC.md), [itch.io](https://port0r.itch.io/scud-race-vr)) |
@@ -411,9 +411,9 @@ Download your game's APK (the table above), then pick one way:
 - **adb** (if you already use it): `adb install -r` followed by the APK's name, for example
   `adb install -r Port0r-CopVR-v0.2.4-quest3.apk`.
 
-The checksum of each APK is in the `SHA256SUMS.txt` next to it, if you want to check your download. The seven VR games
+The checksum of each APK is in the `SHA256SUMS.txt` next to it, if you want to check your download. The nine VR games
 also have their SideQuest store page, with a one-click install from SideQuest:
-[Scud Race VR](https://sidequestvr.com/app/63830/port0r-scud-race-vr), [Daytona USA VR](https://sidequestvr.com/app/63694/port0r-daytona-usa-vr), [Dirt Dash VR](https://sidequestvr.com/app/63515/port0r-dirt-dash-vr),
+[Cop 2 VR](https://sidequestvr.com/app/64058/port0r-cop-2-vr), [Scud Race VR](https://sidequestvr.com/app/63830/port0r-scud-race-vr), [Daytona USA VR](https://sidequestvr.com/app/63694/port0r-daytona-usa-vr), [Dirt Dash VR](https://sidequestvr.com/app/63515/port0r-dirt-dash-vr),
 [Time Crisis II VR](https://sidequestvr.com/app/63359/port0r-time-crisis-ii-vr), [House of the Dead VR](https://sidequestvr.com/app/63360/port0r-house-of-the-dead-vr),
 [Time Crisis VR](https://sidequestvr.com/app/63135/port0r-time-crisis-vr), [Cop VR](https://sidequestvr.com/app/63134/port0r-cop-vr),
 [Rally VR](https://sidequestvr.com/app/62980).
