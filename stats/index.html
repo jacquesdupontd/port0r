@@ -467,13 +467,17 @@ const serie = (l, key) => l.series.filter(s => s.m && s.m[key] != null && !(key 
 const ONGLETS = [
   { id: 'tout', lib: "Vue d'ensemble", ic: 'dashboard' },
   { id: 'quest', lib: 'Rally VR', ic: 'view_in_ar' },
-  { id: 'copvr', lib: 'Cop VR', ic: 'my_location' },   // 13/10 : Virtua Cop, son propre onglet (tag vcop-v, campagne « Cop VR »)
+  { id: 'srally2', lib: 'Sega Rally 2 VR', ic: 'directions_car' },   // 13/11 : ses bêtas (#beta-builds), tag srally2-v, campagne « Sega Rally 2 VR »
+  { id: 'copvr', lib: 'Cop VR', ic: 'my_location' },
+  { id: 'copvr2', lib: 'Cop 2 VR', ic: 'my_location' },   // 13/11 : tag vcop2-v, campagne « Cop 2 VR » (sorti le 11/11, compté nulle part jusque-là)   // 13/10 : Virtua Cop, son propre onglet (tag vcop-v, campagne « Cop VR »)
   { id: 'timecris', lib: 'Time Crisis VR', ic: 'gps_fixed' },   // 13/10 au soir : tag timecris-v, campagne « Time Crisis VR »
   { id: 'hotd', lib: 'House of the Dead VR', ic: 'skull' },   // 16/10 : tag hotd-v, campagne « House of the Dead VR »
   { id: 'timecrs2', lib: 'Time Crisis II VR', ic: 'filter_center_focus' },
   { id: 'scud', lib: 'Scud Race VR', ic: 'directions_car' },   // 30/10 : tags scud-v (Quest), scud-android-v, scud-pc-v ; campagne « Scud Race VR »
-  { id: 'daytona', lib: 'Daytona USA VR', ic: 'directions_car' },   // 26/10 : tag daytona-v, campagne « Daytona USA VR »
-  { id: 'dirtdash', lib: 'Dirt Dash VR', ic: 'terrain' },   // 20/10 : tag dirtdash-v, campagne « Dirt Dash VR »   // 17/10 : tag timecrs2-v, campagne « Time Crisis II VR »
+  { id: 'daytona', lib: 'Daytona USA VR', ic: 'directions_car' },
+  { id: 'daytona2', lib: 'Daytona USA 2 VR', ic: 'directions_car' },   // 13/11 : ses bêtas, tag daytona2-v, campagne « Daytona USA 2 VR »   // 26/10 : tag daytona-v, campagne « Daytona USA VR »
+  { id: 'dirtdash', lib: 'Dirt Dash VR', ic: 'terrain' },
+  { id: 'zelda', lib: 'Zelda: Inside The Dream', ic: 'visibility' },   // 13/11 : son propre dépôt (zelda-inside-the-dream), campagne « Zelda Inside The Dream »   // 20/10 : tag dirtdash-v, campagne « Dirt Dash VR »   // 17/10 : tag timecrs2-v, campagne « Time Crisis II VR »
   { id: 'switch', lib: 'Switch', ic: 'videogame_asset' },
   { id: 'android', lib: 'Android', ic: 'smartphone' },
   { id: 'linux', lib: 'Steam Deck & Linux', ic: 'sports_esports' },
@@ -486,18 +490,21 @@ if (!ONGLETS.some(o => o.id === ONGLET)) ONGLET = 'tout';
 // campagne (« Switch 08/10 », « Android 09/10 », « Steam Deck & Linux 09/10 » ; les autres sont celles du jeu VR). Le Discord
 // et le dépôt entier sont communs : la vue d'ensemble seulement.
 function cible(l) {
+  if (/github\.com\/jacquesdupontd\/zelda-inside-the-dream/.test(l.url)) return 'zelda';   // son propre dépôt : son tag v0.1.0 n'est pas Rally VR
   if (l.kind === 'discord' || estDepot(l)) return 'commun';
   const tag = (l.url.match(/\/releases\/tag\/([^/?#]+)/) || [])[1];
-  if (tag) return /^(daytona|dirtdash|scud)-android-/.test(tag) ? 'android' : /^scud-/.test(tag) ? 'scud' : /^daytona-/.test(tag) ? 'daytona' : /^dirtdash-/.test(tag) ? 'dirtdash' : /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^timecrs2-/.test(tag) ? 'timecrs2' : /^hotd-/.test(tag) ? 'hotd' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
+  if (tag) return /^vcop2-/.test(tag) ? 'copvr2' : /^daytona2-/.test(tag) ? 'daytona2' : /^srally2-/.test(tag) ? 'srally2' : /^(daytona|dirtdash|scud)-android-/.test(tag) ? 'android' : /^scud-/.test(tag) ? 'scud' : /^daytona-/.test(tag) ? 'daytona' : /^dirtdash-/.test(tag) ? 'dirtdash' : /^vcop-/.test(tag) ? 'copvr' : /^timecris-/.test(tag) ? 'timecris' : /^timecrs2-/.test(tag) ? 'timecrs2' : /^hotd-/.test(tag) ? 'hotd' : /^android-/.test(tag) ? 'android' : /^linux-/.test(tag) ? 'linux' : /^mac-/.test(tag) ? 'mac' : /^switch-/.test(tag) ? 'switch' : 'quest';
   const c = l.campaign || '';
-  return /(daytona|dirt ?dash|scud).*android/i.test(c) ? 'android' : /scud/i.test(c) ? 'scud' : /daytona/i.test(c) ? 'daytona' : /dirt ?dash/i.test(c) ? 'dirtdash' : /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis ?(ii|2)\b/i.test(c) ? 'timecrs2' : /time ?crisis/i.test(c) ? 'timecris' : /house ?of ?the ?dead|hotd/i.test(c) ? 'hotd' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
+  return /zelda|inside ?the ?dream/i.test(c) ? 'zelda' : /daytona ?(usa ?)?(2|ii)\b/i.test(c) ? 'daytona2' : /sega ?rally ?(2|ii)\b|srally ?2/i.test(c) ? 'srally2' : /cop ?2|virtua ?cop ?2/i.test(c) ? 'copvr2'
+    : /(daytona|dirt ?dash|scud).*android/i.test(c) ? 'android' : /scud/i.test(c) ? 'scud' : /daytona/i.test(c) ? 'daytona' : /dirt ?dash/i.test(c) ? 'dirtdash' : /cop ?vr|virtua ?cop/i.test(c) ? 'copvr' : /time ?crisis ?(ii|2)\b/i.test(c) ? 'timecrs2' : /time ?crisis/i.test(c) ? 'timecris' : /house ?of ?the ?dead|hotd/i.test(c) ? 'hotd' : /switch/i.test(c) ? 'switch' : /android/i.test(c) ? 'android' : /steam ?deck|linux/i.test(c) ? 'linux' : /\bmac\b/i.test(c) ? 'mac' : 'quest';
 }
 // Les téléchargements d'une plateforme : sa part du dépôt GitHub (dl_<plateforme>, toutes ses releases), ses pages itch,
 // et SideQuest pour le Quest. Les liens de release seuls ne s'additionnent pas : le dépôt les contient déjà.
 function sourcesDl(L, p) {
   const depot = L.filter(estDepot), it = L.filter(l => l.kind === 'itch' && (p === 'tout' || cible(l) === p));
   const sq = L.filter(l => l.kind === 'sidequest' && (p === 'tout' || cible(l) === p));   // 13/10 : chaque fiche à son jeu
-  return [...depot.map(l => [l, p === 'tout' ? 'downloads' : 'dl_' + p]), ...[...it, ...sq].map(l => [l, 'downloads'])];
+  const bt = L.filter(l => l.kind === 'beta' && (p === 'tout' || cible(l) === p));   // 13/11 : les builds de #beta-builds (testeurs qui ont pris le fichier)
+  return [...depot.map(l => [l, p === 'tout' ? 'downloads' : 'dl_' + p]), ...[...it, ...sq, ...bt].map(l => [l, 'downloads'])];
 }
 const totP = pairs => pairs.reduce((a, [l, k]) => a + ((l.latest || {})[k] || 0), 0);
 // Écart sur 24 h : la valeur actuelle moins la dernière relevée avant il y a 24 h (ou la plus ancienne connue).
@@ -536,7 +543,7 @@ function rendre() {
   // les blocs qui ne parlent pas d'une plateforme (réussites, commentaires, Discord) : la vue d'ensemble seulement
   ['#b-reussites', '#b-coms', '#b-tous', '#live', '#b-commu', '#b-site'].forEach(id => { const e = $(id); if (e) e.classList.toggle('hors-onglet', !tout); });
   const by = k => L.filter(l => l.kind === k);
-  const yt = by('youtube'), rd = by('reddit'), gh = by('github'), it = by('itch'), sq = by('sidequest'), dc = by('discord'), man = by('manual');
+  const yt = by('youtube'), rd = by('reddit'), gh = by('github'), it = by('itch'), sq = by('sidequest'), bt = by('beta'), dc = by('discord'), man = by('manual');
   const tot = (ls, k) => ls.reduce((a, l) => a + ((l.latest || {})[k] || 0), 0);
   const kpis = [
     { lib: 'Vues YouTube', ic: 'play_circle', v: tot(yt, 'views'), s: somme(yt, 'views'), hero: true },
@@ -600,11 +607,11 @@ function rendre() {
   }).join('') : '<div class="vide" data-part="empty">Aucun post suivi.</div>';
   remplir('b-video', yt, [['views', 'vues'], ['likes', 'likes']], 'views', 'Aucune vidéo suivie.');
   // le dépôt entier d'abord (toutes les releases), puis chaque release, puis itch et SideQuest
-  const dls = [...gh.filter(estDepot), ...gh.filter(l => !estDepot(l)).sort((a, b) => b.id - a.id), ...it, ...sq];
+  const dls = [...gh.filter(estDepot), ...gh.filter(l => !estDepot(l)).sort((a, b) => b.id - a.id), ...it, ...sq, ...bt.sort((a, b) => b.id - a.id)];
   remplir('b-dl', dls, [['downloads', 'télécharg.'], [gh.length ? 'stars' : 'views', 'étoiles / vues']], 'downloads', 'Aucune source de téléchargements.');
   // la colonne secondaire dépend de la source : étoiles pour GitHub, vues pour itch, statut pour SideQuest
   if (dls.length) $('#b-dl .liste').innerHTML = dls.map(l => ligne(l, l.kind === 'github' ? [['downloads', 'télécharg.'], ['stars', 'étoiles']]
-    : l.kind === 'itch' ? [['downloads', 'télécharg.'], ['views', 'vues']] : [['downloads', (l.latest || {}).status === 'not public' ? 'pas en ligne' : 'télécharg.'], ['views', 'vues']], 'downloads')).join('');
+    : l.kind === 'itch' ? [['downloads', 'télécharg.'], ['views', 'vues']] : l.kind === 'beta' ? [['downloads', 'testeurs'], ['asked', 'liens demandés']] : [['downloads', (l.latest || {}).status === 'not public' ? 'pas en ligne' : 'télécharg.'], ['views', 'vues']], 'downloads')).join('');
   remplir('b-commu', dc, [['members', 'membres'], ['linked', 'casques liés']], 'members', 'Aucun serveur suivi.');
 
   // relevés à la main : une ligne + des champs pour noter les chiffres du moment
