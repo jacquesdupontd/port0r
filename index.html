@@ -78,6 +78,7 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
   <div class="wrap">
     <a class="mark" href="./" aria-label="Port0r, home"><img class="on-light" src="assets/port0r-wordmark-light.svg" alt="Port0r" width="116" height="24"><img class="on-dark" src="assets/port0r-wordmark.svg" alt="" width="116" height="24"></a>
     <nav aria-label="Sections">
+      <a href="#inside-the-dream">Zelda</a>
       <a href="#games">Games</a>
       <a href="#live">Live</a>
       <a class="opt" href="#everywhere">Everywhere</a>
@@ -110,7 +111,12 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
   <div class="wrap hero-copy">
     <!-- Each cue follows the matching shot in the medley; the video's time is the only clock. -->
     <div class="slides">
-      <div class="slide on" data-cue="cop2" data-recording="Cop 2 VR, recorded in the headset" data-hero-watch="mBV8_gGyiBA">
+      <div class="slide on" data-cue="itd" data-recording="Inside The Dream, recorded in VR" data-hero-watch="hG9b2gmJWEs">
+        <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>New · 0.1.1 · Windows PCVR, Linux, Mac</span>
+        <h2 class="hx">Zelda: Inside The Dream, <span class="hl">in first person.</span></h2>
+        <p class="lead">Link's Awakening becomes a first-person VR game that you play on your PC. It is free and open source, and you bring your own copy of the game.</p>
+      </div>
+      <div class="slide" data-cue="cop2" data-recording="Cop 2 VR, recorded in the headset" data-hero-watch="mBV8_gGyiBA">
         <span class="chip"><span class="eyes" aria-hidden="true"><i></i><i></i></span>New · 0.1.0 · Meta Quest 3</span>
         <h2 class="hx">Virtua Cop 2, <span class="hl">with two guns.</span></h2>
         <p class="lead">Sega's 1995 gun game in VR on Meta Quest 3. You hold one gun or two, and the best score of the first week wins a ray gun.</p>
@@ -167,6 +173,42 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
   </div>
 </section>
 
+<section class="band alt" id="inside-the-dream">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker">New · PC VR · Windows, Linux and Mac</p>
+      <h2 class="converge">Zelda: Inside The Dream, <span class="hl">Koholint around you.</span></h2>
+      <p class="lead">Our first mod of a console game: you walk through Link's Awakening in first person, in VR or on your screen.</p>
+    </header>
+
+    <div class="games">
+      <article class="game rise" id="zelda-inside-the-dream" data-game="itd">
+        <div class="stage">
+          <button class="yt" type="button" data-id="hG9b2gmJWEs" aria-label="Play the Inside The Dream video"><img src="assets/yt/hG9b2gmJWEs.jpg" alt="Zelda: Inside The Dream, Link's Awakening in first person" loading="lazy">
+          <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-itd.jpg" data-src="assets/clip-itd.mp4" aria-label="Inside The Dream, recorded in VR"></video></figure></button>
+        </div>
+        <div class="info">
+          <div class="meta"><span class="chip">Out now · 0.1.1</span><span class="kicker">Nintendo · 2019 · Free and open source</span></div>
+          <h3>Zelda: Inside The Dream <span class="hl">in VR</span></h3>
+          <p class="new"><b>New</b>You see Koholint through Link's eyes, in VR on Windows or on the screen on Linux and Mac.</p>
+          <ul class="feat">
+            <li>Windows PCVR, Linux and Mac</li>
+            <li>Free and open source on GitHub</li>
+            <li>You bring your own copy of the game, nothing of Nintendo's is included</li>
+          </ul>
+          <div class="row">
+            <a class="btn" href="zelda-inside-the-dream/">The game's page</a>
+            <a class="btn soft" href="https://github.com/jacquesdupontd/zelda-inside-the-dream/releases/download/v0.1.1/InsideTheDream-v0.1.1-windows-setup.exe">Windows</a>
+            <a class="btn soft" href="https://github.com/jacquesdupontd/zelda-inside-the-dream/releases/download/v0.1.1/InsideTheDream-v0.1.1-linux-x86_64.AppImage">Linux</a>
+            <a class="btn soft" href="https://github.com/jacquesdupontd/zelda-inside-the-dream/releases/download/v0.1.1/InsideTheDream-v0.1.1-macos.dmg">Mac</a>
+            <a class="link" href="https://github.com/jacquesdupontd/zelda-inside-the-dream">GitHub</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="band" id="games">
   <div class="wrap">
     <header class="head">
@@ -190,16 +232,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="cop2" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.1.0</span><span class="kicker">Sega · 1995 · Model 2A</span></div>
+          <div class="meta"><span class="chip">Out now · 0.1.1</span><span class="kicker">Sega · 1995 · Model 2A</span></div>
           <h3>Virtua Cop 2 <span class="hl">in VR</span></h3>
-          <p class="new"><b>New</b>One gun or two, one in each hand, and a ray gun to win with the best score of the first week.</p>
+          <p class="new"><b>New in 0.1.1</b>Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>One gun or two, one in each hand</li>
             <li>Your own arm holding the gun</li>
             <li>A ray gun for the best score of the first week</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/vcop2-v0.1.0">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/vcop2-v0.1.1">Download</a>
             <a class="btn soft" href="cop-2-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/64058/port0r-cop-2-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/cop-2-vr">itch.io</a>
@@ -214,16 +256,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
           <figure class="pip"><video class="clip" muted loop playsinline preload="none" poster="assets/clip-scud.jpg" data-src="assets/clip-scud.mp4" aria-label="Scud Race VR, recorded in the headset: by the sea, behind the yellow car"></video><figcaption class="tag"><span class="dot" aria-hidden="true"></span>In the headset</figcaption></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.2.3</span><span class="kicker">Sega AM2 · 1996 · Model 3</span></div>
+          <div class="meta"><span class="chip">Out now · 0.2.7</span><span class="kicker">Sega AM2 · 1996 · Model 3</span></div>
           <h3>Scud Race <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.2.3</b>You can switch Smoothing off in the middle of a race, and Find them now finds a Logitech G29 in its PS3/PS4 mode on the first try.</p>
+          <p class="new"><b>New in 0.2.7</b>Logitech wheels like the G29 now have full force feedback, and the pedals are easy to set up. Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>The GT racing game Sega AM2 released in arcades in 1996</li>
             <li>Standalone on Meta Quest 3</li>
             <li>Plug a Logitech wheel straight into your Quest: steering and force feedback, no PC needed</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.2.3">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-v0.2.7">Download</a>
             <a class="btn soft" href="scud-race-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63830/port0r-scud-race-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/scud-race-vr">itch.io</a>
@@ -247,16 +289,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="daytona" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.2.1</span><span class="kicker">Sega AM2 · 1994 · Model 2</span></div>
+          <div class="meta"><span class="chip">Out now · 0.2.5</span><span class="kicker">Sega AM2 · 1994 · Model 2</span></div>
           <h3>Daytona USA <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.2.1</b>You can switch Smoothing off in the middle of a race, and Find them now finds a Logitech G29 in its PS3/PS4 mode on the first try.</p>
+          <p class="new"><b>New in 0.2.5</b>Logitech wheels like the G29 now have full force feedback, and the pedals are easy to set up. Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>The stock-car racing game Sega AM2 released in arcades in 1994</li>
             <li>Standalone on Meta Quest 3, in 4K</li>
             <li>The cabinet's own settings menu: the Japanese or export version</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.1">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-v0.2.5">Download</a>
             <a class="btn soft" href="daytona-usa-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63694/port0r-daytona-usa-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/daytona-usa-vr">itch.io</a>
@@ -278,16 +320,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="dirtdash" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.1.5</span><span class="kicker">Namco · 1995 · System Super 22</span></div>
+          <div class="meta"><span class="chip">Out now · 0.1.6</span><span class="kicker">Namco · 1995 · System Super 22</span></div>
           <h3>Dirt Dash <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.1.5</b>You can switch Smoothing off in the middle of a race, and Find them now learns how far each of your pedals moves.</p>
+          <p class="new"><b>New in 0.1.6</b>Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>Released in Japan in December 1995, worldwide in 1996</li>
             <li>&ldquo;To Sega Rally what Tekken is to Virtua Fighter&rdquo; (Next Generation)</li>
             <li>In VR on Meta Quest 3, in stereoscopic 3D</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.5">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-v0.1.6">Download</a>
             <a class="btn soft" href="dirt-dash-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63515/port0r-dirt-dash-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/dirt-dash-vr">itch.io</a>
@@ -309,16 +351,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="timecrs2" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.1.3</span><span class="kicker">Namco · 1997 · System 23</span></div>
+          <div class="meta"><span class="chip">Out now · 0.1.4</span><span class="kicker">Namco · 1997 · System 23</span></div>
           <h3>Time Crisis II <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.1.3</b>You can now switch Smoothing off in the middle of a game and keep playing.</p>
+          <p class="new"><b>New in 0.1.4</b>Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>In the town of the first stage, at real scale</li>
             <li>Take cover with the pedal button, or crouch for real</li>
             <li>A 3D gun in your hand, the shots land on what you hit</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.3">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/timecrs2-v0.1.4">Download</a>
             <a class="btn soft" href="time-crisis-ii-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63359/port0r-time-crisis-ii-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/time-crisis-ii-vr">itch.io</a>
@@ -340,16 +382,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="hotd" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.1.3</span><span class="kicker">Sega · 1996 · Model 2</span></div>
+          <div class="meta"><span class="chip">Out now · 0.1.4</span><span class="kicker">Sega · 1996 · Model 2</span></div>
           <h3>House of the Dead <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.1.3</b>You can switch Smoothing off in the middle of a game, and shots at the very edge of the screen now hit.</p>
+          <p class="new"><b>New in 0.1.4</b>Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>In the Curien mansion, at real scale</li>
             <li>The zombies walk right up to you</li>
             <li>A 3D gun in your hand, or the cabinet's blue gun</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.3">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/hotd-v0.1.4">Download</a>
             <a class="btn soft" href="house-of-the-dead-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63360/port0r-house-of-the-dead-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/house-of-the-dead-vr">itch.io</a>
@@ -371,16 +413,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="timecris" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.2.4</span><span class="kicker">Namco · 1995 · System 22</span></div>
+          <div class="meta"><span class="chip">Out now · 0.2.5</span><span class="kicker">Namco · 1995 · System 22</span></div>
           <h3>Time Crisis <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.2.4</b>You can now switch Smoothing off in the middle of a game and keep playing.</p>
+          <p class="new"><b>New in 0.2.5</b>Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>On the island with the soldiers, at real scale</li>
             <li>Take cover with the pedal button, or crouch for real</li>
             <li>A 3D gun in your hand, the shots land where you aim</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.4">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.5">Download</a>
             <a class="btn soft" href="time-crisis-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63135/port0r-time-crisis-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/time-crisis-vr">itch.io</a>
@@ -402,16 +444,16 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="cop" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.2.4</span><span class="kicker">Sega · 1994 · Model 2</span></div>
+          <div class="meta"><span class="chip">Out now · 0.2.5</span><span class="kicker">Sega · 1994 · Model 2</span></div>
           <h3>Virtua Cop <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.2.4</b>You can switch Smoothing off in the middle of a game, and shots at the very edge of the screen now hit.</p>
+          <p class="new"><b>New in 0.2.5</b>Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>Sega's blue Virtua Gun in your hand, like on the cabinet</li>
             <li>The weapons you pick up, in 3D</li>
             <li>The cabinet's camera zooms become a move into the docks</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.4">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.5">Download</a>
             <a class="btn soft" href="cop-vr/">The game's page</a>
             <a class="link" href="https://sidequestvr.com/app/63134/port0r-cop-vr">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/cop-vr">itch.io</a>
@@ -433,18 +475,18 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
             <figure class="said" data-said="rally" hidden><q></q><cite></cite></figure>
         </div>
         <div class="info">
-          <div class="meta"><span class="chip">Out now · 0.2.8</span><span class="kicker">Sega · 1995 · Model 2A</span></div>
+          <div class="meta"><span class="chip">Out now · 0.2.14</span><span class="kicker">Sega · 1995 · Model 2A</span></div>
           <h3>Sega Rally <span class="hl">in VR</span></h3>
-          <p class="new"><b>New in 0.2.8</b>ScottMadeAThing's 4K texture pack now comes with the game. You can also switch Smoothing off in the middle of a race.</p>
+          <p class="new"><b>New in 0.2.14</b>Fixes the game being stuck at 72 Hz since the last Quest system update.</p>
           <ul class="feat">
             <li>The whole race in real 3D around you, at real scale</li>
             <li>Gears on the side grips, the knocks in your hands</li>
             <li>ScottMadeAThing's 4K textures, built in</li>
           </ul>
           <div class="row">
-            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.8">Download</a>
+            <a class="btn" href="https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.14">Download</a>
             <a class="btn soft" href="rally-vr/">The game's page</a>
-            <a class="link" href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7">On PC (PCVR)</a>
+            <a class="link" href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.14">On PC (PCVR)</a>
             <a class="link" href="https://sidequestvr.com/app/62980">SideQuest</a>
             <a class="link" href="https://port0r.itch.io/rally-vr">itch.io</a>
           </div>
@@ -454,9 +496,9 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
       <aside class="next rise" aria-label="In beta now, on our Discord">
         <div>
           <p class="kicker" style="color:#f4efe5">In beta now · on our Discord</p>
-          <h3 style="margin-top:12px">Daytona USA 2 and Sega Rally 2 <span class="hl">in VR.</span></h3>
+          <h3 style="margin-top:12px">Daytona USA 2, Sega Rally 2 and Star Wars Trilogy <span class="hl">in VR.</span></h3>
           <ul class="queue">
-            <li class="beta">Daytona USA 2</li><li class="beta">Sega Rally 2</li><li>Top Skater</li><li>Sega Super GT 24h</li><li>Virtua Racing</li>
+            <li class="beta">Daytona USA 2</li><li class="beta">Sega Rally 2</li><li class="beta">Star Wars Trilogy</li><li>Top Skater</li><li>Sega Super GT 24h</li><li>Virtua Racing</li>
           </ul>
         </div>
         <a class="btn primary" href="https://discord.gg/XMk7GgapuN">Join our Discord</a>
@@ -527,57 +569,57 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
         <button class="yt" type="button" data-id="r90VKyOhWvY" aria-label="Play the Scud Race video"><img src="assets/scud/android.jpg" alt="Scud Race on Android, with its touch controls" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
         <div class="body">
           <h3>Scud Race <span class="hl">on Android</span></h3>
-          <p class="spec"><span>v0.2.2 · APK · 237 MB</span></p>
+          <p class="spec"><span>v0.2.3 · APK · 237 MB</span></p>
           <p>Phones and tablets: touch controls or a gamepad, 4K at 120 FPS.</p>
-          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.2.2">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-ANDROID.md">Install guide</a></div>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/scud-android-v0.2.3">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SCUD-ANDROID.md">Install guide</a></div>
         </div>
       </article>
       <article class="plat rise" data-game="pc">
         <button class="yt" type="button" data-id="_Nm22_u1s7Y" aria-label="Play the Sega Rally PCVR video"><img src="assets/yt/_Nm22_u1s7Y.jpg" alt="Sega Rally on PC, in PCVR from the cockpit" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span></button>
         <div class="body">
           <h3>Sega Rally <span class="hl">on PC</span></h3>
-          <p class="spec"><span>v0.1.7 · Windows 10 / 11 · 34 MB</span><span><b data-g="pc" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p class="spec"><span>v0.1.14 · Windows 10 / 11 · 309 MB</span><span><b data-g="pc" data-k="downloads">&nbsp;</b> downloads</span></p>
           <p>In VR through SteamVR or Quest Link, or on the screen. Logitech wheels with the force feedback of the arcade cabinet.</p>
           <figure class="said" data-said="pc" hidden><q></q><cite></cite></figure>
-          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/WINDOWS.md">Install guide</a></div>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.14">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/WINDOWS.md">Install guide</a></div>
         </div>
       </article>
       <article class="plat rise" data-game="switch">
         <button class="yt" type="button" data-id="nC8Lj6FlHLE" aria-label="Play the Nintendo Switch video"><img src="assets/yt/nC8Lj6FlHLE.jpg" alt="Sega Rally on Nintendo Switch" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="nC8Lj6FlHLE"></span></button>
         <div class="body">
           <h3>Sega Rally <span class="hl">on Switch</span></h3>
-          <p class="spec"><span>v0.5.3 · homebrew · 42 MB</span><span><b data-g="switch" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p class="spec"><span>v0.5.4 · homebrew · 42 MB</span><span><b data-g="switch" data-k="downloads">&nbsp;</b> downloads</span></p>
           <p>Joy-Con or Pro Controller, docked or handheld. Updates from inside the game.</p>
           <figure class="said" data-said="switch" hidden><q></q><cite></cite></figure>
-          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SWITCH.md">Install guide</a></div>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/SWITCH.md">Install guide</a></div>
         </div>
       </article>
       <article class="plat rise" data-game="android">
         <button class="yt" type="button" data-id="hZXkqHSjeHs" aria-label="Play the Android video"><img src="assets/yt/hZXkqHSjeHs.jpg" alt="Sega Rally on Android, with its touch controls" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="hZXkqHSjeHs"></span></button>
         <div class="body">
           <h3>Sega Rally <span class="hl">on Android</span></h3>
-          <p class="spec"><span>v0.1.2 · APK · 82 MB</span><span><b data-g="android" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p class="spec"><span>v0.1.3 · APK · 82 MB</span><span><b data-g="android" data-k="downloads">&nbsp;</b> downloads</span></p>
           <p>Phones and tablets: touch controls or a gamepad.</p>
           <figure class="said" data-said="android" hidden><q></q><cite></cite></figure>
-          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/ANDROID.md">Install guide</a></div>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.3">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/ANDROID.md">Install guide</a></div>
         </div>
       </article>
       <article class="plat rise" data-game="android_daytona">
         <button class="yt" type="button" data-id="75K8WlwFTeU" aria-label="Play the Android video"><img src="assets/yt/75K8WlwFTeU.jpg" alt="Daytona USA on Android" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="75K8WlwFTeU"></span></button>
         <div class="body">
           <h3>Daytona USA <span class="hl">on Android</span></h3>
-          <p class="spec"><span>v0.1.0 · APK · 66 MB</span><span><b data-g="android_daytona" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p class="spec"><span>v0.1.1 · APK · 66 MB</span><span><b data-g="android_daytona" data-k="downloads">&nbsp;</b> downloads</span></p>
           <p>Phones and tablets: touch controls or a gamepad, 4K at 120 FPS.</p>
-          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.0">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/DAYTONA-ANDROID.md">Install guide</a></div>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.1">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/DAYTONA-ANDROID.md">Install guide</a></div>
         </div>
       </article>
       <article class="plat rise" data-game="android_dirtdash">
         <button class="yt" type="button" data-id="75K8WlwFTeU" aria-label="Play the Android video"><img src="assets/yt/75K8WlwFTeU.jpg" alt="Dirt Dash on Android" loading="lazy"><span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Play</span><span class="views" data-views="75K8WlwFTeU"></span></button>
         <div class="body">
           <h3>Dirt Dash <span class="hl">on Android</span></h3>
-          <p class="spec"><span>v0.1.0 · APK · 54 MB</span><span><b data-g="android_dirtdash" data-k="downloads">&nbsp;</b> downloads</span></p>
+          <p class="spec"><span>v0.1.1 · APK · 54 MB</span><span><b data-g="android_dirtdash" data-k="downloads">&nbsp;</b> downloads</span></p>
           <p>Phones and tablets: touch controls or a gamepad, 4K at 120 FPS.</p>
-          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/DIRTDASH-ANDROID.md">Install guide</a></div>
+          <div class="row"><a class="btn sm" href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.1">Download</a><a class="link" href="https://github.com/jacquesdupontd/port0r/blob/main/DIRTDASH-ANDROID.md">Install guide</a></div>
         </div>
       </article>
       <article class="plat rise" data-game="linux">
@@ -670,6 +712,7 @@ if (!location.hash && (showIntro || new URLSearchParams(location.search).get("in
   <div class="wrap">
     <img src="assets/port0r-wordmark.svg" alt="Port0r" width="116" height="24">
     <nav aria-label="Elsewhere">
+      <a href="/zelda-inside-the-dream/">Zelda: Inside The Dream</a>
       <a href="https://discord.gg/XMk7GgapuN">Discord</a>
       <a href="https://www.youtube.com/@jacquesdupontd">YouTube</a>
       <a href="https://github.com/jacquesdupontd/port0r">GitHub</a>
