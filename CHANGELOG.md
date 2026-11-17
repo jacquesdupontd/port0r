@@ -1,5 +1,14 @@
 # Changelog
 
+## Sega Rally Switch v0.5.4
+
+- The other cars now leave the starting grid together, the way they do on the arcade board.
+- Manual cars now start every stage in first gear, so you can shift up from the very first second.
+- The game is a little lighter on the console, so the race stays smooth.
+- When a newer version is out, a short notice at startup tells you, and you can still check by hand in the menu.
+- The HD textures now fade out together with the rest of the picture.
+- You can update from inside the game in Sharing > GitHub updates, and your settings, scores, replays, ghosts and HD textures are kept. From v0.5.1 or v0.5.2, install it by hand once.
+
 ## Port0r: Cop 2 VR v0.1.0 (Meta Quest 3)
 
 - Virtua Cop 2 is now playable in VR on Quest 3 in its own app, and you hold the cabinet's blue gun or the revolver in 3D.

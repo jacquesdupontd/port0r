@@ -12,7 +12,7 @@
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.8"><img alt="Download Port0r: Rally VR v0.2.8 (APK, free)" src="https://img.shields.io/badge/Download-Rally%20VR%20v0.2.8%20%C2%B7%20APK%20%C2%B7%20free-2ea44f?style=for-the-badge&logo=meta&logoColor=white" height="42"></a>
   <br>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7"><img alt="Download Sega Rally for Windows PC v0.1.7 (PCVR and desktop, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20PC%20v0.1.7%20%C2%B7%20PCVR%20%26%20desktop%20%C2%B7%20free-9b7bff?style=for-the-badge&logo=windows&logoColor=white" height="34"></a>
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4"><img alt="Download Sega Rally for Nintendo Switch v0.5.4 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.4%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2"><img alt="Download Sega Rally for Android v0.1.2 (APK, free)" src="https://img.shields.io/badge/Download-Android%20v0.1.2%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.0"><img alt="Download Daytona USA for Android v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Daytona%20USA%20Android%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
   <a href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0"><img alt="Download Dirt Dash for Android v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Dirt%20Dash%20Android%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
@@ -84,8 +84,8 @@
 | [Nintendo Switch: Sega Rally, full 16:9](SWITCH.md) | [Android: Sega Rally, phones and tablets](ANDROID.md) |
 | --- | --- |
 | [![Sega Rally on Nintendo Switch](assets/switch/header.jpg)](SWITCH.md) | [![Sega Rally on Android](assets/android/header.jpg)](ANDROID.md) |
-| **v0.5.3** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard | **v0.1.2** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures |
-| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2) · [Complete guide](ANDROID.md) · [itch.io](https://port0r.itch.io/sega-rally-android) · [Video](https://youtu.be/hZXkqHSjeHs) |
+| **v0.5.4** · homebrew for a Switch with custom firmware · HD textures, 10 mods, replays, ghost, leaderboard | **v0.1.2** · APK for Android 8+ (Vulkan) · touch, tilt or gamepad, 60 fps, HD textures |
+| [Download](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4) · [Complete guide](SWITCH.md) · [itch.io](https://port0r.itch.io/sega-rally-switch) · [Video](https://youtu.be/nC8Lj6FlHLE) | [Download](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2) · [Complete guide](ANDROID.md) · [itch.io](https://port0r.itch.io/sega-rally-android) · [Video](https://youtu.be/hZXkqHSjeHs) |
 
 | [Android: Daytona USA, phones and tablets](DAYTONA-ANDROID.md) | [Android: Dirt Dash, phones and tablets](DIRTDASH-ANDROID.md) |
 | --- | --- |
@@ -126,7 +126,7 @@
 > ### Download Port0r: Rally VR v0.2.8 (free)
 > **[Port0r-RallyVR-v0.2.8-quest3.apk](https://github.com/jacquesdupontd/port0r/releases/download/v0.2.8/Port0r-RallyVR-v0.2.8-quest3.apk)** (Meta Quest 3), from [its release](https://github.com/jacquesdupontd/port0r/releases/tag/v0.2.8), also on [itch.io](https://port0r.itch.io/rally-vr).
 > Then follow the [install guide](#install-port0r-rally-vr) below: about ten minutes the first time.
-> **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip) (homebrew), [complete Switch guide](SWITCH.md).
+> **On Nintendo Switch:** [Port0r-SegaRally-Switch-v0.5.4.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.4/Port0r-SegaRally-Switch-v0.5.4.zip) (homebrew), [complete Switch guide](SWITCH.md).
 > **On Android:** [Port0r-SegaRally-Android-v0.1.2.apk](https://github.com/jacquesdupontd/port0r/releases/download/android-v0.1.2/Port0r-SegaRally-Android-v0.1.2.apk), [complete Android guide](ANDROID.md).
 > **Daytona USA on Android:** [Port0r-DaytonaUSA-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/daytona-android-v0.1.0/Port0r-DaytonaUSA-Android-v0.1.0.apk), [its guide](DAYTONA-ANDROID.md).
 > **Dirt Dash on Android:** [Port0r-DirtDash-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/dirtdash-android-v0.1.0/Port0r-DirtDash-Android-v0.1.0.apk), [its guide](DIRTDASH-ANDROID.md).
@@ -164,7 +164,7 @@ pass by your shoulder, the speed is physical. Be inside the arcade, not in front
 | **Port0r: Time Crisis VR** (Time Crisis) | Namco System 22, 1995 | **Out now, v0.2.4** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/timecris-v0.2.4), [itch.io](https://port0r.itch.io/time-crisis-vr), [SideQuest](https://sidequestvr.com/app/63135/port0r-time-crisis-vr)) |
 | **Port0r: Cop VR** (Virtua Cop) | Sega Model 2, 1994 | **Out now, v0.2.4** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/vcop-v0.2.4), [itch.io](https://port0r.itch.io/cop-vr), [SideQuest](https://sidequestvr.com/app/63134/port0r-cop-vr)) |
 | **Port0r: Rally VR** (Sega Rally Championship) | Sega Model 2A, 1995 | **Out now, v0.2.8** ([Releases](../../releases), [itch.io](https://port0r.itch.io/rally-vr), [SideQuest](https://sidequestvr.com/app/62980)) |
-| **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.3** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3), [install guide](#install-sega-rally-switch)) |
+| **Sega Rally on Switch** (homebrew) | Sega Model 2A, 1995 | **Out now, v0.5.4** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4), [install guide](#install-sega-rally-switch)) |
 | **Sega Rally on Android** (phones, tablets, handhelds) | Sega Model 2A, 1995 | **Out now, v0.1.2** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/android-v0.1.2), [guide](ANDROID.md), [itch.io](https://port0r.itch.io/sega-rally-android)) |
 | **Daytona USA on Android** (phones, tablets, handhelds) | Sega Model 2, 1994 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/daytona-android-v0.1.0), [guide](DAYTONA-ANDROID.md), [itch.io](https://port0r.itch.io/daytona-usa-vr)) |
 | **Dirt Dash on Android** (phones, tablets, handhelds) | Namco System Super 22, 1995 | **Out now, v0.1.0** ([Release](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0), [guide](DIRTDASH-ANDROID.md), [itch.io](https://port0r.itch.io/dirt-dash-vr)) |
@@ -187,7 +187,7 @@ They come out one at a time, when they are right.
 
 <a id="install-sega-rally-switch"></a>
 
-## Sega Rally on Nintendo Switch (new, v0.5.3)
+## Sega Rally on Nintendo Switch (v0.5.4)
 
 > **The complete Switch guide, with screenshots of every Workshop page: [SWITCH.md](SWITCH.md).**
 > **Video:** https://youtu.be/nC8Lj6FlHLE
@@ -202,12 +202,12 @@ The same arcade Sega Rally, as a homebrew for a Switch running custom firmware (
 16:9, Jean-seb's HD textures (optional), a Workshop with 10 mods, best-lap ghost, named replays, photo mode, 10
 languages, and your times on the Discord leaderboard.
 
-**Download:** [Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip)
-from the [Switch release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3).
+**Download:** [Port0r-SegaRally-Switch-v0.5.4.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.4/Port0r-SegaRally-Switch-v0.5.4.zip)
+from the [Switch release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4).
 
 ### 1. Copy the files
 
-Unzip `Port0r-SegaRally-Switch-v0.5.3.zip` and copy its content to the **root of the SD card**, keeping the folders.
+Unzip `Port0r-SegaRally-Switch-v0.5.4.zip` and copy its content to the **root of the SD card**, keeping the folders.
 The game lands in:
 
 ```
@@ -272,6 +272,8 @@ game data: it only opens the NRO. Install it with your usual NSP installer, and 
 | Quit cleanly | Hold ZL + ZR + R for 2 seconds |
 
 Steering sensitivity: 22 % is the reference, 50 % reaches both ends of the arcade wheel.
+
+**New in v0.5.4:** the other cars leave the starting grid together, the way they do on the arcade board, manual cars start every stage in first gear, and the game is a little lighter on the console. From v0.5.3, update from inside the game in Sharing > GitHub updates.
 
 **New in v0.5.3:** remap driving buttons in Workshop > Driving > Controls (A to capture, B to save, X to reset). Choose mirror or black sides in 4:3. Sharing > GitHub updates shows the scrollable changelog before downloading and confirming installation; automatic checks can be disabled. From v0.5.1 / v0.5.2, copy the new NRO manually once. [Update and rollback guide](SWITCH.md#saves-settings-and-updates).
 

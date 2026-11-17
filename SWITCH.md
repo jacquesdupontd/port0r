@@ -1,13 +1,13 @@
 ![Sega Rally on Nintendo Switch](assets/switch/header.jpg)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><img alt="Download Sega Rally for Nintendo Switch v0.5.3 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.3%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4"><img alt="Download Sega Rally for Nintendo Switch v0.5.4 (homebrew, free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20Switch%20v0.5.4%20%C2%B7%20homebrew%20%C2%B7%20free-e60012?style=for-the-badge&logo=nintendoswitch&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
   <a href="https://port0r.com"><b>port0r.com</b></a> ·
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3"><b>Download</b></a> ·
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4"><b>Download</b></a> ·
   <a href="https://port0r.itch.io/sega-rally-switch"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
@@ -19,10 +19,10 @@
 
 **The 1995 arcade Sega Rally Championship, as a free homebrew for a Switch running custom firmware.**
 
-> ### Download Sega Rally for Switch v0.5.3 (free)
-> **[Port0r-SegaRally-Switch-v0.5.3.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.3/Port0r-SegaRally-Switch-v0.5.3.zip)**
+> ### Download Sega Rally for Switch v0.5.4 (free)
+> **[Port0r-SegaRally-Switch-v0.5.4.zip](https://github.com/jacquesdupontd/port0r/releases/download/switch-v0.5.4/Port0r-SegaRally-Switch-v0.5.4.zip)**
 > (the game, the optional HOME tile and the install guide), from the
-> [release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.3). The project is also on
+> [release page](https://github.com/jacquesdupontd/port0r/releases/tag/switch-v0.5.4). The project is also on
 > [itch.io](https://port0r.itch.io/sega-rally-switch). Then follow the [install guide](#install) below: about ten
 > minutes the first time.
 
@@ -71,7 +71,7 @@ left or the right stick. And your times on the **Port0r Discord leaderboard**.
 
 ### 1. Copy the files
 
-Unzip `Port0r-SegaRally-Switch-v0.5.3.zip` on your computer and copy **its content** to the **root of the SD card**,
+Unzip `Port0r-SegaRally-Switch-v0.5.4.zip` on your computer and copy **its content** to the **root of the SD card**,
 keeping the folders. You get:
 
 ```
@@ -242,12 +242,12 @@ cache: keep it when you update.
 4. **Forget Discord account** removes the link from this Switch.
 
 The Switch needs an internet connection for this. It is the first public version of the Switch link: if anything goes
-wrong, tell us in #bugs.
+wrong, tell us in #bug-reports.
 
 ## Saves, settings and updates
 
 - Scores and arcade settings are saved automatically during play; Workshop > Game > Scores and settings saves now.
-- **From v0.5.1 / v0.5.2**: close the game and replace `/switch/segarally/gpt61sol/segarally.nro` with v0.5.3 once. Keep your data folders and the HOME tile.
+- **From v0.5.1 / v0.5.2**: close the game and replace `/switch/segarally/gpt61sol/segarally.nro` with v0.5.4 once. Keep your data folders and the HOME tile.
 - **From v0.5.3 onwards**: use Sharing > GitHub updates, read the changelog, download, then confirm installation. Settings, records, replays, ghosts and the HD cache stay.
 - Downloads use HTTPS and are checked against the release asset's SHA-256. A verified new NRO is stored in `.updates/`; `update.ini` selects it. The original `segarally.nro` and earlier versions are not overwritten.
 - **Rollback**: close the game, remove `update.ini` and `update.ini.bak` in `/switch/segarally/gpt61sol/`, then launch the original NRO. To choose another release manually, also replace `segarally.nro` with its NRO. Your data stays.
