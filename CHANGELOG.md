@@ -1,5 +1,14 @@
 # Changelog
 
+## Dirt Dash on Android v0.1.1
+
+- Fixes the crashes after a minute or two on phones. The game set up its screen again many times a second and lost a
+  little memory each time, until Android closed it. It now sets the screen up once, in the phone's own orientation, and
+  runs at a steady 60 frames per second.
+- The touch buttons stay clear of the camera notch.
+- If Google Play Protect says the app was blocked when you install it, tap More details, then Install anyway.
+- You can update from inside the game, and your settings, records and game files are kept.
+
 ## Daytona USA on Android v0.1.1
 
 - Fixes the crashes after a minute or two on phones. The game set up its screen again many times a second and lost a

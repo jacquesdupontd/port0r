@@ -1,13 +1,13 @@
 ![Dirt Dash on Android](assets/android-dirtdash/header.jpg)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0"><img alt="Download Dirt Dash for Android v0.1.0 (APK, free)" src="https://img.shields.io/badge/Download-Dirt%20Dash%20Android%20v0.1.0%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.1"><img alt="Download Dirt Dash for Android v0.1.1 (APK, free)" src="https://img.shields.io/badge/Download-Dirt%20Dash%20Android%20v0.1.1%20%C2%B7%20APK%20%C2%B7%20free-3ddc84?style=for-the-badge&logo=android&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
   <a href="https://port0r.com"><b>port0r.com</b></a> ·
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0"><b>Download</b></a> ·
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.1"><b>Download</b></a> ·
   <a href="https://port0r.itch.io/dirt-dash-vr"><b>itch.io</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
@@ -22,9 +22,9 @@
 **Namco's 1995 off-road arcade racer Dirt Dash on your phone or tablet, free, from the people who made Port0r: Dirt Dash
 VR.**
 
-> ### Download Dirt Dash for Android v0.1.0 (free)
-> **[Port0r-DirtDash-Android-v0.1.0.apk](https://github.com/jacquesdupontd/port0r/releases/download/dirtdash-android-v0.1.0/Port0r-DirtDash-Android-v0.1.0.apk)**
-> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.0). Then follow the
+> ### Download Dirt Dash for Android v0.1.1 (free)
+> **[Port0r-DirtDash-Android-v0.1.1.apk](https://github.com/jacquesdupontd/port0r/releases/download/dirtdash-android-v0.1.1/Port0r-DirtDash-Android-v0.1.1.apk)**
+> from the [release page](https://github.com/jacquesdupontd/port0r/releases/tag/dirtdash-android-v0.1.1). Then follow the
 > [install guide](#install): a few minutes.
 
 The race in **full screen**: the arcade's picture at its full height, HUD included, and the world widened to fill a
@@ -71,7 +71,7 @@ device**, a **gamepad**, three views and the cabinet's gear shift.
 
 ## Install
 
-1. **Download** `Port0r-DirtDash-Android-v0.1.0.apk` on the device and open it. Android asks to allow installing
+1. **Download** `Port0r-DirtDash-Android-v0.1.1.apk` on the device and open it. Android asks to allow installing
    apps from your browser or file manager: allow it for that app, then install.
 2. **Put your game files anywhere on the device**: `dirtdash.zip` and `namcoc71.zip`, **not unzipped**. The Download
    folder is the simplest.
@@ -168,6 +168,7 @@ is done, choose **Open** to start the new version. Your settings, records and ga
 | The start screen lists missing files | Put `dirtdash.zip` and `namcoc71.zip`, not unzipped, anywhere on the device (Download is the simplest), and allow file access if Android asks. They must be made for MAME 0.289. |
 | It says a file is not the right version | Check your files against MAME 0.289 with a ROM manager; put the corrected ones anywhere on the device: they replace the old ones by themselves. |
 | Google Play Protect asks to scan the app | It does so for every app installed outside the Play Store, and again for updates installed from the game: choose to install it (without scanning, or after the scan). |
+| Google Play Protect says the app was blocked | Tap **More details**, then **Install anyway**. |
 | Installing is refused | Allow installing unknown apps for the app you downloaded with (your browser or file manager). |
 | The car turns on its own | Steering is set to Turn or Tilt the device and the device is not held straight: Settings > Driving > Steering > Touch, or Straight ahead = as I hold it now. |
 | Not smooth on my device | Settings > Image > Resolution: Auto, and Frame rate: 60. |
