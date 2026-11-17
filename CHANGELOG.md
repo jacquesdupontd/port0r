@@ -72,6 +72,18 @@
 - You can now switch Smoothing off in Settings > Smoothness in the middle of a race and keep racing.
 - Find them in Settings > Wheel > Pedals now learns how far each of your pedals moves, so it finds a Logitech G29 in its PS3/PS4 mode, reversed pedals or a stiff brake on the first try.
 
+## Port0r: Rally VR v0.2.13 (Meta Quest 3)
+
+- A Lakeside switch in the Mods tab: in Practice, the hidden fourth stage loads by itself from the course select, and it has its cockpit view like the other stages.
+- The HD textures are ScottMadeAThing's 4K pack in its latest version, Lakeside included. Jean-seb's pack can still be added in its place, and the settings and the credits name each author.
+- A Logitech G29 plugged into the headset is switched to its native mode, as on a PC: finer and faster steering readings, and its pedals on their own axes.
+- Settings > Wheel > Pedals: Find them asks for one pedal at a time and shows each pedal moving live. The gas reads 100 % at its own stop, and the brake reaches 100 % on firm braking.
+- With the gamepad or the wheel's paddles, a manual car starts every stage in 1st gear.
+- In flat screen mode, the car select reaches every car again, the manual ones included.
+- Mods > Cabinet settings: choosing a setting changes that setting, not the one below.
+- Headset smoothing works again when Super Resolution was on.
+- After an update from SideQuest or another installer, the game waits for you to start it.
+
 ## Port0r: Rally VR v0.2.8 (Meta Quest 3)
 
 - ScottMadeAThing's 4K texture pack now comes with the game, and we want to say a big thank you to ScottMadeAThing! If you imported a texture pack yourself, the game keeps using yours, so remove it from the headset to get Scott's.
