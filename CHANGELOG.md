@@ -6,7 +6,7 @@
   second and lost a little memory each time. It now sets the screen up once, in the phone's own orientation: on a Pixel
   9 Pro XL it went from about 32 to 70 frames per second, and the memory stays flat. Thanks to MaxiFull10 for the report
   and the log.
-- The touch buttons stay clear of the camera notch, on either side when you turn the phone over.
+- The touch buttons stay clear of the camera notch.
 - You can update from inside the game, and your settings, records and game files are kept.
 
 ## Sega Rally Android v0.1.3
@@ -14,7 +14,7 @@
 - Fixes the crashes after a few minutes on phones. The game set up its screen again many times a second and lost a
   little memory each time, until Android closed it. It now sets the screen up once, in the phone's own orientation, and
   runs at a steady 60 frames per second. Thanks to the_rat and MobileDecay for their reports.
-- The touch buttons stay clear of the camera notch, on either side when you turn the phone over.
+- The touch buttons stay clear of the camera notch.
 - You can update from inside the game, and your settings, records and game files are kept.
 
 ## Sega Rally Switch v0.5.4
