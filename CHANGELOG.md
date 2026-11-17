@@ -1,5 +1,13 @@
 # Changelog
 
+## Sega Rally Android v0.1.3
+
+- Fixes the crashes after a few minutes on phones. The game set up its screen again many times a second and lost a
+  little memory each time, until Android closed it. It now sets the screen up once, in the phone's own orientation, and
+  runs at a steady 60 frames per second. Thanks to the_rat and MobileDecay for their reports.
+- The touch buttons stay clear of the camera notch, on either side when you turn the phone over.
+- You can update from inside the game, and your settings, records and game files are kept.
+
 ## Sega Rally Switch v0.5.4
 
 - The other cars now leave the starting grid together, the way they do on the arcade board.
