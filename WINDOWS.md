@@ -1,13 +1,13 @@
 ![Sega Rally on PC: PCVR and desktop](assets/windows/header.jpg)
 
 <p align="center">
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7"><img alt="Download Sega Rally for Windows PC v0.1.7 (free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20PC%20v0.1.7%20%C2%B7%20free-9b7bff?style=for-the-badge&logo=windows&logoColor=white" height="42"></a>
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.14"><img alt="Download Sega Rally for Windows PC v0.1.14 (free)" src="https://img.shields.io/badge/Download-Sega%20Rally%20PC%20v0.1.14%20%C2%B7%20free-9b7bff?style=for-the-badge&logo=windows&logoColor=white" height="42"></a>
 </p>
 
 <p align="center">
   <a href="https://port0r.com"><b>port0r.com</b></a> ·
   <a href="https://discord.gg/XMk7GgapuN"><b>Discord</b></a> ·
-  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.7"><b>Download</b></a> ·
+  <a href="https://github.com/jacquesdupontd/port0r/releases/tag/pc-v0.1.14"><b>Download</b></a> ·
   <a href="https://ko-fi.com/port0r"><b>Ko-fi</b></a> ·
   <a href="https://github.com/sponsors/jacquesdupontd"><b>Sponsor</b></a> ·
   <a href="README.md"><b>Port0r on Meta Quest (VR)</b></a> ·
@@ -22,9 +22,9 @@
 **The 1995 arcade Sega Rally Championship on a Windows PC, free: in your VR headset through SteamVR or Quest Link, or on
 the screen, with the cockpit view and Logitech wheels driven by the force feedback of the arcade cabinet.**
 
-> ### Download Sega Rally for Windows PC v0.1.7 (free)
-> **[Port0r-SegaRally-PC-v0.1.7-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/pc-v0.1.7/Port0r-SegaRally-PC-v0.1.7-Setup.exe)**
-> (the installer), or **[Port0r-SegaRally-PC-v0.1.7.zip](https://github.com/jacquesdupontd/port0r/releases/download/pc-v0.1.7/Port0r-SegaRally-PC-v0.1.7.zip)**
+> ### Download Sega Rally for Windows PC v0.1.14 (free)
+> **[Port0r-SegaRally-PC-v0.1.14-Setup.exe](https://github.com/jacquesdupontd/port0r/releases/download/pc-v0.1.14/Port0r-SegaRally-PC-v0.1.14-Setup.exe)**
+> (the installer), or **[Port0r-SegaRally-PC-v0.1.14.zip](https://github.com/jacquesdupontd/port0r/releases/download/pc-v0.1.14/Port0r-SegaRally-PC-v0.1.14.zip)**
 > to unpack anywhere without installing.
 
 ## Contents
@@ -51,13 +51,13 @@ the screen, with the cockpit view and Logitech wheels driven by the force feedba
   **Quest Link**.
 - **Your own** Sega Rally Championship arcade files, made for **MAME 0.289**: `srallyc.zip` and `segabill.zip`.
   Port0r never includes them and never says where to get them. No ROM requests on the Discord, please.
-- Optional: a Logitech wheel (tested with a G29) or a gamepad, and Jean-seb's HD texture pack.
+- Optional: a Logitech wheel (tested with a G29) or a gamepad.
 
 <a id="install"></a>
 
 ## Install
 
-1. **Download** `Port0r-SegaRally-PC-v0.1.7-Setup.exe` and open it. The installer is not signed: if Windows shows
+1. **Download** `Port0r-SegaRally-PC-v0.1.14-Setup.exe` and open it. The installer is not signed: if Windows shows
    "Windows protected your PC", click **More info**, then **Run anyway**. It installs for your account only, no
    administrator rights needed.
 2. The **Port0r launcher** opens. Under **Game files**, click **Choose the files** and pick `srallyc.zip` and
@@ -95,8 +95,10 @@ The **VIEW** button changes the view: **cockpit**, **chase** and **on the road**
 
 ## HD textures
 
-Jean-seb's community pack, optional. In the launcher, under **HD textures**: **Add the pack** and pick its zip. The same
-place switches it on or off (**Use the HD textures**) and removes it (**Remove the pack**, click twice).
+The game comes with **ScottMadeAThing**'s 4K texture pack, and it is on from the first start. In the launcher, under
+**HD textures**, **Use the HD textures** switches it on or off (in the game, it is Settings > Image > HD textures). If you
+prefer Jean-seb's community pack, **Add the pack** and pick its zip, and it takes the place of the one that comes with the
+game. **Remove the pack** (click twice) removes it.
 
 ## The leaderboard on Discord
 
@@ -132,6 +134,6 @@ buy me a coffee on [Ko-fi](https://ko-fi.com/port0r). Sharing it helps a lot too
 
 ## Credits and legal
 
-HD textures by Jean-seb. Sega Rally Championship is a trademark of SEGA. Windows is a trademark of Microsoft. Port0r is a
+HD textures by ScottMadeAThing (the 4K pack that comes with the game) and by Jean-seb (the pack you can add). Sega Rally Championship is a trademark of SEGA. Windows is a trademark of Microsoft. Port0r is a
 free fan project, not affiliated with SEGA, Microsoft, Valve or Meta. Built from MAME's BSD-3-Clause source files; every
 component's license is in [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).

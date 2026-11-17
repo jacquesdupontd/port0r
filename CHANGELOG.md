@@ -1,5 +1,25 @@
 # Changelog
 
+## Sega Rally on Windows PC v0.1.14 (PCVR and desktop)
+
+- Opening the Port0r menu during a race closed the game on some NVIDIA graphics cards, and the game now keeps running. Thank you to ScottMadeAThing and MFox333 for their logs and their tests on the RTX 3080.
+- ScottMadeAThing's 4K texture pack (0.9.5, with Lakeside's textures) now comes with the installer and is on from the first start. Settings > Image > HD textures turns it off, the settings and the credits name each pack's author, and Jean-seb's pack can still be added in its place.
+- The Mods tab has a Lakeside switch that loads the hidden fourth stage by itself from the course select in Practice, and Lakeside has its cockpit view like the other stages.
+- With a wheel, the gas pedal reads 100 % at its own stop, the brake reaches 100 % on firm braking, and a pedal you have not pressed yet is read as released, so the car is free at the start.
+- Settings > Wheel > Pedals > Find them shows each step and each pedal moving live, in the headset and on the PC's screen, and says when both are found.
+- The bumpy road in Forest is now a soft rumble on a racing wheel, instead of a hard judder.
+- With the gamepad, the keyboard or the wheel's paddles, a manual car starts every stage in 1st gear.
+- On AMD graphics cards, the tiny white dots that sparkled on the cars and the scenery are gone.
+- Started from the launcher, the game goes straight to its race, and the game files you point at the first time are used right away. Only one game runs at a time, in the headset or on the screen, and the launcher has a Stop button.
+- The launcher wears the new Port0r logo, and the desktop shortcut is now called Sega Rally (Port0r).
+- Each PC now gets its own link to the Discord leaderboard, so you may have to link your game once more from the menu.
+- On a DualSense or a DualShock 4, the touchpad's click also inserts a coin, and so does the capture button of a Switch Pro or Xbox Series pad.
+- In Mods > Cabinet settings, choosing a setting with the controller changes that setting.
+- The cabinet's factory settings are in place from the very first start, and your own settings and records are never touched.
+- If the game ever closes unexpectedly, its log now says why and where, which makes a report much easier to solve.
+- One thing is known and still open, which is a short slowdown just before the first checkpoint of Desert.
+- Run the new installer, which replaces the old version. Your settings, records and game files are kept.
+
 ## Dirt Dash on Android v0.1.1
 
 - Fixes the crashes after a minute or two on phones. The game set up its screen again many times a second and lost a
