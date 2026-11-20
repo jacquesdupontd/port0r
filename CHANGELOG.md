@@ -1,5 +1,9 @@
 # Changelog
 
+## Port0r: Rally VR v0.2.14 (Meta Quest 3)
+
+- Fixes the game being stuck at 72 Hz since the last Quest system update.
+
 ## Sega Rally on Windows PC v0.1.14 (PCVR and desktop)
 
 - Opening the Port0r menu during a race closed the game on some NVIDIA graphics cards, and the game now keeps running. Thank you to ScottMadeAThing and MFox333 for their logs and their tests on the RTX 3080.
