@@ -1,5 +1,9 @@
 # Changelog
 
+## Port0r: Cop VR v0.2.5 (Meta Quest 3)
+
+- Fixes the game being stuck at 72 Hz since the last Quest system update.
+
 ## Port0r: Rally VR v0.2.14 (Meta Quest 3)
 
 - Fixes the game being stuck at 72 Hz since the last Quest system update.
