@@ -1,5 +1,10 @@
 # Changelog
 
+## Port0r: Daytona USA VR v0.2.5 (Meta Quest 3)
+
+- Logitech wheels like the G29 now have full force feedback, and the pedals are easy to set up.
+- Fixes the game being stuck at 72 Hz since the last Quest system update.
+
 ## Port0r: Cop 2 VR v0.1.1 (Meta Quest 3)
 
 - Fixes the game being stuck at 72 Hz since the last Quest system update.
