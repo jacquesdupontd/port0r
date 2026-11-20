@@ -1,5 +1,9 @@
 # Changelog
 
+## Port0r: Dirt Dash VR v0.1.6 (Meta Quest 3)
+
+- Fixes the game being stuck at 72 Hz since the last Quest system update.
+
 ## Port0r: Time Crisis II VR v0.1.4 (Meta Quest 3)
 
 - Fixes the game being stuck at 72 Hz since the last Quest system update.
