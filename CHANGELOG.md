@@ -93,6 +93,12 @@
 - The touch buttons stay clear of the camera notch.
 - You can update from inside the game, and your settings, records and game files are kept.
 
+## Sega Rally Switch v0.5.5
+
+- The game starts faster: the cabinet's own screens appear about 5 seconds sooner.
+- A start screen shows at once, in your language, while the cabinet starts up.
+- You can update from inside the game in Sharing > GitHub updates, and your settings, scores, replays, ghosts and HD textures are kept. From v0.5.1 or v0.5.2, install it by hand once.
+
 ## Sega Rally Switch v0.5.4
 
 - The other cars now leave the starting grid together, the way they do on the arcade board.
